@@ -1,0 +1,77 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.spatial import KDTree
+
+# --- Configuration ---
+MD_FILE = "nitrobenzene_direction_A_wb97x_4000_ts.xyz"  # Your MD output file
+ENERGY_FILE = "CCSD_Combined_Results.txt"
+AU_TO_KCAL = 627.509
+
+def parse_md_data(filename):
+    """Parses your specific MD block format."""
+    data = []
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+        for i, line in enumerate(lines):
+            if "Step" in line:
+                parts = line.split()
+                step = int(parts[1])
+                e = float(parts[2].split('=')[1])
+                phi = float(parts[3].split('=')[1])
+                theta = float(parts[4].split('=')[1])
+                data.append({'step': step, 'e_md': e, 'theta': theta, 'phi': phi})
+    return pd.DataFrame(data)
+
+# 1. Load Data
+df_md = parse_md_data(MD_FILE)
+df_grid = pd.read_csv(ENERGY_FILE, delim_whitespace=True, skiprows=[1])
+
+# 2. Map MD coordinates to Grid points (Nearest Neighbor)
+# Create a KDTree for fast spatial searching
+tree = KDTree(df_grid[['theta', 'phi']].values)
+_, idx = tree.query(df_md[['theta', 'phi']].values)
+
+# Get the corresponding Ortho/Meta energies from the grid
+df_md['ortho_e_grid'] = df_grid.loc[idx, 'Ortho_E'].values
+df_md['meta_e_grid'] = df_grid.loc[idx, 'Meta_E'].values
+df_md['diff_om_grid'] = (df_md['ortho_e_grid'] - df_md['meta_e_grid']) * AU_TO_KCAL
+
+# --- PLOTTING ---
+
+# FIGURE 1: Trajectory on Energy Landscape
+plt.figure(figsize=(8, 6))
+# Assume we have the grid data from before (reshape)
+num_t = len(np.unique(df_grid['theta']))
+num_p = len(np.unique(df_grid['phi']))
+T = df_grid['theta'].values.reshape(num_t, num_p)
+P = df_grid['phi'].values.reshape(num_t, num_p)
+diff_om = (df_grid['Ortho_E'] - df_grid['Meta_E']).values.reshape(num_t, num_p) * AU_TO_KCAL
+
+plt.pcolormesh(P, T, diff_om, cmap='RdBu_r', shading='gouraud')
+plt.colorbar(label='Ortho - Meta Energy (kcal/mol)')
+plt.plot(df_md['phi'], df_md['theta'], color='white', lw=1.5, alpha=0.7, label='MD Trajectory')
+plt.scatter(df_md['phi'].iloc[0], df_md['theta'].iloc[0], color='lime', marker='o', label='Start')
+plt.xlabel(r'$\phi$ ($^{\circ}$)')
+plt.ylabel(r'$\theta$ ($^{\circ}$)')
+plt.title('MD Trajectory over Ortho-Meta PES')
+plt.legend()
+plt.savefig("traj_overlay.png", dpi=300)
+
+# FIGURE 2: Time-Series Analysis
+fig, ax1 = plt.subplots(figsize=(10, 5))
+
+# Rel Energy from MD (E_t - E_min)
+rel_e_md = (df_md['e_md'] - df_md['e_md'].min()) * AU_TO_KCAL
+ax1.plot(df_md['step'], rel_e_md, label='MD Relative Energy', color='black')
+ax1.set_xlabel('Time Step')
+ax1.set_ylabel('Relative Energy (kcal/mol)', color='black')
+
+ax2 = ax1.twinx()
+ax2.plot(df_md['step'], df_md['diff_om_grid'], label='Ortho-Meta (Grid)', color='red', linestyle='--')
+ax2.set_ylabel('Grid Ortho-Meta Diff (kcal/mol)', color='red')
+
+plt.title('Orientational Dynamics vs Energy Landscapes')
+fig.tight_layout()
+plt.savefig("traj_timeseries.png", dpi=300)
+plt.show()
