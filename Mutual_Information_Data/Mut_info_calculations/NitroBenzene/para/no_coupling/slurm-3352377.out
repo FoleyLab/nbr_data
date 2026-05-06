@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/scratch/project/open-31-30/psi4_3352377/QED-CI_test.inp", line 55, in <module>
+    psi4.oeprop(wfn, 'DIPOLE', 'QUADRUPOLE', title='para')
+                ^^^
+NameError: name 'wfn' is not defined

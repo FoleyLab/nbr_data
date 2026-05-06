@@ -1,0 +1,55 @@
+$model
+name mol
+  nOrbs 8
+  nAlpha 4 
+  nBeta 4
+  calc rhf
+  Integral_File FCIDUMP_el
+  level_shift 1.0
+end
+
+$model
+ name photon
+  norbs 1
+  npart 10
+  calc photon
+  
+  Integral_File FCIDUMP_ph
+end
+
+$interaction
+  mod1_name mol
+  mod2_name photon
+  type 1
+  Integral_File FCIDUMP_int
+end
+
+
+$chain
+  optimize_ordering 0
+  
+  Optimize_Bond_Dims [ 500 1000 1000 ]
+  Optimize_Max_Sweep 6
+  Optimizer Fiedler
+cas_vec  [ 9 1 2 3 4 5 6 7 8 ] 
+ordering [ 9 1 2 3 4 5 6 7 8 ]
+
+
+end
+
+$dmrg
+  mMax 4000
+  mMin 1000 
+  mStart 1000
+  Max_Sweep 40
+  Truncation_error 1e-6
+  nstates  1
+
+  davidson_maxit 400
+  davidson_maxkrylov 400
+end
+
+$post_dmrg
+correls 1
+end
+

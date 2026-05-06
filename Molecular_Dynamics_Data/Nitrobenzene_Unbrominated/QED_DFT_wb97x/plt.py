@@ -5,7 +5,7 @@ from scipy.spatial import KDTree
 import sys
 
 # --- Configuration ---
-MD_FILE = "nitrobenzene_direction_A_wb97x_4000_ts.xyz" #"md_trajectory.txt"
+MD_FILE = "nitrobenzene_direction_B_wb97x_4000_ts.xyz" #"md_trajectory.txt"
 ENERGY_FILE = "CCSD_Combined_Results.txt"
 AU_TO_KCAL = 627.509
 
@@ -86,11 +86,12 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time.png"):
     traj1 = df_md['diff_om_grid'][10:] # Ortho-Meta
     traj2 = (df_md['e_md'] - df_md['e_md'].min())[10:] * AU_TO_KCAL # Rel Energy
     
-    color1, color2 = "#005F73", "#BB3E03"
+    # maroon hex color: #800000
+    color1, color2, color3 = "#005F73", "#BB3E03", "#800000"
 
     # 2. Shading for stabilization/destabilization
     ax.fill_between(t_values, traj1, -6, where=(traj1 <= -6), color=color1, alpha=0.15, interpolate=True)
-    ax.fill_between(t_values, traj1, 6, where=(traj1 >= 6), color=color1, alpha=0.15, interpolate=True)
+    ax.fill_between(t_values, traj1, 6, where=(traj1 >= 6), color=color3, alpha=0.15, interpolate=True)
 
     # 3. Plots
     #ax.plot(t_values, traj1, color=color1, linewidth=2.0, alpha=0.9, label="Ortho vs Meta ($\Delta E$)")
@@ -116,7 +117,7 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time.png"):
 #    # 1. Load Data
 #    try:
 #        df_md = parse_md_data(MD_FILE)
-#        df_grid = pd.read_csv(ENERGY_FILE, delim_whitespace=True, skiprows=[1])
+#        df_grid = pd.read_csv(ENERGY_FILE, sep='\s+', skiprows=[1])
 #    except Exception as e:
 #        print(f"Error loading files: {e}")
 #        return#
@@ -135,7 +136,7 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time.png"):
 def main():
     # 1. Load and Clean
     df_md = parse_md_data(MD_FILE)
-    df_grid = pd.read_csv(ENERGY_FILE, delim_whitespace=True, skiprows=[1])
+    df_grid = pd.read_csv(ENERGY_FILE, sep='\s+', skiprows=[1])
     
     # Force numeric for grid
     for col in ['theta', 'phi', 'Ortho_E', 'Meta_E']:

@@ -1,0 +1,281 @@
+
+                                 *****************
+                                 * O   R   C   A *
+                                 *****************
+
+           --- An Ab Initio, DFT and Semiempirical electronic structure package ---
+
+                  #######################################################
+                  #                        -***-                        #
+                  #          Department of theory and spectroscopy      #
+                  #               Directorship: Frank Neese             #
+                  #        Max Planck Institute fuer Kohlenforschung    #
+                  #                Kaiser Wilhelm Platz 1               #
+                  #                 D-45470 Muelheim/Ruhr               #
+                  #                      Germany                        #
+                  #                                                     #
+                  #                  All rights reserved                #
+                  #                        -***-                        #
+                  #######################################################
+
+
+                         Program Version 4.2  -  CURRENT   -
+                                (SVN: $$)
+                ($ $)
+
+
+ With contributions from (in alphabetic order):
+   Daniel Aravena         : Magnetic Suceptibility
+   Michael Atanasov       : Ab Initio Ligand Field Theory (pilot matlab implementation)
+   Alexander A. Auer      : GIAO ZORA, VPT2
+   Ute Becker             : Parallelization
+   Giovanni Bistoni       : ED, misc. LED, open-shell LED, HFLD
+   Martin Brehm           : Molecular dynamics
+   Dmytro Bykov           : SCF Hessian
+   Vijay G. Chilkuri      : MRCI spin determinant printing, contributions to CSF-ICE
+   Dipayan Datta          : RHF DLPNO-CCSD density
+   Achintya Kumar Dutta   : EOM-CC, STEOM-CC
+   Dmitry Ganyushin       : Spin-Orbit,Spin-Spin,Magnetic field MRCI
+   Miquel Garcia          : C-PCM Hessian, Gaussian charge scheme
+   Yang Guo               : DLPNO-NEVPT2, CIM, IAO-localization
+   Andreas Hansen         : Spin unrestricted coupled pair/coupled cluster methods
+   Benjamin Helmich-Paris : CASSCF linear response (MC-RPA)
+   Lee Huntington         : MR-EOM, pCC
+   Robert Izsak           : Overlap fitted RIJCOSX, COSX-SCS-MP3, EOM
+   Christian Kollmar      : KDIIS, OOCD, Brueckner-CCSD(T), CCSD density
+   Simone Kossmann        : Meta GGA functionals, TD-DFT gradient, OOMP2, MP2 Hessian
+   Martin Krupicka        : AUTO-CI
+   Lucas Lang             : DCDCAS
+   Dagmar Lenk            : GEPOL surface, SMD
+   Dimitrios Liakos       : Extrapolation schemes; Compound Job, initial MDCI parallelization
+   Dimitrios Manganas     : Further ROCIS development; embedding schemes
+   Dimitrios Pantazis     : SARC Basis sets
+   Taras Petrenko         : DFT Hessian,TD-DFT gradient, ASA, ECA, R-Raman, ABS, FL, XAS/XES, NRVS
+   Peter Pinski           : DLPNO-MP2, DLPNO-MP2 Gradient
+   Christoph Reimann      : Effective Core Potentials
+   Marius Retegan         : Local ZFS, SOC
+   Christoph Riplinger    : Optimizer, TS searches, QM/MM, DLPNO-CCSD(T), (RO)-DLPNO pert. Triples
+   Tobias Risthaus        : Range-separated hybrids, TD-DFT gradient, RPA, STAB
+   Michael Roemelt        : Original ROCIS implementation
+   Masaaki Saitow         : Open-shell DLPNO-CCSD energy and density
+   Barbara Sandhoefer     : DKH picture change effects
+   Avijit Sen             : IP-ROCIS
+   Kantharuban Sivalingam : CASSCF convergence, NEVPT2, FIC-MRCI
+   Bernardo de Souza      : ESD, SOC TD-DFT
+   Georgi Stoychev        : AutoAux, RI-MP2 NMR
+   Willem Van den Heuvel  : Paramagnetic NMR
+   Boris Wezisla          : Elementary symmetry handling
+   Frank Wennmohs         : Technical directorship
+
+
+ We gratefully acknowledge several colleagues who have allowed us to
+ interface, adapt or use parts of their codes:
+   Stefan Grimme, W. Hujo, H. Kruse,             : VdW corrections, initial TS optimization,
+                  C. Bannwarth                     DFT functionals, gCP, sTDA/sTD-DF
+   Ed Valeev, F. Pavosevic, A. Kumar             : LibInt (2-el integral package), F12 methods
+   Garnet Chan, S. Sharma, J. Yang, R. Olivares  : DMRG
+   Ulf Ekstrom                                   : XCFun DFT Library
+   Mihaly Kallay                                 : mrcc  (arbitrary order and MRCC methods)
+   Andreas Klamt, Michael Diedenhofen            : otool_cosmo (COSMO solvation model)
+   Jiri Pittner, Ondrej Demel                    : Mk-CCSD
+   Frank Weinhold                                : gennbo (NPA and NBO analysis)
+   Christopher J. Cramer and Donald G. Truhlar   : smd solvation model
+   Lars Goerigk                                  : TD-DFT with DH, B97 family of functionals
+   V. Asgeirsson, H. Jonsson                     : NEB implementation
+   FAccTs GmbH                                   : IRC, NEB, NEB-TS, Multilevel, MM, QM/MM, CI optimization
+   S Lehtola, MJT Oliveira, MAL Marques          : LibXC Library
+
+
+ Your calculation uses the libint2 library for the computation of 2-el integrals
+ For citations please refer to: http://libint.valeyev.net
+
+ This ORCA versions uses:
+   CBLAS   interface :  Fast vector & matrix operations
+   LAPACKE interface :  Fast linear algebra routines
+
+
+SCAN-COORDS
+----- Orbital basis set information -----
+Your calculation utilizes the basis: 6-311G*
+   H, Li - Ne  : R. Krishnan, J. S. Binkley, R. Seeger and J. A. Pople, J. Chem. Phys. 72, 650 (1980).
+   Na - Ar     : A. D. McLean and G. S. Chandler J. Chem. Phys. 72, 5639, (1980).
+   K  - Ca     : J.-P. Blaudeau, M. P. McGrath, L. A. Curtiss and L. Radom, J. Chem. Phys. 107, 5016 (1997).
+   Ga - Kr     : L. A. Curtiss, M. P. McGrath, J.-P. Blandeau, N. E. Davis, R. C. Binning and L. Radom, J. Chem. Phys. 103, 6104 (1995).
+   Pol./Diff.
+   H, Li - Cl  : T. Clark, J. Chandrasekhar and P. v. R. Schleyer, J. Comp. Chem. 4, 294 (1983).
+   H - Ne      : M. J. Frisch, J. A. Pople and J. S. Binkley, J. Chem. Phys. 80, 3265 (1984).
+
+================================================================================
+                                        WARNINGS
+                       Please study these warnings very carefully!
+================================================================================
+
+
+WARNING: Post HF methods need fully converged wavefunctions
+  ===> : Setting SCFConvForced true
+         You can overwrite this default with %scf ConvForced false 
+
+
+WARNING: MDCI localization with Augmented Hessian Foster-Boys
+  ===> : Switching off randomization!
+
+INFO   : the flag for use of LIBINT has been found!
+
+================================================================================
+                                       INPUT FILE
+================================================================================
+NAME = QED-CI_test.inp
+|  1> !CCSD 6-311G*  
+|  2> %MaxCore 40000
+|  3> 
+|  4> %pal
+|  5> nprocs 16 
+|  6> end
+|  7> 
+|  8> %elprop 
+|  9> 	Dipole        true # dipole moment
+| 10>         Quadrupole    true # quadrupole moment
+| 11> end
+| 12> 
+| 13> %coords
+| 14>   Ctyp xyz
+| 15>   Charge 1
+| 16>   Mult 1
+| 17>   Units Angs
+| 18> coords
+| 19> 
+| 20> C                 -0.80658313    1.22973465    0.03041801
+| 21> C                  0.56153576    1.23725234    0.01622618
+| 22> C                  1.22915389    0.01001055    0.01220575
+| 23> H                 -1.36676923    2.15803094    0.04420367
+| 24> H                  1.14116413    2.14927050    0.01037697
+| 25> N                  2.71357475    0.03144573   -0.00289824
+| 26> O                  3.28013247   -1.09741954   -0.00254733
+| 27> O                  3.24714953    1.17621948   -0.01252002
+| 28> C                 -0.77042978   -1.26805414    0.04039660
+| 29> H                 -1.30353926   -2.21202933    0.06122375
+| 30> C                  0.59726287   -1.23605918    0.02634378
+| 31> H                  1.20308359   -2.13089607    0.02793117
+| 32> C                 -1.56287141   -0.03049318    0.01040538
+| 33> H                 -2.41148563   -0.03994459    0.70143946
+| 34> Br                -2.40993182   -0.04931830   -1.82359612
+| 35> 
+| 36> end
+| 37> end
+| 38> 
+| 39>                          ****END OF INPUT****
+================================================================================
+
+                       ****************************
+                       * Single Point Calculation *
+                       ****************************
+
+---------------------------------
+CARTESIAN COORDINATES (ANGSTROEM)
+---------------------------------
+  C     -0.806583    1.229735    0.030418
+  C      0.561536    1.237252    0.016226
+  C      1.229154    0.010011    0.012206
+  H     -1.366769    2.158031    0.044204
+  H      1.141164    2.149271    0.010377
+  N      2.713575    0.031446   -0.002898
+  O      3.280132   -1.097420   -0.002547
+  O      3.247150    1.176219   -0.012520
+  C     -0.770430   -1.268054    0.040397
+  H     -1.303539   -2.212029    0.061224
+  C      0.597263   -1.236059    0.026344
+  H      1.203084   -2.130896    0.027931
+  C     -1.562871   -0.030493    0.010405
+  H     -2.411486   -0.039945    0.701439
+  Br    -2.409932   -0.049318   -1.823596
+
+----------------------------
+CARTESIAN COORDINATES (A.U.)
+----------------------------
+  NO LB      ZA    FRAG     MASS         X           Y           Z
+   0 C     6.0000    0    12.011   -1.524221    2.323862    0.057482
+   1 C     6.0000    0    12.011    1.061149    2.338068    0.030663
+   2 C     6.0000    0    12.011    2.322764    0.018917    0.023066
+   3 H     1.0000    0     1.008   -2.582820    4.078087    0.083533
+   4 H     1.0000    0     1.008    2.156488    4.061533    0.019610
+   5 N     7.0000    0    14.007    5.127913    0.059424   -0.005477
+   6 O     8.0000    0    15.999    6.198552   -2.073822   -0.004814
+   7 O     8.0000    0    15.999    6.136223    2.222733   -0.023659
+   8 C     6.0000    0    12.011   -1.455901   -2.396275    0.076339
+   9 H     1.0000    0     1.008   -2.463332   -4.180130    0.115696
+  10 C     6.0000    0    12.011    1.128663   -2.335813    0.049783
+  11 H     1.0000    0     1.008    2.273499   -4.026810    0.052782
+  12 C     6.0000    0    12.011   -2.953399   -0.057624    0.019663
+  13 H     1.0000    0     1.008   -4.557047   -0.075484    1.325528
+  14 Br   35.0000    0    79.900   -4.554111   -0.093198   -3.446097
+
+--------------------------------
+INTERNAL COORDINATES (ANGSTROEM)
+--------------------------------
+ C      0   0   0     0.000000000000     0.00000000     0.00000000
+ C      1   0   0     1.368213148920     0.00000000     0.00000000
+ C      2   1   0     1.397087163524   118.23146708     0.00000000
+ H      1   2   3     1.084311999879   120.79850662   179.37423524
+ H      2   1   3     1.080638878042   122.75391974   180.14551384
+ N      3   2   1     1.484652446554   117.71905335   180.01419399
+ O      6   3   2     1.263061586401   115.82235853   179.82025996
+ O      6   3   2     1.263052478400   115.82004408   359.91716651
+ C      3   2   1     2.373305485853    94.03690051   359.89210483
+ H      9   3   2     1.084310217225   152.04122636   181.27862094
+ C      9   3   2     1.368139007586    31.24337558   180.20053774
+ H     11   9   3     1.080626820088   122.75559885   179.86333973
+ C      9   3   2     1.469836841269    90.03325856     1.38298625
+ H     13   9   3     1.094423831639   113.44633810   223.52408607
+ Br    13   9   3     2.020254247696   103.69354554   110.94793816
+
+---------------------------
+INTERNAL COORDINATES (A.U.)
+---------------------------
+ C      0   0   0     0.000000000000     0.00000000     0.00000000
+ C      1   0   0     2.585548144288     0.00000000     0.00000000
+ C      2   1   0     2.640112124278   118.23146708     0.00000000
+ H      1   2   3     2.049052723497   120.79850662   179.37423524
+ H      2   1   3     2.042111529168   122.75391974   180.14551384
+ N      3   2   1     2.805586528043   117.71905335   180.01419399
+ O      6   3   2     2.386840488574   115.82235853   179.82025996
+ O      6   3   2     2.386823276946   115.82004408   359.91716651
+ C      3   2   1     4.484897400395    94.03690051   359.89210483
+ H      9   3   2     2.049049354768   152.04122636   181.27862094
+ C      9   3   2     2.585408037473    31.24337558   180.20053774
+ H     11   9   3     2.042088742936   122.75559885   179.86333973
+ C      9   3   2     2.777589091545    90.03325856     1.38298625
+ H     13   9   3     2.068161316234   113.44633810   223.52408607
+ Br    13   9   3     3.817727249037   103.69354554   110.94793816
+
+---------------------
+BASIS SET INFORMATION
+---------------------
+There are 5 groups of distinct atoms
+
+ Group   1 Type C   : 11s5p1d contracted to 4s3p1d pattern {6311/311/1}
+ Group   2 Type H   : 5s contracted to 3s pattern {311}
+ Group   3 Type N   : 11s5p1d contracted to 4s3p1d pattern {6311/311/1}
+ Group   4 Type O   : 11s5p1d contracted to 4s3p1d pattern {6311/311/1}
+ Group   5 Type Br  : 15s13p6d contracted to 8s7p3d pattern {63111111/3331111/411}
+
+Atom   0C    basis set group =>   1
+Atom   1C    basis set group =>   1
+Atom   2C    basis set group =>   1
+Atom   3H    basis set group =>   2
+Atom   4H    basis set group =>   2
+Atom   5N    basis set group =>   3
+Atom   6O    basis set group =>   4
+Atom   7O    basis set group =>   4
+Atom   8C    basis set group =>   1
+Atom   9H    basis set group =>   2
+Atom  10C    basis set group =>   1
+Atom  11H    basis set group =>   2
+Atom  12C    basis set group =>   1
+Atom  13H    basis set group =>   2
+Atom  14Br   basis set group =>   5
+
+ORCA finished by error termination in GTOInt
+Calling Command: mpirun -np 16  /mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi QED-CI_test.int.tmp QED-CI_test 
+[file orca_tools/qcmsg.cpp, line 458]: 
+  .... aborting the run
+

@@ -1,0 +1,1278 @@
+
+Thu Oct 30 14:39:14 CET 2025
+cn018.karolina.it4i.cz
+
+
++----------------------------------------------------------------------------------------------------+ 
+|                                            M O L M P S                                             | 
+|                                         =================                                          | 
+|                                   Scalable C++ QC-DMRG Project                                     | 
+|                                            Version 1.0                                             | 
+|                                                                                                    | 
+|                          Core developers: L. Veis, J. Brabec, J. Brandejs, A. Antalik, M. Matousek | 
+|                             Contributors: O. Legeza                                                | 
++----------------------------------------------------------------------------------------------------+ 
+
+Reading input file: molmps.inp
+
+$model
+name mol
+  nOrbs 8
+  nAlpha 4 
+  nBeta 4
+  calc rhf
+  Integral_File FCIDUMP_el
+  level_shift 1.0
+end
+
+$model
+ name photon
+  norbs 1
+  npart 10
+  calc photon
+  
+  Integral_File FCIDUMP_ph
+end
+
+$interaction
+  mod1_name mol
+  mod2_name photon
+  type 1
+  Integral_File FCIDUMP_int
+end
+
+
+$chain
+  optimize_ordering 0
+  
+  Optimize_Bond_Dims [ 500 1000 1000 ]
+  Optimize_Max_Sweep 6
+  Optimizer Fiedler
+cas_vec  [ 9 1 2 3 4 5 6 7 8 ] 
+ordering [ 9 1 2 3 4 5 6 7 8 ]
+
+
+end
+
+$dmrg
+  mMax 4000
+  mMin 1000 
+  mStart 1000
+  Max_Sweep 40
+  Truncation_error 1e-6
+  nstates  1
+
+  davidson_maxit 400
+  davidson_maxkrylov 400
+end
+
+$postdmrg
+correls 1
+end
+
+
+DMRG work flow:
+===============
+
+PROD run 1	 lqqr	 end: middle  	 add sweeps: 0	 start: from beginning
+
+
+                                         DMRG RUN, Good Luck! 
++----------------------------------------------------------------------------------------------------+
+
+
+DMRG scratch directory: ./dmrg_scratch
+
+Reading integrals for multiple particle type calculation: 
+
+Reading integrals from: FCIDUMP_el file.
+Two-electron integrals read.
+One-electron integrals read.
+
+Reading integrals from: FCIDUMP_ph file.
+Two-electron integrals read.
+One-electron integrals read.
+
+Reading integrals from: FCIDUMP_int file.
+Two-electron integrals read.
+Took 0.00384740 sec.
+
+Nuclear repulsion (plus frozen-core contribution): -2994.62688002
+One-electron integrals reordered.
+Two-electron integrals reordered.
+Nothing to reorder for photonic integrals
+Interaction integrals reordered.
+multiparticle hf_occup printing not ready yet!
+Model 0: rhf       __xx
+Model 1: photon       _x__
+iter: 1  L: 0  R: 0
+
+Iteration    1, Sweep   1:
+==========================
+     -->
++-+       +-+-+-+-+-+-+
+|L| S : S |R|R|R|R|R|R|
++-+       +-+-+-+-+-+-+
+
+Configuration type invoked: backward, left: 1 , right: 6.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       _xxx
+Model 1: photon       x___
+Beginning multiparticle CI-DEAS
+Performing multiparticle CI-DEAS for right block.
+Effective right block size: 6.
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 1 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+DEBUG: generating left block ops
+Constructing multiparticlephase on the left block
+DEBUG: generated presummed ops
+right block operators generated using CI-DEAS, took 26.18767659 sec.
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+took 0.07640009 sec.
+
+Davidson diagonalization:
+Davidson converged in 42 iterations.
+E_el(0) = -12.48720957
+Took 0.53519925 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3007.11408959 a.u.
+
+Time: 26.872344 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00051019 sec.
+Truncation: M = 44, TRE = -6.66133815e-16
+
+Renormalization of individual left block operators.
+Gathering integrals for (multiparticle) partial summations on left block.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.01355768 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration    2, Sweep   1:
+==========================
+       -->
++-+-+       +-+-+-+-+-+
+|L|L| S : S |R|R|R|R|R|
++-+-+       +-+-+-+-+-+
+
+Configuration type invoked: backward, left: 2 , right: 5.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+Beginning multiparticle CI-DEAS
+Performing multiparticle CI-DEAS for right block.
+Warning: DEAS couldn't generate the required amount of states.
+Effective right block size: 5.
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 2 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+right block operators generated using CI-DEAS, took 11.92468406 sec.
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.05661929 sec.
+
+Davidson diagonalization:
+Davidson converged in 69 iterations.
+E_el(0) = -15.17180498
+Took 4.57400252 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3009.79868500 a.u.
+
+Time: 43.513821 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00121712 sec.
+Truncation: M = 176, TRE = -3.55271368e-15
+
+Renormalization of individual left block operators.
+Gathering integrals for (multiparticle) partial summations on left block.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+WIP interaction terms not ready yet!!!
+WIP: Interaction terms not ready yet!!!
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.02376780 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration    3, Sweep   1:
+==========================
+         -->
++-+-+-+       +-+-+-+-+
+|L|L|L| S : S |R|R|R|R|
++-+-+-+       +-+-+-+-+
+
+Configuration type invoked: backward, left: 3 , right: 4.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+Beginning multiparticle CI-DEAS
+Performing multiparticle CI-DEAS for right block.
+Effective right block size: 4.
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 3 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+right block operators generated using CI-DEAS, took 2.53446214 sec.
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.03611213 sec.
+
+Davidson diagonalization:
+Davidson converged in 30 iterations.
+E_el(0) = -14.01007897
+Took 0.79276963 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3008.63695899 a.u.
+
+Time: 46.963695 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00382831 sec.
+Truncation: M = 704, TRE = -3.33066907e-15
+
+Renormalization of individual left block operators.
+Gathering integrals for (multiparticle) partial summations on left block.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+WIP interaction terms not ready yet!!!
+WIP: Interaction terms not ready yet!!!
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.06744331 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration    4, Sweep   1:
+==========================
+           -->
++-+-+-+-+       +-+-+-+
+|L|L|L|L| S : S |R|R|R|
++-+-+-+-+       +-+-+-+
+
+Configuration type invoked: backward, left: 4 , right: 3.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+Beginning multiparticle CI-DEAS
+Performing multiparticle CI-DEAS for right block.
+Effective right block size: 3.
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 4 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+right block operators generated using CI-DEAS, took 1.83286974 sec.
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.06307837 sec.
+
+Davidson diagonalization:
+Davidson converged in 100 iterations.
+E_el(0) = -12.64522782
+Took 8.83149080 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3007.27210784 a.u., middle of the sweep
+
+Time: 57.877553 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.05749420 sec.
+Truncation: M = 1000, TRE = -1.39888101e-14
+
+Renormalization of individual left block operators.
+Gathering integrals for (multiparticle) partial summations on left block.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+WIP interaction terms not ready yet!!!
+WIP: Interaction terms not ready yet!!!
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.24597638 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration    5, Sweep   1:
+==========================
+             -->
++-+-+-+-+-+       +-+-+
+|L|L|L|L|L| S : S |R|R|
++-+-+-+-+-+       +-+-+
+
+Configuration type invoked: backward, left: 5 , right: 2.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+Beginning multiparticle CI-DEAS
+Performing multiparticle CI-DEAS for right block.
+Effective right block size: 2.
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 5 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+right block operators generated using CI-DEAS, took 0.62169237 sec.
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.07893022 sec.
+
+Davidson diagonalization:
+Davidson converged in 91 iterations.
+E_el(0) = -12.02767999
+Took 6.45567987 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.65456001 a.u.
+
+Time: 1 minute, 5.494341 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.11884702 sec.
+Truncation: M = 1000, TRE = -4.66293670e-15
+
+Renormalization of individual left block operators.
+Gathering integrals for (multiparticle) partial summations on left block.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+WIP interaction terms not ready yet!!!
+WIP: Interaction terms not ready yet!!!
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.31670452 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration    6, Sweep   2:
+==========================
+               <--
++-+-+-+-+-+-+       +-+
+|L|L|L|L|L|L| S : S |R|
++-+-+-+-+-+-+       +-+
+
+Configuration type invoked: backward, left: 6 , right: 1.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 6 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/l6_M0-ph.bin
+Reading file: ./dmrg_scratch/l6_M0M1-ph.bin
+Reading file: ./dmrg_scratch/l6_M1-ph.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+row invalid
+row invalid
+row invalid
+row invalid
+row invalid
+row invalid
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.09707102 sec.
+
+Davidson diagonalization:
+Davidson converged in 38 iterations.
+E_el(0) = -11.58278346
+Took 0.69044762 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.20966347 a.u.
+
+Time: 1 minute, 6.885095 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00062898 sec.
+Truncation: M = 16, TRE = -8.88178420e-16
+
+Renormalization of individual right block operators.
+cleaning_phases
+Took 0.01482061 sec.
+Constructing identity on the right block
+
+Iteration    7, Sweep   2:
+==========================
+             <--
++-+-+-+-+-+       +-+-+
+|L|L|L|L|L| S : S |R|R|
++-+-+-+-+-+       +-+-+
+
+Configuration type invoked: backward, left: 5 , right: 2.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 7 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/l5_id.bin
+Reading file: ./dmrg_scratch/l5_M0-opa4.bin
+Reading file: ./dmrg_scratch/l5_M0-opa31u.bin
+Reading file: ./dmrg_scratch/l5_M0-opa31d.bin
+Reading file: ./dmrg_scratch/l5_M0-cpu.bin
+Reading file: ./dmrg_scratch/l5_M0-cpd.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpucpd.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpdcpu.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpucu.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpucd.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpdcu.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpdcd.bin
+Reading file: ./dmrg_scratch/l5_M0-opa1cpu.bin
+Reading file: ./dmrg_scratch/l5_M0-opa1cpd.bin
+Reading file: ./dmrg_scratch/l5_M0-opa1sp.bin
+Reading file: ./dmrg_scratch/l5_M0-opa1sm.bin
+Reading file: ./dmrg_scratch/l5_M0-ph.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpucpu.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpdcpd.bin
+Reading file: ./dmrg_scratch/l5_M1-opa4.bin
+Reading file: ./dmrg_scratch/l5_M0M1-opa4.bin
+Reading file: ./dmrg_scratch/l5_M0-opa31u_i.bin
+Reading file: ./dmrg_scratch/l5_M0-opa31d_i.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpucu_i.bin
+Reading file: ./dmrg_scratch/l5_M0-opa2cpdcd_i.bin
+Reading file: ./dmrg_scratch/l5_M0-ph.bin
+Reading file: ./dmrg_scratch/l5_M0M1-ph.bin
+Reading file: ./dmrg_scratch/l5_M1-ph.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/r1_O.bin
+Reading file: ./dmrg_scratch/l5_O.bin
+took 0.00303088 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.08494035 sec.
+
+Davidson diagonalization:
+Davidson converged in 35 iterations.
+E_el(0) = -11.70111879
+Took 2.86466715 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32799880 a.u.
+
+Time: 1 minute, 9.953761 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.01065273 sec.
+Truncation: M = 64, TRE = -1.33226763e-15
+
+Renormalization of individual right block operators.
+cleaning_phases
+Took 0.04931054 sec.
+Constructing identity on the right block
+
+Iteration    8, Sweep   2:
+==========================
+           <--
++-+-+-+-+       +-+-+-+
+|L|L|L|L| S : S |R|R|R|
++-+-+-+-+       +-+-+-+
+
+Configuration type invoked: backward, left: 4 , right: 3.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 8 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/l4_id.bin
+Reading file: ./dmrg_scratch/l4_M0-opa4.bin
+Reading file: ./dmrg_scratch/l4_M0-opa31u.bin
+Reading file: ./dmrg_scratch/l4_M0-opa31d.bin
+Reading file: ./dmrg_scratch/l4_M0-cpu.bin
+Reading file: ./dmrg_scratch/l4_M0-cpd.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpucpd.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpdcpu.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpucu.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpucd.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpdcu.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpdcd.bin
+Reading file: ./dmrg_scratch/l4_M0-opa1cpu.bin
+Reading file: ./dmrg_scratch/l4_M0-opa1cpd.bin
+Reading file: ./dmrg_scratch/l4_M0-opa1sp.bin
+Reading file: ./dmrg_scratch/l4_M0-opa1sm.bin
+Reading file: ./dmrg_scratch/l4_M0-ph.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpucpu.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpdcpd.bin
+Reading file: ./dmrg_scratch/l4_M1-opa4.bin
+Reading file: ./dmrg_scratch/l4_M0M1-opa4.bin
+Reading file: ./dmrg_scratch/l4_M0-opa31u_i.bin
+Reading file: ./dmrg_scratch/l4_M0-opa31d_i.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpucu_i.bin
+Reading file: ./dmrg_scratch/l4_M0-opa2cpdcd_i.bin
+Reading file: ./dmrg_scratch/l4_M0-ph.bin
+Reading file: ./dmrg_scratch/l4_M0M1-ph.bin
+Reading file: ./dmrg_scratch/l4_M1-ph.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/r2_O.bin
+Reading file: ./dmrg_scratch/l4_O.bin
+took 0.00385183 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.07580454 sec.
+
+Davidson diagonalization:
+Davidson converged in 23 iterations.
+E_el(0) = -11.70159892
+Took 1.91671775 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32847894 a.u., middle of the sweep
+
+Time: 1 minute, 12.092698 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00212034 sec.
+Truncation: M = 256, TRE = -1.69642078e-13
+
+Renormalization of individual right block operators.
+cleaning_phases
+Took 0.03081159 sec.
+Constructing identity on the right block
+
+Iteration    9, Sweep   2:
+==========================
+         <--
++-+-+-+       +-+-+-+-+
+|L|L|L| S : S |R|R|R|R|
++-+-+-+       +-+-+-+-+
+
+Configuration type invoked: backward, left: 3 , right: 4.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 9 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/l3_id.bin
+Reading file: ./dmrg_scratch/l3_M0-opa4.bin
+Reading file: ./dmrg_scratch/l3_M0-opa31u.bin
+Reading file: ./dmrg_scratch/l3_M0-opa31d.bin
+Reading file: ./dmrg_scratch/l3_M0-cpu.bin
+Reading file: ./dmrg_scratch/l3_M0-cpd.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpucpd.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpdcpu.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpucu.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpucd.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpdcu.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpdcd.bin
+Reading file: ./dmrg_scratch/l3_M0-opa1cpu.bin
+Reading file: ./dmrg_scratch/l3_M0-opa1cpd.bin
+Reading file: ./dmrg_scratch/l3_M0-opa1sp.bin
+Reading file: ./dmrg_scratch/l3_M0-opa1sm.bin
+Reading file: ./dmrg_scratch/l3_M0-ph.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpucpu.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpdcpd.bin
+Reading file: ./dmrg_scratch/l3_M1-opa4.bin
+Reading file: ./dmrg_scratch/l3_M0M1-opa4.bin
+Reading file: ./dmrg_scratch/l3_M0-opa31u_i.bin
+Reading file: ./dmrg_scratch/l3_M0-opa31d_i.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpucu_i.bin
+Reading file: ./dmrg_scratch/l3_M0-opa2cpdcd_i.bin
+Reading file: ./dmrg_scratch/l3_M0-ph.bin
+Reading file: ./dmrg_scratch/l3_M0M1-ph.bin
+Reading file: ./dmrg_scratch/l3_M1-ph.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/r3_O.bin
+Reading file: ./dmrg_scratch/l3_O.bin
+took 0.00265761 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.03711605 sec.
+
+Davidson diagonalization:
+Davidson converged in 1 iterations.
+E_el(0) = -11.70159892
+Took 0.22951495 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32847894 a.u.
+
+Time: 1 minute, 12.457852 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00455996 sec.
+Truncation: M = 900, TRE = -1.32560629e-13
+
+Renormalization of individual right block operators.
+cleaning_phases
+Took 0.09951665 sec.
+Constructing identity on the right block
+
+Iteration   10, Sweep   2:
+==========================
+       <--
++-+-+       +-+-+-+-+-+
+|L|L| S : S |R|R|R|R|R|
++-+-+       +-+-+-+-+-+
+
+Configuration type invoked: backward, left: 2 , right: 5.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 10 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/l2_id.bin
+Reading file: ./dmrg_scratch/l2_M0-opa4.bin
+Reading file: ./dmrg_scratch/l2_M0-opa31u.bin
+Reading file: ./dmrg_scratch/l2_M0-opa31d.bin
+Reading file: ./dmrg_scratch/l2_M0-cpu.bin
+Reading file: ./dmrg_scratch/l2_M0-cpd.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpucpd.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpdcpu.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpucu.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpucd.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpdcu.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpdcd.bin
+Reading file: ./dmrg_scratch/l2_M0-opa1cpu.bin
+Reading file: ./dmrg_scratch/l2_M0-opa1cpd.bin
+Reading file: ./dmrg_scratch/l2_M0-opa1sp.bin
+Reading file: ./dmrg_scratch/l2_M0-opa1sm.bin
+Reading file: ./dmrg_scratch/l2_M0-ph.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpucpu.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpdcpd.bin
+Reading file: ./dmrg_scratch/l2_M1-opa4.bin
+Reading file: ./dmrg_scratch/l2_M0M1-opa4.bin
+Reading file: ./dmrg_scratch/l2_M0-opa31u_i.bin
+Reading file: ./dmrg_scratch/l2_M0-opa31d_i.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpucu_i.bin
+Reading file: ./dmrg_scratch/l2_M0-opa2cpdcd_i.bin
+Reading file: ./dmrg_scratch/l2_M0-ph.bin
+Reading file: ./dmrg_scratch/l2_M0M1-ph.bin
+Reading file: ./dmrg_scratch/l2_M1-ph.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/r4_O.bin
+Reading file: ./dmrg_scratch/l2_O.bin
+took 0.00325457 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.07031680 sec.
+
+Davidson diagonalization:
+Davidson converged in 1 iterations.
+E_el(0) = -11.70159892
+Took 0.20420720 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32847894 a.u.
+
+Time: 1 minute, 12.985658 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.05243730 sec.
+Truncation: M = 1000, TRE = -9.17044218e-14
+
+Renormalization of individual right block operators.
+cleaning_phases
+Took 0.20349467 sec.
+Constructing identity on the right block
+
+Iteration   11, Sweep   3:
+==========================
+     -->
++-+       +-+-+-+-+-+-+
+|L| S : S |R|R|R|R|R|R|
++-+       +-+-+-+-+-+-+
+
+Configuration type invoked: backward, left: 1 , right: 6.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       _xxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 11 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+DEBUG: generating left block ops
+Constructing multiparticlephase on the left block
+DEBUG: generated presummed ops
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/r5_O.bin
+Reading file: ./dmrg_scratch/l1_O.bin
+took 0.00544390 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+took 0.09492582 sec.
+
+Davidson diagonalization:
+Davidson converged in 1 iterations.
+E_el(0) = -11.70159892
+Took 0.15243203 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32847894 a.u.
+
+Time: 1 minute, 13.734936 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00054791 sec.
+Truncation: M = 44, TRE = -4.17443857e-14
+
+Renormalization of individual left block operators.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.01298837 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration   12, Sweep   3:
+==========================
+       -->
++-+-+       +-+-+-+-+-+
+|L|L| S : S |R|R|R|R|R|
++-+-+       +-+-+-+-+-+
+
+Configuration type invoked: backward, left: 2 , right: 5.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 12 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/r5_id.bin
+Reading file: ./dmrg_scratch/r5_M0-opa4.bin
+Reading file: ./dmrg_scratch/r5_M0-opa13u.bin
+Reading file: ./dmrg_scratch/r5_M0-opa13d.bin
+Reading file: ./dmrg_scratch/r5_M0-cu.bin
+Reading file: ./dmrg_scratch/r5_M0-cd.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cucd.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cdcu.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cpucu.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cpdcd.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cpucd.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cpdcu.bin
+Reading file: ./dmrg_scratch/r5_M0-sm.bin
+Reading file: ./dmrg_scratch/r5_M0-sp.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cucu.bin
+Reading file: ./dmrg_scratch/r5_M0-op2cdcd.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/l1_O.bin
+Reading file: ./dmrg_scratch/r5_O.bin
+took 0.00517260 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.06834857 sec.
+
+Davidson diagonalization:
+Davidson converged in 1 iterations.
+E_el(0) = -11.70159892
+Took 0.22503048 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32847894 a.u.
+
+Time: 1 minute, 14.138374 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00175510 sec.
+Truncation: M = 176, TRE = -6.43929354e-14
+
+Renormalization of individual left block operators.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+WIP interaction terms not ready yet!!!
+WIP: Interaction terms not ready yet!!!
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.02780787 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration   13, Sweep   3:
+==========================
+         -->
++-+-+-+       +-+-+-+-+
+|L|L|L| S : S |R|R|R|R|
++-+-+-+       +-+-+-+-+
+
+Configuration type invoked: backward, left: 3 , right: 4.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 13 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/r4_id.bin
+Reading file: ./dmrg_scratch/r4_M0-opa4.bin
+Reading file: ./dmrg_scratch/r4_M0-opa13u.bin
+Reading file: ./dmrg_scratch/r4_M0-opa13d.bin
+Reading file: ./dmrg_scratch/r4_M0-cu.bin
+Reading file: ./dmrg_scratch/r4_M0-cd.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cucd.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cdcu.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cpucu.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cpdcd.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cpucd.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cpdcu.bin
+Reading file: ./dmrg_scratch/r4_M0-sm.bin
+Reading file: ./dmrg_scratch/r4_M0-sp.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cucu.bin
+Reading file: ./dmrg_scratch/r4_M0-op2cdcd.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/l2_O.bin
+Reading file: ./dmrg_scratch/r4_O.bin
+took 0.00297466 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.03737637 sec.
+
+Davidson diagonalization:
+Davidson converged in 1 iterations.
+E_el(0) = -11.70159892
+Took 0.21618790 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32847894 a.u.
+
+Time: 1 minute, 14.482409 seconds 
+
+Formation of the renormalization operator, i.e. eigenvectors of the reduced density matrix.
+Took 0.00424868 sec.
+Truncation: M = 704, TRE = -2.93098879e-14
+
+Renormalization of individual left block operators.
+Forming_missing_pressumed_ops
+Preparing blocking for op version: 0
+Cleaning_op_renorm_tables: 
+Calculating_block_offsets: 
+WIP interaction terms not ready yet!!!
+WIP: Interaction terms not ready yet!!!
+Finshed Calculating_block_offsets: 
+Starting actual blocking
+blocking finished
+renorm_table_cleaned
+nonzero calculated
+op version:0
+everything done
+Took 0.06846385 sec.
+Constructing identity on the left block
+Constructing phase on the left block
+Constructing multiparticlephase on the left block
+
+Iteration   14, Sweep   3:
+==========================
+           -->
++-+-+-+-+       +-+-+-+
+|L|L|L|L| S : S |R|R|R|
++-+-+-+-+       +-+-+-+
+
+Configuration type invoked: backward, left: 4 , right: 3.
+Redefining Hamiltonian for this iteration
+Model 0: rhf       xxxx
+Model 1: photon       x___
+0 
+0 
+0 1 
+3
+DEBUG: adding spin ops to the renormalized operators
+DEBUG: Restarted 0 iter: 14 dmrg.iter: 1 dmrg.print: 0
+creating site operators
+DEBUG: site_ops_generated
+Reading file: ./dmrg_scratch/r3_id.bin
+Reading file: ./dmrg_scratch/r3_M0-opa4.bin
+Reading file: ./dmrg_scratch/r3_M0-opa13u.bin
+Reading file: ./dmrg_scratch/r3_M0-opa13d.bin
+Reading file: ./dmrg_scratch/r3_M0-cu.bin
+Reading file: ./dmrg_scratch/r3_M0-cd.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cucd.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cdcu.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cpucu.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cpdcd.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cpucd.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cpdcu.bin
+Reading file: ./dmrg_scratch/r3_M0-sm.bin
+Reading file: ./dmrg_scratch/r3_M0-sp.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cucu.bin
+Reading file: ./dmrg_scratch/r3_M0-op2cdcd.bin
+Gathering integrals for (multiparticle) partial summations on left block.
+Gathering integrals for (multiparticle) partial summations on right block.
+
+Transforming the solution from the previous iteration for the current initial guess,
+Reading file: ./dmrg_scratch/l3_O.bin
+Reading file: ./dmrg_scratch/r3_O.bin
+took 0.00257325 sec.
+
+Preparing application of the Hamiltonian on a wave function 
+(on-the-fly formation of presummed operators), 
+Preparing Ham table
+Error in calculating left block offset: Multiparticle op must be quadratic!
+took 0.07007015 sec.
+
+Davidson diagonalization:
+Davidson converged in 1 iterations.
+E_el(0) = -11.70159892
+Took 0.38906065 sec.
+
+Total energy:
+-------------
+E_tot(0) = -3006.32847894 a.u., middle of the sweep
+
+Time: 1 minute, 15.142571 seconds 
+
+
+DMRG converged in 3 sweeps!
+
+Final energy:
+-------------
+E_tot(0) = -3006.32847894 a.u.
+Max TRE = -2.93098879e-14
+
+creating site operators
+DEBUG: forming nund tables
+DEBUG: forming n tables
+
+                          Expectation values (in original FCIDUMP ordering): 
++----------------------------------------------------------------------------------------------------+
+
+Warning: Multicomponent expectation values are still under developement and may conatin bugs!
+
+DEBUG: M0-op2smsp x id X id x id
+DEBUG: Calculating offsets:
+DEBUG: M0-sm x M0-sp X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x M0-op2smsp X id x id
+DEBUG: Calculating offsets:
+DEBUG: M0-sm x id X id x M0-sp
+DEBUG: Calculating offsets:
+DEBUG: M0-sm x id X M0-sp x id
+DEBUG: Calculating offsets:
+DEBUG: id x M0-sm X id x M0-sp
+DEBUG: Calculating offsets:
+pink 10 3
+DEBUG: id x M0-sm X M0-sp x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X M0-op2smsp x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X M0-sm x M0-sp
+DEBUG: Calculating offsets:
+pink 01 3
+DEBUG: id x id X id x M0-op2smsp
+Reading file: ./dmrg_scratch/r3_M0-op2smsp.bin
+DEBUG: Calculating offsets:
+pink 00 3
+DEBUG: M0-nd x id X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x M0-nd X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X M0-nd x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X id x M0-nd
+Reading file: ./dmrg_scratch/r3_M0-nd.bin
+DEBUG: Calculating offsets:
+pink 00 3
+DEBUG: M0-op2szsz x id X id x id
+DEBUG: Calculating offsets:
+DEBUG: M0-sz x M0-sz X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x M0-op2szsz X id x id
+DEBUG: Calculating offsets:
+DEBUG: M0-sz x id X M0-sz x id
+DEBUG: Calculating offsets:
+DEBUG: M0-sz x id X id x M0-sz
+Reading file: ./dmrg_scratch/r3_M0-sz.bin
+DEBUG: Calculating offsets:
+DEBUG: id x M0-sz X M0-sz x id
+DEBUG: Calculating offsets:
+DEBUG: id x M0-sz X id x M0-sz
+DEBUG: Calculating offsets:
+pink 10 3
+DEBUG: id x id X M0-op2szsz x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X M0-sz x M0-sz
+DEBUG: Calculating offsets:
+pink 01 3
+DEBUG: id x id X id x M0-op2szsz
+Reading file: ./dmrg_scratch/r3_M0-op2szsz.bin
+DEBUG: Calculating offsets:
+pink 00 3
+DEBUG: M1-n x id X id x id
+DEBUG: Calculating offsets:
+DEBUG: M0-sz x id X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x M0-sz X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X M0-sz x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X id x M0-sz
+DEBUG: Calculating offsets:
+pink 00 3
+DEBUG: M0-nu x id X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x M0-nu X id x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X M0-nu x id
+DEBUG: Calculating offsets:
+DEBUG: id x id X id x M0-nu
+Reading file: ./dmrg_scratch/r3_M0-nu.bin
+DEBUG: Calculating offsets:
+pink 00 3
+
+Expectation values table: 
+
+     mult.            exp_name                               op1             op2             op3                               op4 l.o. r.o.      phl type add_tp
+----------+-------------------+---------------------------------+---------------+---------------+---------------------------------+----+----+--------+----+-------
+    1.0000          M0-op2smsp                        M0-op2smsp              id              id                                id                       2    0
+    1.0000          M0-op2smsp                             M0-sm           M0-sp              id                                id    3                  2    0
+    1.0000          M0-op2smsp                                id      M0-op2smsp              id                                id    3    3             1    0
+    1.0000          M0-op2smsp                             M0-sm              id              id                             M0-sp    0    5             4    0
+    1.0000          M0-op2smsp                             M0-sm              id           M0-sp                                id    4                  2    0
+    1.0000          M0-op2smsp                                id           M0-sm              id                             M0-sp         3             3    0
+    1.0000          M0-op2smsp                                id           M0-sm           M0-sp                                id    3    4             1    0
+    1.0000          M0-op2smsp                                id              id      M0-op2smsp                                id    4    4             1    0
+    1.0000          M0-op2smsp                                id              id           M0-sm                             M0-sp         4             3    0
+    1.0000          M0-op2smsp                                id              id              id                        M0-op2smsp                       3    0
+    1.0000               M0-nd                             M0-nd              id              id                                id                       2    0
+    1.0000               M0-nd                                id           M0-nd              id                                id    3    3             1    0
+    1.0000               M0-nd                                id              id           M0-nd                                id    4    4             1    0
+    1.0000               M0-nd                                id              id              id                             M0-nd                       3    0
+    1.0000          M0-op2szsz                        M0-op2szsz              id              id                                id                       2    0
+    1.0000          M0-op2szsz                             M0-sz           M0-sz              id                                id    3                  2    0
+    1.0000          M0-op2szsz                                id      M0-op2szsz              id                                id    3    3             1    0
+    1.0000          M0-op2szsz                             M0-sz              id           M0-sz                                id    4                  2    0
+    1.0000          M0-op2szsz                             M0-sz              id              id                             M0-sz    0    5             4    0
+    1.0000          M0-op2szsz                                id           M0-sz           M0-sz                                id    3    4             1    0
+    1.0000          M0-op2szsz                                id           M0-sz              id                             M0-sz         3             3    0
+    1.0000          M0-op2szsz                                id              id      M0-op2szsz                                id    4    4             1    0
+    1.0000          M0-op2szsz                                id              id           M0-sz                             M0-sz         4             3    0
+    1.0000          M0-op2szsz                                id              id              id                        M0-op2szsz                       3    0
+    1.0000                M1-n                              M1-n              id              id                                id                       2    0
+    1.0000               M0-sz                             M0-sz              id              id                                id                       2    0
+    1.0000               M0-sz                                id           M0-sz              id                                id    3    3             1    0
+    1.0000               M0-sz                                id              id           M0-sz                                id    4    4             1    0
+    1.0000               M0-sz                                id              id              id                             M0-sz                       3    0
+    1.0000               M0-nu                             M0-nu              id              id                                id                       2    0
+    1.0000               M0-nu                                id           M0-nu              id                                id    3    3             1    0
+    1.0000               M0-nu                                id              id           M0-nu                                id    4    4             1    0
+    1.0000               M0-nu                                id              id              id                             M0-nu                       3    0
+
+Constructing multiparticlephase on the left block
+model 0:
+< Psi(0) | S^2 | Psi(0) > = S * (S + 1) = < SmSp > + < SzSz > + < Sz > = 0.00000000 + 0.00000000 + 0.00000000 = 0.00000000
+Warning: multiparticle occupations are untested and possibly wrong!
+model: 0
+
+< Psi(0) | nu | Psi(0) >
+0.56858939 0.30055495 0.70868102 0.50759839 0.70868509 0.30021742 0.50759598 0.39807777 
+Sum = 4.00000000
+
+< Psi(0) | nd | Psi(0) >
+0.56858939 0.30055495 0.70868102 0.50759839 0.70868509 0.30021743 0.50759597 0.39807777 
+Sum = 4.00000000
+model: 1
+
+< Psi(0) | n | Psi(0) >
+0.00000000 
+Sum = 0.00000000
+
+
+Took 0.11789400 sec.
+
+Cleaning scratch and forming dmrg.tar

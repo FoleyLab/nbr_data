@@ -1,0 +1,7 @@
+mkdir: cannot create directory ‘/scratch/project/open-27-52’: Permission denied
+/var/spool/slurmd/job3354734/slurm_script: line 18: cd: /scratch/project/open-27-52/orca_: No such file or directory
+cp: cannot stat '/inputOrbs.gbw': No such file or directory
+/var/spool/slurmd/job3354734/slurm_script: line 70: /.out: Permission denied
+/var/spool/slurmd/job3354734/slurm_script: line 72: orca_2mkl: command not found
+mv: missing destination file operand after '/scratch/project/open-27-52/orca_'
+Try 'mv --help' for more information.

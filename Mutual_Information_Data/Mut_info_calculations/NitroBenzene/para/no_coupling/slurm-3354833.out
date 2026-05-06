@@ -1,0 +1,9 @@
+cp: cannot stat '/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/inputOrbs.gbw': No such file or directory
+Reading the input file multipole_ORCA.gbw               ... done
+Writing the output file multipole_ORCA.molden.input     ... done
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354833/multipole_ORCA.inp’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354833/multipole_ORCA_property.txt’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354833/multipole_ORCA.prop’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354833/multipole_ORCA.gbw’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354833/multipole_ORCA.molden.input’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354833’: Operation not supported

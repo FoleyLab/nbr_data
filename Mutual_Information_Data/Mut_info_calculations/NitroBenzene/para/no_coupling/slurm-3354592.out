@@ -1,0 +1,32 @@
+PSIO_ERROR: unit = 102, errval = 21
+PSIO_ERROR: 21 (File not opened)
+ You need to open file 102 before you attempt this operation,
+ If you're a user, contact developers immediately. This is a bug.
+ If you're a developer, get yourself some coffee.
+
+Traceback (most recent call last):
+  File "/scratch/project/open-31-30/psi4_3354592/CCSD_multipole.inp", line 57, in <module>
+    E, wfn = psi4.energy('ccsd/6-311G*', return_wfn=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matoumik/.conda/envs/psi4env/lib/python3.12/site-packages/psi4/driver/driver.py", line 525, in energy
+    wfn = procedures['energy'][lowername](lowername, molecule=molecule, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matoumik/.conda/envs/psi4env/lib/python3.12/site-packages/psi4/driver/procrouting/proc.py", line 871, in select_ccsd
+    return func(name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/matoumik/.conda/envs/psi4env/lib/python3.12/site-packages/psi4/driver/procrouting/proc.py", line 2912, in run_ccenergy
+    core.cctransort(ref_wfn)
+RuntimeError: 
+Fatal Error: PSIO_ERROR: 21 (File not opened)
+ You need to open file 102 before you attempt this operation,
+ If you're a user, contact developers immediately. This is a bug.
+ If you're a developer, get yourself some coffee.
+
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1729125657503/work/psi4/src/psi4/libpsio/error.cc on line: 135
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+psi::PSIO::wt_toclen(unsigned long, unsigned long)
+psi::PSIO::write(unsigned long, char const*, char*, unsigned long, psi::psio_address, psi::psio_address*)
+
+cp: cannot stat '/scratch/project/open-31-30/psi4_3354592/FCIDUMP*': No such file or directory

@@ -1,0 +1,56 @@
+import psi4
+from helper_PFCI import PFHamiltonianGenerator
+import numpy as np
+from FCIDUMP_writer import make_permutation
+mol_str = """
+1 1
+symmetry c1
+C                  0.51932475    1.23303451   -0.03194925
+C                  1.94454413    1.26916358   -0.03672882
+C                  2.62037793    0.09283428   -0.02499003
+C                 -0.19603352    0.03013062    0.00102732
+H                 -0.02069420    2.17423764   -0.04336646
+H                  2.48281698    2.20891057   -0.03611879
+H                 -1.27770137    0.03990295    0.01166953
+N                  4.09213475    0.09594076    0.03662979
+O                  4.63930696   -1.02169275    0.14459220
+O                  4.66489883    1.19839699   -0.02327545
+C                  0.49428518   -1.16712649    0.02099746
+H                 -0.03251071   -2.11492669    0.05447935
+C                  1.96291176   -1.21653219   -0.02111314
+H                  2.44359113   -1.96306433    0.61513886
+Br                 2.17304025   -1.94912156   -1.90618750
+"""
+
+options_dict = {
+        "basis": "6-311G*",
+        "scf_type": "pk",
+        "e_convergence": 1e-10,
+        "d_convergence": 1e-10,
+}
+
+cavity_dict = {
+        'omega_value' : 0.06615, 
+        'lambda_vector' : np.array([0.787812,0.551632,0.273959])*0.1,
+        'ci_level' : 'fcidump',
+        'davidson_roots' : 10,
+        'number_of_photons' : 10,
+        'photon_number_basis' : True,
+        'canonical_mos' : True,
+        'coherent_state_basis' : False,
+	'nact_orbs' : 8,
+	'nact_els' : 8,
+        "manual_ordering" : make_permutation([36,45,47,49,50,51,53,59],49,221),   
+	'localize_active_full':True,
+   #     "localize_active" : True,
+}
+
+psi4.set_num_threads(128);
+
+test_pf = PFHamiltonianGenerator(
+        mol_str,
+        options_dict,
+        cavity_dict
+)
+
+

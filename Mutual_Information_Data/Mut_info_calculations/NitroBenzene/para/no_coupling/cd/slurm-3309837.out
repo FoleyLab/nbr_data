@@ -1,0 +1,8 @@
+/home/matoumik/build/qed-ci/src/helper_PFCI.py:816: SyntaxWarning: invalid escape sequence '\l'
+  """
+/home/matoumik/build/qed-ci/src/helper_PFCI.py:1273: SyntaxWarning: invalid escape sequence '\l'
+  """
+/home/matoumik/build/qed-ci/src/helper_PFCI.py:2567: SyntaxWarning: invalid escape sequence '\k'
+  """getting the phase(-1 or 1) for E_pq\ket{I_a} where I_a is an alpha or beta string
+/home/matoumik/build/qed-ci/src/helper_PFCI.py:2581: SyntaxWarning: invalid escape sequence '\k'
+  """getting the sign, string address and pq for sign(pq)E_pq\ket{I_a}

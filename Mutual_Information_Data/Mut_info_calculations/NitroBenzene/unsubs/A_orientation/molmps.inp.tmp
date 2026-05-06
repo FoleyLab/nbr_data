@@ -1,0 +1,33 @@
+#! /bin/bash
+
+# export MOLMPS_NUM_THREADS
+export MOLMPS_NUM_THREADS=128
+
+# export the MOLMPS program directory
+export molmps_dir=/home/matoumik/build/MOLMPS_multi
+
+# export the MOLMPS program working directory
+export molmps_workdir=/home/matoumik/open-34-25/QED-CI/NitroBenzene/unsubs/A_orientation
+
+# export the PATH and LD_LIBRARY_PATH
+export PATH=/home/matoumik/build/MOLMPS_multi:/home/matoumik/bin:/apps/all/XALT/3.0.2/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/apps/all/Anaconda3/2024.02-1/bin:/apps/all/Anaconda3/2024.02-1/condabin:/home/matoumik/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/c3/bin:/sbin:/bin:/opt/slurm/bin:/opt/icommands
+export LD_LIBRARY_PATH=:
+
+mkdir -p /scratch/project/open-31-30/molmps_734785
+cp /home/matoumik/open-34-25/QED-CI/NitroBenzene/unsubs/A_orientation/* /scratch/project/open-31-30/molmps_734785
+cd /scratch/project/open-31-30/molmps_734785
+
+# usefull info to output
+echo > /home/matoumik/open-34-25/QED-CI/NitroBenzene/unsubs/A_orientation/molmps.inp.out
+date >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/unsubs/A_orientation/molmps.inp.out
+hostname >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/unsubs/A_orientation/molmps.inp.out
+echo >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/unsubs/A_orientation/molmps.inp.out
+
+# load modules
+module load imkl
+module load GCC
+
+# run the MOLMPS program
+molmps molmps.inp >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/unsubs/A_orientation/molmps.inp.out
+
+rm -rf /scratch/project/open-31-30/molmps_734785

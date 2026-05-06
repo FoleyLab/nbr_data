@@ -6,7 +6,7 @@ from matplotlib import rcParams
 from scipy.spatial import KDTree
 
 # --- Configuration ---
-MD_FILE = "nitrobenzene_direction_A_wb97x_4000_ts.xyz"  # Your MD output file
+MD_FILE = "nitrobenzene_direction_B_wb97x_4000_ts.xyz"  # Your MD output file
 ENERGY_FILE = "CCSD_Combined_Results.txt"
 AU_TO_KCAL = 627.509
 
@@ -37,7 +37,7 @@ def parse_md_data(filename):
 
 # 1. Load Data
 df_md = parse_md_data(MD_FILE)
-df_grid = pd.read_csv(ENERGY_FILE, delim_whitespace=True, skiprows=[1])
+df_grid = pd.read_csv(ENERGY_FILE, sep='\s+', skiprows=[1])
 
 # 2. Map MD coordinates to Grid points (Nearest Neighbor)
 # Create a KDTree for fast spatial searching

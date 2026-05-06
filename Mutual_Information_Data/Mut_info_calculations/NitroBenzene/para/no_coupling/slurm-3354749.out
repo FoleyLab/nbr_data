@@ -1,0 +1,5 @@
+cp: cannot stat '/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/inputOrbs.gbw': No such file or directory
+/var/spool/slurmd/job3354749/slurm_script: line 75: /home/matousek/bin/testorca/orca: No such file or directory
+/var/spool/slurmd/job3354749/slurm_script: line 77: orca_2mkl: command not found
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/psi4_3354749/QED-CI_test.inp’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/psi4_3354749’: Operation not supported

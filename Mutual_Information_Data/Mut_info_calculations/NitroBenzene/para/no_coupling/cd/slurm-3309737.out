@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/scratch/project/open-31-30/psi4_3309737/QED-CI_test.inp", line 4, in <module>
+    from FCIDDUMP_writer import make_permutation
+ModuleNotFoundError: No module named 'FCIDDUMP_writer'
+cp: cannot stat '/scratch/project/open-31-30/psi4_3309737/FCIDUMP*': No such file or directory
