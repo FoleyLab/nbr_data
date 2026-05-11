@@ -25,8 +25,8 @@ def create_single_map(P, T, data_grid, title, filename, label, vmin=None, vmax=N
 
     # 2. Title and Axes labels
     ax.set_title(title, fontsize=fs_title, fontweight='bold', pad=20)
-    ax.set_xlabel(r'Azimuthal Angle $\phi$ ($^{\circ}$)', fontsize=fs_labels)
-    ax.set_ylabel(r'Polar Angle $\theta$ ($^{\circ}$)', fontsize=fs_labels)
+    ax.set_xlabel(r'Azimuthal Angle $\phi$ (deg.)', fontsize=fs_labels)
+    ax.set_ylabel(r'Polar Angle $\theta$ (deg.)', fontsize=fs_labels)
     
     # 3. Ticks (for both x and y)
     ax.tick_params(axis='both', which='major', labelsize=fs_ticks)
@@ -93,10 +93,10 @@ def plot_energy_diffs():
 
     # 4. Generate Separate Plots
     create_single_map(P, T, diff_om, r'$\Delta E$ (Ortho $-$ Meta)', 
-                      "ortho_meta_diff.png", "kcal/mol")
+                      "ortho_meta_diff_QED_CCSD_22.png", "kcal/mol", vmin=-30, vmax=30)
     
     create_single_map(P, T, diff_pm, r'$\Delta E$ (Para $-$ Meta)', 
-                      "para_meta_diff.png", "kcal/mol", -15, 30)
+                      "para_meta_diff_QED_CCSD_22.png", "kcal/mol", vmin=-30, vmax=30)
 
 if __name__ == "__main__":
     plot_energy_diffs()
