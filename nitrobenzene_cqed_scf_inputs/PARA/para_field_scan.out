@@ -1,0 +1,1281 @@
+Field vector for θ=45°, φ=45.0°: [0.05       0.05       0.07071068]
+Initial RHF energy: -3006.281331 Hartree
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.309929331730 Eh
+Initial CQED-RHF energy: -3010.309929 Hartree
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.336531521172 Eh
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.336531521172 Eh
+0.000000 0.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 24.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 48.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 72.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 96.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 120.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 144.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 168.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 192.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 216.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 240.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 264.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 288.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 312.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 336.000000  0.0000  0.0000  0.1000 -3010.336531521172
+0.000000 360.000000  0.0000  0.0000  0.1000 -3010.336531521172
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.324152454434 Eh
+24.000000 0.000000  0.0407  0.0000  0.0914 -3010.324152454434
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.324441308415 Eh
+24.000000 24.000000  0.0372  0.0165  0.0914 -3010.324441308415
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.325352165200 Eh
+24.000000 48.000000  0.0272  0.0302  0.0914 -3010.325352165200
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.327115524577 Eh
+24.000000 72.000000  0.0126  0.0387  0.0914 -3010.327115524577
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.329707623618 Eh
+24.000000 96.000000 -0.0043  0.0405  0.0914 -3010.329707623618
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.332672755686 Eh
+24.000000 120.000000 -0.0203  0.0352  0.0914 -3010.332672755686
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.335275886477 Eh
+24.000000 144.000000 -0.0329  0.0239  0.0914 -3010.335275886477
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.336799211064 Eh
+24.000000 168.000000 -0.0398  0.0085  0.0914 -3010.336799211064
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.336789950490 Eh
+24.000000 192.000000 -0.0398 -0.0085  0.0914 -3010.336789950490
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.335244655084 Eh
+24.000000 216.000000 -0.0329 -0.0239  0.0914 -3010.335244655084
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.332612683963 Eh
+24.000000 240.000000 -0.0203 -0.0352  0.0914 -3010.332612683963
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.329613544647 Eh
+24.000000 264.000000 -0.0043 -0.0405  0.0914 -3010.329613544647
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.326992825321 Eh
+24.000000 288.000000  0.0126 -0.0387  0.0914 -3010.326992825321
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.325228487219 Eh
+24.000000 312.000000  0.0272 -0.0302  0.0914 -3010.325228487219
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.324361537052 Eh
+24.000000 336.000000  0.0372 -0.0165  0.0914 -3010.324361537052
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.324152454434 Eh
+24.000000 360.000000  0.0407 -0.0000  0.0914 -3010.324152454434
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.308130070372 Eh
+48.000000 0.000000  0.0743  0.0000  0.0669 -3010.308130070372
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.307933677238 Eh
+48.000000 24.000000  0.0679  0.0302  0.0669 -3010.307933677238
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.307884566460 Eh
+48.000000 48.000000  0.0497  0.0552  0.0669 -3010.307884566460
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.309321457417 Eh
+48.000000 72.000000  0.0230  0.0707  0.0669 -3010.309321457417
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.312736508933 Eh
+48.000000 96.000000 -0.0078  0.0739  0.0669 -3010.312736508933
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.317317790131 Eh
+48.000000 120.000000 -0.0372  0.0644  0.0669 -3010.317317790131
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.321690571314 Eh
+48.000000 144.000000 -0.0601  0.0437  0.0669 -3010.321690571314
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.324486075449 Eh
+48.000000 168.000000 -0.0727  0.0155  0.0669 -3010.324486075449
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.324496817683 Eh
+48.000000 192.000000 -0.0727 -0.0155  0.0669 -3010.324496817683
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.321695780805 Eh
+48.000000 216.000000 -0.0601 -0.0437  0.0669 -3010.321695780805
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.317283146713 Eh
+48.000000 240.000000 -0.0372 -0.0644  0.0669 -3010.317283146713
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.312644265729 Eh
+48.000000 264.000000 -0.0078 -0.0739  0.0669 -3010.312644265729
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.309147100073 Eh
+48.000000 288.000000  0.0230 -0.0707  0.0669 -3010.309147100073
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.307659425369 Eh
+48.000000 312.000000  0.0497 -0.0552  0.0669 -3010.307659425369
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.307764859243 Eh
+48.000000 336.000000  0.0679 -0.0302  0.0669 -3010.307764859243
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.308130070370 Eh
+48.000000 360.000000  0.0743 -0.0000  0.0669 -3010.308130070370
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.298836556505 Eh
+72.000000 0.000000  0.0951  0.0000  0.0309 -3010.298836556505
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.297807822949 Eh
+72.000000 24.000000  0.0869  0.0387  0.0309 -3010.297807822949
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.295855190730 Eh
+72.000000 48.000000  0.0636  0.0707  0.0309 -3010.295855190730
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.295302836058 Eh
+72.000000 72.000000  0.0294  0.0905  0.0309 -3010.295302836058
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.297075797925 Eh
+72.000000 96.000000 -0.0099  0.0946  0.0309 -3010.297075797925
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300614302597 Eh
+72.000000 120.000000 -0.0476  0.0824  0.0309 -3010.300614302597
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.304814831018 Eh
+72.000000 144.000000 -0.0769  0.0559  0.0309 -3010.304814831018
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.308017008184 Eh
+72.000000 168.000000 -0.0930  0.0198  0.0309 -3010.308017008184
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.308074280238 Eh
+72.000000 192.000000 -0.0930 -0.0198  0.0309 -3010.308074280238
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.304912086850 Eh
+72.000000 216.000000 -0.0769 -0.0559  0.0309 -3010.304912086850
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300654393083 Eh
+72.000000 240.000000 -0.0476 -0.0824  0.0309 -3010.300654393083
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.297043674114 Eh
+72.000000 264.000000 -0.0099 -0.0946  0.0309 -3010.297043674114
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.295170559640 Eh
+72.000000 288.000000  0.0294 -0.0905  0.0309 -3010.295170559640
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.295635161188 Eh
+72.000000 312.000000  0.0636 -0.0707  0.0309 -3010.295635161188
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.297614687853 Eh
+72.000000 336.000000  0.0869 -0.0387  0.0309 -3010.297614687853
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.298836556504 Eh
+72.000000 360.000000  0.0951 -0.0000  0.0309 -3010.298836556504
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.302310527806 Eh
+96.000000 0.000000  0.0995  0.0000 -0.0105 -3010.302310527806
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300681645581 Eh
+96.000000 24.000000  0.0909  0.0405 -0.0105 -3010.300681645581
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.297099852676 Eh
+96.000000 48.000000  0.0665  0.0739 -0.0105 -3010.297099852676
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.294023402349 Eh
+96.000000 72.000000  0.0307  0.0946 -0.0105 -3010.294023402349
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.292622596905 Eh
+96.000000 96.000000 -0.0104  0.0989 -0.0105 -3010.292622596905
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.293364657731 Eh
+96.000000 120.000000 -0.0497  0.0861 -0.0105 -3010.293364657731
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.295891645070 Eh
+96.000000 144.000000 -0.0805  0.0585 -0.0105 -3010.295891645070
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.298456093248 Eh
+96.000000 168.000000 -0.0973  0.0207 -0.0105 -3010.298456093248
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.298557466786 Eh
+96.000000 192.000000 -0.0973 -0.0207 -0.0105 -3010.298557466786
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.296090208090 Eh
+96.000000 216.000000 -0.0805 -0.0585 -0.0105 -3010.296090208090
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.293505236452 Eh
+96.000000 240.000000 -0.0497 -0.0861 -0.0105 -3010.293505236452
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.292664707078 Eh
+96.000000 264.000000 -0.0104 -0.0989 -0.0105 -3010.292664707078
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.293975524219 Eh
+96.000000 288.000000  0.0307 -0.0946 -0.0105 -3010.293975524219
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.296970746865 Eh
+96.000000 312.000000  0.0665 -0.0739 -0.0105 -3010.296970746865
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300543863163 Eh
+96.000000 336.000000  0.0909 -0.0405 -0.0105 -3010.300543863163
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.302310527805 Eh
+96.000000 360.000000  0.0995 -0.0000 -0.0105 -3010.302310527805
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.316494804305 Eh
+120.000000 0.000000  0.0866  0.0000 -0.0500 -3010.316494804305
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.314816693997 Eh
+120.000000 24.000000  0.0791  0.0352 -0.0500 -3010.314816693997
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.310734992569 Eh
+120.000000 48.000000  0.0579  0.0644 -0.0500 -3010.310734992569
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.306066351538 Eh
+120.000000 72.000000  0.0268  0.0824 -0.0500 -3010.306066351538
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.302181377843 Eh
+120.000000 96.000000 -0.0091  0.0861 -0.0500 -3010.302181377843
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300333218642 Eh
+120.000000 120.000000 -0.0433  0.0750 -0.0500 -3010.300333218642
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300684503175 Eh
+120.000000 144.000000 -0.0701  0.0509 -0.0500 -3010.300684503175
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.301845663269 Eh
+120.000000 168.000000 -0.0847  0.0180 -0.0500 -3010.301845663269
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.301953960769 Eh
+120.000000 192.000000 -0.0847 -0.0180 -0.0500 -3010.301953960769
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300919434558 Eh
+120.000000 216.000000 -0.0701 -0.0509 -0.0500 -3010.300919434558
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.300541518548 Eh
+120.000000 240.000000 -0.0433 -0.0750 -0.0500 -3010.300541518548
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.302292238357 Eh
+120.000000 264.000000 -0.0091 -0.0861 -0.0500 -3010.302292238357
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.306097641564 Eh
+120.000000 288.000000  0.0268 -0.0824 -0.0500 -3010.306097641564
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.310710200327 Eh
+120.000000 312.000000  0.0579 -0.0644 -0.0500 -3010.310710200327
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.314767204843 Eh
+120.000000 336.000000  0.0791 -0.0352 -0.0500 -3010.314767204843
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.316494804306 Eh
+120.000000 360.000000  0.0866 -0.0000 -0.0500 -3010.316494804306
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.332161272498 Eh
+144.000000 0.000000  0.0588  0.0000 -0.0809 -3010.332161272498
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.330970391860 Eh
+144.000000 24.000000  0.0537  0.0239 -0.0809 -3010.330970391860
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.327837471638 Eh
+144.000000 48.000000  0.0393  0.0437 -0.0809 -3010.327837471638
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.323756711121 Eh
+144.000000 72.000000  0.0182  0.0559 -0.0809 -3010.323756711121
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.319886806567 Eh
+144.000000 96.000000 -0.0061  0.0585 -0.0809 -3010.319886806567
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.317234500983 Eh
+144.000000 120.000000 -0.0294  0.0509 -0.0809 -3010.317234500983
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.316081388815 Eh
+144.000000 144.000000 -0.0476  0.0345 -0.0809 -3010.316081388815
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.315891836907 Eh
+144.000000 168.000000 -0.0575  0.0122 -0.0809 -3010.315891836907
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.315961691678 Eh
+144.000000 192.000000 -0.0575 -0.0122 -0.0809 -3010.315961691678
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.316249204077 Eh
+144.000000 216.000000 -0.0476 -0.0345 -0.0809 -3010.316249204077
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.317415540132 Eh
+144.000000 240.000000 -0.0294 -0.0509 -0.0809 -3010.317415540132
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.320020885919 Eh
+144.000000 264.000000 -0.0061 -0.0585 -0.0809 -3010.320020885919
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.323834400809 Eh
+144.000000 288.000000  0.0182 -0.0559 -0.0809 -3010.323834400809
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.327873396714 Eh
+144.000000 312.000000  0.0393 -0.0437 -0.0809 -3010.327873396714
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.330979744968 Eh
+144.000000 336.000000  0.0537 -0.0239 -0.0809 -3010.330979744968
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.332161272495 Eh
+144.000000 360.000000  0.0588 -0.0000 -0.0809 -3010.332161272495
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.338523931425 Eh
+168.000000 0.000000  0.0208  0.0000 -0.0978 -3010.338523931425
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.338140208112 Eh
+168.000000 24.000000  0.0190  0.0085 -0.0978 -3010.338140208112
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.337100953280 Eh
+168.000000 48.000000  0.0139  0.0155 -0.0978 -3010.337100953280
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.335658528786 Eh
+168.000000 72.000000  0.0064  0.0198 -0.0978 -3010.335658528786
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.334138393652 Eh
+168.000000 96.000000 -0.0022  0.0207 -0.0978 -3010.334138393652
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.332834296251 Eh
+168.000000 120.000000 -0.0104  0.0180 -0.0978 -3010.332834296251
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.331929482354 Eh
+168.000000 144.000000 -0.0168  0.0122 -0.0978 -3010.331929482354
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.331486880367 Eh
+168.000000 168.000000 -0.0203  0.0043 -0.0978 -3010.331486880367
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.331504521772 Eh
+168.000000 192.000000 -0.0203 -0.0043 -0.0978 -3010.331504521772
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.331976511422 Eh
+168.000000 216.000000 -0.0168 -0.0122 -0.0978 -3010.331976511422
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.332896407485 Eh
+168.000000 240.000000 -0.0104 -0.0180 -0.0978 -3010.332896407485
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.334200174424 Eh
+168.000000 264.000000 -0.0022 -0.0207 -0.0978 -3010.334200174424
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.335709174429 Eh
+168.000000 288.000000  0.0064 -0.0198 -0.0978 -3010.335709174429
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.337135458121 Eh
+168.000000 312.000000  0.0139 -0.0155 -0.0978 -3010.337135458121
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.338157380131 Eh
+168.000000 336.000000  0.0190 -0.0085 -0.0978 -3010.338157380131
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Dispersion correction energy: 0.002039074696 Eh
+Total energy (CQED + dispersion): -3010.338523931424 Eh
+168.000000 360.000000  0.0208 -0.0000 -0.0978 -3010.338523931424

@@ -1,0 +1,234 @@
+
+  Memory set to  22.352 GiB by Python driver.
+Initializing from geometry string...
+
+1 1
+ C                  0.51932475    1.23303451   -0.03194925
+ C                  1.94454413    1.26916358   -0.03672882
+ C                  2.62037793    0.09283428   -0.02499003
+ C                 -0.19603352    0.03013062    0.00102732
+ H                 -0.02069420    2.17423764   -0.04336646
+ H                  2.48281698    2.20891057   -0.03611879
+ H                 -1.27770137    0.03990295    0.01166953
+ N                  4.09213475    0.09594076    0.03662979
+ O                  4.63930696   -1.02169275    0.14459220
+ O                  4.66489883    1.19839699   -0.02327545
+ C                  0.49428518   -1.16712649    0.02099746
+ H                 -0.03251071   -2.11492669    0.05447935
+ C                  1.96291176   -1.21653219   -0.02111314
+ H                  2.44359113   -1.96306433    0.61513886
+ Br                 2.17304025   -1.94912156   -1.90618750
+units angstrom
+no_reorient
+no_com
+symmetry c1
+
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 540.6511 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.1662 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0801 s
+Gradient computation time: 3.2608 s
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 538.3854 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0547 s
+Quadrupole gradient time: 0.0137 s
+Dipole–dipole gradient time: 0.0737 s
+Gradient computation time: 3.1421 s
+Step    0 | E = -2992.90740525 Ha | |F| = 8.9803e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 543.2747 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0489 s
+Quadrupole gradient time: 0.0135 s
+Dipole–dipole gradient time: 0.0731 s
+Gradient computation time: 3.1355 s
+Step    1 | E = -2992.87756911 Ha | |F| = 9.1583e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 559.7392 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0580 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0799 s
+Gradient computation time: 3.1523 s
+Step    2 | E = -2992.82488827 Ha | |F| = 9.4483e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 535.8279 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0599 s
+Quadrupole gradient time: 0.0137 s
+Dipole–dipole gradient time: 0.0739 s
+Gradient computation time: 3.1475 s
+Step    3 | E = -2992.74533164 Ha | |F| = 9.8259e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 578.8548 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0623 s
+Quadrupole gradient time: 0.0136 s
+Dipole–dipole gradient time: 0.0733 s
+Gradient computation time: 3.1492 s
+Step    4 | E = -2992.63436706 Ha | |F| = 1.0231e+00
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 645.8588 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0550 s
+Quadrupole gradient time: 0.0137 s
+Dipole–dipole gradient time: 0.0772 s
+Gradient computation time: 3.1459 s
+Step    5 | E = -2992.48893597 Ha | |F| = 1.0544e+00
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 676.1464 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0802 s
+Quadrupole gradient time: 0.0142 s
+Dipole–dipole gradient time: 0.0733 s
+Gradient computation time: 3.1677 s
+Step    6 | E = -2992.31127970 Ha | |F| = 1.0589e+00
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 670.1321 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0564 s
+Quadrupole gradient time: 0.0143 s
+Dipole–dipole gradient time: 0.0742 s
+Gradient computation time: 3.1449 s
+Step    7 | E = -2992.11431416 Ha | |F| = 1.0168e+00
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 668.9805 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0465 s
+Quadrupole gradient time: 0.0137 s
+Dipole–dipole gradient time: 0.0777 s
+Gradient computation time: 3.1379 s
+Step    8 | E = -2991.92228443 Ha | |F| = 9.5013e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 667.6681 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0341 s
+Quadrupole gradient time: 0.0136 s
+Dipole–dipole gradient time: 0.0739 s
+Gradient computation time: 3.1216 s
+Step    9 | E = -2991.74961500 Ha | |F| = 9.2165e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 669.9396 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0435 s
+Quadrupole gradient time: 0.0136 s
+Dipole–dipole gradient time: 0.0729 s
+Gradient computation time: 3.1301 s
+Step   10 | E = -2991.59259761 Ha | |F| = 9.2698e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 674.8280 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0400 s
+Quadrupole gradient time: 0.0138 s
+Dipole–dipole gradient time: 0.0730 s
+Gradient computation time: 3.1268 s
+Step   11 | E = -2991.44347702 Ha | |F| = 9.4729e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 667.6514 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0347 s
+Quadrupole gradient time: 0.0137 s
+Dipole–dipole gradient time: 0.0739 s
+Gradient computation time: 3.1223 s
+Step   12 | E = -2991.29686475 Ha | |F| = 9.7336e-01
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 669.6951 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0263 s
+Quadrupole gradient time: 0.0136 s
+Dipole–dipole gradient time: 0.0736 s
+Gradient computation time: 3.1136 s
+Step   13 | E = -2990.73853815 Ha | |F| = 1.2486e+00
+Instantiating SCF time: 0.0000 s
+Starting CQED-RHF SCF calculation...
+Using density fitting for two-electron integrals.
+Using density-fitting auxiliary basis 'cc-pvtz-jkfit' for orbital basis '6-311G*'.
+SCF run time: 671.4988 s
+Instantiating gradient engine time: 0.0000 s
+Psi4 canonical gradient time: 3.0315 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0814 s
+Gradient computation time: 3.1273 s
+Step   14 | E = -2990.47154629 Ha | |F| = 1.3391e+00
+ phi   at step 0 is 37.02 deg
+ theta at step 0 is 73.67 deg
+ phi   at step 1 is 36.98 deg
+ theta at step 1 is 73.67 deg
+ phi   at step 2 is 36.91 deg
+ theta at step 2 is 73.67 deg
+ phi   at step 3 is 36.81 deg
+ theta at step 3 is 73.67 deg
+ phi   at step 4 is 36.69 deg
+ theta at step 4 is 73.67 deg
+ phi   at step 5 is 36.53 deg
+ theta at step 5 is 73.66 deg
+ phi   at step 6 is 36.35 deg
+ theta at step 6 is 73.66 deg
+ phi   at step 7 is 36.13 deg
+ theta at step 7 is 73.65 deg
+ phi   at step 8 is 35.88 deg
+ theta at step 8 is 73.65 deg
+ phi   at step 9 is 35.60 deg
+ theta at step 9 is 73.65 deg
+ phi   at step 10 is 35.29 deg
+ theta at step 10 is 73.66 deg
+ phi   at step 11 is 34.94 deg
+ theta at step 11 is 73.68 deg
+ phi   at step 12 is 34.55 deg
+ theta at step 12 is 73.70 deg
+ phi   at step 13 is 34.13 deg
+ theta at step 13 is 73.73 deg
+ phi   at step 14 is 33.67 deg
+ theta at step 14 is 73.78 deg
+
+Final orientation:
+  phi   = 33.67 deg
+  theta = 73.78 deg
