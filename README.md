@@ -13,6 +13,7 @@ A data repository accompanying the publication:
 | `Energy_Scan_Data/` | Energy data of Wheland intermediates as a function of orientation ($\theta$, $\phi$) in a cavity field. | Formatted data, processing scripts (QED-CCSD and QED-DFT levels). |
 | `Mutual_Information_Data/` | Data for mutual information analysis of Wheland intermediates (inside and outside cavity). | Raw outputs, processed data from QED-DMRG calculations. |
 | `Molecular_Dynamics_Data/` | Data and scripts for the QED-DFT-driven molecular dynamics simulations. | `.xyz` trajectory outputs, processing scripts. |
+| `nitrobenzene_cqed_scf_scripts/` | Driver scripts for various [QED-SCF](https://github.com/FoleyLab/cqed-scf) calculations | `.py` and `.ipynb` scripts. |
 
 ---
 
