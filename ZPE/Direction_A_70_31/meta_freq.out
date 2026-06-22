@@ -1,0 +1,1253 @@
+Starting numerical frequency calculation using full QED-DFT gradients.
+Important: gradients are not projected during finite differences.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7358 s
+Quadrupole gradient time: 0.0156 s
+Dipole–dipole gradient time: 0.0853 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.3748 s
+Quadrupole gradient time: 0.0160 s
+Dipole–dipole gradient time: 0.1027 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 16.0384 s
+Quadrupole gradient time: 0.0150 s
+Dipole–dipole gradient time: 0.1135 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.3074 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0999 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.4434 s
+Quadrupole gradient time: 0.0368 s
+Dipole–dipole gradient time: 0.1542 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.5480 s
+Quadrupole gradient time: 0.0219 s
+Dipole–dipole gradient time: 0.0978 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.8837 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0886 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.4085 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0980 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.4863 s
+Quadrupole gradient time: 0.0160 s
+Dipole–dipole gradient time: 0.1096 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.3774 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0950 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.0302 s
+Quadrupole gradient time: 0.0160 s
+Dipole–dipole gradient time: 0.1094 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.6949 s
+Quadrupole gradient time: 0.0158 s
+Dipole–dipole gradient time: 0.0959 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.0940 s
+Quadrupole gradient time: 0.0226 s
+Dipole–dipole gradient time: 0.1157 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.6144 s
+Quadrupole gradient time: 0.0156 s
+Dipole–dipole gradient time: 0.1196 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 16.7994 s
+Quadrupole gradient time: 0.0207 s
+Dipole–dipole gradient time: 0.1060 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 15.1404 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0937 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.5430 s
+Quadrupole gradient time: 0.0163 s
+Dipole–dipole gradient time: 0.1214 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.4810 s
+Quadrupole gradient time: 0.0235 s
+Dipole–dipole gradient time: 0.1199 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.1463 s
+Quadrupole gradient time: 0.0219 s
+Dipole–dipole gradient time: 0.1154 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.6825 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0998 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.1407 s
+Quadrupole gradient time: 0.0155 s
+Dipole–dipole gradient time: 0.1056 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.0491 s
+Quadrupole gradient time: 0.0169 s
+Dipole–dipole gradient time: 0.0925 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.2961 s
+Quadrupole gradient time: 0.0156 s
+Dipole–dipole gradient time: 0.0902 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.9255 s
+Quadrupole gradient time: 0.0167 s
+Dipole–dipole gradient time: 0.0976 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.9631 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0989 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.0900 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0919 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.9139 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0979 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.1037 s
+Quadrupole gradient time: 0.0152 s
+Dipole–dipole gradient time: 0.1002 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.7938 s
+Quadrupole gradient time: 0.0155 s
+Dipole–dipole gradient time: 0.0884 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.0867 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.1049 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.1002 s
+Quadrupole gradient time: 0.0161 s
+Dipole–dipole gradient time: 0.0991 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.2111 s
+Quadrupole gradient time: 0.0166 s
+Dipole–dipole gradient time: 0.0990 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.8885 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0901 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.0822 s
+Quadrupole gradient time: 0.0155 s
+Dipole–dipole gradient time: 0.1070 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 14.0946 s
+Quadrupole gradient time: 0.0234 s
+Dipole–dipole gradient time: 0.0976 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9386 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0880 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.0689 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.1019 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.9338 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0773 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.3156 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0756 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8025 s
+Quadrupole gradient time: 0.0164 s
+Dipole–dipole gradient time: 0.0789 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8010 s
+Quadrupole gradient time: 0.0143 s
+Dipole–dipole gradient time: 0.0727 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8060 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0714 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8306 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0792 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8863 s
+Quadrupole gradient time: 0.0142 s
+Dipole–dipole gradient time: 0.0740 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8365 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0799 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.7941 s
+Quadrupole gradient time: 0.0143 s
+Dipole–dipole gradient time: 0.0795 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8076 s
+Quadrupole gradient time: 0.0142 s
+Dipole–dipole gradient time: 0.0736 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 11.8156 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0808 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2656 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.1101 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.0002 s
+Quadrupole gradient time: 0.0174 s
+Dipole–dipole gradient time: 0.1045 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.0161 s
+Quadrupole gradient time: 0.0159 s
+Dipole–dipole gradient time: 0.0896 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.1868 s
+Quadrupole gradient time: 0.0156 s
+Dipole–dipole gradient time: 0.0813 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9502 s
+Quadrupole gradient time: 0.0165 s
+Dipole–dipole gradient time: 0.0851 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9183 s
+Quadrupole gradient time: 0.0164 s
+Dipole–dipole gradient time: 0.0799 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9282 s
+Quadrupole gradient time: 0.0152 s
+Dipole–dipole gradient time: 0.0865 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.0976 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0778 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9307 s
+Quadrupole gradient time: 0.0160 s
+Dipole–dipole gradient time: 0.1075 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9059 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0989 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9682 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0763 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8537 s
+Quadrupole gradient time: 0.0177 s
+Dipole–dipole gradient time: 0.0882 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9175 s
+Quadrupole gradient time: 0.0185 s
+Dipole–dipole gradient time: 0.0914 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8659 s
+Quadrupole gradient time: 0.0168 s
+Dipole–dipole gradient time: 0.1050 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.3274 s
+Quadrupole gradient time: 0.0160 s
+Dipole–dipole gradient time: 0.0792 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8257 s
+Quadrupole gradient time: 0.0148 s
+Dipole–dipole gradient time: 0.0921 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8549 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0795 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8150 s
+Quadrupole gradient time: 0.0160 s
+Dipole–dipole gradient time: 0.1064 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7513 s
+Quadrupole gradient time: 0.0151 s
+Dipole–dipole gradient time: 0.0867 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8255 s
+Quadrupole gradient time: 0.0155 s
+Dipole–dipole gradient time: 0.0988 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7538 s
+Quadrupole gradient time: 0.0149 s
+Dipole–dipole gradient time: 0.0875 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8045 s
+Quadrupole gradient time: 0.0152 s
+Dipole–dipole gradient time: 0.0818 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7011 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.1115 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7919 s
+Quadrupole gradient time: 0.0151 s
+Dipole–dipole gradient time: 0.0854 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7521 s
+Quadrupole gradient time: 0.0162 s
+Dipole–dipole gradient time: 0.0827 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7262 s
+Quadrupole gradient time: 0.0173 s
+Dipole–dipole gradient time: 0.0976 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7014 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0929 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6583 s
+Quadrupole gradient time: 0.0159 s
+Dipole–dipole gradient time: 0.0806 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5479 s
+Quadrupole gradient time: 0.0144 s
+Dipole–dipole gradient time: 0.0801 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.0270 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0836 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.0227 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.1039 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9004 s
+Quadrupole gradient time: 0.0155 s
+Dipole–dipole gradient time: 0.1037 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 13.0395 s
+Quadrupole gradient time: 0.0155 s
+Dipole–dipole gradient time: 0.0834 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7832 s
+Quadrupole gradient time: 0.0150 s
+Dipole–dipole gradient time: 0.0836 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8666 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0904 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9692 s
+Quadrupole gradient time: 0.0174 s
+Dipole–dipole gradient time: 0.1087 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8570 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0783 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9693 s
+Quadrupole gradient time: 0.0150 s
+Dipole–dipole gradient time: 0.0874 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7730 s
+Quadrupole gradient time: 0.0168 s
+Dipole–dipole gradient time: 0.0861 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8391 s
+Quadrupole gradient time: 0.0180 s
+Dipole–dipole gradient time: 0.1066 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8372 s
+Quadrupole gradient time: 0.0151 s
+Dipole–dipole gradient time: 0.0879 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8093 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0781 s
+No dispersion correction applied.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8859 s
+Quadrupole gradient time: 0.0155 s
+Dipole–dipole gradient time: 0.1037 s
+No dispersion correction applied.
+
+--------------------------------------------------
+ASE FREQUENCY SUMMARY FROM RAW CARTESIAN HESSIAN
+--------------------------------------------------
+---------------------
+  #    meV     cm^-1
+---------------------
+  0    3.0i     24.2i
+  1    1.7i     13.7i
+  2    0.3i      2.5i
+  3    0.0i      0.2i
+  4    0.1       1.1
+  5    1.7      13.5
+  6    8.6      69.4
+  7   10.5      84.5
+  8   15.3     123.6
+  9   24.2     195.0
+ 10   32.9     265.3
+ 11   40.6     327.3
+ 12   46.8     377.4
+ 13   48.5     391.4
+ 14   58.6     472.3
+ 15   71.1     573.7
+ 16   76.2     614.6
+ 17   83.4     672.9
+ 18   87.7     707.4
+ 19   94.4     761.4
+ 20  105.9     854.2
+ 21  110.9     894.8
+ 22  119.0     959.9
+ 23  122.8     990.3
+ 24  128.0    1032.2
+ 25  131.4    1059.5
+ 26  134.8    1087.5
+ 27  138.2    1114.9
+ 28  140.5    1133.3
+ 29  145.9    1176.8
+ 30  148.3    1195.8
+ 31  153.0    1234.4
+ 32  169.1    1363.7
+ 33  179.5    1448.0
+ 34  184.3    1486.8
+ 35  185.9    1499.5
+ 36  187.3    1510.5
+ 37  204.4    1648.6
+ 38  215.0    1734.4
+ 39  224.0    1806.4
+ 40  398.7    3216.1
+ 41  405.2    3268.5
+ 42  407.0    3282.8
+ 43  410.2    3308.5
+ 44  411.2    3316.4
+---------------------
+Zero-point energy: 2.931 eV
+Projected ZPE / eV     = 2.9296747990338363
+Projected ZPE / Hartree = 0.10766356393644823
+
+--------------------------------------------------
+LOCKED-MOLECULE PROJECTED FREQUENCY SUMMARY
+--------------------------------------------------
+Rigid-body projector rank: 6
+Rigid-body singular values:
+[2514.66549139 2323.59682106 1378.73567877  608.33683599  608.33683599
+  608.33683599]
+
+All projected mass-weighted Hessian frequencies / cm^-1:
+   0       -0.00003399
+   1       -0.00001794
+   2       -0.00001404
+   3        0.00000415
+   4        0.00002726
+   5        0.00004067
+   6       69.13740098
+   7       83.56867070
+   8      123.54212228
+   9      194.91128171
+  10      265.34232969
+  11      327.32029418
+  12      377.38535241
+  13      391.39878076
+  14      472.28226343
+  15      573.71685341
+  16      614.64617888
+  17      672.92665265
+  18      707.39926878
+  19      761.43610979
+  20      854.24189684
+  21      894.80513093
+  22      959.88825715
+  23      990.28273663
+  24     1032.24593061
+  25     1059.48393250
+  26     1087.47839363
+  27     1114.86904585
+  28     1133.32971701
+  29     1176.84639276
+  30     1195.83883535
+  31     1234.35380319
+  32     1363.70550243
+  33     1447.99521733
+  34     1486.83196681
+  35     1499.53485434
+  36     1510.49595044
+  37     1648.56379552
+  38     1734.43972669
+  39     1806.40067652
+  40     3216.06520811
+  41     3268.49339450
+  42     3282.75560668
+  43     3308.49509303
+  44     3316.38701565
+
+Nonzero vibrational frequencies / cm^-1:
+   0       69.13740098
+   1       83.56867070
+   2      123.54212228
+   3      194.91128171
+   4      265.34232969
+   5      327.32029418
+   6      377.38535241
+   7      391.39878076
+   8      472.28226343
+   9      573.71685341
+  10      614.64617888
+  11      672.92665265
+  12      707.39926878
+  13      761.43610979
+  14      854.24189684
+  15      894.80513093
+  16      959.88825715
+  17      990.28273663
+  18     1032.24593061
+  19     1059.48393250
+  20     1087.47839363
+  21     1114.86904585
+  22     1133.32971701
+  23     1176.84639276
+  24     1195.83883535
+  25     1234.35380319
+  26     1363.70550243
+  27     1447.99521733
+  28     1486.83196681
+  29     1499.53485434
+  30     1510.49595044
+  31     1648.56379552
+  32     1734.43972669
+  33     1806.40067652
+  34     3216.06520811
+  35     3268.49339450
+  36     3282.75560668
+  37     3308.49509303
+  38     3316.38701565
+
+Saved:
+  meta_H_cart_au.npy
+  meta_H_mw.npy
+  meta_H_locked_mw.npy
+  meta_projected_freq_cm.npy
+  ASE mode trajectory files

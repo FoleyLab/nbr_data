@@ -3,17 +3,12 @@ import shutil
 import numpy as np
 import psi4
 from concurrent.futures import ProcessPoolExecutor
-# Import your specific calculator
 from cqed_scf.calculator import CQEDCalculator
 
 # --- Configuration ---
 NUM_CORES = 16
-NUM_THETA = 42
-NUM_PHI = 42
 MEM_PER_CORE = "4 GB"
-
-OUTPUT_FILE = "nitrobromo_wb97x_d_dense_field_scan_combined.txt"
-
+OUTPUT_FILE = "para_meta_refinement_scan.txt"
 
 # ----------------------------
 # Molecular Geometries
@@ -36,28 +31,6 @@ GEOMS = {
          C           -1.267906576797    -0.015841805469     0.712127418697
          H           -2.116520796797    -0.025293215469     1.403161498697
          BR          -2.114966986797    -0.034666925469    -1.121874081303
-units angstrom
-no_reorient
-no_com
-symmetry c1
-""",
-    "ortho": """
-1 1
-C           -1.804928163307     1.957993763262     0.703312273806
-C           -0.379708783307     1.994122833262     0.698532703806
-C            0.296125016693     0.817793533262     0.710271493806
-C           -2.520286433307     0.755089873262     0.736288843806
-H           -2.344947113307     2.899196893262     0.691895063806
-H            0.158564066693     2.933869823262     0.699142733806
-H           -3.601954283307     0.764862203262     0.746931053806
-N            1.767881836693     0.820900013262     0.771891313806
-O            2.315054046693    -0.296733496738     0.879853723806
-O            2.340645916693     1.923356243262     0.711986073806
-C           -1.829967733307    -0.442167236738     0.756258983806
-H           -2.356763623307    -1.389967436738     0.789740873806
-C           -0.361341153307    -0.491572936738     0.714148383806
-H            0.119338216693    -1.238105076738     1.350400383806
-BR          -0.151212663307    -1.224162306738    -1.170925976194
 units angstrom
 no_reorient
 no_com
@@ -96,24 +69,16 @@ psi4_options = {
     "dft_spherical_points": 590,
 }
 
-# ----------------------------
-# Worker Function
-# ----------------------------
 def run_point(task):
     theta, phi, worker_id = task
-    
-    # 1. Setup Isolated Scratch Directory
-    scratch_path = f"/tmp/psi_work_{worker_id}"
+    scratch_path = f"/tmp/psi_work_pm_{worker_id}"
     os.makedirs(scratch_path, exist_ok=True)
-    
-    # 2. Configure Psi4 - FIXED SYNTAX
+
     psi4.core.IOManager.shared_object().set_default_path(scratch_path)
     psi4.set_memory(MEM_PER_CORE)
     psi4.core.set_num_threads(1)
-    # Redirect output to the scratch dir to avoid mixing up logs
     psi4.core.set_output_file(os.path.join(scratch_path, "output.dat"), False)
 
-    # 3. Field Vector Generation
     theta_rad, phi_rad = np.radians(theta), np.radians(phi)
     field_vec = np.array([
         np.sin(theta_rad) * np.cos(phi_rad),
@@ -123,11 +88,9 @@ def run_point(task):
 
     results = {"theta": theta, "phi": phi, "vec": field_vec, "energies": {}}
 
-    # 4. Calculate for each geometry
     for name, geom_string in GEOMS.items():
         try:
-            # We re-initialize the calculator to ensure it picks up the local psi4 settings
-            calc = CQEDRHFCalculator(
+            calc = CQEDCalculator(
                 lambda_vector=field_vec,
                 psi4_options=psi4_options,
                 omega=0.06615,
@@ -136,23 +99,19 @@ def run_point(task):
                 functional="wb97x",
             )
             results["energies"][name] = calc.energy(geom_string)
-            psi4.core.clean() 
+            psi4.core.clean()
         except Exception as e:
             results["energies"][name] = np.nan
             print(f"Error at {theta}, {phi} for {name}: {e}")
 
-    # OPTIONAL: Cleanup scratch files immediately to save space
     shutil.rmtree(scratch_path, ignore_errors=True)
-    
     return results
 
-# ----------------------------
-# Main Execution Block
-# ----------------------------
 if __name__ == "__main__":
-    theta_list = np.linspace(45, 90, NUM_THETA)
-    phi_list = np.linspace(15, 75, NUM_PHI)
-    
+    # Target: 63, 63 over +/- 10 degrees with 1-degree intervals (21 points per dimension)
+    theta_list = np.linspace(53, 73, 21)
+    phi_list = np.linspace(53, 73, 21)
+
     tasks = []
     counter = 0
     for t in theta_list:
@@ -162,17 +121,13 @@ if __name__ == "__main__":
 
     print(f"Submitting {len(tasks)} points to {NUM_CORES} cores...")
 
-    all_data = []
-    # We use ProcessPoolExecutor to truly utilize the 24 cores of the M2 Ultra
     with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
         all_data = list(executor.map(run_point, tasks))
 
-    # Sort results
     all_data.sort(key=lambda x: (x["theta"], x["phi"]))
 
-    # 5. Write Combined Output
     with open(OUTPUT_FILE, "w") as f:
-        header = f"{'Theta':>10} {'Phi':>10} {'Ex':>12} {'Ey':>12} {'Ez':>12} {'Para_E':>20} {'Ortho_E':>20} {'Meta_E':>20}\n"
+        header = f"{'Theta':>10} {'Phi':>10} {'Ex':>12} {'Ey':>12} {'Ez':>12} {'Para_E':>20} {'Meta_E':>20}\n"
         f.write(header)
         f.write("-" * len(header) + "\n")
 
@@ -180,10 +135,9 @@ if __name__ == "__main__":
             t, p = d["theta"], d["phi"]
             vx, vy, vz = d["vec"]
             e_p = d["energies"].get("para", np.nan)
-            e_o = d["energies"].get("ortho", np.nan)
             e_m = d["energies"].get("meta", np.nan)
-            
-            line = f"{t:10.3f} {p:10.3f} {vx:12.6f} {vy:12.6f} {vz:12.6f} {e_p:20.12f} {e_o:20.12f} {e_m:20.12f}\n"
+
+            line = f"{t:10.3f} {p:10.3f} {vx:12.6f} {vy:12.6f} {vz:12.6f} {e_p:20.12f} {e_m:20.12f}\n"
             f.write(line)
 
     print(f"Scan complete. Data written to {OUTPUT_FILE}")
