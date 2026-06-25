@@ -1,0 +1,1190 @@
+Phase 1: Starting ASE Geometry Optimization with PROJECTED forces...
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2536 s
+Quadrupole gradient time: 0.0145 s
+Dipole–dipole gradient time: 0.0793 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.12181374249859213
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.219254e-01
+projected |grad| = 1.218137e-01
+raw |net force|  = 2.677168e-05
+proj |net force| = 2.030442e-17
+raw |torque|     = 3.180674e-02
+proj |torque|    = 6.088855e-17
+---------------------------------------
+
+Energy before optimization: -3010.3083395091 Ha
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2861 s
+Quadrupole gradient time: 0.0150 s
+Dipole–dipole gradient time: 0.0872 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.07946379380520754
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 7.958354e-02
+projected |grad| = 7.946379e-02
+raw |net force|  = 2.018910e-05
+proj |net force| = 9.381952e-18
+raw |torque|     = 2.959819e-02
+proj |torque|    = 2.902748e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.4814 s
+Quadrupole gradient time: 0.0151 s
+Dipole–dipole gradient time: 0.0861 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.022774096666322286
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 2.303537e-02
+projected |grad| = 2.277410e-02
+raw |net force|  = 2.707201e-05
+proj |net force| = 2.124594e-18
+raw |torque|     = 3.024345e-02
+proj |torque|    = 1.939480e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.0351 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0775 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.020364436077953428
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 2.050654e-02
+projected |grad| = 2.036444e-02
+raw |net force|  = 2.000717e-05
+proj |net force| = 1.902767e-18
+raw |torque|     = 3.015509e-02
+proj |torque|    = 1.450077e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.1130 s
+Quadrupole gradient time: 0.0146 s
+Dipole–dipole gradient time: 0.0730 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.019159214053123673
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.892313e-02
+projected |grad| = 1.915921e-02
+raw |net force|  = 1.615341e-05
+proj |net force| = 4.712228e-18
+raw |torque|     = 2.995827e-02
+proj |torque|    = 1.617025e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.3398 s
+Quadrupole gradient time: 0.0163 s
+Dipole–dipole gradient time: 0.0851 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.010077432685112946
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 9.775111e-03
+projected |grad| = 1.007743e-02
+raw |net force|  = 1.350824e-05
+proj |net force| = 1.582341e-18
+raw |torque|     = 2.974875e-02
+proj |torque|    = 1.612366e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2596 s
+Quadrupole gradient time: 0.0149 s
+Dipole–dipole gradient time: 0.0829 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.008491946298929593
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 8.397592e-03
+projected |grad| = 8.491946e-03
+raw |net force|  = 2.047917e-05
+proj |net force| = 6.505213e-19
+raw |torque|     = 2.941852e-02
+proj |torque|    = 1.722210e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.1503 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0766 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.008198781598624253
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 8.241731e-03
+projected |grad| = 8.198782e-03
+raw |net force|  = 3.151375e-05
+proj |net force| = 2.759928e-18
+raw |torque|     = 2.916447e-02
+proj |torque|    = 1.631931e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6534 s
+Quadrupole gradient time: 0.0148 s
+Dipole–dipole gradient time: 0.0854 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.007849619641400293
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 8.112697e-03
+projected |grad| = 7.849620e-03
+raw |net force|  = 4.801338e-05
+proj |net force| = 8.940560e-19
+raw |torque|     = 2.883372e-02
+proj |torque|    = 1.927808e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5655 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0907 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.008446134415062326
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 8.856775e-03
+projected |grad| = 8.446134e-03
+raw |net force|  = 5.725401e-05
+proj |net force| = 2.598129e-18
+raw |torque|     = 2.856125e-02
+proj |torque|    = 9.908445e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.4177 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0842 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.00894986298717093
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 9.490073e-03
+projected |grad| = 8.949863e-03
+raw |net force|  = 6.490504e-05
+proj |net force| = 2.124594e-18
+raw |torque|     = 2.832671e-02
+proj |torque|    = 2.401844e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6156 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0821 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.008952070903381772
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 9.597119e-03
+projected |grad| = 8.952071e-03
+raw |net force|  = 6.418904e-05
+proj |net force| = 2.603214e-18
+raw |torque|     = 2.817928e-02
+proj |torque|    = 1.720879e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6688 s
+Quadrupole gradient time: 0.0236 s
+Dipole–dipole gradient time: 0.0830 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.009342648593144777
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.001712e-02
+projected |grad| = 9.342649e-03
+raw |net force|  = 6.069719e-05
+proj |net force| = 1.625625e-18
+raw |torque|     = 2.807322e-02
+proj |torque|    = 9.875320e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6086 s
+Quadrupole gradient time: 0.0152 s
+Dipole–dipole gradient time: 0.0799 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.011385663003383643
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.198039e-02
+projected |grad| = 1.138566e-02
+raw |net force|  = 5.275587e-05
+proj |net force| = 1.868480e-18
+raw |torque|     = 2.790425e-02
+proj |torque|    = 4.358439e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2671 s
+Quadrupole gradient time: 0.0146 s
+Dipole–dipole gradient time: 0.0860 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.014640229689177634
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.512079e-02
+projected |grad| = 1.464023e-02
+raw |net force|  = 4.358137e-05
+proj |net force| = 2.840217e-18
+raw |torque|     = 2.751126e-02
+proj |torque|    = 1.016147e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6247 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0836 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.01670469855933369
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.711017e-02
+projected |grad| = 1.670470e-02
+raw |net force|  = 3.402373e-05
+proj |net force| = 2.417218e-18
+raw |torque|     = 2.673637e-02
+proj |torque|    = 2.732189e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5583 s
+Quadrupole gradient time: 0.0148 s
+Dipole–dipole gradient time: 0.0844 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.013572204069233153
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.390255e-02
+projected |grad| = 1.357220e-02
+raw |net force|  = 4.504344e-05
+proj |net force| = 3.226555e-18
+raw |torque|     = 2.602307e-02
+proj |torque|    = 3.172991e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6766 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0859 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.011544108346845177
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.190407e-02
+projected |grad| = 1.154411e-02
+raw |net force|  = 4.497046e-05
+proj |net force| = 3.836395e-18
+raw |torque|     = 2.524760e-02
+proj |torque|    = 1.234277e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6963 s
+Quadrupole gradient time: 0.0149 s
+Dipole–dipole gradient time: 0.0780 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.01070231682059266
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.089223e-02
+projected |grad| = 1.070232e-02
+raw |net force|  = 3.173683e-05
+proj |net force| = 3.890236e-18
+raw |torque|     = 2.486504e-02
+proj |torque|    = 8.846053e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5529 s
+Quadrupole gradient time: 0.0152 s
+Dipole–dipole gradient time: 0.0895 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.015203928540940102
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 1.541034e-02
+projected |grad| = 1.520393e-02
+raw |net force|  = 2.827370e-05
+proj |net force| = 5.082776e-18
+raw |torque|     = 2.412992e-02
+proj |torque|    = 1.423116e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6277 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0744 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.009112328355294946
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 9.329042e-03
+projected |grad| = 9.112328e-03
+raw |net force|  = 3.321345e-05
+proj |net force| = 1.788112e-18
+raw |torque|     = 2.422080e-02
+proj |torque|    = 7.746547e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.3023 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0817 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.006772492134758307
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 6.852498e-03
+projected |grad| = 6.772492e-03
+raw |net force|  = 3.632648e-05
+proj |net force| = 1.045567e-18
+raw |torque|     = 2.410398e-02
+proj |torque|    = 8.951072e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.4911 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0773 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.006878837651905399
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 6.928897e-03
+projected |grad| = 6.878838e-03
+raw |net force|  = 2.971878e-05
+proj |net force| = 1.041342e-18
+raw |torque|     = 2.380342e-02
+proj |torque|    = 9.096967e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7001 s
+Quadrupole gradient time: 0.0145 s
+Dipole–dipole gradient time: 0.0776 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.006612227930461339
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 6.754061e-03
+projected |grad| = 6.612228e-03
+raw |net force|  = 2.299191e-05
+proj |net force| = 3.288548e-18
+raw |torque|     = 2.336142e-02
+proj |torque|    = 1.128404e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5306 s
+Quadrupole gradient time: 0.0149 s
+Dipole–dipole gradient time: 0.0808 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.005472395862933389
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 5.866489e-03
+projected |grad| = 5.472396e-03
+raw |net force|  = 1.824690e-05
+proj |net force| = 1.857636e-18
+raw |torque|     = 2.298636e-02
+proj |torque|    = 1.784064e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8976 s
+Quadrupole gradient time: 0.0151 s
+Dipole–dipole gradient time: 0.0784 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0044759397497733215
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 5.234032e-03
+projected |grad| = 4.475940e-03
+raw |net force|  = 1.545966e-05
+proj |net force| = 1.850305e-18
+raw |torque|     = 2.278650e-02
+proj |torque|    = 1.496042e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7431 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0923 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.004222159107385956
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 5.226126e-03
+projected |grad| = 4.222159e-03
+raw |net force|  = 1.645873e-05
+proj |net force| = 7.047314e-19
+raw |torque|     = 2.273317e-02
+proj |torque|    = 1.397412e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.4301 s
+Quadrupole gradient time: 0.0151 s
+Dipole–dipole gradient time: 0.0875 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.004666687635456953
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 5.717258e-03
+projected |grad| = 4.666688e-03
+raw |net force|  = 2.154254e-05
+proj |net force| = 1.749287e-18
+raw |torque|     = 2.283822e-02
+proj |torque|    = 1.187118e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6597 s
+Quadrupole gradient time: 0.0146 s
+Dipole–dipole gradient time: 0.0827 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.00450744940857981
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 5.658522e-03
+projected |grad| = 4.507449e-03
+raw |net force|  = 2.604690e-05
+proj |net force| = 6.792507e-19
+raw |torque|     = 2.286847e-02
+proj |torque|    = 6.329364e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6326 s
+Quadrupole gradient time: 0.0148 s
+Dipole–dipole gradient time: 0.0750 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.003767767085761495
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 5.009010e-03
+projected |grad| = 3.767767e-03
+raw |net force|  = 3.066337e-05
+proj |net force| = 1.383686e-18
+raw |torque|     = 2.301720e-02
+proj |torque|    = 1.842027e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6765 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0861 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0026494167235881555
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 4.134254e-03
+projected |grad| = 2.649417e-03
+raw |net force|  = 3.032171e-05
+proj |net force| = 1.445633e-18
+raw |torque|     = 2.292389e-02
+proj |torque|    = 2.647430e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8084 s
+Quadrupole gradient time: 0.0158 s
+Dipole–dipole gradient time: 0.0817 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0025259333583473095
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.979776e-03
+projected |grad| = 2.525933e-03
+raw |net force|  = 2.907727e-05
+proj |net force| = 9.502245e-19
+raw |torque|     = 2.280724e-02
+proj |torque|    = 2.154836e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.9069 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0848 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0026651189167447666
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 4.045670e-03
+projected |grad| = 2.665119e-03
+raw |net force|  = 2.841096e-05
+proj |net force| = 4.938776e-19
+raw |torque|     = 2.270235e-02
+proj |torque|    = 1.493840e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.4694 s
+Quadrupole gradient time: 0.0146 s
+Dipole–dipole gradient time: 0.0843 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.002767649781319508
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 4.111452e-03
+projected |grad| = 2.767650e-03
+raw |net force|  = 2.799097e-05
+proj |net force| = 9.606056e-19
+raw |torque|     = 2.257668e-02
+proj |torque|    = 5.284860e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5716 s
+Quadrupole gradient time: 0.0150 s
+Dipole–dipole gradient time: 0.0801 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0025432958545905473
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.968784e-03
+projected |grad| = 2.543296e-03
+raw |net force|  = 2.803695e-05
+proj |net force| = 9.667047e-19
+raw |torque|     = 2.249887e-02
+proj |torque|    = 7.066470e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2431 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0784 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0022604622778766713
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.786061e-03
+projected |grad| = 2.260462e-03
+raw |net force|  = 2.825750e-05
+proj |net force| = 8.673882e-19
+raw |torque|     = 2.244673e-02
+proj |torque|    = 3.961750e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6696 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0842 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.00219006627209637
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.716897e-03
+projected |grad| = 2.190066e-03
+raw |net force|  = 2.835935e-05
+proj |net force| = 9.046756e-19
+raw |torque|     = 2.238833e-02
+proj |torque|    = 5.403908e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6228 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0848 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0022585910910727465
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.715722e-03
+projected |grad| = 2.258591e-03
+raw |net force|  = 2.805573e-05
+proj |net force| = 1.634415e-18
+raw |torque|     = 2.228373e-02
+proj |torque|    = 3.956967e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7789 s
+Quadrupole gradient time: 0.0149 s
+Dipole–dipole gradient time: 0.0859 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0023169418619300186
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.709032e-03
+projected |grad| = 2.316942e-03
+raw |net force|  = 2.739217e-05
+proj |net force| = 5.788056e-19
+raw |torque|     = 2.212886e-02
+proj |torque|    = 8.978117e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6789 s
+Quadrupole gradient time: 0.0152 s
+Dipole–dipole gradient time: 0.0841 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0023603888775612387
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.706711e-03
+projected |grad| = 2.360389e-03
+raw |net force|  = 2.670043e-05
+proj |net force| = 8.940560e-19
+raw |torque|     = 2.193910e-02
+proj |torque|    = 4.413715e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5833 s
+Quadrupole gradient time: 0.0154 s
+Dipole–dipole gradient time: 0.0845 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0024057968392089857
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.720199e-03
+projected |grad| = 2.405797e-03
+raw |net force|  = 2.645824e-05
+proj |net force| = 4.543635e-19
+raw |torque|     = 2.174315e-02
+proj |torque|    = 1.143567e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5255 s
+Quadrupole gradient time: 0.0148 s
+Dipole–dipole gradient time: 0.0789 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0022264511807975574
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.600469e-03
+projected |grad| = 2.226451e-03
+raw |net force|  = 2.677005e-05
+proj |net force| = 8.499282e-19
+raw |torque|     = 2.158174e-02
+proj |torque|    = 7.073952e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2813 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0802 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0016713298756876455
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.274167e-03
+projected |grad| = 1.671330e-03
+raw |net force|  = 2.745488e-05
+proj |net force| = 9.463508e-19
+raw |torque|     = 2.151902e-02
+proj |torque|    = 9.929777e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.8163 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0778 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.001162673315655464
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 3.017978e-03
+projected |grad| = 1.162673e-03
+raw |net force|  = 2.795580e-05
+proj |net force| = 4.833524e-19
+raw |torque|     = 2.152991e-02
+proj |torque|    = 4.268852e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.6745 s
+Quadrupole gradient time: 0.0148 s
+Dipole–dipole gradient time: 0.0826 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0010070580528248015
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 2.919461e-03
+projected |grad| = 1.007058e-03
+raw |net force|  = 2.857170e-05
+proj |net force| = 1.570281e-19
+raw |torque|     = 2.156257e-02
+proj |torque|    = 6.327971e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.5206 s
+Quadrupole gradient time: 0.0157 s
+Dipole–dipole gradient time: 0.0763 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0009157989507389972
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 2.835684e-03
+projected |grad| = 9.157990e-04
+raw |net force|  = 2.905312e-05
+proj |net force| = 4.031734e-19
+raw |torque|     = 2.156408e-02
+proj |torque|    = 1.616845e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.7256 s
+Quadrupole gradient time: 0.0153 s
+Dipole–dipole gradient time: 0.0843 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0008230315816544177
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 2.748134e-03
+projected |grad| = 8.230316e-04
+raw |net force|  = 2.994708e-05
+proj |net force| = 1.211948e-18
+raw |torque|     = 2.155441e-02
+proj |torque|    = 6.430014e-18
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.1908 s
+Quadrupole gradient time: 0.0145 s
+Dipole–dipole gradient time: 0.0819 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.000652413802800591
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 2.664494e-03
+projected |grad| = 6.524138e-04
+raw |net force|  = 3.031803e-05
+proj |net force| = 1.223655e-18
+raw |torque|     = 2.150002e-02
+proj |torque|    = 1.421714e-17
+---------------------------------------
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Psi4 canonical gradient time: 12.2572 s
+Quadrupole gradient time: 0.0147 s
+Dipole–dipole gradient time: 0.0740 s
+No dispersion correction applied.
+projected gradient norm (Hartree/Bohr): 0.0004890075083497557
+
+--- Gradient Projection Diagnostics ---
+raw |grad|       = 2.613474e-03
+projected |grad| = 4.890075e-04
+raw |net force|  = 3.089518e-05
+proj |net force| = 1.691463e-18
+raw |torque|     = 2.147317e-02
+proj |torque|    = 2.970163e-17
+---------------------------------------
+
+
+Optimization Complete!
+
+Energy after optimization: -3010.3221477539 Ha
+Phase 2: Starting Numerical Frequency Calculation with RAW forces...
+
+--------------------------------------------------
+FREQUENCY SUMMARY
+--------------------------------------------------
+---------------------
+  #    meV     cm^-1
+---------------------
+  0    3.0i     24.1i
+  1    1.7i     13.4i
+  2    0.3i      2.6i
+  3    0.0i      0.2i
+  4    0.1       1.2
+  5    1.8      14.6
+  6    8.6      69.3
+  7   10.5      84.7
+  8   15.4     124.0
+  9   24.2     194.8
+ 10   32.9     265.2
+ 11   40.6     327.3
+ 12   46.8     377.5
+ 13   48.5     391.3
+ 14   58.5     472.2
+ 15   71.1     573.6
+ 16   76.2     614.5
+ 17   83.4     673.0
+ 18   87.7     707.2
+ 19   94.4     761.5
+ 20  105.9     854.3
+ 21  110.9     894.8
+ 22  119.0     960.0
+ 23  122.8     990.3
+ 24  128.0    1032.1
+ 25  131.3    1059.4
+ 26  134.8    1087.5
+ 27  138.2    1114.8
+ 28  140.5    1133.1
+ 29  145.9    1176.6
+ 30  148.3    1195.9
+ 31  153.0    1234.3
+ 32  169.1    1363.8
+ 33  179.6    1448.2
+ 34  184.3    1486.7
+ 35  185.9    1499.3
+ 36  187.2    1510.3
+ 37  204.4    1648.5
+ 38  215.0    1734.4
+ 39  223.9    1806.1
+ 40  398.7    3215.5
+ 41  405.3    3268.6
+ 42  407.0    3282.4
+ 43  410.2    3308.3
+ 44  411.2    3316.7
+---------------------
+Zero-point energy: 2.931 eV
+
+Zero-point energy (ZPE): 2.93060150 eV (0.1076976196 Ha)
