@@ -109,8 +109,8 @@ def run_point(task):
 
 if __name__ == "__main__":
     # Target: 63, 63 over +/- 10 degrees with 1-degree intervals (21 points per dimension)
-    theta_list = np.linspace(53, 73, 21)
-    phi_list = np.linspace(53, 73, 21)
+    theta_list = np.linspace(55, 75, 21)
+    phi_list = np.linspace(69, 89, 21)
 
     tasks = []
     counter = 0

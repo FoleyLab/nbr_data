@@ -6587,56 +6587,6 @@ Method: RKS
 Functional: wb97x
 Using conventional JK through Psi4 JK.
 
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
 Running CQED-SCF energy calculation...
 
 Functional: wb97x
@@ -6744,38 +6694,6 @@ Method: RKS
 Functional: wb97x
 Using conventional JK through Psi4 JK.
 
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
-
-Running CQED-SCF energy calculation...
-
-Functional: wb97x
-Starting CQED-SCF calculation...
-Method: RKS
-Functional: wb97x
-Using conventional JK through Psi4 JK.
 
 Running CQED-SCF energy calculation...
 
@@ -6842,6 +6760,22 @@ Method: RKS
 Functional: wb97x
 Using conventional JK through Psi4 JK.
 
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
 
 Running CQED-SCF energy calculation...
 
@@ -7031,6 +6965,72 @@ Starting CQED-SCF calculation...
 Method: RKS
 Functional: wb97x
 Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using conventional JK through Psi4 JK.
+
 
 Running CQED-SCF energy calculation...
 
