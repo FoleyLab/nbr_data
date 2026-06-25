@@ -1,0 +1,8 @@
+{
+  "ao_tilesize": 30,
+  "do_freeze": true,
+  "mso_tilesize": 55,
+  "ccsd": {
+    "converged": false
+  }
+}

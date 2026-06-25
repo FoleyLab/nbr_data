@@ -1,0 +1,433 @@
++ module load PrgEnv-gnu
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cudatoolkit
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cpe-cuda
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cmake
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module unload cray-libsci
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module unload craype-accel-nvidia80
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cray-python
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ export MPICH_GPU_SUPPORT_ENABLED=0
++ MPICH_GPU_SUPPORT_ENABLED=0
++ export CRAYPE_LINK_TYPE=dynamic
++ CRAYPE_LINK_TYPE=dynamic
++ ppn=4
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ export MPICH_OFI_SKIP_NIC_SYMMETRY_TEST=1
++ MPICH_OFI_SKIP_NIC_SYMMETRY_TEST=1
++ export MPICH_OFI_VERBOSE=1
++ MPICH_OFI_VERBOSE=1
++ export MPICH_OFI_NIC_VERBOSE=1
++ MPICH_OFI_NIC_VERBOSE=1
++ cd /global/cfs/projectdirs/m4262/mapol/exachem-dev/inputs/ci/NB_QED_RHF_INPUTS/SUB_META/runs/run_qed_rhf_meta_theta_23.47826086956522_phi_0.0
++ MAPOL_DIR=/global/cfs/projectdirs/m4262/mapol/
++ EXE=/global/cfs/projectdirs/m4262/mapol//exachem-dev/build/methods_stage//global/cfs/projectdirs/m4262/mapol//install/exachem/methods/ExaChem
++ export GA_NUM_PROGRESS_RANKS_PER_NODE=1
++ GA_NUM_PROGRESS_RANKS_PER_NODE=1
++ export GA_PROGRESS_RANKS_DISTRIBUTION_PACKED=1
++ GA_PROGRESS_RANKS_DISTRIBUTION_PACKED=1
++ srun -u --cpu_bind=map_cpu:0,16,32,48,64 --mem-bind=map_mem:0,1,2,3,0 --gpus-per-node 4 --ntasks-per-node 5 /global/cfs/projectdirs/m4262/mapol/pm_bind.sh /global/cfs/projectdirs/m4262/mapol//exachem-dev/build/methods_stage//global/cfs/projectdirs/m4262/mapol//install/exachem/methods/ExaChem /global/cfs/projectdirs/m4262/mapol/exachem-dev/inputs/ci/NB_QED_RHF_INPUTS/SUB_META/qed_rhf_meta_theta_23.47826086956522_phi_0.0.json
+PE 0: MPICH_OFI_NIC_POLICY = BLOCK
+PE 0: MPICH CH4 OFI detected 4 NICs/node on host nid001549
+PE 0: ======================== Display NIC Addrs  ========================
+PE 0: Hostname: nid001549
+PE 0:   MPICH_OFI_NIC_POLICY: BLOCK
+PE 0:   Number of NICs: 4
+PE 0:     nic_index 0: domain_name=cxi0, numa_domain=0, addr=0x49e3
+PE 0:     nic_index 1: domain_name=cxi1, numa_domain=1, addr=0x49a3
+PE 0:     nic_index 2: domain_name=cxi2, numa_domain=2, addr=0x49a2
+PE 0:     nic_index 3: domain_name=cxi3, numa_domain=3, addr=0x49e2
+PE 0:   Number of NUMA domains: 4
+PE 0:     numa_domain 0: cpu_list=[0-15,64-79]
+PE 0:     numa_domain 1: cpu_list=[16-31,80-95]
+PE 0:     numa_domain 2: cpu_list=[32-47,96-111]
+PE 0:     numa_domain 3: cpu_list=[48-63,112-127]
+PE 0: ====================================================================
+PE 0: MPICH CH4 OFI netmod using cxi provider (domain_name=cxi0, src_addr=0x49e3)
+PE 0: Selected traffic class: [TC_BEST_EFFORT, 512]
+
+ExaChem Git Information
+{
+ Branch: main
+ Commit Hash: aea52aa [aea52aa69cb8138b3d70b124a6eab7fce9cc0d57]
+ Commit Date: 2024-11-05 20:43:32 -0800
+ Commit Message: minor [skip ci]
+
+ WARNING: The following ExaChem sources have uncommitted changes at build-time.
+
+ M exachem/CMakeLists.txt
+ M exachem/task/ec_task.hpp
+
+diff --git a/exachem/CMakeLists.txt b/exachem/CMakeLists.txt
+index 61c9c5a..4a5c257 100644
+--- a/exachem/CMakeLists.txt
++++ b/exachem/CMakeLists.txt
+@@ -37 +37 @@ if(NOT _cc_index EQUAL -1)
+-  include(${CMAKE_CURRENT_SOURCE_DIR}/cc/dlpno/dlpno.cmake)
++  # include(${CMAKE_CURRENT_SOURCE_DIR}/cc/dlpno/dlpno.cmake)
+diff --git a/exachem/task/ec_task.hpp b/exachem/task/ec_task.hpp
+index ce45e0b..5a4fd8a 100644
+--- a/exachem/task/ec_task.hpp
++++ b/exachem/task/ec_task.hpp
+@@ -11 +11 @@
+-#define EC_DLPNO
++//#define EC_DLPNO
+@@ -66 +66 @@ void execute_task(ExecutionContext& ec, ChemEnv& chem_env, std::string ec_arg2);
+-} // namespace exachem::task
+\ No newline at end of file
++} // namespace exachem::task
+
+}
+
+
+TAMM Git Information
+{
+ Branch: main
+ Commit Hash: eb938891 [eb9388916259a30e143acf21423f16a6b9a00d6a]
+ Commit Date: 2024-10-19 11:27:42 -0700
+ Commit Message: expose meminfo
+}
+
+
+date: Tue Nov 12 10:37:46 2024
+program: "/global/cfs/cdirs/m4262/mapol/exachem-dev/build/methods_stage/global/cfs/projectdirs/m4262/mapol/install/exachem/methods/ExaChem"
+nnodes: 10, nproc_per_node: 4, nproc_total: 40, ngpus_per_node: 4, ngpus_total: 40
+
+Memory information
+{
+[AMD EPYC 7763 64-Core Processor                ] : 
+  CPU memory per node (GiB): 251
+  Total CPU memory (GiB): 2510
+[NVIDIA A100-SXM4-40GB, CUDA v12.2] : 
+  GPU memory per device (GiB): 39
+  GPU memory per node (GiB): 156
+  Total GPU memory (GiB): 1560
+}
+
+------------------------------------------------------------
+
+Input file provided: /global/cfs/cdirs/m4262/mapol/exachem-dev/inputs/ci/NB_QED_RHF_INPUTS/SUB_META/qed_rhf_meta_theta_23.47826086956522_phi_0.0.json
+
+{
+  "geometry": {
+    "coordinates": [
+      "C                  0.02949981    1.33972592    0.06817723",
+      "C                  1.43483278    1.28667967    0.00635313",
+      "C                  2.11179024    0.05106117   -0.00544138",
+      "C                  1.44506636   -1.13720058    0.03116583",
+      "C                 -0.68793171    0.16822220    0.10995314",
+      "H                 -0.47126997    2.29839666    0.07811355",
+      "H                  2.02732783    2.19651728   -0.03220624",
+      "H                  1.98966526   -2.07643217    0.02318494",
+      "H                 -1.77163480    0.18040547    0.15819632",
+      "N                  3.58635895    0.05097292   -0.06745286",
+      "O                  4.14711759   -1.05966097   -0.08807849",
+      "O                  4.14497859    1.16390951   -0.09010823",
+      "C                 -0.02361177   -1.14582791    0.08353483",
+      "H                 -0.43674996   -1.87247364    0.78889576",
+      "Br                -0.53591638   -1.86972195   -1.74078671"
+    ],
+    "units": "angstrom"
+  },
+  "basis": {
+    "basisset": "6-311G*"
+  },
+  "SCF": {
+    "charge": 1,
+    "multiplicity": 1,
+    "conve": 1e-10,
+    "convd": 1e-08,
+    "scf_type": "restricted",
+    "qed_omegas": [
+      0.06614874648125418
+    ],
+    "qed_volumes": [],
+    "qed_lambdas": [
+      0.1
+    ],
+    "qed_polvecs": [
+      [
+        0.3984010898462415,
+        0.0,
+        0.917211301505453
+      ]
+    ],
+    "DFT": null
+  },
+  "TASK": {
+    "scf": true
+  },
+  "common": null,
+  "CD": null,
+  "GW": null,
+  "CC": null,
+  "FCI": null
+}
+
+Output folder & files prefix: qed_rhf_meta_theta_23.47826086956522_phi_0.0.6-311g*
+
+
+------------------------------------------------------------
+C     0.0557465576   2.5317148877   0.1288362833
+C     2.7114407926   2.4314720105   0.0120056749
+C     3.9907048975   0.0964916199  -0.0102827172
+C     2.7307794547  -2.1489974895   0.0588948789
+C    -1.3000024303   0.3178938631   0.2077813061
+H    -0.8905711096   4.3433398989   0.1476132054
+H     3.8310940863   4.1508157869  -0.0608609687
+H     3.7599221490  -3.9238878337   0.0438131836
+H    -3.3479043226   0.3409169050   0.2989476971
+N     6.7772357097   0.0963248516  -0.1274674225
+O     7.8369158846  -2.0024688734  -0.1664442115
+O     7.8328737608   2.1994700486  -0.1702798640
+C    -0.0446197754  -2.1653007792   0.1578579391
+H    -0.8253377496  -3.5384620991   1.4907968194
+Br   -1.0127351106  -3.5332621590  -3.2896098853
+Resetting xc_basis_tol to 0.0000000001
+
+ Number of nodes, processes per node used for SCF calculation: 10, 4
+
+Common Options
+{
+ maxiter    = 50
+ basis      = 6-311g* spherical
+ geom_units = angstrom
+ debug      = false
+ file_prefix    = qed_rhf_meta_theta_23.47826086956522_phi_0.0
+}
+
+SCF Options
+{
+ charge            = 1
+ multiplicity      = 1
+ level shift       = 0
+ tol_int           = 1e-22
+ tol_sch           = 1e-12
+ tol_lindep        = 1e-05
+ conve             = 1e-10
+ convd             = 1e-08
+ diis_hist         = 10
+ AO_tilesize       = 30
+ writem            = 1
+ damp              = 100
+ n_lindep          = 0
+ scf_type          = restricted
+ qed_omegas       = [0.06614874648,]
+ qed_lambdas       = [0.1,]
+ qed_polvecs       = [[0.3984010898,0,0.9172113015,],]
+ direct_df         = false
+ restart_size      = 2000
+ restart           = false
+ debug             = false
+}
+
+Number of basis functions = 221
+
+Total number of shells = 105
+
+Total number of electrons = 98
+  # of alpha electrons    = 49
+  # of beta electons      = 49
+
+Nuclear repulsion energy  = 739.211896403946
+
+# of {all,non-negligible} shell-pairs = {5565,4913}
+Number of AO tiles = 105
+
+Time for initial setup: 0.02 secs
+HF exch = 1.00
+
+Time for computing 1-e integrals T, V, S: 0.01 secs
+Time for computing orthogonalizer: 0.03 secs
+
+Superposition of Atomic Density Guess ...
+Time taken for SAD: 0.73 secs
+Total Time to compute initial guess: 0.73 secs
+
+
+ SCF iterations
+-----------------------------------------------------------------------------
+ Iter     Energy            E-Diff       RMSD        |[F,P]|^2       Time(s)
+-----------------------------------------------------------------------------
+   1  -3011.1823332728    -3.01e+03     1.64e-02     1.35e+03         0.2 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   2  -3005.7796892601     5.40e+00     6.82e-03     8.27e+00         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   3  -3005.9872216428    -2.08e-01     2.67e-03     3.98e+00         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   4  -3006.1028943575    -1.16e-01     1.14e-03     9.72e-02         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   5  -3006.1092582368    -6.36e-03     2.65e-04     7.80e-03         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   6  -3006.1097732587    -5.15e-04     1.54e-04     1.40e-03         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   7  -3006.1099115032    -1.38e-04     6.01e-05     2.00e-04         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   8  -3006.1099329607    -2.15e-05     1.81e-05     2.90e-05         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   9  -3006.1099358353    -2.87e-06     8.82e-06     4.27e-06         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  10  -3006.1099364031    -5.68e-07     4.12e-06     8.40e-07         0.3 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  11  -3006.1099365141    -1.11e-07     2.55e-06     2.44e-07         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  12  -3006.1099365483    -3.42e-08     1.29e-06     3.62e-08         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  13  -3006.1099365568    -8.52e-09     6.56e-07     8.44e-09         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  14  -3006.1099365586    -1.76e-09     1.88e-07     1.01e-09         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  15  -3006.1099365588    -1.93e-10     7.26e-08     2.43e-10         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  16  -3006.1099365588    -3.18e-11     3.51e-08     3.73e-11         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  17  -3006.1099365588    -6.37e-12     2.10e-08     1.01e-11         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  18  -3006.1099365588    -2.73e-12     9.96e-09     2.14e-12         0.4 
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+
+** Total SCF energy = -3006.1099365588043
+
+Nuclear repulsion energy = 739.211896403946298
+#electrons        = 98
+1e energy kinetic = 3005.6546557994784052
+1e energy N-e     = -8631.1906131381638261
+1e energy         = -5622.1631116676826423
+2e energy         = 1880.0267266423895762
+QED energy        = 0.1873977335460046
+QED eT energy     = -37.4532183296275107
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+writing orbitals and density to disk ... done.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+
+Total Time taken for Hartree-Fock: 10.37 secs

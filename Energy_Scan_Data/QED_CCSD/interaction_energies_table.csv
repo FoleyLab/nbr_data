@@ -1,0 +1,66 @@
+01 Water ... Water,MP2/cc-pVTZ CP,-0.00698953
+02 Water ... MeOH,MP2/cc-pVTZ CP,-0.0079935
+03 Water ... MeNH2,MP2/cc-pVTZ CP,-0.01004925
+04 Water ... Peptide,MP2/cc-pVTZ CP,-0.01127632
+05 MeOH ... MeOH,MP2/cc-pVTZ CP,-0.00822298
+06 MeOH ... MeNH2,MP2/cc-pVTZ CP,-0.01094645
+07 MeOH ... Peptide,MP2/cc-pVTZ CP,-0.01144684
+08 MeOH ... Water,MP2/cc-pVTZ CP,-0.00711224
+09 MeNH2 ... MeOH,MP2/cc-pVTZ CP,-0.00420233
+10 MeNH2 ... MeNH2,MP2/cc-pVTZ CP,-0.00581186
+11 MeNH2 ... Peptide,MP2/cc-pVTZ CP,-0.00755526
+12 MeNH2 ... Water,MP2/cc-pVTZ CP,-0.01059107
+13 Peptide ... MeOH,MP2/cc-pVTZ CP,-0.00893532
+14 Peptide ... MeNH2,MP2/cc-pVTZ CP,-0.0109831
+15 Peptide ... Peptide,MP2/cc-pVTZ CP,-0.01236316
+16 Peptide ... Water,MP2/cc-pVTZ CP,-0.00737837
+17 Uracil ... Uracil (BP),MP2/cc-pVTZ CP,-0.02453508
+18 Water ... Pyridine,MP2/cc-pVTZ CP,-0.01009387
+19 MeOH ... Pyridine,MP2/cc-pVTZ CP,-0.01101656
+20 AcOH ... AcOH,MP2/cc-pVTZ CP,-0.0265223
+21 AcNH2 ... AcNH2,MP2/cc-pVTZ CP,-0.02295742
+22 AcOH ... Uracil,MP2/cc-pVTZ CP,-0.02753902
+23 AcNH2 ... Uracil,MP2/cc-pVTZ CP,-0.02746253
+24 Benzene ... Benzene (pi-pi),MP2/cc-pVTZ CP,-0.00663575
+25 Pyridine ... Pyridine (pi-pi),MP2/cc-pVTZ CP,-0.00855126
+26 Uracil ... Uracil (pi-pi),MP2/cc-pVTZ CP,-0.01560773
+27 Benzene ... Pyridine (pi-pi),MP2/cc-pVTZ CP,-0.00771303
+28 Benzene ... Uracil (pi-pi),MP2/cc-pVTZ CP,-0.01052255
+29 Pyridine ... Uracil (pi-pi),MP2/cc-pVTZ CP,-0.0122038
+30 Benzene ... Ethene,MP2/cc-pVTZ CP,-0.00305971
+31 Uracil ... Ethene,MP2/cc-pVTZ CP,-0.00541506
+32 Uracil ... Ethyne,MP2/cc-pVTZ CP,-0.0059521
+33 Pyridine ... Ethene,MP2/cc-pVTZ CP,-0.00381667
+34 Pentane ... Pentane,MP2/cc-pVTZ CP,-0.00531785
+35 Neopentane ... Pentane,MP2/cc-pVTZ CP,-0.00354576
+36 Neopentane ... Neopentane,MP2/cc-pVTZ CP,-0.00232666
+37 Cyclopentane ... Neopentane,MP2/cc-pVTZ CP,-0.00327963
+38 Cyclopentane ... Cyclopentane,MP2/cc-pVTZ CP,-0.0042087
+39 Benzene ... Cyclopentane,MP2/cc-pVTZ CP,-0.0063744
+40 Benzene ... Neopentane,MP2/cc-pVTZ CP,-0.00497841
+41 Uracil ... Pentane,MP2/cc-pVTZ CP,-0.00730666
+42 Uracil ... Cyclopentane,MP2/cc-pVTZ CP,-0.00636644
+43 Uracil ... Neopentane,MP2/cc-pVTZ CP,-0.00554254
+44 Ethene ... Pentane,MP2/cc-pVTZ CP,-0.00275693
+45 Ethyne ... Pentane,MP2/cc-pVTZ CP,-0.00274577
+46 Peptide ... Pentane,MP2/cc-pVTZ CP,-0.00592023
+47 Benzene ... Benzene (TS),MP2/cc-pVTZ CP,-0.00519195
+48 Pyridine ... Pyridine (TS),MP2/cc-pVTZ CP,-0.0061019
+49 Benzene ... Pyridine (TS),MP2/cc-pVTZ CP,-0.0058023
+50 Benzene ... Ethyne (CH-pi),MP2/cc-pVTZ CP,-0.00464375
+51 Ethyne ... Ethyne (TS),MP2/cc-pVTZ CP,-0.00214339
+52 Benzene ... AcOH (OH-pi),MP2/cc-pVTZ CP,-0.00691304
+53 Benzene ... AcNH2 (NH-pi),MP2/cc-pVTZ CP,-0.00647958
+54 Benzene ... Water (OH-pi),MP2/cc-pVTZ CP,-0.00470431
+55 Benzene ... MeOH (OH-pi),MP2/cc-pVTZ CP,-0.00636644
+56 Benzene ... MeNH2 (NH-pi),MP2/cc-pVTZ CP,-0.00514574
+57 Benzene ... Peptide (NH-pi),MP2/cc-pVTZ CP,-0.00860066
+58 Pyridine ... Pyridine (CH-N),MP2/cc-pVTZ CP,-0.00608278
+59 Ethyne ... Water (CH-O),MP2/cc-pVTZ CP,-0.00403022
+60 Ethyne ... AcOH (OH-pi),MP2/cc-pVTZ CP,-0.00637281
+61 Pentane ... AcOH,MP2/cc-pVTZ CP,-0.00388042
+62 Pentane ... AcNH2,MP2/cc-pVTZ CP,-0.00472662
+63 Benzene ... AcOH,MP2/cc-pVTZ CP,-0.00615927
+64 Peptide ... Ethene,MP2/cc-pVTZ CP,-0.00416089
+65 Pyridine ... Ethyne,MP2/cc-pVTZ CP,-0.00603019
+66 MeNH2 ... Pyridine,MP2/cc-pVTZ CP,-0.00627241

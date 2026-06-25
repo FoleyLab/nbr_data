@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # --- Configuration ---
-FILE_NAME = "CCSD_Combined_Results.txt"
+FILE_NAME = "QED_CCSD_Combined_Results.txt"
 DPI = 350  
 AU_TO_KCAL = 627.509
 
@@ -93,10 +93,10 @@ def plot_energy_diffs():
 
     # 4. Generate Separate Plots
     create_single_map(P, T, diff_om, r'$\Delta E$ (Ortho $-$ Meta)', 
-                      "ortho_meta_diff_QED_CCSD_22.png", "kcal/mol", vmin=-30, vmax=30)
+                      "ortho_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
     
     create_single_map(P, T, diff_pm, r'$\Delta E$ (Para $-$ Meta)', 
-                      "para_meta_diff_QED_CCSD_22.png", "kcal/mol", vmin=-30, vmax=30)
+                      "para_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
 
 if __name__ == "__main__":
     plot_energy_diffs()

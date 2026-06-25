@@ -6,10 +6,10 @@ def load_data(file_name):
     """Loads the data and cleans it to handle headers and string rows."""
     try:
         # Load, skipping row 1 (the dashed line)
-        df = pd.read_csv(file_name, delim_whitespace=True, skiprows=[1])
+        df = pd.read_csv(file_name, sep=r"\s+", skiprows=[1]) #delim_whitespace=True, skiprows=[1])
         
         # Force numeric, turning non-numeric junk into NaN, then drop NaNs
-        numeric_cols = ['theta', 'phi', 'Para_E', 'Ortho_E', 'Meta_E']
+        numeric_cols = ['theta', 'phi', 'Ex', 'Ey', 'Ez', 'Para_E', 'Ortho_E', 'Meta_E']
         for col in numeric_cols:
             df[col] = pd.to_numeric(df[col], errors='coerce')
         
@@ -39,6 +39,7 @@ def find_most_stabilizing_orientation(df):
         print(f"\nMost favorable {name}:")
         print(f"  Max Stabilization: {min_val:8.4f} kcal/mol")
         print(f"  At Angle:          Theta = {row['theta']:.1f}°, Phi = {row['phi']:.1f}°")
+        print(f"  At lambda:         {(row['Ex'] * 0.1):.3f}, {(row['Ey'] * 0.1):.3f}, {(row['Ez'] * 0.1):.3f}")
 
 def query_energies(df):
     """Interactive loop to query specific orientations."""
@@ -77,7 +78,7 @@ def query_energies(df):
             print("Invalid input! Please enter two numbers separated by a comma (e.g., 90, 180).")
 
 if __name__ == "__main__":
-    FILE_NAME = "CCSD_Combined_Results.txt"
+    FILE_NAME = "QED_CCSD_Combined_Results.txt"
     data = load_data(FILE_NAME)
     
     # 1. Run the global scan summary

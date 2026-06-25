@@ -1,0 +1,715 @@
++ module load PrgEnv-gnu
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cudatoolkit
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cpe-cuda
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+The following have been reloaded with a version change:
+  1) cray-python/3.11.5 => cray-python/3.11.7
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cmake
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module unload cray-libsci
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module unload craype-accel-nvidia80
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cray-python
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ export MPICH_GPU_SUPPORT_ENABLED=0
++ MPICH_GPU_SUPPORT_ENABLED=0
++ export CRAYPE_LINK_TYPE=dynamic
++ CRAYPE_LINK_TYPE=dynamic
++ ppn=4
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ export MPICH_OFI_SKIP_NIC_SYMMETRY_TEST=1
++ MPICH_OFI_SKIP_NIC_SYMMETRY_TEST=1
++ export MPICH_OFI_VERBOSE=1
++ MPICH_OFI_VERBOSE=1
++ export MPICH_OFI_NIC_VERBOSE=1
++ MPICH_OFI_NIC_VERBOSE=1
++ cd /global/cfs/projectdirs/m4262/mapol/exachem-dev/inputs/ci/NB_QED_RHF_INPUTS/SUB_META/runs/run_qed_rhf_meta_theta_23.47826086956522_phi_234.7826086956522
++ MAPOL_DIR=/global/cfs/projectdirs/m4262/mapol/
++ EXE=/global/cfs/projectdirs/m4262/mapol//exachem-dev/build/methods_stage//global/cfs/projectdirs/m4262/mapol//install/exachem/methods/ExaChem
++ export GA_NUM_PROGRESS_RANKS_PER_NODE=1
++ GA_NUM_PROGRESS_RANKS_PER_NODE=1
++ export GA_PROGRESS_RANKS_DISTRIBUTION_PACKED=1
++ GA_PROGRESS_RANKS_DISTRIBUTION_PACKED=1
++ srun -u --cpu_bind=map_cpu:0,16,32,48,64 --mem-bind=map_mem:0,1,2,3,0 --gpus-per-node 4 --ntasks-per-node 5 /global/cfs/projectdirs/m4262/mapol/pm_bind.sh /global/cfs/projectdirs/m4262/mapol//exachem-dev/build/methods_stage//global/cfs/projectdirs/m4262/mapol//install/exachem/methods/ExaChem /global/cfs/projectdirs/m4262/mapol/exachem-dev/inputs/ci/NB_QED_RHF_INPUTS/SUB_META/qed_rhf_meta_theta_23.47826086956522_phi_234.7826086956522.json
+PE 0: MPICH_OFI_NIC_POLICY = BLOCK
+PE 0: MPICH CH4 OFI detected 4 NICs/node on host nid001361
+PE 0: ======================== Display NIC Addrs  ========================
+PE 0: Hostname: nid001361
+PE 0:   MPICH_OFI_NIC_POLICY: BLOCK
+PE 0:   Number of NICs: 4
+PE 0:     nic_index 0: domain_name=cxi0, numa_domain=0, addr=0x3bf1
+PE 0:     nic_index 1: domain_name=cxi1, numa_domain=1, addr=0x3bb1
+PE 0:     nic_index 2: domain_name=cxi2, numa_domain=2, addr=0x3bb0
+PE 0:     nic_index 3: domain_name=cxi3, numa_domain=3, addr=0x3bf0
+PE 0:   Number of NUMA domains: 4
+PE 0:     numa_domain 0: cpu_list=[0-15,64-79]
+PE 0:     numa_domain 1: cpu_list=[16-31,80-95]
+PE 0:     numa_domain 2: cpu_list=[32-47,96-111]
+PE 0:     numa_domain 3: cpu_list=[48-63,112-127]
+PE 0: ====================================================================
+PE 0: MPICH CH4 OFI netmod using cxi provider (domain_name=cxi0, src_addr=0x3bf1)
+PE 0: Selected traffic class: [TC_BEST_EFFORT, 512]
+
+ExaChem Git Information
+{
+ Branch: main
+ Commit Hash: 67058e4 [67058e4ef254abf6d574c71de71c43302a57a564]
+ Commit Date: 2025-09-12 14:22:02 -0700
+ Commit Message: Checks for QED options
+}
+
+
+TAMM Git Information
+{
+ Branch: main
+ Commit Hash: b1c8bd6a [b1c8bd6a1af89df24e4bc132c67dc373da677e99]
+ Commit Date: 2025-09-11 01:49:06 -0700
+ Commit Message: update macos instructions
+}
+
+
+date: Sat Sep 13 18:17:41 2025
+program: "/global/cfs/cdirs/m4262/mapol/exachem-dev/build/methods_stage/global/cfs/projectdirs/m4262/mapol/install/exachem/methods/ExaChem"
+nnodes: 10, nproc_per_node: 4, nproc_total: 40, ngpus_per_node: 4, ngpus_total: 40
+
+Memory information
+{
+[AMD EPYC 7763 64-Core Processor                ] : 
+  CPU memory per node (GiB): 251
+  Total CPU memory (GiB): 2510
+[NVIDIA A100-SXM4-40GB, CUDA v12.4] : 
+  GPU memory per device (GiB): 39
+  GPU memory per node (GiB): 156
+  Total GPU memory (GiB): 1560
+}
+
+------------------------------------------------------------
+
+Input file provided: /global/cfs/cdirs/m4262/mapol/exachem-dev/inputs/ci/NB_QED_RHF_INPUTS/SUB_META/qed_rhf_meta_theta_23.47826086956522_phi_234.7826086956522.json
+
+{
+  "geometry": {
+    "coordinates": [
+      "C                  0.02949981    1.33972592    0.06817723",
+      "C                  1.43483278    1.28667967    0.00635313",
+      "C                  2.11179024    0.05106117   -0.00544138",
+      "C                  1.44506636   -1.13720058    0.03116583",
+      "C                 -0.68793171    0.16822220    0.10995314",
+      "H                 -0.47126997    2.29839666    0.07811355",
+      "H                  2.02732783    2.19651728   -0.03220624",
+      "H                  1.98966526   -2.07643217    0.02318494",
+      "H                 -1.77163480    0.18040547    0.15819632",
+      "N                  3.58635895    0.05097292   -0.06745286",
+      "O                  4.14711759   -1.05966097   -0.08807849",
+      "O                  4.14497859    1.16390951   -0.09010823",
+      "C                 -0.02361177   -1.14582791    0.08353483",
+      "H                 -0.43674996   -1.87247364    0.78889576",
+      "Br                -0.53591638   -1.86972195   -1.74078671"
+    ],
+    "units": "angstrom"
+  },
+  "basis": {
+    "basisset": "6-311G*"
+  },
+  "SCF": {
+    "charge": 1,
+    "multiplicity": 1,
+    "conve": 1e-10,
+    "convd": 1e-08,
+    "scf_type": "restricted",
+    "qed_omegas": [
+      0.06614874648125418
+    ],
+    "qed_volumes": [],
+    "qed_lambdas": [
+      0.1
+    ],
+    "qed_polvecs": [
+      [
+        -0.2297500688234447,
+        -0.3254816957469274,
+        0.917211301505453
+      ]
+    ]
+  },
+  "TASK": {
+    "scf": true
+  }
+}
+
+Output folder & files prefix: qed_rhf_meta_theta_23.47826086956522_phi_234.7826086956522.6-311g*
+
+  C (carbon)
+  ----------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  4.56324000E+03      0.778202
+  1 S  6.82024000E+02      1.448695
+  1 S  1.54973000E+02      2.383089
+  1 S  4.44553000E+01      3.200089
+  1 S  1.30290000E+01      3.013004
+  1 S  1.82773000E+00      0.247599
+
+  2 S  2.09642000E+01      0.800629
+  2 S  4.80331000E+00      2.127420
+  2 S  1.45933000E+00     -0.002868
+
+  3 P  2.09642000E+01      2.573592
+  3 P  4.80331000E+00      2.408248
+  3 P  1.45933000E+00      1.865281
+
+  4 S  4.83456000E-01      0.413217
+
+  5 P  4.83456000E-01      0.574627
+
+  6 S  1.45585000E-01      0.167976
+
+  7 P  1.45585000E-01      0.128185
+
+  8 D  6.26000000E-01      0.725128
+
+
+  H (hydrogen)
+  ------------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  3.38650000E+01      0.255069
+  1 S  5.09479000E+00      0.460109
+  1 S  1.15879000E+00      0.678321
+
+  2 S  3.25840000E-01      0.307371
+
+  3 S  1.02741000E-01      0.129336
+
+
+  N (nitrogen)
+  ------------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  6.29348000E+03      0.991968
+  1 S  9.49044000E+02      1.823240
+  1 S  2.18776000E+02      2.979891
+  1 S  6.36916000E+01      4.000007
+  1 S  1.88282000E+01      3.881008
+  1 S  2.72023000E+00      0.386764
+
+  2 S  3.06331000E+01      1.038501
+  2 S  7.02614000E+00      2.834794
+  2 S  2.11205000E+00     -0.003208
+
+  3 P  3.06331000E+01      3.935616
+  3 P  7.02614000E+00      3.870994
+  3 P  2.11205000E+00      2.967271
+
+  4 S  6.84009000E-01      0.536051
+
+  5 P  6.84009000E-01      0.886681
+
+  6 S  2.00878000E-01      0.213850
+
+  7 P  2.00878000E-01      0.191693
+
+  8 D  9.13000000E-01      1.403568
+
+
+  O (oxygen)
+  ----------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  8.58850000E+03      1.205013
+  1 S  1.29723000E+03      2.216205
+  1 S  2.99296000E+02      3.627452
+  1 S  8.73771000E+01      4.888452
+  1 S  2.56789000E+01      4.835721
+  1 S  3.74004000E+00      0.538229
+
+  2 S  4.21175000E+01      1.341958
+  2 S  9.62837000E+00      3.587114
+  2 S  2.85332000E+00     -0.005123
+
+  3 P  4.21175000E+01      5.584018
+  3 P  9.62837000E+00      5.733366
+  3 P  2.85332000E+00      4.332955
+
+  4 S  9.05661000E-01      0.661659
+
+  5 P  9.05661000E-01      1.259352
+
+  6 S  2.55611000E-01      0.256209
+
+  7 P  2.55611000E-01      0.259068
+
+  8 D  1.29200000E+00      2.577026
+
+
+  Br (bromine)
+  ------------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  4.39700000E+05      9.893706
+  1 S  6.60300000E+04     18.450679
+  1 S  1.51400000E+04     31.049770
+  1 S  4.31700000E+03     48.888138
+  1 S  1.41400000E+03     64.847798
+  1 S  5.23900000E+02     42.245010
+
+  2 S  5.23900000E+02     14.290679
+  2 S  2.07700000E+02     24.083128
+  2 S  8.65400000E+01      5.132542
+
+  3 S  3.05200000E+01      9.254405
+
+  4 S  1.29800000E+01      4.873782
+
+  5 S  4.41200000E+00      2.169635
+
+  6 S  1.86200000E+00      1.136043
+
+  7 S  3.93200000E-01      0.353892
+
+  8 S  1.40000000E-01      0.163120
+
+  9 P  2.95700000E+03    691.874478
+  9 P  7.00300000E+02    925.332763
+  9 P  2.24600000E+02   1068.830732
+
+  10 P  8.25900000E+01    122.079275
+  10 P  3.31900000E+01     57.580687
+  10 P  1.42000000E+01     10.176170
+
+  11 P  1.42000000E+01      3.129736
+  11 P  7.43800000E+00      6.538168
+  11 P  3.52600000E+00      4.166276
+
+  12 P  1.59500000E+00      2.555000
+
+  13 P  8.46200000E-01      1.156861
+
+  14 P  3.18600000E-01      0.341191
+
+  15 P  1.09600000E-01      0.089888
+
+  16 D  1.34800000E+02    160.709187
+  16 D  3.63900000E+01    119.797406
+  16 D  1.21600000E+01     55.531619
+  16 D  4.34100000E+00     12.984636
+
+  17 D  1.53500000E+00      3.484168
+
+  18 D  4.51000000E-01      0.408525
+
+
+
+Printing Internal Coordinates
+
+------------------------------------------------------------
+                Bond Lengths
+
+i      j        Length (Angstroms)     Length (Bohr)
+0      1          1.4076920404         2.6601524259
+0      4          1.3743631902         2.5971700270
+0      5          1.0816277968         2.0439803061
+1      2          1.4089583353         2.6625453766
+1      6          1.0864353114         2.0530651921
+2      3          1.3630212054         2.5757367821
+2      9          1.4758720513         2.7889939739
+3      7          1.0857290805         2.0517306090
+3      12         1.4696368233         2.7772111007
+4      8          1.0848447925         2.0500595469
+4      12         1.4726664936         2.7829363477
+9      10         1.2443405107         2.3514627726
+9      11         1.2454706024         2.3535983363
+12     13         1.0937235586         2.0668379831
+12     14         2.0284545043         3.8332234719
+
+Number of Bonds: 15
+
+------------------------------------------------------------
+           Bond Angles
+
+i      j      k      Angle (degrees)
+0      1      2        120.8690 
+0      1      6        120.9603 
+0      4      8        120.8799 
+0      4      12       121.6389 
+1      0      4        119.3635 
+1      0      5        119.7360 
+1      2      3        121.9572 
+1      2      9        118.7146 
+2      1      6        118.1707 
+2      3      7        120.5707 
+2      3      12       119.6636 
+2      9      10       116.8078 
+2      9      11       116.6690 
+3      2      9        119.3272 
+3      12     4        116.5006 
+3      12     13       113.8517 
+3      12     14       102.8525 
+4      0      5        120.8999 
+4      12     13       114.2585 
+4      12     14       102.7464 
+7      3      12       119.7657 
+8      4      12       117.4803 
+10     9      11       126.5229 
+13     12     14       104.3308 
+
+Number of Angles: 24
+
+------------------------------------------------------------
+              Torsional Angles
+
+i      j      k      l      Angle (degrees)
+3      2      1      0          0.5325 
+4      0      1      2         -0.3632 
+5      0      1      2        179.8857 
+6      1      0      4        179.7205 
+6      1      0      5         -0.0306 
+6      1      2      3       -179.5489 
+7      3      2      1       -179.8728 
+8      4      0      1        179.9801 
+8      4      0      5         -0.2718 
+
+Number of Torsional Angles: 9
+
+
+----------------------------------------------------------------------
+                          Center of Mass
+
+         x               y               z              Unit
+    0.9514056198   -0.6876442895   -0.6817648281      Angstrom
+     1.797896056    -1.299459379    -1.288348807          Bohr
+
+----------------------------------------------------------------------
+                Moment of Inertia Tensor
+
+           1654.62          -804.062          -678.179
+          -804.062           2996.33          -582.704
+          -678.179          -582.704           3585.93
+
+----------------------------------------------------------------------
+                      Principal Moments of Inertia
+
+           x                 y                 z                Unit
+       277.2002473       920.2667616       1109.095061       amu * ang^2
+       989.9000543       3286.332268       3960.650366      amu * bohr^2
+  4.6030215410e-38  1.5281399524e-37  1.8416969343e-37          g * cm^2
+
+ - Molecule is an asymmetric top.
+
+----------------------------------------------------------------------
+
+         Rotational constants (MHz)
+
+    A = 1.8232e+03        B = 5.4917e+02        C = 4.5567e+02
+
+----------------------------------------------------------------------
+
+        Rotational constants (cm-1)
+
+    A = 6.0814e-02        B = 1.8318e-02        C = 1.5199e-02
+
+----------------------------------------------------------------------
+
+                                Z-Matrix
+C   
+C        1       2.6601524
+C        2       2.6625454     1       120.86895
+C        3      2.57573678     2    121.95724932     1          0.5325
+C        4      4.72809962     3     87.87959621     2         -0.3374
+H        5      4.04666188     4    115.61310760     3          0.2032
+H        6      4.73018525     5     93.50656054     4          0.0686
+H        7      8.07569627     6     91.79523826     5         -0.1235
+H        8      8.29306097     7     59.58587455     6          0.0699
+N        9     10.13706717     8     29.56745538     7         -0.1187
+O       10      2.35146277     9    118.18695841     8          0.4623
+O       11      4.20194292    10     26.75167340     9       -179.7746
+C       12      9.01187079    11     61.08394510    10          0.1410
+H       13      2.06683798    12    132.48927665    11         58.4224
+Br      14      4.78408156    13     50.92423379    12       -137.6544
+
+----------------------------------------------------------------------
+
+             Converted back to Cartesian
+
+C        0.000000      0.000000      0.000000
+C        0.000000      0.000000      2.660152
+C        0.000000      0.098010     -0.000588
+C       -0.000016     -0.092342      2.568105
+C        0.000046      0.383156     -2.136024
+H       -0.000053     -0.165321      1.873296
+H        0.000104      0.609011     -2.793080
+H       -0.000224     -0.935205      5.133601
+H        0.000150      0.798055     -2.976311
+N       -0.000327     -1.409804      6.917399
+O       -0.000211     -0.815379      4.642308
+O        0.001454     -1.910630      8.699000
+C       -0.011289      0.599575      0.043798
+H       -0.005290     -0.055698      2.004002
+Br      -0.018797      1.531252     -2.509184
+
+----------------------------------------------------------------------
+                       Geometry in bohr 
+
+1     C       0.0557465617    2.5317150726    0.1288362927
+2     C       2.7114409907    2.4314721881    0.0120056757
+3     C       3.9907051890    0.0964916270   -0.0102827179
+4     C       2.7307796542   -2.1489976464    0.0588948832
+5     C      -1.3000025252    0.3178938863    0.2077813213
+6     H      -0.8905711747    4.3433402161    0.1476132162
+7     H       3.8310943661    4.1508160900   -0.0608609731
+8     H       3.7599224236   -3.9238881203    0.0438131868
+9     H      -3.3479045671    0.3409169299    0.2989477189
+10    N       6.7772362047    0.0963248586   -0.1274674318
+11    O       7.8369164570   -2.0024690196   -0.1664442237
+12    O       7.8328743329    2.1994702092   -0.1702798764
+13    C      -0.0446197786   -2.1653009373    0.1578579507
+14    H      -0.8253378099   -3.5384623576    1.4907969283
+15    Br     -1.0127351846   -3.5332624171   -3.2896101255
+
+ Number of nodes, processes per node used for SCF calculation: 10, 4
+
+Common Options
+{
+  maxiter       = 100
+  basis         = 6-311g* spherical
+  geom_units    = angstrom
+  ang2au factor = 1.889726126
+  debug         = false
+  file_prefix   = qed_rhf_meta_theta_23.47826086956522_phi_234.7826086956522
+}
+
+SCF Options
+{
+  charge            = 1
+  multiplicity      = 1
+  level shift       = 0
+  tol_int           = 1e-22
+  tol_sch           = 1e-12
+  tol_lindep        = 1e-05
+  conve             = 1e-10
+  convd             = 1e-08
+  diis_hist         = 10
+  AO_tilesize       = 30
+  writem            = 1
+  damp              = 100
+  n_lindep          = 0
+  scf_type          = restricted
+  qed_omegas        = [0.06614874648,]
+  qed_lambdas       = [0.1,]
+  qed_polvecs       = [[-0.2297500688,-0.3254816957,0.9172113015,],]
+  direct_df         = false
+  restart_size      = 2000
+  restart           = false
+  debug             = false
+}
+
+Number of basis functions = 221
+
+Total number of shells = 105
+
+Total number of electrons = 98
+  # of alpha electrons    = 49
+  # of beta electons      = 49
+
+Nuclear repulsion energy  = 739.211842413324
+
+# of {all,non-negligible} shell-pairs = {5565,4913}
+Number of AO tiles = 105
+
+Time for initial setup: 0.06 secs
+HF exch = 1.00
+
+Time for computing 1-e integrals T, V, S: 0.01 secs
+Time for computing orthogonalizer: 0.04 secs
+
+Superposition of Atomic Density Guess ...
+Time taken for SAD: 0.56 secs
+Total Time to compute initial guess: 0.56 secs
+
+
+ SCF iterations
+-----------------------------------------------------------------------------
+ Iter     Energy            E-Diff       RMSD        |[F,P]|^2       Time(s)
+-----------------------------------------------------------------------------
+   1  -3011.2235926414    -3.01e+03     1.64e-02     1.35e+03         0.2 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   2  -3005.8077614693     5.42e+00     6.85e-03     7.65e+00         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   3  -3005.9772202234    -1.69e-01     2.87e-03     4.49e+00         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   4  -3006.1077971663    -1.31e-01     1.09e-03     1.14e-01         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   5  -3006.1141510714    -6.35e-03     2.40e-04     1.05e-02         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   6  -3006.1146888456    -5.38e-04     1.26e-04     1.24e-03         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   7  -3006.1148088229    -1.20e-04     5.33e-05     2.61e-04         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   8  -3006.1148329277    -2.41e-05     2.39e-05     5.60e-05         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+   9  -3006.1148381617    -5.23e-06     1.05e-05     9.87e-06         0.3 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  10  -3006.1148391188    -9.57e-07     5.37e-06     1.75e-06         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  11  -3006.1148393153    -1.97e-07     2.56e-06     1.93e-07         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  12  -3006.1148393477    -3.23e-08     9.03e-07     2.88e-08         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  13  -3006.1148393535    -5.79e-09     5.58e-07     7.97e-09         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  14  -3006.1148393553    -1.82e-09     2.40e-07     1.51e-09         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  15  -3006.1148393556    -3.25e-10     8.10e-08     2.86e-10         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  16  -3006.1148393557    -4.77e-11     3.83e-08     4.57e-11         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  17  -3006.1148393557    -8.64e-12     1.98e-08     9.59e-12         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+  18  -3006.1148393557    -2.73e-12     7.72e-09     1.71e-12         0.4 
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+
+** Total SCF energy = -3006.1148393556614
+
+Nuclear repulsion energy = 739.211842413323666
+#electrons        = 98
+1e energy kinetic = 3005.6509339617268779
+1e energy N-e     = -8631.1665661920305865
+1e energy         = -5624.7782148816631889
+2e energy         = 1880.0053719026705039
+QED energy        = 0.1835785586473344
+QED eT energy     = -37.4532668176898582
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+writing orbitals and density to disk ... done.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+MPIIO WARNING: DVS stripe width of 48 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+
+Total Time taken for Hartree-Fock: 10.39 secs

@@ -6,7 +6,7 @@ def load_data(file_name):
     """Loads the data and cleans it to handle headers and string rows."""
     try:
         # Load, skipping row 1 (the dashed line)
-        df = pd.read_csv(file_name, delim_whitespace=True, skiprows=[1])
+        df = pd.read_csv(file_name, sep=r'\s+', skiprows=[1]) # delim_whitespace=True, skiprows=[1])
         
         # Force numeric, turning non-numeric junk into NaN, then drop NaNs
         numeric_cols = ['theta', 'phi', 'Para_E', 'Ortho_E', 'Meta_E']
