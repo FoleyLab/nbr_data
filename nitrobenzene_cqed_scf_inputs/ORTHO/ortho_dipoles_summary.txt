@@ -1,0 +1,35 @@
+==============================================================================
+ADC(2)/def2-SVP  --  ortho bromonitro-arenium cation (charge +1, singlet)
+==============================================================================
+
+Vertical excitation energies
+------------------------------------------------------------------------------
+  state      E_exc (eV)     osc. strength
+   S1            2.1288          0.00444
+   S2            2.3419          0.00631
+   S3            2.5473          0.00396
+
+Permanent dipole moments  (state |mu|)
+------------------------------------------------------------------------------
+  state        mu (a.u. vector)                |mu| (a.u.)
+  S0     [  -3.8256    1.1378    1.2306]        4.1766
+  S1     [  -0.5446    0.5907    0.9041]        1.2095
+  S2     [  -0.7950    1.0304    0.7518]        1.5030
+  S3     [   0.1065    1.1424    1.3641]        1.7824
+
+Transition dipole moments  (all state pairs)
+------------------------------------------------------------------------------
+  pair         mu_trans (a.u. vector)          |mu| (a.u.)
+  S0-S1   [  -0.0518   -0.2609   -0.1196]        0.2917
+  S0-S2   [  -0.1303   -0.2721   -0.1379]        0.3317
+  S0-S3   [   0.1213    0.2015    0.0903]        0.2519
+  S1-S2   [  -1.2170   -0.8745   -0.8119]        1.7044
+  S1-S3   [   0.7749   -0.0651    0.5320]        0.9422
+  S2-S3   [   0.8287    0.9386    0.4993]        1.3480
+
+Notes:
+  * All vectors are length-gauge, in the input (unrotated) frame
+    (no_com / no_reorient are respected).
+  * S0 permanent dipole is the SCF value; excited-state permanent
+    dipoles and all transition dipoles are ADC(2) unrelaxed values.
+  * 1 a.u. dipole = 2.541746 Debye.

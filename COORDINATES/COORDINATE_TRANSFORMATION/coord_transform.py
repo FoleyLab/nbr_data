@@ -54,8 +54,8 @@ ANG_TO_BOHR = 1.0 / BOHR_TO_ANG
 TOTAL_CHARGE = 1.0      # This species is a cation
 
 # --- Load Data ---
-file_unshifted = "nitro_coordinates.txt"
-file_shifted = "nitro_coordinates_com_at_origin.txt"
+file_unshifted = "ortho_coordinates_com_at_origin.txt"
+file_shifted = "ortho_coordinates_com_at_origin.txt"
 
 syms, coords_un, masses, dip_un_au, _ = parse_psi4_snippet(file_unshifted)
 _, coords_sh_psi4, _, dip_sh_psi4_au, rot_psi4 = parse_psi4_snippet(file_shifted, is_shifted=True)
@@ -76,6 +76,8 @@ for m, (x, y, z) in zip(masses, manual_shifted_coords):
     I[1, 2] -= m * y * z
 I[1,0], I[2,0], I[2,1] = I[0,1], I[0,2], I[1,2]
 
+print("Printing I")
+print(I)
 evals = np.linalg.eigvalsh(I)
 evals.sort()
 conv = AMU_TO_KG * (ANG_TO_M**2)

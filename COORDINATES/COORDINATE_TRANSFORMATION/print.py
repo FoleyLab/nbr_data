@@ -108,8 +108,8 @@ nitro_input = """
 """
 
 
-print("para")
-print(format_coords_to_list(para_input))
+print("ortho")
+print(format_coords_to_list(ortho_input))
 
 print("meta")
 print(format_coords_to_list(meta_input))

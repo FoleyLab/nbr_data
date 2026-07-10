@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 
 # --- Configuration ---
-FILE_NAME = "CCSD_Combined_Results.txt"
+FILE_NAME = "QED_CCSD_Combined_Results.txt"
 DPI = 300  # High resolution for publication
 AU_TO_KCAL = 627.509
 

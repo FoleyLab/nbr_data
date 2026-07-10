@@ -7,6 +7,8 @@ import psi4
 # ----------------------------
 meta_string = """
 1 1
+
+
          C           -0.929257263947     2.021527608578     0.744707683350
          C            0.476075706053     1.968481358578     0.682883583350
          C            1.153033166053     0.732862858578     0.67108907335
@@ -48,8 +50,9 @@ psi4.core.set_output_file("psi4_cc.out", False)
 mol = psi4.geometry(meta_string)
 psi4.set_options(psi4_options)
 # compute psi4 rhf energy for initial geometry
-e_rhf_1 = psi4.energy("ccsd", molecule=mol)
-print(f"CCSD energy: {e_rhf_1:.6f} Hartree")
+e_rhf = psi4.energy("scf", moleucule=mol)
+#e_rhf_1 = psi4.energy("ccsd", molecule=mol)
+#print(f"CCSD energy: {e_rhf_1:.6f} Hartree")
 
 
 

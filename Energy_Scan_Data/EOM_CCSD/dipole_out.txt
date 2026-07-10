@@ -1,0 +1,63 @@
+   <0|mu|0> dipole is [-1.21024746 -0.01269389  1.23364768]
+   <1|mu|1> dipole is [-2.91247504 -0.04168225  0.2034287 ]
+   <2|mu|2> dipole is [1.032633   0.02026972 1.4501404 ]
+   <3|mu|3> dipole is [-3.68717206 -0.05432613 -0.30287769]
+Parsing EOMCC data from: reexternaldecisiononsubmissiontochemicalscience/ortho.h5
+  Using ortho nuclear dipole
+  Parsed dipole shapes:
+    Ground state: (3,)
+    G->E transitions: (50, 3)
+    E->G transitions: (50, 3)
+    E->E transitions: (50, 50, 3)
+   <0|mu|0> dipole is [-3.25702904  1.0594484   1.10451585]
+   <1|mu|1> dipole is [-2.62658354e+00 -1.34486982e-03  7.83318634e-02]
+   <2|mu|2> dipole is [-2.55072021 -0.55725395 -0.36627031]
+   <3|mu|3> dipole is [-1.09312076  1.30845074  1.41472837]
+Parsing EOMCC data from: reexternaldecisiononsubmissiontochemicalscience/meta.h5
+  Using meta nuclear dipole
+  Parsed dipole shapes:
+    Ground state: (3,)
+    G->E transitions: (50, 3)
+    E->G transitions: (50, 3)
+    E->E transitions: (50, 50, 3)
+   <0|mu|0> dipole is [-1.99943656  1.13632311  1.27582715]
+   <1|mu|1> dipole is [-2.86946816 -0.06729904  0.29683345]
+   <2|mu|2> dipole is [-3.31948553 -0.64847155 -0.15127078]
+   <3|mu|3> dipole is [0.26438689 1.72214162 1.50235172]
+
+
+
+  Using para nuclear dipole
+  Parsed dipole shapes:
+    Ground state: (3,)
+    G->E transitions: (50, 3)
+    E->G transitions: (50, 3)
+    E->E transitions: (50, 50, 3)
+   <0|mu|0> dipole is [-1.21024746 -0.01269389  1.23364768]
+   <1|mu|1> dipole is [-2.91247504 -0.04168225  0.2034287 ]
+   <2|mu|2> dipole is [1.032633   0.02026972 1.4501404 ]
+   <3|mu|3> dipole is [-3.68717206 -0.05432613 -0.30287769]
+Parsing EOMCC data from: reexternaldecisiononsubmissiontochemicalscience/ortho.h5
+  Using ortho nuclear dipole
+  Parsed dipole shapes:
+    Ground state: (3,)
+    G->E transitions: (50, 3)
+    E->G transitions: (50, 3)
+    E->E transitions: (50, 50, 3)
+   <0|mu|0> dipole is [-3.25702904  1.0594484   1.10451585]
+   <1|mu|1> dipole is [-2.62658354e+00 -1.34486982e-03  7.83318634e-02]
+   <2|mu|2> dipole is [-2.55072021 -0.55725395 -0.36627031]
+   <3|mu|3> dipole is [-1.09312076  1.30845074  1.41472837]
+Parsing EOMCC data from: reexternaldecisiononsubmissiontochemicalscience/meta.h5
+  Using meta nuclear dipole
+  Parsed dipole shapes:
+    Ground state: (3,)
+    G->E transitions: (50, 3)
+    E->G transitions: (50, 3)
+    E->E transitions: (50, 50, 3)
+   <0|mu|0> dipole is [-1.99943656  1.13632311  1.27582715]
+   <1|mu|1> dipole is [-2.86946816 -0.06729904  0.29683345]
+   <2|mu|2> dipole is [-3.31948553 -0.64847155 -0.15127078]
+   <3|mu|3> dipole is [0.26438689 1.72214162 1.50235172]
+
+
