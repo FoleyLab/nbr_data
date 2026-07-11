@@ -1,3 +1,4 @@
+*.pyc
 *.tar
 *.clean
 *.DS_Store
