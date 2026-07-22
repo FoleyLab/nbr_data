@@ -6,9 +6,9 @@ Directory 1, read access: /Users/jfoley19/Code/qcage/nitrobenzene_opt_and_freq/r
 
 Directory 2, write access: /Users/jfoley19/Code/nbr_data/Molecular_Dynamics_Data/Direction_A_MD_Sampled_Orientations
 
-Directory 1 contains subdirectories with QED-DFT geometry optimization and frequency results for para bromonitrobenzene orientations. The subdirectories are named like:
+Directory 1 contains subdirectories with QED-DFT geometry optimization and frequency results for para and meta bromonitrobenzene orientations. The subdirectories are named like:
 
-`para_dirA13_r001_th139_ph83`
+`para_dirA13_r001_th139_ph83` for different directions for para, `meta_dirA10_r001_th124_ph69` for different directions for meta.
 
 Each subdirectory should contain `cell.json` and `opt_status.json`; some contain `optimized.xyz`; some contain frequency products such as `frequencies.json`, `freq_cm.npy`, `H_cart_au.npy`, and `H_locked_mw.npy`.
 
@@ -40,6 +40,7 @@ Columns:
 
 For each row:
 
+- `isomer` comes from `cell.json["isomer"]`.
 - `theta` comes from `cell.json["theta"]`.
 - `phi` comes from `cell.json["phi"]`.
 - `Ex`, `Ey`, and `Ez` come from `cell.json["lambda_vector"][0]`, `[1]`, and `[2]`.
@@ -54,7 +55,7 @@ Create `qed_dft_energy_summary.csv` with one row for every subdirectory in Direc
 
 Include columns useful for plotting energy vs configuration with and without zero point correction:
 
-`id,direction_label,theta,phi,Ex,Ey,Ez,lambda_magnitude,has_optimized_xyz,converged,promoted,resumed_from_stall,attempts,final_gnorm,conv_threshold,final_energy_hartree,frequency_complete,zpe_hartree,zpe_ev,zpe_corrected_energy_hartree,n_real_modes,n_imaginary,imaginary_freqs_cm,lowest_freq_cm,xyz_file_name`
+`isomer,id,direction_label,theta,phi,Ex,Ey,Ez,lambda_magnitude,has_optimized_xyz,converged,promoted,resumed_from_stall,attempts,final_gnorm,conv_threshold,final_energy_hartree,frequency_complete,zpe_hartree,zpe_ev,zpe_corrected_energy_hartree,n_real_modes,n_imaginary,imaginary_freqs_cm,lowest_freq_cm,xyz_file_name`
 
 Use `opt_status.json` for optimization status and final energy. Use `frequencies.json` for ZPE and imaginary-frequency fields when present. If no frequency data exists, leave ZPE/frequency fields blank. Compute:
 
