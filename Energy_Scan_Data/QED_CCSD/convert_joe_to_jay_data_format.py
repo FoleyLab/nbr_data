@@ -59,11 +59,29 @@ def build_symmetry_lookups():
         if np.isclose(t_val, 180.0) and ccsd_theta180 is None:
             ccsd_theta180 = energies_ccsd
             scf_theta180 = energies_scf
-            
+
+    # FIX: when the input scan only covers the canonical theta in [0,90] half (as
+    # intermediate_scans.csv does), there is no raw theta=180 row, so ccsd_theta180/
+    # scf_theta180 stay None here. Previously that meant fetch_energy_with_symmetry's
+    # Rule 2 never fired for theta=180, and nearly every phi at that pole silently fell
+    # through to the (0.0, 0.0, 0.0) placeholder -- only phi=180 accidentally worked,
+    # because that's the one case where the Rule 5 inversion lookup happens to land on
+    # the single stored theta=0 point.
+    #
+    # The theta=0 and theta=180 poles must carry the identical (phi-independent) energy:
+    # the field vector (Ex,Ey,Ez) is phi-independent at both poles (sin(theta)=0 there),
+    # and the antipodal symmetry E(theta,phi) = E(180-theta, phi+180 mod 360) maps the
+    # whole theta=0 ring onto the whole theta=180 ring. So if no explicit theta=180 data
+    # was scanned, derive it directly from the theta=0 anchor instead of leaving it None.
+    if ccsd_theta180 is None:
+        ccsd_theta180 = ccsd_theta0
+    if scf_theta180 is None:
+        scf_theta180 = scf_theta0
+
     # Dynamically extract the resolution step sizes
     d_theta = np.diff(np.unique(theta_raw)).min()
     d_phi = np.diff(np.unique(phi_raw)).min()
-    
+
     return ccsd_lookup, scf_lookup, d_theta, d_phi, ccsd_theta0, scf_theta0, ccsd_theta180, scf_theta180
 
 def fetch_energy_with_symmetry(t, p, lookup, theta0_data, theta180_data):
@@ -94,8 +112,15 @@ def fetch_energy_with_symmetry(t, p, lookup, theta0_data, theta180_data):
         
     if (t_inv, p_inv) in lookup:
         return lookup[(t_inv, p_inv)]
-        
-    return (0.0, 0.0, 0.0)
+
+    # If every rule above fails, the input scan has an actual coverage gap -- fail loudly
+    # instead of silently writing a (0.0, 0.0, 0.0) placeholder that looks like real data.
+    raise ValueError(
+        f"No data or symmetry-derived value found for (theta={t}, phi={p}); "
+        f"checked direct match at (theta={t_key}, phi={p_key}) and inversion match at "
+        f"(theta={t_inv}, phi={p_inv}). The input scan may not fully cover the canonical "
+        f"half-domain needed to reconstruct this point."
+    )
 
 def convert_data():
     # 1. Build lookup tables and extract boundary anchors
