@@ -1,0 +1,629 @@
+{
+  "meta": {
+    "source_trajectory": "../QED_DFT_wb97x_d/nitrobenzene_direction_A_wb97x_d_4000_ts.xyz",
+    "n_frames": 4000,
+    "timestep_au": 25.0,
+    "timestep_fs": 0.6047,
+    "lambda_magnitude": 0.1,
+    "lab_field_hat": [
+      0.7878123362716187,
+      0.5516321777828741,
+      0.273959236480133
+    ],
+    "annotation_residual_deg": 0.0005,
+    "intermediates": [
+      "ortho",
+      "meta",
+      "para"
+    ],
+    "n_orientations": 25,
+    "n_cells": 75,
+    "pc1_variance_fraction": 0.846,
+    "frame_convention": "orthonormal body frame: x=ipso_C->N; z=ring-normal (first-3-C triplet cross product) orthogonalized to x, molecular sign fixed by carbon ordering (NO lab flip); y=z cross x.",
+    "symmetry_fold": "site mirror sigma_v folded (b->|b|): one intermediate at (a,|b|,c) represents both mirror orientations. Global parity E(lambda)=E(-lambda) unused (opposite face never visited).",
+    "placement": "STAGE 1 dwell-BLIND: farthest-point coverage of the support, with one design point pinned at each PES feature (2 basins, 2 major hills, 1 minor hill). Dwell re-enters only at STAGE 2 reweighting (see frames.npz).",
+    "campaign_contract": "A cell is (intermediate, orientation.id). Build lambda per cell with orientation_transfer.lambda_for_intermediate(orientation ['abc'], symbols, intermediate_ref_coords, lambda_magnitude). That helper asserts Br-on-minus-z and frame orthonormality; a raised AssertionError means the intermediate atom ordering disagrees with the reactant frame -- fix before spending CPU."
+  },
+  "orientations": [
+    {
+      "id": "ori_00_t0101_pp149",
+      "abc": [
+        -0.8410806985897498,
+        0.5060381316159868,
+        -0.19107241509537576
+      ],
+      "theta_deg": 101.015,
+      "phi_deg": 148.967,
+      "feature": "major_hill",
+      "representative_frame": 867,
+      "dwell_fraction": 0.03225,
+      "n_member_frames": 129,
+      "member_frames_sample": [
+        774,
+        790,
+        806,
+        822,
+        838,
+        854,
+        870,
+        925
+      ]
+    },
+    {
+      "id": "ori_01_t0130_pp180",
+      "abc": [
+        -0.7711332790275339,
+        0.0026343576542801283,
+        -0.6366683015008622
+      ],
+      "theta_deg": 129.544,
+      "phi_deg": 179.804,
+      "feature": null,
+      "representative_frame": 3958,
+      "dwell_fraction": 0.04225,
+      "n_member_frames": 169,
+      "member_frames_sample": [
+        633,
+        654,
+        1118,
+        2300,
+        2321,
+        3931,
+        3952,
+        3973
+      ]
+    },
+    {
+      "id": "ori_02_t0113_pp144",
+      "abc": [
+        -0.7447203429514073,
+        0.5376729834743195,
+        -0.3953471558468104
+      ],
+      "theta_deg": 113.288,
+      "phi_deg": 144.171,
+      "feature": null,
+      "representative_frame": 2494,
+      "dwell_fraction": 0.07525,
+      "n_member_frames": 301,
+      "member_frames_sample": [
+        759,
+        907,
+        962,
+        999,
+        2495,
+        2532,
+        2569,
+        2606
+      ]
+    },
+    {
+      "id": "ori_03_t0125_pp151",
+      "abc": [
+        -0.720849428187524,
+        0.3943499329635426,
+        -0.5699686239200972
+      ],
+      "theta_deg": 124.748,
+      "phi_deg": 151.319,
+      "feature": null,
+      "representative_frame": 1061,
+      "dwell_fraction": 0.0855,
+      "n_member_frames": 342,
+      "member_frames_sample": [
+        675,
+        717,
+        1012,
+        1054,
+        1096,
+        2385,
+        2427,
+        2469
+      ]
+    },
+    {
+      "id": "ori_04_t0136_pp144",
+      "abc": [
+        -0.5615926639719971,
+        0.40696780881462924,
+        -0.7204102181128851
+      ],
+      "theta_deg": 136.088,
+      "phi_deg": 144.07,
+      "feature": null,
+      "representative_frame": 3858,
+      "dwell_fraction": 0.0255,
+      "n_member_frames": 102,
+      "member_frames_sample": [
+        552,
+        2219,
+        2231,
+        2243,
+        3855,
+        3867,
+        3879,
+        3891
+      ]
+    },
+    {
+      "id": "ori_05_t0144_pp163",
+      "abc": [
+        -0.5594267412791412,
+        0.17201826167717224,
+        -0.8108337923343875
+      ],
+      "theta_deg": 144.177,
+      "phi_deg": 162.908,
+      "feature": null,
+      "representative_frame": 1188,
+      "dwell_fraction": 0.07125,
+      "n_member_frames": 285,
+      "member_frames_sample": [
+        561,
+        596,
+        674,
+        1163,
+        1200,
+        2269,
+        2343,
+        2705
+      ]
+    },
+    {
+      "id": "ori_06_t0125_pp130",
+      "abc": [
+        -0.5204656426798406,
+        0.6280078858846067,
+        -0.5785513028734851
+      ],
+      "theta_deg": 125.349,
+      "phi_deg": 129.65,
+      "feature": null,
+      "representative_frame": 3831,
+      "dwell_fraction": 0.00775,
+      "n_member_frames": 31,
+      "member_frames_sample": [
+        3816,
+        3819,
+        3822,
+        3825,
+        3828,
+        3831,
+        3834,
+        3837
+      ]
+    },
+    {
+      "id": "ori_07_t0154_pp180",
+      "abc": [
+        -0.43124280746893673,
+        0.0018633119997866368,
+        -0.9022339879846585
+      ],
+      "theta_deg": 154.453,
+      "phi_deg": 179.752,
+      "feature": null,
+      "representative_frame": 2754,
+      "dwell_fraction": 0.01125,
+      "n_member_frames": 45,
+      "member_frames_sample": [
+        617,
+        2733,
+        2738,
+        2743,
+        2748,
+        2753,
+        2758,
+        2763
+      ]
+    },
+    {
+      "id": "ori_08_t0138_pp125",
+      "abc": [
+        -0.3875038804922368,
+        0.5448567899928746,
+        -0.7436207507877377
+      ],
+      "theta_deg": 138.041,
+      "phi_deg": 125.421,
+      "feature": "minor_hill",
+      "representative_frame": 3798,
+      "dwell_fraction": 0.0385,
+      "n_member_frames": 154,
+      "member_frames_sample": [
+        494,
+        513,
+        532,
+        551,
+        2174,
+        2193,
+        2212,
+        3795
+      ]
+    },
+    {
+      "id": "ori_09_t0124_pp111",
+      "abc": [
+        -0.3022638829129316,
+        0.7699431004842405,
+        -0.5619823547969386
+      ],
+      "theta_deg": 124.193,
+      "phi_deg": 111.434,
+      "feature": null,
+      "representative_frame": 3758,
+      "dwell_fraction": 0.009,
+      "n_member_frames": 36,
+      "member_frames_sample": [
+        3744,
+        3748,
+        3752,
+        3756,
+        3760,
+        3764,
+        3768,
+        3772
+      ]
+    },
+    {
+      "id": "ori_10_t0158_pp136",
+      "abc": [
+        -0.27092405249090545,
+        0.26588473129078205,
+        -0.9251515916044969
+      ],
+      "theta_deg": 157.691,
+      "phi_deg": 135.538,
+      "feature": "basin",
+      "representative_frame": 2786,
+      "dwell_fraction": 0.02025,
+      "n_member_frames": 81,
+      "member_frames_sample": [
+        1215,
+        1225,
+        1235,
+        2774,
+        2784,
+        2794,
+        2804,
+        2814
+      ]
+    },
+    {
+      "id": "ori_11_t0149_pp115",
+      "abc": [
+        -0.22183517284333706,
+        0.46785696456351894,
+        -0.8555109682517091
+      ],
+      "theta_deg": 148.816,
+      "phi_deg": 115.368,
+      "feature": null,
+      "representative_frame": 2832,
+      "dwell_fraction": 0.026,
+      "n_member_frames": 104,
+      "member_frames_sample": [
+        465,
+        478,
+        491,
+        1254,
+        2121,
+        2134,
+        2147,
+        2829
+      ]
+    },
+    {
+      "id": "ori_12_t0139_pp097",
+      "abc": [
+        -0.07747912912024742,
+        0.6502557967852984,
+        -0.7557541817931838
+      ],
+      "theta_deg": 139.091,
+      "phi_deg": 96.795,
+      "feature": null,
+      "representative_frame": 1274,
+      "dwell_fraction": 0.06425,
+      "n_member_frames": 257,
+      "member_frames_sample": [
+        417,
+        449,
+        1278,
+        1310,
+        2106,
+        2864,
+        3679,
+        3711
+      ]
+    },
+    {
+      "id": "ori_13_t0157_pp073",
+      "abc": [
+        0.11438835611143117,
+        0.3813203501620331,
+        -0.9173385931805272
+      ],
+      "theta_deg": 156.54,
+      "phi_deg": 73.302,
+      "feature": null,
+      "representative_frame": 3647,
+      "dwell_fraction": 0.02375,
+      "n_member_frames": 95,
+      "member_frames_sample": [
+        403,
+        414,
+        2873,
+        2884,
+        3626,
+        3637,
+        3648,
+        3659
+      ]
+    },
+    {
+      "id": "ori_14_t0134_pp071",
+      "abc": [
+        0.24148094491673275,
+        0.6836557691022118,
+        -0.6886956821524184
+      ],
+      "theta_deg": 133.527,
+      "phi_deg": 70.546,
+      "feature": null,
+      "representative_frame": 1342,
+      "dwell_fraction": 0.05275,
+      "n_member_frames": 211,
+      "member_frames_sample": [
+        379,
+        1321,
+        1347,
+        1393,
+        2047,
+        2073,
+        2931,
+        2957
+      ]
+    },
+    {
+      "id": "ori_15_t0159_pp040",
+      "abc": [
+        0.27186084462631577,
+        0.23078515137892364,
+        -0.934253656702543
+      ],
+      "theta_deg": 159.108,
+      "phi_deg": 40.328,
+      "feature": null,
+      "representative_frame": 3613,
+      "dwell_fraction": 0.0045,
+      "n_member_frames": 18,
+      "member_frames_sample": [
+        3605,
+        3607,
+        3609,
+        3611,
+        3613,
+        3615,
+        3617,
+        3619
+      ]
+    },
+    {
+      "id": "ori_16_t0146_pp042",
+      "abc": [
+        0.41328578432163554,
+        0.3765774952727021,
+        -0.8290863950951002
+      ],
+      "theta_deg": 146.005,
+      "phi_deg": 42.339,
+      "feature": null,
+      "representative_frame": 1447,
+      "dwell_fraction": 0.04225,
+      "n_member_frames": 169,
+      "member_frames_sample": [
+        320,
+        341,
+        362,
+        1359,
+        1414,
+        1435,
+        1456,
+        2013
+      ]
+    },
+    {
+      "id": "ori_17_t0153_pp013",
+      "abc": [
+        0.4461170676779093,
+        0.10467858685564807,
+        -0.8888317925121536
+      ],
+      "theta_deg": 152.727,
+      "phi_deg": 13.205,
+      "feature": "basin",
+      "representative_frame": 3579,
+      "dwell_fraction": 0.0345,
+      "n_member_frames": 138,
+      "member_frames_sample": [
+        303,
+        1458,
+        1950,
+        1967,
+        1984,
+        3552,
+        3569,
+        3586
+      ]
+    },
+    {
+      "id": "ori_18_t0130_pp039",
+      "abc": [
+        0.6013076757677607,
+        0.48128636506134925,
+        -0.6378028801038822
+      ],
+      "theta_deg": 129.628,
+      "phi_deg": 38.674,
+      "feature": null,
+      "representative_frame": 3482,
+      "dwell_fraction": 0.02925,
+      "n_member_frames": 117,
+      "member_frames_sample": [
+        1866,
+        1880,
+        2990,
+        3004,
+        3018,
+        3032,
+        3484,
+        3498
+      ]
+    },
+    {
+      "id": "ori_19_t0139_pp001",
+      "abc": [
+        0.6591796893605925,
+        0.014536175790869845,
+        -0.7518449552453284
+      ],
+      "theta_deg": 138.75,
+      "phi_deg": 1.263,
+      "feature": null,
+      "representative_frame": 1490,
+      "dwell_fraction": 0.037,
+      "n_member_frames": 148,
+      "member_frames_sample": [
+        255,
+        273,
+        291,
+        1480,
+        1498,
+        1516,
+        1534,
+        1937
+      ]
+    },
+    {
+      "id": "ori_20_t0135_pp021",
+      "abc": [
+        0.6592976151304367,
+        0.2583098282385738,
+        -0.7061180406409943
+      ],
+      "theta_deg": 134.92,
+      "phi_deg": 21.395,
+      "feature": null,
+      "representative_frame": 3051,
+      "dwell_fraction": 0.04325,
+      "n_member_frames": 173,
+      "member_frames_sample": [
+        190,
+        211,
+        232,
+        253,
+        1909,
+        3041,
+        3062,
+        3100
+      ]
+    },
+    {
+      "id": "ori_21_t0116_pp041",
+      "abc": [
+        0.6824269943756721,
+        0.5866984855259945,
+        -0.4359796835047372
+      ],
+      "theta_deg": 115.848,
+      "phi_deg": 40.686,
+      "feature": null,
+      "representative_frame": 3437,
+      "dwell_fraction": 0.051,
+      "n_member_frames": 204,
+      "member_frames_sample": [
+        1671,
+        3264,
+        3289,
+        3344,
+        3369,
+        3394,
+        3419,
+        3444
+      ]
+    },
+    {
+      "id": "ori_22_t0119_pp026",
+      "abc": [
+        0.7870370088169171,
+        0.37774370594352746,
+        -0.4877319339274085
+      ],
+      "theta_deg": 119.192,
+      "phi_deg": 25.639,
+      "feature": null,
+      "representative_frame": 1787,
+      "dwell_fraction": 0.09325,
+      "n_member_frames": 373,
+      "member_frames_sample": [
+        106,
+        152,
+        1597,
+        1643,
+        1722,
+        1811,
+        1857,
+        3211
+      ]
+    },
+    {
+      "id": "ori_23_t0124_pp009",
+      "abc": [
+        0.8158317498951552,
+        0.13309515251672854,
+        -0.5627648143226065
+      ],
+      "theta_deg": 124.247,
+      "phi_deg": 9.266,
+      "feature": null,
+      "representative_frame": 1553,
+      "dwell_fraction": 0.03225,
+      "n_member_frames": 129,
+      "member_frames_sample": [
+        1539,
+        1555,
+        1571,
+        1587,
+        3082,
+        3125,
+        3141,
+        3157
+      ]
+    },
+    {
+      "id": "ori_24_t0105_pp032",
+      "abc": [
+        0.8216683291362122,
+        0.5117802666724057,
+        -0.25088267285571253
+      ],
+      "theta_deg": 104.53,
+      "phi_deg": 31.917,
+      "feature": "major_hill",
+      "representative_frame": 21,
+      "dwell_fraction": 0.04725,
+      "n_member_frames": 189,
+      "member_frames_sample": [
+        0,
+        23,
+        46,
+        69,
+        92,
+        1688,
+        1747,
+        3306
+      ]
+    }
+  ]
+}
