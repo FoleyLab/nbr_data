@@ -1,0 +1,20 @@
+{
+  "notes": [
+    "Relaxed plots use final_energy_hartree only.",
+    "ZPE columns are present in the source relaxed CSV but intentionally not included in this pass.",
+    "Only converged rows with optimized XYZ files are included for relaxed differences."
+  ],
+  "counts": {
+    "unrelaxed_rows_ok": 75,
+    "relaxed_rows_converged_optimized": 50,
+    "unrelaxed_ortho_meta_pairs": 25,
+    "unrelaxed_para_meta_pairs": 25,
+    "relaxed_ortho_meta_pairs": 4,
+    "relaxed_para_meta_pairs": 4
+  },
+  "min_orientation_match_dot": {
+    "unrelaxed": 0.9999495261352322,
+    "relaxed": 0.9999495261352322
+  },
+  "color_scale_abs_kcal_mol": 8.4
+}

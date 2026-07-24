@@ -78,7 +78,7 @@ from itertools import groupby
 import sys
 
 # --- Configuration ---
-MD_FILE = "nitrobenzene_direction_D_wb97x_d_4000_ts.xyz"
+MD_FILE = "nitrobenzene_direction_A_wb97x_d_4000_ts.xyz"
 ENERGY_FILE = "isomer_Nel_49_Nph_10_total_energies.dat"  # fixed 2026-07-10: was a nonexistent placeholder path
 AU_TO_KCAL = 627.509  # Hartree -> kcal/mol conversion factor
 TS_TO_FS = 6.04721e-16 * 1e15 # 25 au/step -> fs/step (confirmed, see module docstring)

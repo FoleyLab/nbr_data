@@ -1,0 +1,33 @@
+{
+  "notes": [
+    "Sandbox includes stalled rows with final_energy_hartree as provisional relaxed electronic energies.",
+    "Converged/optimized pairs are still marked separately.",
+    "ZPE columns are not included in this pass.",
+    "Theta values are folded with the same theta > 100 -> 180 - theta convention used by plot_timeseries_with_dwell_times.py.",
+    "Fourier fit is a low-order ridge-regularized sinusoidal fit and should be treated as provisional while meta remains sparse."
+  ],
+  "md_file": "/Users/jfoley19/Code/nbr_data/Molecular_Dynamics_Data/Nitrobenzene_Unbrominated/QED_DFT_wb97x_d/nitrobenzene_direction_A_wb97x_d_4000_ts.xyz",
+  "counts": {
+    "relaxed_om_pairs_all_available": 12,
+    "relaxed_pm_pairs_all_available": 12,
+    "relaxed_om_pairs_converged": 4,
+    "relaxed_pm_pairs_converged": 4
+  },
+  "fit_stats": {
+    "ortho_meta": {
+      "n_points": 12,
+      "train_rmse_kcal_mol": 0.0430995019605857,
+      "alpha": 0.01
+    },
+    "para_meta": {
+      "n_points": 12,
+      "train_rmse_kcal_mol": 0.06736506856374105,
+      "alpha": 0.01
+    }
+  },
+  "nearest_trajectory_distance_deg": {
+    "min": 0.17747675904185262,
+    "median": 3.968781803022181,
+    "max": 33.959275492860556
+  }
+}
