@@ -1,0 +1,16 @@
+Job: ortho_dirA_r005_th136_ph36
+Isomer: ortho
+Sample index: 005
+theta=136 phi=36
+|lambda|=0.1 lambda_vector=[0.05619904269861367, 0.04083099455373199, -0.07193398003386513]
+omega=0.06615
+functional=wb97x basis=6-311G*
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Energy: -3010.3293660494550750 Hartree

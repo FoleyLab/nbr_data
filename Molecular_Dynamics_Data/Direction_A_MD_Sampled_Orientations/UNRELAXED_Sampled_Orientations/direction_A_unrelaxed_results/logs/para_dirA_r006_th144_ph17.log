@@ -1,0 +1,16 @@
+Job: para_dirA_r006_th144_ph17
+Isomer: para
+Sample index: 006
+theta=144 phi=17
+|lambda|=0.1 lambda_vector=[0.05621018322522249, 0.01718517762236343, -0.08090169943749474]
+omega=0.06615
+functional=wb97x basis=6-311G*
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Energy: -3010.3335922259689141 Hartree

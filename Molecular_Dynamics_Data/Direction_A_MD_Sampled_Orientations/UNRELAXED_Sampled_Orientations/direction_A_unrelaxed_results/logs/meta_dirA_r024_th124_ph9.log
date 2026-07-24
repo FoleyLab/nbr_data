@@ -1,0 +1,16 @@
+Job: meta_dirA_r024_th124_ph9
+Isomer: meta
+Sample index: 024
+theta=124 phi=9
+|lambda|=0.1 lambda_vector=[0.08188307443279104, 0.012969004916089958, -0.055919290347074685]
+omega=0.06615
+functional=wb97x basis=6-311G*
+
+Running CQED-SCF energy calculation...
+
+Functional: wb97x
+Starting CQED-SCF calculation...
+Method: RKS
+Functional: wb97x
+Using density fitting through Psi4 JK.
+Energy: -3010.3316308502339780 Hartree
