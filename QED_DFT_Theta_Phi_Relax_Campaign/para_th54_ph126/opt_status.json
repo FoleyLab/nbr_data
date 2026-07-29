@@ -1,0 +1,21 @@
+{
+  "cell_id": "para_th54_ph126",
+  "converged": true,
+  "attempts": 4,
+  "gnorm_history": [
+    0.004942121067791299,
+    0.002709077903500973,
+    0.0025965598424675515,
+    0.0019396538173446852
+  ],
+  "final_gnorm": 0.0019396538173446852,
+  "conv_threshold": 0.002,
+  "final_energy_hartree": -3010.340087210436,
+  "wall_seconds": 22297.0,
+  "lambda_vector": [
+    -0.04755282581475768,
+    0.06545084971874739,
+    0.05877852522924733
+  ],
+  "resumed_from_stall": true
+}

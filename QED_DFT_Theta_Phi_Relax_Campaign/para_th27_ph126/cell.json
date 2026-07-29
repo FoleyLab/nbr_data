@@ -1,0 +1,16 @@
+{
+  "id": "para_th27_ph126",
+  "isomer": "para",
+  "xyz": "para.xyz",
+  "theta": 27.0,
+  "phi": 126.0,
+  "magnitude": 0.1,
+  "group_id": "para_th27",
+  "chain_index": 7,
+  "is_first_in_ring": false,
+  "lambda_vector": [
+    -0.026684892042779542,
+    0.03672860295740685,
+    0.0891006524188368
+  ]
+}
