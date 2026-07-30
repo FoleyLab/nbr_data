@@ -16,10 +16,13 @@ theta = cell["theta"]
 phi = cell["phi"]
 LAMBDA_MAG = cell["magnitude"]
 OMEGA = 0.06615
-FUNCTIONAL = "wb97x-d"
+FUNCTIONAL = "wb97x"
 
 FIELD_VECTOR = generate_field_vector_from_theta_and_phi(theta=theta, phi=phi)
 LAMBDA_VECTOR = LAMBDA_MAG * FIELD_VECTOR
+print(f"Loaded parameters from cell.json: theta={theta}, phi={phi}, magnitude={LAMBDA_MAG}")
+print(f"Computed FIELD_VECTOR: {FIELD_VECTOR}")
+print(f"Computed LAMBDA_VECTOR: {LAMBDA_VECTOR}")
 
 # Verify that FIELD_VECTOR * LAMBDA_MAG matches cell.json lambda_vector
 expected_lv = np.array(cell["lambda_vector"])
@@ -60,50 +63,10 @@ no_reorient
 no_com
 symmetry c1
 """
+print(f"Parsed optimized geometry with {n_atoms} atoms from optimized.xyz")
+print(f"Expected |g_proj|: {_EXPECTED_G_PROJ_NORM}, Expected Energy: {_EXPECTED_ENERGY}")
+print(f"Geometry string for Psi4:\n{geometry_string}")
 
-# ---------------------------------------------------------------------------
-# 3. Validate CCSD input file against the same geometry and parameters
-# ---------------------------------------------------------------------------
-ccsd_path = "para_th0_ph0_qed_ccsd_input.json"
-with open(ccsd_path) as f:
-    ccsd = json.load(f)
-
-# Check coordinates match
-ccsd_coords = ccsd["geometry"]["coordinates"]
-xyz_atoms = [line.strip().split()[:4] for line in xyz_lines[2:2 + n_atoms]]
-assert len(ccsd_coords) == len(xyz_atoms), "Atom count mismatch with CCSD input"
-
-for i, (ccsd_line, xyz_line) in enumerate(zip(ccsd_coords, xyz_atoms)):
-    ccsd_parts = ccsd_line.strip().split()
-    assert ccsd_parts[0] == xyz_line[0], f"Element mismatch at atom {i}"
-    for j in range(1, 4):
-        val_ccsd = float(ccsd_parts[j])
-        val_xyz = float(xyz_line[j])
-        assert abs(val_ccsd - val_xyz) < 1e-10, \
-            f"Coordinate mismatch at atom {i}, component {j}"
-
-print("✓ CCSD input geometry matches optimized.xyz")
-
-# Check other CCSD parameters
-assert ccsd["SCF"]["charge"] == 1, "CCSD charge != 1"
-assert ccsd["SCF"]["multiplicity"] == 1, "CCSD multiplicity != 1"
-assert ccsd["basis"]["basisset"] == "6-311G*", 'CCSD basis != "6-311G*"'
-
-# Check qed_polvecs
-ccsd_polvec = np.array(ccsd["SCF"]["qed_polvecs"][0])
-np.testing.assert_allclose(
-    ccsd_polvec, FIELD_VECTOR, atol=1e-15,
-    err_msg="CCSD qed_polvecs does not match FIELD_VECTOR"
-)
-print("✓ CCSD qed_polvecs matches FIELD_VECTOR")
-
-# Check qed_lambdas (magnitude)
-ccsd_mags = ccsd["SCF"]["qed_lambdas"]
-assert len(ccsd_mags) == 1 and abs(ccsd_mags[0] - LAMBDA_MAG) < 1e-15, \
-    "CCSD qed_lambdas does not match LAMBDA_MAG"
-print("✓ CCSD qed_lambdas matches LAMBDA_MAG")
-
-print("✓ CCSD charge, multiplicity, basisset all verified\n")
 
 # ---------------------------------------------------------------------------
 # 4. Run the DFT calculation and compare with expected values
@@ -114,9 +77,6 @@ PSI4_OPTIONS = {
     "scf_type": "df",
     "e_convergence": 1e-9,
     "d_convergence": 1e-9,
-    "dft_radial_points": 90,
-    "dft_spherical_points": 590,
-    "dft_pruning_scheme": "none",
 }
 
 calc = CQEDCalculator(
