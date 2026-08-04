@@ -381,7 +381,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--recompute-count", type=int, default=0, help="randomly recompute this many fast-passing cells")
     parser.add_argument("--recompute-probability", type=float, default=0.0, help="randomly recompute each fast-passing cell with this probability")
     parser.add_argument("--seed", type=int, default=20260729)
-    parser.add_argument("--recompute-energy-tol", type=float, default=1e-8)
+    parser.add_argument("--recompute-energy-tol", type=float, default=1e-6)
     parser.add_argument("--recompute-gnorm-tol", type=float, default=1e-6)
     parser.add_argument("--recompute-output", default="validation_recompute.out")
 

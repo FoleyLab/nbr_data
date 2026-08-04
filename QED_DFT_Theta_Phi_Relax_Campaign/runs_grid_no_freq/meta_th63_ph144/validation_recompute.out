@@ -7,19 +7,19 @@ Scratch directory: /tmp/
     Onebody   basis highest AM E, G, H:  -, -, -
     Solid Harmonics ordering:            Gaussian
 
-*** tstart() called on chem222ch04lws
-*** at Mon Aug  3 10:08:10 2026
+*** tstart() called on CHEM9LYY31VAWS
+*** at Tue Aug  4 11:40:57 2026
 
    => Loading Basis Set <=
 
     Name: 6-311G*
     Role: ORBITAL
     Keyword: BASIS
-    atoms 1-5, 13 entry C          line   114 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
-    atoms 6-9, 14 entry H          line    37 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
-    atoms 10      entry N          line   133 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
-    atoms 11-12   entry O          line   152 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
-    atoms 15      entry BR         line   819 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
+    atoms 1-5, 13 entry C          line   114 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
+    atoms 6-9, 14 entry H          line    37 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
+    atoms 10      entry N          line   133 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
+    atoms 11-12   entry O          line   152 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
+    atoms 15      entry BR         line   819 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/6-311gs.gbs 
 
 
          ---------------------------------------------------------
@@ -74,8 +74,8 @@ Scratch directory: /tmp/
   MOM disabled.
   Fractional occupation disabled.
   Guess Type is SAD.
-  Energy threshold   = 1.00e-12
-  Density threshold  = 1.00e-12
+  Energy threshold   = 1.00e-09
+  Density threshold  = 1.00e-09
   Integral threshold = 1.00e-12
 
   ==> Primary Basis <==
@@ -143,11 +143,11 @@ Scratch directory: /tmp/
     Name: (6-311G* AUX)
     Role: JKFIT
     Keyword: DF_BASIS_SCF
-    atoms 1-5, 13 entry C          line   125 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 6-9, 14 entry H          line    51 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 10      entry N          line   177 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 11-12   entry O          line   229 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 15      entry BR         line  1289 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 1-5, 13 entry C          line   125 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 6-9, 14 entry H          line    51 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 10      entry N          line   177 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 11-12   entry O          line   229 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 15      entry BR         line  1289 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
 
   ==> Integral Setup <==
 
@@ -197,35 +197,25 @@ Scratch directory: /tmp/
 
                            Total Energy        Delta E     RMS |[F,P]|
 
-   @DF-RKS iter SAD: -3009.16197742504073   -3.00916e+03   0.00000e+00 
-   @DF-RKS iter   1: -3009.95821684042812   -7.96239e-01   9.86427e-03 ADIIS/DIIS
-   @DF-RKS iter   2: -3009.98287328884544   -2.46564e-02   9.47699e-03 ADIIS/DIIS
-   @DF-RKS iter   3: -3010.52210575840581   -5.39232e-01   8.19355e-04 ADIIS/DIIS
-   @DF-RKS iter   4: -3010.53214154586522   -1.00358e-02   3.33787e-04 ADIIS/DIIS
-   @DF-RKS iter   5: -3010.53397680342596   -1.83526e-03   4.90116e-05 DIIS
-   @DF-RKS iter   6: -3010.53405958405938   -8.27806e-05   1.97933e-05 DIIS
-   @DF-RKS iter   7: -3010.53407721919302   -1.76351e-05   7.98240e-06 DIIS
-   @DF-RKS iter   8: -3010.53408073348010   -3.51429e-06   4.40660e-06 DIIS
-   @DF-RKS iter   9: -3010.53408160945582   -8.75976e-07   2.49413e-06 DIIS
-   @DF-RKS iter  10: -3010.53408185382432   -2.44368e-07   8.37015e-07 DIIS
-   @DF-RKS iter  11: -3010.53408191580183   -6.19775e-08   3.08540e-07 DIIS
-   @DF-RKS iter  12: -3010.53408192446113   -8.65930e-09   1.47304e-07 DIIS
-   @DF-RKS iter  13: -3010.53408192795223   -3.49110e-09   4.67045e-08 DIIS
-   @DF-RKS iter  14: -3010.53408192838197   -4.29736e-10   2.34001e-08 DIIS
-   @DF-RKS iter  15: -3010.53408192846109   -7.91260e-11   1.13693e-08 DIIS
-   @DF-RKS iter  16: -3010.53408192848065   -1.95541e-11   5.21391e-09 DIIS
-   @DF-RKS iter  17: -3010.53408192848474   -4.09273e-12   2.62013e-09 DIIS
-   @DF-RKS iter  18: -3010.53408192848519   -4.54747e-13   9.37443e-10 DIIS
-   @DF-RKS iter  19: -3010.53408192848201    3.18323e-12   4.29320e-10 DIIS
-   @DF-RKS iter  20: -3010.53408192848292   -9.09495e-13   3.08517e-10 DIIS
-   @DF-RKS iter  21: -3010.53408192848383   -9.09495e-13   1.77654e-10 DIIS
-   @DF-RKS iter  22: -3010.53408192848246    1.36424e-12   5.72103e-11 DIIS
-   @DF-RKS iter  23: -3010.53408192848019    2.27374e-12   2.80895e-11 DIIS
-   @DF-RKS iter  24: -3010.53408192848292   -2.72848e-12   1.11485e-11 DIIS
-   @DF-RKS iter  25: -3010.53408192848292    0.00000e+00   5.96333e-12 DIIS
-   @DF-RKS iter  26: -3010.53408192848337   -4.54747e-13   3.25801e-12 DIIS
-   @DF-RKS iter  27: -3010.53408192848156    1.81899e-12   1.25493e-12 DIIS
-   @DF-RKS iter  28: -3010.53408192848201   -4.54747e-13   7.32958e-13 DIIS
+   @DF-RKS iter SAD: -3009.16197730460681   -3.00916e+03   0.00000e+00 
+   @DF-RKS iter   1: -3009.95821685448709   -7.96240e-01   9.86427e-03 ADIIS/DIIS
+   @DF-RKS iter   2: -3009.98287329002096   -2.46564e-02   9.47699e-03 ADIIS/DIIS
+   @DF-RKS iter   3: -3010.52210572240165   -5.39232e-01   8.19355e-04 ADIIS/DIIS
+   @DF-RKS iter   4: -3010.53214151081966   -1.00358e-02   3.33787e-04 ADIIS/DIIS
+   @DF-RKS iter   5: -3010.53397676797522   -1.83526e-03   4.90116e-05 DIIS
+   @DF-RKS iter   6: -3010.53405954858226   -8.27806e-05   1.97933e-05 DIIS
+   @DF-RKS iter   7: -3010.53407718371682   -1.76351e-05   7.98243e-06 DIIS
+   @DF-RKS iter   8: -3010.53408069799480   -3.51428e-06   4.40664e-06 DIIS
+   @DF-RKS iter   9: -3010.53408157397917   -8.75984e-07   2.49414e-06 DIIS
+   @DF-RKS iter  10: -3010.53408181834720   -2.44368e-07   8.37013e-07 DIIS
+   @DF-RKS iter  11: -3010.53408188033018   -6.19830e-08   3.08540e-07 DIIS
+   @DF-RKS iter  12: -3010.53408188899175   -8.66157e-09   1.47305e-07 DIIS
+   @DF-RKS iter  13: -3010.53408189247557   -3.48382e-09   4.67048e-08 DIIS
+   @DF-RKS iter  14: -3010.53408189291440   -4.38831e-10   2.34003e-08 DIIS
+   @DF-RKS iter  15: -3010.53408189298580   -7.13953e-11   1.13694e-08 DIIS
+   @DF-RKS iter  16: -3010.53408189300717   -2.13731e-11   5.21393e-09 DIIS
+   @DF-RKS iter  17: -3010.53408189301172   -4.54747e-12   2.62013e-09 DIIS
+   @DF-RKS iter  18: -3010.53408189301035    1.36424e-12   9.37441e-10 DIIS
   Energy and wave function converged.
 
 
@@ -289,7 +279,7 @@ Scratch directory: /tmp/
      131A      1.571013   132A      1.589179   133A      1.604725  
      134A      1.620885   135A      1.657276   136A      1.693601  
      137A      1.715103   138A      1.740221   139A      1.770379  
-     140A      1.801681   141A      1.819383   142A      1.830605  
+     140A      1.801681   141A      1.819383   142A      1.830606  
      143A      1.872909   144A      1.885098   145A      1.927978  
      146A      1.999079   147A      2.057172   148A      2.071231  
      149A      2.087785   150A      2.128915   151A      2.165557  
@@ -299,7 +289,7 @@ Scratch directory: /tmp/
      161A      2.579538   162A      2.645527   163A      2.667938  
      164A      2.736737   165A      2.750113   166A      2.770268  
      167A      2.779921   168A      2.816938   169A      2.838783  
-     170A      2.943411   171A      2.963927   172A      3.033970  
+     170A      2.943411   171A      2.963928   172A      3.033970  
      173A      3.070474   174A      3.104192   175A      3.156099  
      176A      3.167049   177A      3.195291   178A      3.239619  
      179A      3.276955   180A      3.366517   181A      3.383866  
@@ -324,17 +314,17 @@ Scratch directory: /tmp/
     NA   [    49 ]
     NB   [    49 ]
 
-  @DF-RKS Final Energy: -3010.53408192848201
+  @DF-RKS Final Energy: -3010.53408189301035
 
    => Energetics <=
 
     Nuclear Repulsion Energy =            745.2876976571936893
-    One-Electron Energy =               -5637.9375149268598761
-    Two-Electron Energy =                1995.5364738668911286
-    DFT Exchange-Correlation Energy =    -113.4207385257065823
+    One-Electron Energy =               -5637.9375147239143189
+    Two-Electron Energy =                1995.5364736671072023
+    DFT Exchange-Correlation Energy =    -113.4207384933972378
     Empirical Dispersion Energy =           0.0000000000000000
     VV10 Nonlocal Energy =                  0.0000000000000000
-    Total Energy =                      -3010.5340819284815552
+    Total Energy =                      -3010.5340818930108071
 
 Computation Completed
 
@@ -351,32 +341,32 @@ Properties computed using the SCF density matrix
  ------------------------------------------------------------------------------------
 
  L = 1.  Multiply by 2.5417464519 to convert [e a0] to [Debye]
- Dipole X            :         -3.2039180            1.2933968           -1.9105211
- Dipole Y            :        -19.8624151           20.9827974            1.1203823
+ Dipole X            :         -3.2039183            1.2933968           -1.9105215
+ Dipole Y            :        -19.8624152           20.9827974            1.1203822
  Dipole Z            :        -11.2279977           12.4853469            1.2573492
- Magnitude           :                                                    2.5468166
+ Magnitude           :                                                    2.5468168
 
  ------------------------------------------------------------------------------------
 
-*** tstop() called on chem222ch04lws at Mon Aug  3 10:09:21 2026
+*** tstop() called on CHEM9LYY31VAWS at Tue Aug  4 11:41:36 2026
 Module time:
-	user time   =      65.99 seconds =       1.10 minutes
-	system time =       5.54 seconds =       0.09 minutes
-	total time  =         71 seconds =       1.18 minutes
+	user time   =      36.45 seconds =       0.61 minutes
+	system time =       2.41 seconds =       0.04 minutes
+	total time  =         39 seconds =       0.65 minutes
 Total time:
-	user time   =    2326.49 seconds =      38.77 minutes
-	system time =      71.98 seconds =       1.20 minutes
-	total time  =       1144 seconds =      19.07 minutes
+	user time   =     754.44 seconds =      12.57 minutes
+	system time =      32.82 seconds =       0.55 minutes
+	total time  =        787 seconds =      13.12 minutes
    => Loading Basis Set <=
 
     Name: (6-311G* AUX)
     Role: JKFIT
     Keyword: DF_BASIS_SCF
-    atoms 1-5, 13 entry C          line   125 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 6-9, 14 entry H          line    51 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 10      entry N          line   177 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 11-12   entry O          line   229 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
-    atoms 15      entry BR         line  1289 file /home/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 1-5, 13 entry C          line   125 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 6-9, 14 entry H          line    51 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 10      entry N          line   177 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 11-12   entry O          line   229 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
+    atoms 15      entry BR         line  1289 file /Users/jfoley19/miniforge3/envs/p4dev/share/psi4/basis/cc-pvtz-jkfit.gbs 
 
 
   Warning: JK type 'DF' found in simple constructor, defaulting to DiskDFJK.
@@ -384,8 +374,8 @@ Total time:
            constructor as DiskDFJK has non-optimal performance for many workloads.
 
 
-*** tstart() called on chem222ch04lws
-*** at Mon Aug  3 10:10:33 2026
+*** tstart() called on CHEM9LYY31VAWS
+*** at Tue Aug  4 11:42:11 2026
 
 
          ------------------------------------------------------------
@@ -508,29 +498,29 @@ Total time:
   -Total Gradient:
      Atom            X                  Y                   Z
     ------   -----------------  -----------------  -----------------
-       1       -0.019621830874     0.015707721214    -0.002719370800
-       2       -0.010273692570     0.003519225734     0.002937790621
-       3       -0.002224690420     0.002547463879    -0.001052062128
-       4        0.004047189073    -0.003191378813     0.001341010706
-       5       -0.021117100862     0.017935849429     0.000003229866
-       6        0.021588952866    -0.038500418637    -0.001993873898
-       7       -0.002199077896    -0.004774428409     0.000592469279
-       8       -0.003742625216     0.005799622199     0.001524304157
-       9        0.039236593341    -0.003071958052    -0.003088610327
-      10        0.018654838201    -0.014298507142     0.005888490667
-      11       -0.016787907250     0.017057519403    -0.003803008693
-      12       -0.007060624320    -0.001813225369    -0.000812397100
-      13        0.000758194849    -0.000985485427     0.003237814900
-      14        0.002173801959     0.001386276892    -0.003313680028
-      15       -0.003180478973     0.002628960002     0.001199762331
+       1       -0.019621853189     0.015707705106    -0.002719368877
+       2       -0.010273658219     0.003519189078     0.002937786813
+       3       -0.002224674039     0.002547527365    -0.001052073464
+       4        0.004047139718    -0.003191388881     0.001341001716
+       5       -0.021117080850     0.017935849469     0.000003224888
+       6        0.021588940228    -0.038500395370    -0.001993877590
+       7       -0.002199060904    -0.004774405413     0.000592470592
+       8       -0.003742600411     0.005799580219     0.001524306814
+       9        0.039236571860    -0.003071959032    -0.003088613332
+      10        0.018654858338    -0.014298448547     0.005888447980
+      11       -0.016787900708     0.017057473637    -0.003802968619
+      12       -0.007060630110    -0.001813224852    -0.000812386783
+      13        0.000758166092    -0.000985486329     0.003237830318
+      14        0.002173802664     0.001386262961    -0.003313673384
+      15       -0.003180478698     0.002628957535     0.001199762443
 
 
-*** tstop() called on chem222ch04lws at Mon Aug  3 10:10:43 2026
+*** tstop() called on CHEM9LYY31VAWS at Tue Aug  4 11:42:20 2026
 Module time:
-	user time   =      11.91 seconds =       0.20 minutes
-	system time =       0.47 seconds =       0.01 minutes
-	total time  =         10 seconds =       0.17 minutes
+	user time   =       8.51 seconds =       0.14 minutes
+	system time =       0.16 seconds =       0.00 minutes
+	total time  =          9 seconds =       0.15 minutes
 Total time:
-	user time   =    2584.37 seconds =      43.07 minutes
-	system time =      74.37 seconds =       1.24 minutes
-	total time  =       1226 seconds =      20.43 minutes
+	user time   =     798.31 seconds =      13.31 minutes
+	system time =      33.36 seconds =       0.56 minutes
+	total time  =        831 seconds =      13.85 minutes
