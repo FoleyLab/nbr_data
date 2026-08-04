@@ -1,0 +1,16 @@
+{
+  "id": "meta_th27_ph306",
+  "isomer": "meta",
+  "xyz": "meta.xyz",
+  "theta": 27.0,
+  "phi": 306.0,
+  "magnitude": 0.1,
+  "group_id": "meta_th27",
+  "chain_index": 17,
+  "is_first_in_ring": false,
+  "lambda_vector": [
+    0.026684892042779535,
+    -0.036728602957406854,
+    0.0891006524188368
+  ]
+}

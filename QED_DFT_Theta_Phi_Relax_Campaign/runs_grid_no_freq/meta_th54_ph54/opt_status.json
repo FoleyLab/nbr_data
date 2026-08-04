@@ -1,0 +1,18 @@
+{
+  "cell_id": "meta_th54_ph54",
+  "converged": true,
+  "attempts": 1,
+  "gnorm_history": [
+    0.00031918013733415557
+  ],
+  "final_gnorm": 0.00031918013733415557,
+  "conv_threshold": 0.002,
+  "final_energy_hartree": -3010.3266047978427,
+  "wall_seconds": 20835.0,
+  "lambda_vector": [
+    0.047552825814757685,
+    0.06545084971874737,
+    0.058778525229247314
+  ],
+  "resumed_from_stall": true
+}

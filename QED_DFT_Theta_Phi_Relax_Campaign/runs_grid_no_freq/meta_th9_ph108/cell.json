@@ -1,0 +1,16 @@
+{
+  "id": "meta_th9_ph108",
+  "isomer": "meta",
+  "xyz": "meta.xyz",
+  "theta": 9.0,
+  "phi": 108.0,
+  "magnitude": 0.1,
+  "group_id": "meta_th9",
+  "chain_index": 6,
+  "is_first_in_ring": false,
+  "lambda_vector": [
+    -0.0048340908203384925,
+    0.0148778017349658,
+    0.09876883405951378
+  ]
+}
