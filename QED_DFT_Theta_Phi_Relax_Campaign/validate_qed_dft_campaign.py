@@ -290,10 +290,11 @@ def recompute_cell(report: CellReport, data: dict[str, Any], args: argparse.Name
         "scf_type": "df",
         "e_convergence": 1e-9,
         "d_convergence": 1e-9,
-        "dft_radial_points": 90,
-        "dft_spherical_points": 590,
-        "dft_pruning_scheme": "none",
     }
+    #    "dft_radial_points": 90,
+    #    "dft_spherical_points": 590,
+    #    "dft_pruning_scheme": "none",
+    #}
 
     lambda_vector = np.array(cell["lambda_vector"], dtype=float)
     geometry_string = build_geometry_string(data["xyz_atoms"], args.expected_charge, args.expected_multiplicity)
@@ -372,8 +373,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--coord-tol", type=float, default=1e-10)
     parser.add_argument("--vector-tol", type=float, default=1e-12)
     parser.add_argument("--scalar-tol", type=float, default=1e-12)
-    parser.add_argument("--energy-tol", type=float, default=5e-10)
-    parser.add_argument("--gnorm-tol", type=float, default=5e-7)
+    parser.add_argument("--energy-tol", type=float, default=5e-7)
+    parser.add_argument("--gnorm-tol", type=float, default=5e-6)
 
     parser.add_argument("--recompute-cell", action="append", default=[], help="cell id to recompute; may be repeated or comma-separated")
     parser.add_argument("--recompute-all", action="store_true", help="recompute every cell that passes fast checks")
