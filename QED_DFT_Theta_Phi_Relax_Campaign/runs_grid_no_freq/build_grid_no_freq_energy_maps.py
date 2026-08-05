@@ -24,19 +24,20 @@ AU_TO_KCAL = 627.509
 ISOMERS = ("ortho", "meta", "para")
 INPUT_TEMPLATE = "grid_campaign_no_freq_{isomer}_status.csv"
 OUTPUT_CSV = "grid_campaign_no_freq_opt_energies.csv"
+OUTPUT_CSV_WITH_GNORM = "grid_campaign_no_freq_opt_energies_and_gnorm.csv"
 
 
 def coordinate_key(theta: float, phi: float) -> tuple[float, float]:
     return (round(theta, 8), round(phi, 8))
 
 
-def read_isomer_table(data_dir: Path, isomer: str) -> dict[tuple[float, float], float]:
+def read_isomer_table(data_dir: Path, isomer: str) -> dict[tuple[float, float], dict[str, float]]:
     input_path = data_dir / INPUT_TEMPLATE.format(isomer=isomer)
-    values: dict[tuple[float, float], float] = {}
+    values: dict[tuple[float, float], dict[str, float]] = {}
 
     with input_path.open(newline="") as handle:
         reader = csv.DictReader(handle)
-        required_columns = {"theta", "phi", "E_opt_hartree"}
+        required_columns = {"theta", "phi", "E_opt_hartree", "final_gnorm"}
         missing = required_columns.difference(reader.fieldnames or [])
         if missing:
             raise ValueError(f"{input_path} is missing columns: {sorted(missing)}")
@@ -45,10 +46,11 @@ def read_isomer_table(data_dir: Path, isomer: str) -> dict[tuple[float, float], 
             theta = float(row["theta"])
             phi = float(row["phi"])
             energy = float(row["E_opt_hartree"])
+            gnorm = float(row["final_gnorm"])
             key = coordinate_key(theta, phi)
             if key in values:
                 raise ValueError(f"Duplicate {isomer} row for theta={theta}, phi={phi}")
-            values[key] = energy
+            values[key] = {"energy": energy, "gnorm": gnorm}
 
     return values
 
@@ -72,27 +74,44 @@ def build_merged_rows(data_dir: Path) -> list[dict[str, float]]:
             {
                 "theta": theta,
                 "phi": phi,
-                "E_opt_ortho": tables["ortho"][(theta, phi)],
-                "E_opt_meta": tables["meta"][(theta, phi)],
-                "E_opt_para": tables["para"][(theta, phi)],
+                "E_opt_ortho": tables["ortho"][(theta, phi)]["energy"],
+                "E_opt_meta": tables["meta"][(theta, phi)]["energy"],
+                "E_opt_para": tables["para"][(theta, phi)]["energy"],
+                "g_norm_ortho": tables["ortho"][(theta, phi)]["gnorm"],
+                "g_norm_meta": tables["meta"][(theta, phi)]["gnorm"],
+                "g_norm_para": tables["para"][(theta, phi)]["gnorm"],
             }
         )
     return rows
 
 
 def write_merged_csv(rows: list[dict[str, float]], output_path: Path) -> None:
-    fieldnames = ["theta", "phi", "E_opt_ortho", "E_opt_meta", "E_opt_para"]
+    if output_path.name == OUTPUT_CSV:
+        fieldnames = ["theta", "phi", "E_opt_ortho", "E_opt_meta", "E_opt_para"]
+    else:
+        fieldnames = [
+            "theta",
+            "phi",
+            "E_opt_ortho",
+            "E_opt_meta",
+            "E_opt_para",
+            "g_norm_ortho",
+            "g_norm_meta",
+            "g_norm_para",
+        ]
     with output_path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
 
 
-def build_lookup(rows: list[dict[str, float]]) -> dict[tuple[float, float], tuple[float, float, float]]:
+def build_lookup(
+    rows: list[dict[str, float]], columns: tuple[str, str, str]
+) -> dict[tuple[float, float], tuple[float, float, float]]:
     lookup = {}
     for row in rows:
         key = coordinate_key(row["theta"], row["phi"])
-        lookup[key] = (row["E_opt_ortho"], row["E_opt_meta"], row["E_opt_para"])
+        lookup[key] = tuple(row[column] for column in columns)
     return lookup
 
 
@@ -124,7 +143,9 @@ def fetch_with_inversion_symmetry(
 
 def symmetry_expanded_grids(
     rows: list[dict[str, float]],
-) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    columns: tuple[str, str, str] = ("E_opt_ortho", "E_opt_meta", "E_opt_para"),
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """Return symmetry-expanded grids for a three-column quantity."""
     theta_values = sorted({row["theta"] for row in rows})
     phi_values = sorted({row["phi"] for row in rows})
     d_theta = min(np.diff(theta_values))
@@ -132,16 +153,16 @@ def symmetry_expanded_grids(
     full_theta = np.arange(0.0, 180.0 + d_theta / 2.0, d_theta)
     full_phi = np.arange(0.0, 360.0 + d_phi / 2.0, d_phi)
 
-    lookup = build_lookup(rows)
+    lookup = build_lookup(rows, columns)
     theta0_data = lookup[coordinate_key(0.0, 0.0)]
-    energy_grid = np.empty((len(full_theta), len(full_phi), 3), dtype=float)
+    value_grid = np.empty((len(full_theta), len(full_phi), 3), dtype=float)
 
     for i, theta in enumerate(full_theta):
         for j, phi in enumerate(full_phi):
-            energy_grid[i, j, :] = fetch_with_inversion_symmetry(theta, phi, lookup, theta0_data)
+            value_grid[i, j, :] = fetch_with_inversion_symmetry(theta, phi, lookup, theta0_data)
 
     phi_grid, theta_grid = np.meshgrid(full_phi, full_theta)
-    return theta_grid, phi_grid, energy_grid[:, :, 0], energy_grid[:, :, 1], energy_grid[:, :, 2]
+    return theta_grid, phi_grid, value_grid[:, :, 0], value_grid[:, :, 1], value_grid[:, :, 2]
 
 
 def create_difference_map(
@@ -325,6 +346,115 @@ def create_difference_map_with_pillow(
     image.save(output_path)
 
 
+def create_scalar_map(
+    theta_grid: np.ndarray,
+    phi_grid: np.ndarray,
+    value_grid: np.ndarray,
+    title: str,
+    colorbar_label: str,
+    output_path: Path,
+    cmap: str = "viridis",
+) -> None:
+    if plt is None:
+        return
+
+    fig, ax = plt.subplots(figsize=(8, 6), constrained_layout=True)
+    image = ax.pcolormesh(phi_grid, theta_grid, value_grid, shading="gouraud", cmap=cmap)
+    ax.set_title(title, fontsize=20, fontweight="bold", pad=20)
+    ax.set_xlabel(r"Azimuthal Angle $\phi$ (deg.)", fontsize=18)
+    ax.set_ylabel(r"Polar Angle $\theta$ (deg.)", fontsize=18)
+    ax.set_xticks([0, 90, 180, 270, 360])
+    ax.set_yticks([0, 45, 90, 135, 180])
+    ax.tick_params(axis="both", labelsize=16)
+    ax.grid(True, linestyle="--", alpha=0.3)
+    colorbar = fig.colorbar(image, ax=ax)
+    colorbar.set_label(colorbar_label, fontsize=18)
+    colorbar.ax.tick_params(labelsize=16)
+    fig.savefig(output_path, dpi=350)
+    plt.close(fig)
+
+
+def grid_roughness(value_grid: np.ndarray) -> np.ndarray:
+    theta_grad, phi_grad = np.gradient(value_grid)
+    return np.sqrt(theta_grad**2 + phi_grad**2)
+
+
+def create_roughness_gnorm_scatter(
+    roughness_grid: np.ndarray,
+    max_gnorm_grid: np.ndarray,
+    title: str,
+    output_path: Path,
+) -> None:
+    if plt is None:
+        return
+
+    roughness = roughness_grid.ravel()
+    max_gnorm = max_gnorm_grid.ravel()
+    corr = np.corrcoef(roughness, max_gnorm)[0, 1]
+
+    fig, ax = plt.subplots(figsize=(7, 6), constrained_layout=True)
+    ax.scatter(max_gnorm, roughness, s=36, alpha=0.72, edgecolor="none")
+    ax.set_title(f"{title}\nPearson r = {corr:.3f}", fontsize=18, fontweight="bold", pad=16)
+    ax.set_xlabel("max final_gnorm among ortho/meta/para", fontsize=15)
+    ax.set_ylabel("local energy-difference roughness (kcal/mol/grid step)", fontsize=15)
+    ax.tick_params(axis="both", labelsize=13)
+    ax.grid(True, linestyle="--", alpha=0.3)
+    fig.savefig(output_path, dpi=350)
+    plt.close(fig)
+
+
+def create_diagnostic_plots(rows: list[dict[str, float]], output_dir: Path) -> None:
+    theta_grid, phi_grid, e_ortho, e_meta, e_para = symmetry_expanded_grids(rows)
+    _, _, g_ortho, g_meta, g_para = symmetry_expanded_grids(
+        rows, ("g_norm_ortho", "g_norm_meta", "g_norm_para")
+    )
+
+    max_gnorm = np.maximum.reduce([g_ortho, g_meta, g_para])
+    diff_ortho_meta = (e_ortho - e_meta) * AU_TO_KCAL
+    diff_para_meta = (e_para - e_meta) * AU_TO_KCAL
+    rough_ortho_meta = grid_roughness(diff_ortho_meta)
+    rough_para_meta = grid_roughness(diff_para_meta)
+
+    create_scalar_map(
+        theta_grid,
+        phi_grid,
+        max_gnorm,
+        "Max final gradient norm",
+        "max final_gnorm",
+        output_dir / "max_gnorm_grid_campaign_no_freq.png",
+    )
+    create_scalar_map(
+        theta_grid,
+        phi_grid,
+        rough_ortho_meta,
+        r"Local roughness: $\Delta E$ (Ortho $-$ Meta)",
+        "kcal/mol/grid step",
+        output_dir / "ortho_meta_roughness_grid_campaign_no_freq.png",
+        cmap="magma",
+    )
+    create_scalar_map(
+        theta_grid,
+        phi_grid,
+        rough_para_meta,
+        r"Local roughness: $\Delta E$ (Para $-$ Meta)",
+        "kcal/mol/grid step",
+        output_dir / "para_meta_roughness_grid_campaign_no_freq.png",
+        cmap="magma",
+    )
+    create_roughness_gnorm_scatter(
+        rough_ortho_meta,
+        max_gnorm,
+        "Ortho - Meta roughness vs gnorm",
+        output_dir / "ortho_meta_roughness_vs_max_gnorm.png",
+    )
+    create_roughness_gnorm_scatter(
+        rough_para_meta,
+        max_gnorm,
+        "Para - Meta roughness vs gnorm",
+        output_dir / "para_meta_roughness_vs_max_gnorm.png",
+    )
+
+
 def create_plots(rows: list[dict[str, float]], output_dir: Path) -> None:
     theta_grid, phi_grid, e_ortho, e_meta, e_para = symmetry_expanded_grids(rows)
     diff_ortho_meta = (e_ortho - e_meta) * AU_TO_KCAL
@@ -346,6 +476,7 @@ def create_plots(rows: list[dict[str, float]], output_dir: Path) -> None:
         "Delta E (Para - Meta)",
         output_dir / "para_meta_diff_grid_campaign_no_freq.png",
     )
+    create_diagnostic_plots(rows, output_dir)
 
 
 def main() -> None:
@@ -363,12 +494,18 @@ def main() -> None:
     data_dir = args.data_dir.resolve()
     rows = build_merged_rows(data_dir)
     output_csv = data_dir / OUTPUT_CSV
+    output_csv_with_gnorm = data_dir / OUTPUT_CSV_WITH_GNORM
     write_merged_csv(rows, output_csv)
+    write_merged_csv(rows, output_csv_with_gnorm)
     create_plots(rows, data_dir)
 
     print(f"Wrote {len(rows)} merged rows to {output_csv}")
+    print(f"Wrote {len(rows)} merged rows to {output_csv_with_gnorm}")
     print(f"Wrote {data_dir / 'ortho_meta_diff_grid_campaign_no_freq.png'}")
     print(f"Wrote {data_dir / 'para_meta_diff_grid_campaign_no_freq.png'}")
+    print(f"Wrote {data_dir / 'max_gnorm_grid_campaign_no_freq.png'}")
+    print(f"Wrote {data_dir / 'ortho_meta_roughness_vs_max_gnorm.png'}")
+    print(f"Wrote {data_dir / 'para_meta_roughness_vs_max_gnorm.png'}")
 
 
 if __name__ == "__main__":
