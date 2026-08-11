@@ -1,71 +1,67 @@
-# analysis — Reorganized results for the cavity opt+frequency campaign
+# Lambda_Scan_Results - Cavity-coupled isomer energetics
 
-Relative energies of bromonitrobenzene isomer pairs vs. cavity-coupling
-magnitude |λ|, along one cavity orientation per pair, from multiple levels of
-theory. Reorganized by method (see `git log`/subfolders); each subfolder has
-its own README with a file-level table.
+This folder collects relative energetics for bromonitrobenzene intermediates
+under strong directional cavity coupling. The data come from heterogeneous
+ab initio cavity-QED methods: QED-DFT, QED-CCSD(2,2), QED-HF, and pQED.
+
+The main comparisons are:
+
+| Pair | Direction | Primary relative energy |
+| --- | --- | --- |
+| ortho/meta | `(theta=70, phi=31)` | `ortho - meta` |
+| para/meta | `(theta=65, phi=78)` | `para - meta` |
 
 ## Layout
 
-```text
-analysis/
-├── README.md                 # this file (index + method overview)
-├── qed_dft_relaxed/          # relaxed-geometry QED-DFT tables (Hartree), from analyze.py
-├── qed_dft_unrelaxed/        # unrelaxed-geometry QED-DFT scans (kcal/mol)
-├── pqed/                     # parameterized QED scans, Nel=49, Nph=3/10, with/without CS
-├── polariton_scan/           # full-sphere polariton orientation scans (DIFFERENT SYSTEM)
-├── scripts/                  # plotting/analysis tools
-└── docs/                     # presentations
+| Folder | Contents |
+| --- | --- |
+| `qed_dft_relaxed/` | QED-DFT energies at geometries relaxed under the target cavity coupling. |
+| `qed_dft_unrelaxed/` | QED-DFT energies at fixed unrelaxed geometries. |
+| `QED_CCSD/` | QED-CCSD(2,2), QED-HF, and original long calculation outputs. |
+| `pqed/` | pQED unrelaxed scans for 49 electrons, `Nph=3/10`, with and without coherent-state transform. |
+| `scripts/` | Plotting script and generated comparison figures. |
+| `docs/` | Presentation material derived from these summaries. |
+
+Each subfolder has its own `README.md` describing the files it contains.
+
+## Data conventions
+
+Summary CSVs use consistent leading metadata columns where possible:
+
+| Column | Meaning |
+| --- | --- |
+| `method` | Present when a file may be mixed or generated from method-specific text summaries. |
+| `geometry` | `relaxed` or `unrelaxed`, where applicable. |
+| `theta`, `phi` | cavity direction in degrees. |
+| `Ex`, `Ey`, `Ez` | Cartesian components of the lambda vector. |
+| `lambda_magnitude` | `|lambda|` in a.u. |
+| `E_<isomer>_Hartrees` | absolute electronic energy in Hartree. |
+| `zpe_<isomer>_Hartrees` | zero-point energy in Hartree, where available. |
+| `dE_<pair>_..._kcal/mol` | relative energy in kcal/mol. |
+
+Relative energies use the sign convention `E(A) - E(B)`. The two target
+columns are `dE_ortho_meta*_kcal/mol` and `dE_para_meta*_kcal/mol`.
+
+## Geometry and method notes
+
+- QED-DFT relaxed data use geometries optimized at each target direction and
+  coupling magnitude.
+- QED-DFT unrelaxed, QED-CCSD unrelaxed, and pQED use fixed unrelaxed
+  geometries.
+- QED-CCSD relaxed calculations reuse the QED-DFT-relaxed geometries.
+- pQED is only available for unrelaxed geometries.
+- The long `.out` calculation files in `QED_CCSD/outputs/` are left unchanged
+  and documented rather than reorganized or parsed in place.
+
+## Plotting
+
+Use `scripts/plot_isomer_energies.py` to regenerate comparison plots:
+
+```bash
+cd scripts
+python plot_isomer_energies.py
 ```
 
-## Files by folder (quick index)
-
-| Folder | Files | Units | Produced by |
-| --- | --- | --- | --- |
-| `qed_dft_relaxed/` | `ortho-meta_70_31_hartree.csv`, `para-meta_65_78_hartree.csv`, `availability.md` | E & ZPE in Hartree, dE in kcal/mol | `../../analyze.py` (from `runs/`) |
-| `qed_dft_unrelaxed/` | `ortho_meta_dir70_31_scan_qed_dft_no_relax.csv`, `para_meta_dir65_78_scan_qed_dft_no_relax.csv` | E in Hartree, dE in kcal/mol | external QED-DFT scans |
-| `pqed/` | 8 × `pqed_49_{3,10}_dir{70_31,65_78}_scan[_CS].csv` | E in Hartree, dE in kcal/mol | pQED scans (also in `../../QED_CCSD/summary/`) |
-| `polariton_scan/` | `polariton_energy_scan.csv`, `polariton_energy_scan_fc.csv` | Hartree | unknown (see README) |
-| `scripts/` | `plot_isomer_energies.py` + its 4 generated figures | — | — |
-| `docs/` | `relaxed_vs_unrelaxed.pptx` | — | — |
-
-## Method overview
-
-- **System:** three bromonitrobenzene isomers (ortho-, meta-, para-), C6H4BrNO2.
-  Basis 6-311G\*, charge +1, singlet. Level of theory for the relaxed/unrelaxed
-  CC energies: QED-CCSD(2,2); relaxation geometries from QED-DFT.
-- **Cavity directions:** (θ=70°, φ=31°) for the ortho–meta pair and
-  (θ=65°, φ=78°) for the para–meta pair. λ vector from spherical coordinates:
-  `Ex = |λ|·sinθ·cosφ`, `Ey = |λ|·sinθ·sinφ`, `Ez = |λ|·cosθ`.
-- **λ magnitudes:** 0.02, 0.04, 0.06, 0.08, 0.10 a.u. (relaxed dir_65_78 is
-  missing λ=0.06 by design — see `../../README.md`).
-- **Relative energies:** ΔE = E(A) − E(B), reported for `ortho − meta` and
-  `para − meta`. `qed_dft_relaxed/` additionally has ZPE-corrected differences,
-  `(E_A + zpe_A) − (E_B + zpe_B)`.
-- **Column conventions (all three QED-DFT/pQED data folders):** absolute
-  electronic energies and ZPEs are in Hartree (columns `E_<iso>_Hartrees`,
-  `zpe_<iso>_Hartrees`); relative energies are in kcal/mol
-  (columns `dE_<A>_<B>_..._kcal/mol`), converted with 627.509 Ha→kcal/mol.
-  Do **not** convert the `dE_*` columns again.
-- **Relaxed vs unrelaxed:** relaxed geometries are re-optimized under QED-DFT
-  per (isomer, direction, |λ|); unrelaxed use a fixed gas-phase geometry at
-  every |λ|.
-
-## Relationships to the parent folder
-
-| Parent item | Role |
-| --- | --- |
-| `analyze.py` | regenerates `qed_dft_relaxed/*` from `runs/` (folder currently absent) |
-| `plot_energies.py` | QED-CCSD (relaxed/unrelaxed) vs pQED figures from `QED_CCSD/summary/` |
-| `plot_qed_ccsd_energies_relaxed_vs_unrelaxed.py` | relaxed-vs-unrelaxed QED-CCSD figures |
-| `QED_CCSD/summary/` | canonical pQED CSVs + QED-CCSD/QEDHF energy tables |
-| `README.md`, `audit_procedure.md` | dataset documentation and geometry audits |
-
-## Known gaps / caveats
-
-1. `qed_dft_relaxed/` data came from a `runs/` folder that is no longer present;
-   only the reduced tables survive.
-2. `pqed/` duplicates `QED_CCSD/summary/unrelaxed_dir_*_pqed_49_*.csv` — keep in
-   sync (see `pqed/README.md`).
-3. `polariton_scan/` belongs to a different molecule (~ −435 Ha) and has no
-   generating script here — see its README before use.
+The default script configuration generates comparisons for QED-CCSD relaxed
+vs. unrelaxed, QED-DFT relaxed vs. unrelaxed, pQED vs. QED-CCSD, and pQED vs.
+QED-DFT for the target isomer pairs and directions.

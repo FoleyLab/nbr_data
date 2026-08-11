@@ -1,52 +1,37 @@
-# qed_dft_relaxed — Relaxed QED-DFT energy tables
+# qed_dft_relaxed - Relaxed QED-DFT energy tables
 
-Per-lambda relative-energy tables for the two isomer pairs, computed from
-geometries **relaxed under QED-DFT** for each (isomer, cavity direction,
-|λ|) combination. Column conventions follow the pQED scan files: absolute
-electronic energies and ZPEs in **Hartree**, relative energy differences in
-**kcal/mol** (Hartree × 627.509). Figures are produced by
-`scripts/plot_isomer_energies.py`.
-
-Produced by `../../analyze.py`, which reads `opt_status.json`
-(`final_energy_hartree`) and `frequencies.json` (`zpe_hartree`) from the
-per-run `runs/` folder.
+This folder contains per-lambda relative-energy tables from geometries relaxed
+under QED-DFT while holding the cavity orientation fixed at the target
+direction. Each row is one coupling magnitude.
 
 ## Files
 
-| File | Source | Contents |
-| --- | --- | --- |
-| `ortho-meta_70_31_hartree.csv` | `../../analyze.py` | ortho − meta at (θ=70°, φ=31°), 5 rows (λ = 0.02–0.10) |
-| `para-meta_65_78_hartree.csv` | `../../analyze.py` | para − meta at (θ=65°, φ=78°), 5 rows (λ = 0.02–0.10) |
-| `availability.md` | `../../analyze.py` | which λ points have raw / +ZPE differences and any missing data |
+| File | Pair | Direction | Rows |
+| --- | --- | --- | --- |
+| `ortho-meta_70_31_hartree.csv` | ortho - meta | `(theta=70, phi=31)` | 5 |
+| `para-meta_65_78_hartree.csv` | para - meta | `(theta=65, phi=78)` | 5 |
+| `availability.md` | both pairs | both directions | Human-readable availability summary. |
 
-## Columns (`*_hartree.csv`)
+## Columns
 
-For the ortho–meta file, `isoA = ortho`, `isoB = meta`; for the para–meta
-file, `isoA = para`, `isoB = meta`.
+The CSVs use the same leading metadata columns as the other method summaries.
 
 | Column | Meaning |
 | --- | --- |
-| `lambda_magnitude` | cavity coupling magnitude \|λ\| (a.u.) |
-| `E_isoA_Hartrees`, `E_isoB_Hartrees` | converged electronic energy of isomer A / B (Hartree) |
-| `zpe_isoA_Hartrees`, `zpe_isoB_Hartrees` | zero-point energy of A / B (Hartree) |
-| `dE_isoA_isoB_raw_kcal/mol` | `E_A − E_B` (kcal/mol) |
-| `dE_isoA_isoB_zpe_kcal/mol` | `(E_A + zpe_A) − (E_B + zpe_B)` (kcal/mol) |
-| `isoA_converged`, `isoB_converged` | optimization convergence flag for each isomer |
-| `isoA_has_freq`, `isoB_has_freq` | whether a frequency (ZPE) file exists for each isomer |
+| `theta`, `phi` | cavity direction in degrees |
+| `Ex`, `Ey`, `Ez` | Cartesian components of the lambda vector |
+| `lambda_magnitude` | `|lambda|` in a.u. |
+| `E_<isomer>_Hartrees` | absolute electronic energy in Hartree |
+| `zpe_<isomer>_Hartrees` | harmonic zero-point energy in Hartree |
+| `dE_<pair>_raw_kcal/mol` | electronic relative energy, `E(A) - E(B)`, in kcal/mol |
+| `dE_<pair>_zpe_kcal/mol` | ZPE-corrected relative energy, `(E_A + ZPE_A) - (E_B + ZPE_B)`, in kcal/mol |
+| `<isomer>_converged` | QED-DFT optimization convergence flag |
+| `<isomer>_has_freq` | whether the frequency/ZPE calculation is present |
 
 ## Method notes
 
-- Geometry type: **relaxed** — optimized under QED-DFT with the specific
-  cavity direction and |λ| of that row (see `../../../README.md`).
-- ZPE correction adds the harmonic zero-point energy to each isomer *before*
-  differencing.
-- All λ points are present and converged (see `availability.md`).
-- Relative energies are pre-converted to kcal/mol (× 627.509) in the CSV;
-  do **not** convert the `dE_*` columns again.
-
-## Caveats
-
-- The upstream `runs/` folder referenced by `analyze.py` is **not present**
-  in `NEW_LAMBDA_SCAN/`; only these reduced outputs remain.
-- `relative_energies_kcal.png` (written by `analyze.py`) is not currently
-  generated; use `scripts/plot_isomer_energies.py` for figures.
+- Geometry type: relaxed at each `(isomer, direction, |lambda|)` point.
+- Relative energies are already converted to kcal/mol using 627.509
+  kcal/mol per Hartree.
+- These are QED-DFT energies, not QED-CCSD energies. The matching QED-CCSD
+  relaxed-geometry summaries are in `../QED_CCSD/summary/`.

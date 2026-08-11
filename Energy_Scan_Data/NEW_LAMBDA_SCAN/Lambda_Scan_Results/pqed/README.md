@@ -39,6 +39,7 @@ All use **Nel = 49** electrons.
 
 ## Duplication warning
 
-These CSVs duplicate `../../../QED_CCSD/summary/unrelaxed_dir_*_pqed_49_*.csv`
-(the canonical source, read by `../../../plot_energies.py`). Keep the two in
-sync or point consumers at the canonical copy to avoid drift.
+These CSVs duplicate `../QED_CCSD/summary/unrelaxed_dir_*_pqed_49_*.csv`.
+The copies in this `pqed/` folder are the clearer method-level copies used by
+`../scripts/plot_isomer_energies.py`; keep the two locations in sync if either
+copy is regenerated.

@@ -1,29 +1,42 @@
-# scripts — Analysis and plotting tools
+# scripts - Analysis and plotting tools
 
 | File | Purpose |
 | --- | --- |
-| `plot_isomer_energies.py` | Publication-quality plots of isomer-pair energy differences (kcal/mol) vs. \|λ\| for the QED-DFT / pQED data in the sibling folders. Config-driven: edit the `FIGURES` dict, run `python plot_isomer_energies.py`, and it emits `.png` (300 dpi) + `.pdf` figures in this folder. |
+| `plot_isomer_energies.py` | Generates method-comparison plots of relative isomer energies vs. `|lambda|`. |
 
 ## plot_isomer_energies.py
 
-Reads data from the sibling folders of this script:
+Run from this folder or from anywhere:
 
-| Method | Reads from |
+```bash
+python plot_isomer_energies.py
+```
+
+The script writes both `.png` and `.pdf` outputs into `scripts/`. The default
+configuration regenerates these comparison figures:
+
+| Figure stem | Comparison |
 | --- | --- |
-| `qed_dft_relaxed` | `../qed_dft_relaxed/*_hartree.csv` (also used for the +ZPE curves) |
-| `qed_dft_no_relax` | `../qed_dft_unrelaxed/*_scan_qed_dft_no_relax.csv` |
-| `pqed` | `../pqed/pqed_49_*_scan[_CS].csv` |
+| `01_relaxed_vs_unrelaxed_no_zpe` | QED-DFT relaxed vs. unrelaxed for both target pairs. |
+| `02_relaxed_zpe_vs_no_zpe` | Relaxed QED-DFT raw electronic vs. ZPE-corrected relative energies. |
+| `03_qeddft_vs_pqed_ortho_meta` | pQED vs. QED-DFT relaxed and unrelaxed for ortho-meta at `(70,31)`. |
+| `04_qeddft_vs_pqed_para_meta` | pQED vs. QED-DFT relaxed and unrelaxed for para-meta at `(65,78)`. |
+| `05_qed_ccsd_relaxed_vs_unrelaxed` | QED-CCSD relaxed vs. unrelaxed for both target pairs. |
+| `06_pqed_vs_qed_ccsd_ortho_meta` | pQED vs. QED-CCSD relaxed and unrelaxed for ortho-meta at `(70,31)`. |
+| `07_pqed_vs_qed_ccsd_para_meta` | pQED vs. QED-CCSD relaxed and unrelaxed for para-meta at `(65,78)`. |
+| `08_pqed_coherent_state_check` | pQED coherent-state vs. non-coherent-state comparison. |
 
-See the module docstring for the exact `FIGURES` entry syntax. Running
-`python plot_isomer_energies.py` regenerates the current four figures:
+## Data read by the script
 
-| Figure | Comparison |
-| --- | --- |
-| `01_relaxed_vs_unrelaxed_no_zpe` | relaxed vs unrelaxed QED-DFT |
-| `02_relaxed_zpe_vs_no_zpe` | relaxed QED-DFT with vs without ZPE |
-| `03_qeddft_vs_pqed_ortho_meta` | QED-DFT vs pQED, ortho−meta |
-| `04_qeddft_vs_pqed_para_meta` | QED-DFT vs pQED, para−meta |
+| Method key | Reads from | Notes |
+| --- | --- | --- |
+| `qed_ccsd` | `../QED_CCSD/summary/*_QEDCCSD22.csv` | QED-CCSD(2,2), relaxed or unrelaxed. |
+| `qed_dft` | `../qed_dft_relaxed/*.csv`, `../qed_dft_unrelaxed/*.csv` | QED-DFT, relaxed or unrelaxed; relaxed data can use `zpe=True`. |
+| `pqed` | `../pqed/pqed_49_*_scan*.csv` | pQED unrelaxed data; supports `Nph=3/10` and `CS=True/False`. |
 
-Figures (`.png` 300 dpi + `.pdf`) are saved in this folder (`scripts/`).
-Requires `python` with `numpy`, `pandas`, `matplotlib` (e.g. the `jbook`
-conda env).
+To add a plot, edit the `DEFAULT_FIGURES` dictionary near the bottom of the
+script. Each curve is a small dictionary describing `method`, `pair`,
+`direction`, and any method-specific options.
+
+Requires Python with `matplotlib`. CSV parsing uses the Python standard
+library.
