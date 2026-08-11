@@ -22,9 +22,9 @@ analysis/
 
 | Folder | Files | Units | Produced by |
 | --- | --- | --- | --- |
-| `qed_dft_relaxed/` | `ortho-meta_70_31_hartree.csv`, `para-meta_65_78_hartree.csv`, `availability.md` | Hartree | `../../analyze.py` (from `runs/`) |
-| `qed_dft_unrelaxed/` | `ortho_meta_dir70_31_scan_qed_dft_no_relax.csv`, `para_meta_dir65_78_scan_qed_dft_no_relax.csv` | Hartree / kcal/mol | external QED-DFT scans |
-| `pqed/` | 8 × `pqed_49_{3,10}_dir{70_31,65_78}_scan[_CS].csv` | Hartree / kcal/mol | pQED scans (also in `../../QED_CCSD/summary/`) |
+| `qed_dft_relaxed/` | `ortho-meta_70_31_hartree.csv`, `para-meta_65_78_hartree.csv`, `availability.md` | E & ZPE in Hartree, dE in kcal/mol | `../../analyze.py` (from `runs/`) |
+| `qed_dft_unrelaxed/` | `ortho_meta_dir70_31_scan_qed_dft_no_relax.csv`, `para_meta_dir65_78_scan_qed_dft_no_relax.csv` | E in Hartree, dE in kcal/mol | external QED-DFT scans |
+| `pqed/` | 8 × `pqed_49_{3,10}_dir{70_31,65_78}_scan[_CS].csv` | E in Hartree, dE in kcal/mol | pQED scans (also in `../../QED_CCSD/summary/`) |
 | `polariton_scan/` | `polariton_energy_scan.csv`, `polariton_energy_scan_fc.csv` | Hartree | unknown (see README) |
 | `scripts/` | `plot_isomer_energies.py` + its 4 generated figures | — | — |
 | `docs/` | `relaxed_vs_unrelaxed.pptx` | — | — |
@@ -42,8 +42,11 @@ analysis/
 - **Relative energies:** ΔE = E(A) − E(B), reported for `ortho − meta` and
   `para − meta`. `qed_dft_relaxed/` additionally has ZPE-corrected differences,
   `(E_A + zpe_A) − (E_B + zpe_B)`.
-- **Units:** Hartree tables live in `qed_dft_relaxed/`; everything in
-  kcal/mol uses 627.509 Ha→kcal/mol.
+- **Column conventions (all three QED-DFT/pQED data folders):** absolute
+  electronic energies and ZPEs are in Hartree (columns `E_<iso>_Hartrees`,
+  `zpe_<iso>_Hartrees`); relative energies are in kcal/mol
+  (columns `dE_<A>_<B>_..._kcal/mol`), converted with 627.509 Ha→kcal/mol.
+  Do **not** convert the `dE_*` columns again.
 - **Relaxed vs unrelaxed:** relaxed geometries are re-optimized under QED-DFT
   per (isomer, direction, |λ|); unrelaxed use a fixed gas-phase geometry at
   every |λ|.

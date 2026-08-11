@@ -6,9 +6,10 @@ cavity-coupling magnitude |lambda|, for the nitrobenzene QED-DFT / pQED
 scan data in this analysis folder.
 
 DATA LAYOUT (sibling folders of this script):
-  qed_dft_relaxed/    -- relaxed QED-DFT per-lambda tables (Hartree), from analyze.py
-  qed_dft_unrelaxed/  -- unrelaxed QED-DFT scans (kcal/mol)
-  pqed/               -- parameterized QED scans (kcal/mol)
+  qed_dft_relaxed/    -- relaxed QED-DFT per-lambda tables; absolute E and ZPE
+                         in Hartree, dE in kcal/mol (from analyze.py)
+  qed_dft_unrelaxed/  -- unrelaxed QED-DFT scans; E in Hartree, dE in kcal/mol
+  pqed/               -- parameterized QED scans; E in Hartree, dE in kcal/mol
 
 ============================== HOW TO USE ==================================
 Everything you normally need to change lives in the FIGURES dict near the
@@ -58,8 +59,6 @@ OUTPUT_DIR = DATA_DIR  # where generated figures are saved
 RELAXED_DIR = DATA_DIR.parent / "qed_dft_relaxed"
 UNRELAXED_DIR = DATA_DIR.parent / "qed_dft_unrelaxed"
 PQED_DIR = DATA_DIR.parent / "pqed"
-
-HARTREE_TO_KCAL = 627.5094740631
 
 PAIR_LABELS = {
     "ortho_meta": "ortho − meta",
@@ -113,9 +112,9 @@ def load_qed_dft_relaxed(pair, direction, zpe=False):
         raise FileNotFoundError(f"Expected relaxed QED-DFT file not found: {path.name}")
 
     df = pd.read_csv(path, comment="#")
-    lam = df["magnitude"].to_numpy(dtype=float)
-    col = "dE_zpe_Ha" if zpe else "dE_raw_Ha"
-    dE = df[col].to_numpy(dtype=float) * HARTREE_TO_KCAL
+    lam = df["lambda_magnitude"].to_numpy(dtype=float)
+    col = f"dE_{pair}_{'zpe' if zpe else 'raw'}_kcal/mol"
+    dE = df[col].to_numpy(dtype=float)
     return lam, dE
 
 
@@ -135,8 +134,8 @@ def load_qed_dft_no_relax(pair, direction):
         raise FileNotFoundError(f"Expected unrelaxed QED-DFT file not found: {path.name}")
 
     df = pd.read_csv(path, comment="#")
-    lam = np.sqrt(df["Ex"] ** 2 + df["Ey"] ** 2 + df["Ez"] ** 2).to_numpy(dtype=float)
-    dE = df["dE_kcal/mol"].to_numpy(dtype=float)
+    lam = df["lambda_magnitude"].to_numpy(dtype=float)
+    dE = df[f"dE_{pair}_kcal/mol"].to_numpy(dtype=float)
     return lam, dE
 
 

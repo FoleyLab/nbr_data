@@ -3,6 +3,7 @@
 Relative-energy scans of the two isomer pairs vs. cavity coupling |λ| using
 **unrelaxed (fixed gas-phase) geometries**. One row per λ (0.02–0.10 a.u.).
 Electronic energies are in Hartree; the difference is reported in kcal/mol.
+Columns follow the pQED scan-file convention.
 
 ## Files
 
@@ -17,8 +18,10 @@ Electronic energies are in Hartree; the difference is reported in kcal/mol.
 | --- | --- |
 | `theta`, `phi` | cavity direction (degrees) |
 | `Ex`, `Ey`, `Ez` | Cartesian components of the λ vector (a.u.) |
-| `E_ortho/para_Hartrees`, `E_meta_Hartrees` | electronic energies (Hartree) |
-| `dE_kcal/mol` | energy difference, A − B, in kcal/mol |
+| `lambda_magnitude` | \|λ\| (a.u.), the norm of (Ex, Ey, Ez) |
+| `E_ortho_Hartrees` / `E_para_Hartrees` | electronic energy of the named isomer (Hartree) |
+| `E_meta_Hartrees` | electronic energy of meta (Hartree) |
+| `dE_ortho_meta_kcal/mol` / `dE_para_meta_kcal/mol` | energy difference, A − B, in kcal/mol |
 
 ## Method notes
 
@@ -27,4 +30,5 @@ Electronic energies are in Hartree; the difference is reported in kcal/mol.
 - λ components are generated from the spherical direction:
   `Ex = λ·sinθ·cosφ`, `Ey = λ·sinθ·sinφ`, `Ez = λ·cosθ`.
 - No ZPE correction: not available/meaningful for unrelaxed geometries.
-- kcal/mol conversion factor used: 627.509.
+- Relative energies are already in kcal/mol (× 627.509); do not convert the
+  `dE_*` columns again.

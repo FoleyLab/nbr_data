@@ -2,9 +2,10 @@
 
 Per-lambda relative-energy tables for the two isomer pairs, computed from
 geometries **relaxed under QED-DFT** for each (isomer, cavity direction,
-|λ|) combination. Energies are in **Hartree**; only the per-point raw and
-ZPE-corrected differences are given here (kcal/mol versions are produced by
-`scripts/plot_isomer_energies.py`).
+|λ|) combination. Column conventions follow the pQED scan files: absolute
+electronic energies and ZPEs in **Hartree**, relative energy differences in
+**kcal/mol** (Hartree × 627.509). Figures are produced by
+`scripts/plot_isomer_energies.py`.
 
 Produced by `../../analyze.py`, which reads `opt_status.json`
 (`final_energy_hartree`) and `frequencies.json` (`zpe_hartree`) from the
@@ -20,18 +21,18 @@ per-run `runs/` folder.
 
 ## Columns (`*_hartree.csv`)
 
+For the ortho–meta file, `isoA = ortho`, `isoB = meta`; for the para–meta
+file, `isoA = para`, `isoB = meta`.
+
 | Column | Meaning |
 | --- | --- |
-| `magnitude` | cavity coupling magnitude \|λ\| (a.u.) |
-| `E_A_Ha`, `E_B_Ha` | converged electronic energy of isomer A / B (Hartree) |
-| `zpe_A_Ha`, `zpe_B_Ha` | zero-point energy of A / B (Hartree) |
-| `dE_raw_Ha` | `E_A − E_B` (Hartree) |
-| `dE_zpe_Ha` | `(E_A + zpe_A) − (E_B + zpe_B)` (Hartree) |
-| `A_converged`, `B_converged` | optimization convergence flag for each isomer |
-| `A_has_freq`, `B_has_freq` | whether a frequency (ZPE) file exists for each isomer |
-
-Isomer A is `ortho` / `para` for the two files respectively; B is `meta` in
-both.
+| `lambda_magnitude` | cavity coupling magnitude \|λ\| (a.u.) |
+| `E_isoA_Hartrees`, `E_isoB_Hartrees` | converged electronic energy of isomer A / B (Hartree) |
+| `zpe_isoA_Hartrees`, `zpe_isoB_Hartrees` | zero-point energy of A / B (Hartree) |
+| `dE_isoA_isoB_raw_kcal/mol` | `E_A − E_B` (kcal/mol) |
+| `dE_isoA_isoB_zpe_kcal/mol` | `(E_A + zpe_A) − (E_B + zpe_B)` (kcal/mol) |
+| `isoA_converged`, `isoB_converged` | optimization convergence flag for each isomer |
+| `isoA_has_freq`, `isoB_has_freq` | whether a frequency (ZPE) file exists for each isomer |
 
 ## Method notes
 
@@ -40,7 +41,8 @@ both.
 - ZPE correction adds the harmonic zero-point energy to each isomer *before*
   differencing.
 - All λ points are present and converged (see `availability.md`).
-- To convert to kcal/mol: Hartree × 627.509.
+- Relative energies are pre-converted to kcal/mol (× 627.509) in the CSV;
+  do **not** convert the `dE_*` columns again.
 
 ## Caveats
 

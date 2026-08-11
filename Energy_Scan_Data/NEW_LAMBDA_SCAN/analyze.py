@@ -16,12 +16,14 @@ Curves produced (relative energy = A - B):
 before differencing: (E_A + zpe_A) - (E_B + zpe_B).
 
 Outputs (written to analysis/qed_dft_relaxed/):
-  * <pair>_<orientation>_hartree.csv  -- full per-lambda table in Hartree
+  * <pair>_<orientation>_hartree.csv  -- full per-lambda table
   * relative_energies_kcal.png        -- the four curves in kcal/mol
   * availability.md                   -- which lambda points / cells are present
 
-The plot is in kcal/mol (Hartree * 627.509); the tables are in Hartree, as
-requested. Missing cells are skipped gracefully and reported, never invented.
+CSV column conventions (aligned with the pQED scan files): absolute electronic
+energies and ZPEs in Hartree (E_<iso>_Hartrees, zpe_<iso>_Hartrees); relative
+energies in kcal/mol (Hartree * 627.509). Missing cells are skipped gracefully
+and reported, never invented.
 """
 
 import json
@@ -76,36 +78,47 @@ def load_cell(isomer, theta, phi, mag):
 
 
 def build_pair_table(isomer_A, isomer_B, theta, phi):
-    """Assemble the per-lambda table (Hartree) for one isomer pair."""
+    """Assemble the per-lambda table for one isomer pair.
+
+    Column names follow the pQED convention: absolute energies and ZPEs in
+    Hartree (E_<iso>_Hartrees, zpe_<iso>_Hartrees), relative energies in
+    kcal/mol (dE_<A>_<B>_{raw,zpe}_kcal/mol).
+    """
     rows = []
     for mag in MAGNITUDES:
         a = load_cell(isomer_A, theta, phi, mag)
         b = load_cell(isomer_B, theta, phi, mag)
 
-        dE_raw = None
+        dE_raw_kcal = None
         if a["E"] is not None and b["E"] is not None:
-            dE_raw = a["E"] - b["E"]
+            dE_raw_kcal = (a["E"] - b["E"]) * HARTREE_TO_KCAL
 
-        dE_zpe = None
+        dE_zpe_kcal = None
         if None not in (a["E"], b["E"], a["zpe"], b["zpe"]):
-            dE_zpe = (a["E"] + a["zpe"]) - (b["E"] + b["zpe"])
+            dE_zpe_kcal = ((a["E"] + a["zpe"]) - (b["E"] + b["zpe"])) * HARTREE_TO_KCAL
 
         rows.append({
-            "magnitude": mag,
-            "E_A_Ha": a["E"], "E_B_Ha": b["E"],
-            "zpe_A_Ha": a["zpe"], "zpe_B_Ha": b["zpe"],
-            "dE_raw_Ha": dE_raw, "dE_zpe_Ha": dE_zpe,
-            "A_converged": a["converged"], "B_converged": b["converged"],
-            "A_has_freq": a["has_freq"], "B_has_freq": b["has_freq"],
+            "lambda_magnitude": mag,
+            f"E_{isomer_A}_Hartrees": a["E"], f"E_{isomer_B}_Hartrees": b["E"],
+            f"zpe_{isomer_A}_Hartrees": a["zpe"], f"zpe_{isomer_B}_Hartrees": b["zpe"],
+            f"dE_{isomer_A}_{isomer_B}_raw_kcal/mol": dE_raw_kcal,
+            f"dE_{isomer_A}_{isomer_B}_zpe_kcal/mol": dE_zpe_kcal,
+            f"{isomer_A}_converged": a["converged"], f"{isomer_B}_converged": b["converged"],
+            f"{isomer_A}_has_freq": a["has_freq"], f"{isomer_B}_has_freq": b["has_freq"],
         })
     return rows
 
 
 def write_csv(path, label, isomer_A, isomer_B, theta, phi, rows):
-    cols = ["magnitude", "E_A_Ha", "E_B_Ha", "zpe_A_Ha", "zpe_B_Ha",
-            "dE_raw_Ha", "dE_zpe_Ha", "A_converged", "B_converged",
-            "A_has_freq", "B_has_freq"]
-    header_note = f"# {label}  ({isomer_A} - {isomer_B}) at (theta={theta}, phi={phi}); energies in Hartree"
+    cols = ["lambda_magnitude",
+            f"E_{isomer_A}_Hartrees", f"E_{isomer_B}_Hartrees",
+            f"zpe_{isomer_A}_Hartrees", f"zpe_{isomer_B}_Hartrees",
+            f"dE_{isomer_A}_{isomer_B}_raw_kcal/mol",
+            f"dE_{isomer_A}_{isomer_B}_zpe_kcal/mol",
+            f"{isomer_A}_converged", f"{isomer_B}_converged",
+            f"{isomer_A}_has_freq", f"{isomer_B}_has_freq"]
+    header_note = (f"# {label}  ({isomer_A} - {isomer_B}) at (theta={theta}, phi={phi}); "
+                   f"absolute E and ZPE in Hartree, dE in kcal/mol (627.509)")
     with open(path, "w") as f:
         f.write(header_note + "\n")
         f.write(",".join(cols) + "\n")
@@ -125,11 +138,11 @@ def make_plot(all_tables, path):
         color = styles[label]["color"]
 
         def both_converged(r):
-            return bool(r["A_converged"]) and bool(r["B_converged"])
+            return bool(r[f"{iA}_converged"]) and bool(r[f"{iB}_converged"])
 
-        # ---- raw curve ----
-        raw_pts = [(r["magnitude"], r["dE_raw_Ha"] * HARTREE_TO_KCAL, both_converged(r))
-                   for r in rows if r["dE_raw_Ha"] is not None]
+        # ---- raw curve (already in kcal/mol) ----
+        raw_pts = [(r["lambda_magnitude"], r[f"dE_{iA}_{iB}_raw_kcal/mol"], both_converged(r))
+                   for r in rows if r[f"dE_{iA}_{iB}_raw_kcal/mol"] is not None]
         if raw_pts:
             xs = [p[0] for p in raw_pts]
             ys = [p[1] for p in raw_pts]
@@ -143,9 +156,9 @@ def make_plot(all_tables, path):
                 plt.plot(*zip(*shaky), "o", markerfacecolor="none",
                          markeredgecolor=color)
 
-        # ---- ZPE-corrected curve ----
-        zpe_pts = [(r["magnitude"], r["dE_zpe_Ha"] * HARTREE_TO_KCAL, both_converged(r))
-                   for r in rows if r["dE_zpe_Ha"] is not None]
+        # ---- ZPE-corrected curve (already in kcal/mol) ----
+        zpe_pts = [(r["lambda_magnitude"], r[f"dE_{iA}_{iB}_zpe_kcal/mol"], both_converged(r))
+                   for r in rows if r[f"dE_{iA}_{iB}_zpe_kcal/mol"] is not None]
         if zpe_pts:
             xs = [p[0] for p in zpe_pts]
             ys = [p[1] for p in zpe_pts]
@@ -182,17 +195,17 @@ def write_availability(all_tables, path):
         lines.append("| --- | --- | --- | --- |")
         for r in rows:
             missing = []
-            if r["E_A_Ha"] is None:
+            if r[f"E_{iA}_Hartrees"] is None:
                 missing.append(f"{iA} opt")
-            if r["E_B_Ha"] is None:
+            if r[f"E_{iB}_Hartrees"] is None:
                 missing.append(f"{iB} opt")
-            if r["zpe_A_Ha"] is None:
+            if r[f"zpe_{iA}_Hartrees"] is None:
                 missing.append(f"{iA} freq")
-            if r["zpe_B_Ha"] is None:
+            if r[f"zpe_{iB}_Hartrees"] is None:
                 missing.append(f"{iB} freq")
-            raw_ok = "yes" if r["dE_raw_Ha"] is not None else "NO"
-            zpe_ok = "yes" if r["dE_zpe_Ha"] is not None else "NO"
-            lines.append(f"| {r['magnitude']:.2f} | {raw_ok} | {zpe_ok} | "
+            raw_ok = "yes" if r[f"dE_{iA}_{iB}_raw_kcal/mol"] is not None else "NO"
+            zpe_ok = "yes" if r[f"dE_{iA}_{iB}_zpe_kcal/mol"] is not None else "NO"
+            lines.append(f"| {r['lambda_magnitude']:.2f} | {raw_ok} | {zpe_ok} | "
                          f"{', '.join(missing) if missing else '-'} |")
         lines.append("")
     path.write_text("\n".join(lines))
@@ -214,8 +227,8 @@ def main():
     # Console summary
     print("=== Curve availability (points usable / 5) ===")
     for (label, iA, iB, theta, phi), rows in all_tables:
-        raw_n = sum(1 for r in rows if r["dE_raw_Ha"] is not None)
-        zpe_n = sum(1 for r in rows if r["dE_zpe_Ha"] is not None)
+        raw_n = sum(1 for r in rows if r[f"dE_{iA}_{iB}_raw_kcal/mol"] is not None)
+        zpe_n = sum(1 for r in rows if r[f"dE_{iA}_{iB}_zpe_kcal/mol"] is not None)
         print(f"  {label} ({theta},{phi}):  raw {raw_n}/5   +ZPE {zpe_n}/5")
     print(f"\nWrote outputs to: {OUT}")
 
