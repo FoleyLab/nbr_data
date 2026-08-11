@@ -1,0 +1,836 @@
++ module restore
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cmake python
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module list
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Currently Loaded Modules:
+  1) gcc/13.4.0                            8) gcc-runtime/13.4.0-2tg3zy7   (H)
+  2) oneapi/release/2025.3.1               9) bzip2/1.0.8
+  3) mpich/opt/5.0.0.aurora_test.3c70a61  10) expat/2.7.3-6auksxt          (H)
+  4) libfabric/1.22.0                     11) gdbm/1.25
+  5) cray-pals/1.8.0                      12) sqlite/3.50.4-s65ksrg        (H)
+  6) cray-libpals/1.8.0                   13) util-linux-uuid/2.41-ytoy2bg (H)
+  7) cmake/3.31.11                        14) python/3.12.12
+
+  Where:
+   H:  Hidden Module
+
+ 
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ export TZ=/usr/share/zoneinfo/US/Central
++ TZ=/usr/share/zoneinfo/US/Central
++ cd /lus/flare/projects/TransMetalChem/dmejiar/MAPOL/NITRO/qed_ccsd_scans/unrelaxed_dir_70_31
++ export FI_CXI_DEFAULT_CQ_SIZE=131072
++ FI_CXI_DEFAULT_CQ_SIZE=131072
++ export FI_CXI_CQ_FILL_PERCENT=20
++ FI_CXI_CQ_FILL_PERCENT=20
++ export FI_MR_CACHE_MONITOR=disabled
++ FI_MR_CACHE_MONITOR=disabled
++ export FI_CXI_OVFLOW_BUF_SIZE=8388608
++ FI_CXI_OVFLOW_BUF_SIZE=8388608
++ export MPIR_CVAR_ENABLE_GPU=0
++ MPIR_CVAR_ENABLE_GPU=0
++ export MPIR_CVAR_CH4_XPMEM_ENABLE=0
++ MPIR_CVAR_CH4_XPMEM_ENABLE=0
++ export ZE_FLAT_DEVICE_HIERARCHY=FLAT
++ ZE_FLAT_DEVICE_HIERARCHY=FLAT
++ export ZES_ENABLE_SYSMAN=1
++ ZES_ENABLE_SYSMAN=1
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ export TAMM_ENABLE_SPRHBM=0
++ TAMM_ENABLE_SPRHBM=0
++ export GA_NUM_PROGRESS_RANKS_PER_NODE=6
++ GA_NUM_PROGRESS_RANKS_PER_NODE=6
++ export GA_PROGRESS_RANKS_DISTRIBUTION_PACKED=1
++ GA_PROGRESS_RANKS_DISTRIBUTION_PACKED=1
++ export GA_PROGRESS_RANKS_DISTRIBUTION_CYCLIC=0
++ GA_PROGRESS_RANKS_DISTRIBUTION_CYCLIC=0
++ export SYCL_PI_LEVEL_ZERO_SINGLE_THREAD_MODE=1
++ SYCL_PI_LEVEL_ZERO_SINGLE_THREAD_MODE=1
++ export UR_L0_USE_DRIVER_INORDER_LISTS=1
++ UR_L0_USE_DRIVER_INORDER_LISTS=1
++ export UR_L0_ENABLE_RELAXED_ALLOCATION_LIMITS=1
++ UR_L0_ENABLE_RELAXED_ALLOCATION_LIMITS=1
++ export UR_L0_USE_COPY_ENGINE_FOR_IN_ORDER_QUEUE=1
++ UR_L0_USE_COPY_ENGINE_FOR_IN_ORDER_QUEUE=1
++ export PALS_PING_PERIOD=240
++ PALS_PING_PERIOD=240
++ export PALS_RPC_TIMEOUT=240
++ PALS_RPC_TIMEOUT=240
++ unset MPIR_CVAR_CH4_COLL_SELECTION_TUNING_JSON_FILE
++ unset MPIR_CVAR_COLL_SELECTION_TUNING_JSON_FILE
++ unset MPIR_CVAR_CH4_POSIX_COLL_SELECTION_TUNING_JSON_FILE
+++ wc -l
++ NNODES=2
++ ppn=12
++ NRANKS_PER_NODE=18
++ NTHREADS=1
++ NTOTRANKS=36
++ echo 'NUM_OF_NODES= 2 TOTAL_NUM_RANKS= 36 RANKS_PER_NODE= 18 THREADS_PER_RANK= 1'
+NUM_OF_NODES= 2 TOTAL_NUM_RANKS= 36 RANKS_PER_NODE= 18 THREADS_PER_RANK= 1
++ export LD_LIBRARY_PATH=/home/dmejiar/install_jul2026/lib64:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/python-3.12.12-nvje3vk/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/util-linux-uuid-2.41-ytoy2bg/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/sqlite-3.50.4-s65ksrg/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gdbm-1.25-skzvkbq/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/expat-2.7.3-6auksxt/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/bzip2-1.0.8-lpab4po/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gcc-runtime-13.4.0-2tg3zy7/lib:/opt/cray/pals/1.8/lib:/opt/cray/libfabric/1.22.0/lib64:/opt/cray/libfabric/1.22.0/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/mpich-5.0.0.aurora_test.3c70a61-hlkigtk/lib:/opt/aurora/26.26.0/support/libraries/khronos/default/lib64:/opt/aurora/26.26.0/oneapi/ishmem/latest/lib:/opt/aurora/26.26.0/oneapi/pti/latest/lib:/opt/aurora/26.26.0/oneapi/tcm/latest/lib:/opt/aurora/26.26.0/oneapi/umf/latest/lib:/opt/aurora/26.26.0/oneapi/ipp/latest/lib:/opt/aurora/26.26.0/oneapi/ippcp/latest/lib:/opt/aurora/26.26.0/oneapi/debugger/latest/opt/debugger/lib:/opt/aurora/26.26.0/oneapi/ccl/latest/lib:/opt/aurora/26.26.0/oneapi/dal/latest/lib:/opt/aurora/26.26.0/oneapi/dnnl/latest/lib:/opt/aurora/26.26.0/oneapi/tbb/latest/lib/intel64/gcc4.8:/opt/aurora/26.26.0/oneapi/mkl/latest/lib:/opt/aurora/26.26.0/oneapi/compiler/latest/opt/compiler/lib:/opt/aurora/26.26.0/oneapi/compiler/latest/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gcc-13.4.0-hgnyg4p/lib64:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gcc-13.4.0-hgnyg4p/lib
++ LD_LIBRARY_PATH=/home/dmejiar/install_jul2026/lib64:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/python-3.12.12-nvje3vk/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/util-linux-uuid-2.41-ytoy2bg/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/sqlite-3.50.4-s65ksrg/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gdbm-1.25-skzvkbq/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/expat-2.7.3-6auksxt/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/bzip2-1.0.8-lpab4po/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gcc-runtime-13.4.0-2tg3zy7/lib:/opt/cray/pals/1.8/lib:/opt/cray/libfabric/1.22.0/lib64:/opt/cray/libfabric/1.22.0/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/mpich-5.0.0.aurora_test.3c70a61-hlkigtk/lib:/opt/aurora/26.26.0/support/libraries/khronos/default/lib64:/opt/aurora/26.26.0/oneapi/ishmem/latest/lib:/opt/aurora/26.26.0/oneapi/pti/latest/lib:/opt/aurora/26.26.0/oneapi/tcm/latest/lib:/opt/aurora/26.26.0/oneapi/umf/latest/lib:/opt/aurora/26.26.0/oneapi/ipp/latest/lib:/opt/aurora/26.26.0/oneapi/ippcp/latest/lib:/opt/aurora/26.26.0/oneapi/debugger/latest/opt/debugger/lib:/opt/aurora/26.26.0/oneapi/ccl/latest/lib:/opt/aurora/26.26.0/oneapi/dal/latest/lib:/opt/aurora/26.26.0/oneapi/dnnl/latest/lib:/opt/aurora/26.26.0/oneapi/tbb/latest/lib/intel64/gcc4.8:/opt/aurora/26.26.0/oneapi/mkl/latest/lib:/opt/aurora/26.26.0/oneapi/compiler/latest/opt/compiler/lib:/opt/aurora/26.26.0/oneapi/compiler/latest/lib:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gcc-13.4.0-hgnyg4p/lib64:/opt/aurora/26.26.0/spack/unified/1.1.1/install/linux-x86_64/gcc-13.4.0-hgnyg4p/lib
++ EXE=/home/dmejiar/codes/exachem.master/build/methods_stage/home/dmejiar/install_jul2026/methods/ExaChem
++ INP=/lus/flare/projects/TransMetalChem/dmejiar/MAPOL/NITRO/qed_ccsd_scans/unrelaxed_dir_70_31/ortho_lam0.10.json
++ bind_script=/home/dmejiar/jobscripts/aurora_bind.sh
++ ulimit -c unlimited
++ mpiexec -n 36 --ppn 18 --pmi=pmix --cpu-bind=list:1-5:6-10:11-15:16-20:21-25:26-30:31-35:36-40:41-45:53-57:58-62:63-67:68-72:73-77:78-82:83-87:88-92:93-97 /home/dmejiar/jobscripts/aurora_bind.sh /home/dmejiar/codes/exachem.master/build/methods_stage/home/dmejiar/install_jul2026/methods/ExaChem /lus/flare/projects/TransMetalChem/dmejiar/MAPOL/NITRO/qed_ccsd_scans/unrelaxed_dir_70_31/ortho_lam0.10.json
+
+ExaChem Git Information
+{
+ Branch: main
+ Commit Hash: 794cab1 [794cab19fe2444da5b7170dc4e6f291fbc1ab75c]
+ Commit Date: 2026-07-04 08:31:04 -0700
+ Commit Message: fix ci result compare script, update cr2 reference outputs
+}
+
+
+TAMM Git Information
+{
+ Branch: main
+ Commit Hash: e485b7a6 [e485b7a6e79f495b0ffb2c18c6a830b45c7ddbcb]
+ Commit Date: 2026-07-06 06:28:40 -0500
+ Commit Message: refactor: replace gsl::span with std::span (C++20) (#143)
+}
+
+
+date: Fri Jul 24 18:38:37 2026
+program: "/home/dmejiar/codes/exachem.master/build/methods_stage/home/dmejiar/install_jul2026/methods/ExaChem"
+nnodes: 2, nproc_per_node: 12, nproc_total: 24, ngpus_per_node: 12, ngpus_total: 24
+
+Memory information
+{
+[Intel(R) Xeon(R) CPU Max 9470C] : 
+  CPU memory per node (GiB): 1134
+  Total CPU memory (GiB): 2268
+[Intel(R) Data Center GPU Max 1550, SYCL v1.6.33578+42] : 
+  GPU memory per device (GiB): 63
+  GPU memory per node (GiB): 756
+  Total GPU memory (GiB): 1512
+}
+
+------------------------------------------------------------
+
+Input file provided: /lus/flare/projects/TransMetalChem/dmejiar/MAPOL/NITRO/qed_ccsd_scans/unrelaxed_dir_70_31/ortho_lam0.10.json
+
+{
+  "geometry": {
+    "coordinates": [
+      "C   -1.804928163307   1.957993763262   0.703312273806",
+      "C   -0.379708783307   1.994122833262   0.698532703806",
+      "C    0.296125016693   0.817793533262   0.710271493806",
+      "C   -2.520286433307   0.755089873262   0.736288843806",
+      "H   -2.344947113307   2.899196893262   0.691895063806",
+      "H    0.158564066693   2.933869823262   0.699142733806",
+      "H   -3.601954283307   0.764862203262   0.746931053806",
+      "N    1.767881836693   0.820900013262   0.771891313806",
+      "O    2.315054046693  -0.296733496738   0.879853723806",
+      "O    2.340645916693   1.923356243262   0.711986073806",
+      "C   -1.829967733307  -0.442167236738   0.756258983806",
+      "H   -2.356763623307  -1.389967436738   0.789740873806",
+      "C   -0.361341153307  -0.491572936738   0.714148383806",
+      "H    0.119338216693  -1.238105076738   1.350400383806",
+      "Br  -0.151212663307  -1.224162306738  -1.170925976194"
+    ],
+    "units": "angstrom",
+    "noorient": true
+  },
+  "common": {
+    "maxiter": 100,
+    "debug": false
+  },
+  "basis": {
+    "basisset": "6-311G*"
+  },
+  "SCF": {
+    "charge": 1,
+    "multiplicity": 1,
+    "lshift": 0,
+    "tol_lindep": 1e-10,
+    "conve": 1e-07,
+    "convd": 1e-05,
+    "diis_hist": 10,
+    "writem": 10,
+    "restart": false,
+    "noscf": false,
+    "scf_type": "restricted",
+    "debug": false,
+    "qed_omegas": [
+      0.06615
+    ],
+    "qed_volumes": [],
+    "qed_lambdas": [
+      0.1
+    ],
+    "qed_polvecs": [
+      [
+        0.8054737872487507,
+        0.48397747841675776,
+        0.3420201433256688
+      ]
+    ],
+    "direct_df": false
+  },
+  "CD": {
+    "debug": false,
+    "diagtol": 1e-06
+  },
+  "CC": {
+    "threshold": 1e-06,
+    "ndiis": 5,
+    "ccsd_maxiter": 200,
+    "tilesize": 40,
+    "freeze": {
+      "atomic": true
+    },
+    "readt": false,
+    "writet": true,
+    "writet_iter": 5,
+    "debug": false,
+    "profile_ccsd": false,
+    "balance_tiles": true
+  },
+  "TASK": {
+    "scf": false,
+    "ccsd": true
+  }
+}
+
+Output folder & files prefix: ortho_lam0.10.6-311g*
+
+  C (carbon)
+  ----------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  4.56324000E+03      0.778202
+  1 S  6.82024000E+02      1.448695
+  1 S  1.54973000E+02      2.383089
+  1 S  4.44553000E+01      3.200089
+  1 S  1.30290000E+01      3.013004
+  1 S  1.82773000E+00      0.247599
+
+  2 S  2.09642000E+01      0.800629
+  2 S  4.80331000E+00      2.127420
+  2 S  1.45933000E+00     -0.002868
+
+  3 P  2.09642000E+01      2.573592
+  3 P  4.80331000E+00      2.408248
+  3 P  1.45933000E+00      1.865281
+
+  4 S  4.83456000E-01      0.413217
+
+  5 P  4.83456000E-01      0.574627
+
+  6 S  1.45585000E-01      0.167976
+
+  7 P  1.45585000E-01      0.128185
+
+  8 D  6.26000000E-01      0.725128
+
+
+  H (hydrogen)
+  ------------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  3.38650000E+01      0.255069
+  1 S  5.09479000E+00      0.460109
+  1 S  1.15879000E+00      0.678321
+
+  2 S  3.25840000E-01      0.307371
+
+  3 S  1.02741000E-01      0.129336
+
+
+  N (nitrogen)
+  ------------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  6.29348000E+03      0.991968
+  1 S  9.49044000E+02      1.823240
+  1 S  2.18776000E+02      2.979891
+  1 S  6.36916000E+01      4.000007
+  1 S  1.88282000E+01      3.881008
+  1 S  2.72023000E+00      0.386764
+
+  2 S  3.06331000E+01      1.038501
+  2 S  7.02614000E+00      2.834794
+  2 S  2.11205000E+00     -0.003208
+
+  3 P  3.06331000E+01      3.935616
+  3 P  7.02614000E+00      3.870994
+  3 P  2.11205000E+00      2.967271
+
+  4 S  6.84009000E-01      0.536051
+
+  5 P  6.84009000E-01      0.886681
+
+  6 S  2.00878000E-01      0.213850
+
+  7 P  2.00878000E-01      0.191693
+
+  8 D  9.13000000E-01      1.403568
+
+
+  O (oxygen)
+  ----------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  8.58850000E+03      1.205013
+  1 S  1.29723000E+03      2.216205
+  1 S  2.99296000E+02      3.627452
+  1 S  8.73771000E+01      4.888452
+  1 S  2.56789000E+01      4.835721
+  1 S  3.74004000E+00      0.538229
+
+  2 S  4.21175000E+01      1.341958
+  2 S  9.62837000E+00      3.587114
+  2 S  2.85332000E+00     -0.005123
+
+  3 P  4.21175000E+01      5.584018
+  3 P  9.62837000E+00      5.733366
+  3 P  2.85332000E+00      4.332955
+
+  4 S  9.05661000E-01      0.661659
+
+  5 P  9.05661000E-01      1.259352
+
+  6 S  2.55611000E-01      0.256209
+
+  7 P  2.55611000E-01      0.259068
+
+  8 D  1.29200000E+00      2.577026
+
+
+  Br (bromine)
+  ------------
+          Exponent        Coefficients
+      ----------------  --------------------
+  1 S  4.39700000E+05      9.893706
+  1 S  6.60300000E+04     18.450679
+  1 S  1.51400000E+04     31.049770
+  1 S  4.31700000E+03     48.888138
+  1 S  1.41400000E+03     64.847798
+  1 S  5.23900000E+02     42.245010
+
+  2 S  5.23900000E+02     14.290679
+  2 S  2.07700000E+02     24.083128
+  2 S  8.65400000E+01      5.132542
+
+  3 S  3.05200000E+01      9.254405
+
+  4 S  1.29800000E+01      4.873782
+
+  5 S  4.41200000E+00      2.169635
+
+  6 S  1.86200000E+00      1.136043
+
+  7 S  3.93200000E-01      0.353892
+
+  8 S  1.40000000E-01      0.163120
+
+  9 P  2.95700000E+03    691.874478
+  9 P  7.00300000E+02    925.332763
+  9 P  2.24600000E+02   1068.830732
+
+  10 P  8.25900000E+01    122.079275
+  10 P  3.31900000E+01     57.580687
+  10 P  1.42000000E+01     10.176170
+
+  11 P  1.42000000E+01      3.129736
+  11 P  7.43800000E+00      6.538168
+  11 P  3.52600000E+00      4.166276
+
+  12 P  1.59500000E+00      2.555000
+
+  13 P  8.46200000E-01      1.156861
+
+  14 P  3.18600000E-01      0.341191
+
+  15 P  1.09600000E-01      0.089888
+
+  16 D  1.34800000E+02    160.709187
+  16 D  3.63900000E+01    119.797406
+  16 D  1.21600000E+01     55.531619
+  16 D  4.34100000E+00     12.984636
+
+  17 D  1.53500000E+00      3.484168
+
+  18 D  4.51000000E-01      0.408525
+
+
+
+Printing Internal Coordinates
+
+------------------------------------------------------------
+                Bond Lengths
+
+i      j        Length (Angstroms)     Length (Bohr)
+0      1          1.4256852511         2.6941546663
+0      3          1.3999295258         2.6454833993
+0      4          1.0851793174         2.0506917074
+1      2          1.3567017898         2.5637948173
+1      5          1.0829877370         2.0465502206
+2      7          1.4730494865         2.7836600994
+2      12         1.4651680271         2.7687662997
+3      6          1.0817643425         2.0442383402
+3      10         1.3821589277         2.6119018359
+7      8          1.2490628375         2.3603866769
+7      9          1.2438074884         2.3504555064
+10     11         1.0848779497         2.0501222050
+10     12         1.4700606305         2.7780119801
+12     13         1.0923275609         2.0641999299
+12     14         2.0333092510         3.8423976136
+
+Number of Bonds: 15
+
+------------------------------------------------------------
+           Bond Angles
+
+i      j      k      Angle (degrees)
+0      1      2        118.4232 
+0      1      5        121.2552 
+0      3      6        120.2265 
+0      3      10       119.3034 
+1      0      3        122.1869 
+1      0      4        118.3889 
+1      2      7        119.7516 
+1      2      12       123.4591 
+2      1      5        120.3164 
+2      7      8        116.0663 
+2      7      9        117.3834 
+2      12     10       114.7295 
+2      12     13       114.5089 
+2      12     14       105.8521 
+3      0      4        119.4207 
+3      10     11       120.9771 
+3      10     12       121.8475 
+6      3      10       120.4701 
+7      2      12       116.7508 
+8      7      9        126.5503 
+10     12     13       116.4812 
+10     12     14        98.1583 
+11     10     12       117.1698 
+13     12     14       104.3767 
+
+Number of Angles: 24
+
+------------------------------------------------------------
+              Torsional Angles
+
+i      j      k      l      Angle (degrees)
+3      0      1      2          0.8063 
+4      0      1      2       -179.8786 
+5      1      0      3       -178.3717 
+5      1      0      4          0.9434 
+6      3      0      1        179.5113 
+6      3      0      4          0.2031 
+10     3      0      1         -0.4308 
+10     3      0      4       -179.7390 
+11     10     3      0        179.5174 
+11     10     3      6         -0.4246 
+12     2      1      0          0.6326 
+12     2      1      5        179.8186 
+13     12     2      1       -140.7805 
+14     12     2      1        104.8178 
+
+Number of Torsional Angles: 14
+
+
+----------------------------------------------------------------------
+                          Center of Mass
+
+         x               y               z              Unit
+-0.0007438493596 -0.006020855662 -0.005759021518      Angstrom
+ -0.001405671569  -0.01137776824  -0.01088297342          Bohr
+
+----------------------------------------------------------------------
+                Moment of Inertia Tensor
+
+           1801.84          -109.072          -102.424
+          -109.072           2081.17          -648.778
+          -102.424          -648.778           2599.32
+
+----------------------------------------------------------------------
+                      Principal Moments of Inertia
+
+           x                 y                 z                Unit
+        435.048927       529.1002706        851.089412       amu * ang^2
+       1553.587923       1889.451368       3039.295467      amu * bohr^2
+  7.2241623227e-38  8.7859226919e-38  1.4132681825e-37          g * cm^2
+
+ - Molecule is an asymmetric top.
+
+----------------------------------------------------------------------
+
+         Rotational constants (MHz)
+
+    A = 1.1617e+03        B = 9.5517e+02        C = 5.9380e+02
+
+----------------------------------------------------------------------
+
+        Rotational constants (cm-1)
+
+    A = 3.8749e-02        B = 3.1861e-02        C = 1.9807e-02
+
+----------------------------------------------------------------------
+
+                                Z-Matrix
+C   
+C        1       2.6941547
+C        2       2.5637948     1       118.42321
+C        3      5.32379221     2     61.40455795     1         -0.3862
+H        4      4.06616617     3     84.04005389     2          0.2803
+H        5      4.73142402     4     95.46394380     3         -0.6884
+H        6      8.20419239     5     29.19257758     4         -0.3866
+N        7     10.14818176     6     29.39100968     5       -179.8064
+O        8      2.36038668     7    115.41060768     6        176.3940
+O        9      4.20761555     8     26.66403452     7       -177.6969
+C       10      9.06116872     9     59.82839444     8          0.5361
+H       11      2.05012221    10    148.60970326     9         -2.1657
+C       12      4.13782613    11     36.67597126    10         -2.8213
+H       13      2.06419993    12     95.76809582    11        144.1990
+Br      14      4.79204097    13     50.96114649    12         90.1968
+
+----------------------------------------------------------------------
+
+             Converted back to Cartesian
+
+C        0.000000      0.000000      0.000000
+C        0.000000      0.000000      2.694155
+C        0.000000      0.092466      0.132028
+C        0.000012     -0.199019      5.447834
+H       -0.000018      0.127463      1.394796
+H        0.000073     -0.389399      6.097905
+H       -0.000107      0.579312     -2.048897
+N        0.005117     -0.708971      8.017180
+O       -0.005106     -0.327706      5.687811
+O        0.018657     -1.040603      9.834526
+C       -0.059299      0.654937      0.933748
+H       -0.026579      0.181811      2.928261
+C       -0.100075      1.181039     -1.086430
+H       -0.056340      0.624785      0.900927
+Br      -0.168595      1.986795     -3.692109
+
+----------------------------------------------------------------------
+                            Geometry in angstrom
+
+1     C      -1.8049281633    1.9579937633    0.7033122738
+2     C      -0.3797087833    1.9941228333    0.6985327038
+3     C       0.2961250167    0.8177935333    0.7102714938
+4     C      -2.5202864333    0.7550898733    0.7362888438
+5     H      -2.3449471133    2.8991968933    0.6918950638
+6     H       0.1585640667    2.9338698233    0.6991427338
+7     H      -3.6019542833    0.7648622033    0.7469310538
+8     N       1.7678818367    0.8209000133    0.7718913138
+9     O       2.3150540467   -0.2967334967    0.8798537238
+10    O       2.3406459167    1.9233562433    0.7119860738
+11    C      -1.8299677333   -0.4421672367    0.7562589838
+12    H      -2.3567636233   -1.3899674367    0.7897408738
+13    C      -0.3613411533   -0.4915729367    0.7141483838
+14    H       0.1193382167   -1.2381050767    1.3504003838
+15    Br     -0.1512126633   -1.2241623067   -1.1709259762
+
+ Number of nodes, processes per node used for SCF calculation: 2, 12
+
+Common Options
+{
+  maxiter       = 100
+  basis         = 6-311g* spherical
+  geom_units    = angstrom
+  ang2au factor = 1.889726126
+  debug         = false
+  file_prefix   = ortho_lam0.10
+}
+
+SCF Options
+{
+  charge            = 1
+  multiplicity      = 1
+  level shift       = 0
+  tol_int           = 1e-22
+  tol_sch           = 1e-12
+  tol_lindep        = 1e-10
+  conve             = 1e-07
+  convd             = 1e-05
+  diis_hist         = 10
+  AO_tilesize       = 30
+  writem            = 10
+  damp              = 100
+  n_lindep          = 0
+  scf_type          = restricted
+  cuscf             = false
+  qed_omegas        = [0.06615,]
+  qed_lambdas       = [0.1,]
+  qed_polvecs       = [[0.8054737872,0.4839774784,0.3420201433,],]
+  direct_df         = false
+  restart_size      = 2000
+  restart           = false
+  debug             = false
+}
+
+Number of basis functions = 221
+
+Total number of shells = 105
+
+Total number of electrons = 98
+  # of alpha electrons    = 49
+  # of beta electons      = 49
+
+Nuclear repulsion energy  = 772.892105797506
+
+Maximum angular momentum = 2
+# of {all,non-negligible} shell-pairs = {5565,4988}
+Number of AO tiles = 105
+
+Time for initial setup: 0.06 secs
+HF exch = 1.00
+
+Time for computing 1-e integrals T, V, S: 0.03 secs
+Time for computing orthogonalizer: 0.04 secs
+
+Superposition of Atomic Density Guess ...
+Time taken for SAD: 0.45 secs
+Total Time to compute initial guess: 0.45 secs
+
+
+ SCF iterations
+-----------------------------------------------------------------------------
+ Iter     Energy            E-Diff       RMSD        |[F,P]|^2       Time(s)
+-----------------------------------------------------------------------------
+   1  -3011.1978872867    -3.01e+03     1.64e-02     1.42e+02         0.2 
+   2  -3005.7143210672     5.48e+00     7.11e-03     2.93e+00         0.4 
+   3  -3005.9644999624    -2.50e-01     2.77e-03     1.34e+00         0.4 
+   4  -3006.0810060327    -1.17e-01     1.21e-03     3.43e-02         0.4 
+   5  -3006.0882538883    -7.25e-03     3.37e-04     5.64e-03         0.4 
+   6  -3006.0892191617    -9.65e-04     2.12e-04     5.64e-04         0.4 
+   7  -3006.0894407364    -2.22e-04     8.84e-05     8.86e-05         0.4 
+   8  -3006.0894813007    -4.06e-05     2.75e-05     1.57e-05         0.4 
+   9  -3006.0894873866    -6.09e-06     1.49e-05     3.31e-06         0.4 
+  10  -3006.0894891468    -1.76e-06     8.35e-06     7.14e-07         0.4 
+  11  -3006.0894896068    -4.60e-07     4.80e-06     2.62e-07         0.4 
+  12  -3006.0894897351    -1.28e-07     2.40e-06     5.82e-08         0.4 
+  13  -3006.0894897731    -3.81e-08     1.55e-06     1.90e-08         0.4 
+
+** Total SCF energy = -3006.0894897731437
+
+Nuclear repulsion energy = 772.892105797506247
+#electrons        = 98
+1e energy kinetic = 3005.6153626081254515
+1e energy N-e     = -8698.5998237189378415
+1e energy         = -5688.6415469655412380
+2e energy         = 1913.8050249719897238
+QED energy        = 0.1978405681721229
+QED eT energy     = 0.1784033662056067
+
+
+                      Electron        Nuclear        Total  
+                  ------------------------------------------
+    Monopole         -98.000000     99.000000      1.000000
+
+      Dipole   X       2.519155     -6.232462     -3.713307
+      Dipole   Y     -12.856224     14.042586      1.186362
+      Dipole   Z     -12.640317     13.882938      1.242621
+
+  Quadrupole  XX    -803.969457    761.974000    -41.995456
+  Quadrupole  XY     -46.861890     40.728056     -6.133833
+  Quadrupole  XZ     -43.324372     37.648752     -5.675620
+  Quadrupole  YY    -628.053274    590.822239    -37.231035
+  Quadrupole  YZ    -299.825976    302.320842      2.494866
+  Quadrupole  ZZ    -349.617905    303.705291    -45.912614
+
+    Octupole XXX     -76.029979     -5.818982    -81.848960
+    Octupole XXY   -1136.020524   1124.896125    -11.124400
+    Octupole XXZ   -1100.403071   1088.774639    -11.628432
+    Octupole XYY      54.815044    -95.794062    -40.979017
+    Octupole XYZ      20.787410    -27.099734     -6.312324
+    Octupole XZZ      18.773475    -10.227032      8.546443
+    Octupole YYY    -960.626435    938.780309    -21.846125
+    Octupole YYZ    -143.522460    134.417890     -9.104570
+    Octupole YZZ     208.000466   -240.747671    -32.747205
+    Octupole ZZZ     107.693390   -183.090949    -75.397559
+
+
+writing orbitals and density to disk ... done.
+
+Total Time taken for Hartree-Fock: 14.92 secs
+
+CD Options
+{
+  debug             = false
+  skip_cd           = [false, 100]
+  write_cv          = [false, 5000]
+  diagtol           = 1e-06
+  itilesize         = 1000
+  max_cvecs_factor  = 12
+}
+
+- #occupied, #virtual = 98, 344
+
+- Tilesize for the MSO space: 40
+
+-----------------------------------------------------
+Begin 2-index transformation ... 
+
+nAO, nMO, nelectrons = 221, 442, 98
+n_occ_alpha, n_vir_alpha, n_occ_beta, n_vir_beta = 49,172,49,172
+
+Time taken for Fao->Fmo transform: 0.01 secs
+
+-----------------------------------------------------
+Number of AO tiles = 105
+# of {all,non-negligible} shell-pairs = {5565,4988}
+
+    Begin Cholesky Decomposition
+---------------------------------------------
+Total # of mpi ranks used for Cholesky decomposition: 24
+  --> Number of nodes, mpi ranks per node: 2, 12
+- CPU memory required for computing cholesky vectors: 1.93 GiB
+
+- Time for computing the diagonal: 0.00 secs
+
+- Total number of cholesky vectors = 1640
+
+- Time to compute cholesky vectors: 5.71 secs
+
+- CPU memory required for resizing the ao cholesky tensor: 1.56 GiB
+- CPU memory required for ao2mo transformation: 1.69 GiB
+- CPU memory required for the 2-step contraction: 2.10 GiB
+
+- Time for ao to mo transform: 0.79 secs
+
+   End Cholesky Decomposition
+---------------------------------------------
+
+Total Time taken for Cholesky Decomposition: 10.64 secs
+
+scf_type = restricted
+Closed-Shell SCF
+QED-HF Enabled
+nbf = 203
+nbf_orig = 221
+n_lindep = 0
+focc = 1
+nmo = 406
+nocc = 62
+nvir = 344
+n_occ_alpha = 31
+n_vir_alpha = 172
+n_occ_beta = 31
+n_vir_beta = 172
+nelectrons = 98
+nelectrons_alpha = 49
+nelectrons_beta = 49
+freeze atomic = true
+n_frozen_core = 18
+n_frozen_virtual = 0
+----------------------------
+--------- QED-CCSD --------
+lambda_x: 0.0805
+lambda_y: 0.0484
+lambda_z: 0.0342
+omega: 0.066150
+coupling_factor_x: 0.014649
+coupling_factor_y: 0.008802
+coupling_factor_z: 0.006220
+----------------------------
+# of {all,non-negligible} shell-pairs = {5565,4988}
+Number of AO tiles = 105
+----------------------------
+Electronic dipole expectation value using SCF density: 
+dipole_x_elec: 2.51919433
+dipole_y_elec: -12.85603264
+dipole_z_elec: -12.64036700
+
+d_n/N value: d_n is nuclear dipole moment and N is the total number of electrons 
+d_nuc_x: -0.06359655
+d_nuc_y: 0.14329170
+d_nuc_z: 0.14166264
+
+<d_e+d_n> expectation values: 
+dipole_total_x: -3.71326773
+dipole_total_y: 1.18655378
+dipole_total_z: 1.24257140
+----------------------------
+
+
+ CCSD iterations
+------------------------------------------------------------
+  Iter     Residuum          Correlation          Time(s)
+------------------------------------------------------------
+   1     1.1819150945744    0.0000000000000         39.26
+   2     0.1725385457109   -1.6295415582699         38.48
+   3     0.0686632083151   -1.6394462754374         38.04
+   4     0.0269375181156   -1.7056260553259         38.06
+   5     0.0230403992013   -1.7012934096878         38.31
+ MICROCYCLE DIIS UPDATE:                    6
+   6     0.0102484538522   -1.7128173227253         37.96
+   7     0.0074570887595   -1.7123780604060         37.69
+   8     0.0057195567696   -1.7142928317970         37.78
+   9     0.0056641840265   -1.7146215639120         38.05
+  10     0.0065339388496   -1.7150849114132         37.87
+ MICROCYCLE DIIS UPDATE:                   11
+  11     0.0010881170837   -1.7160587846762         38.01
+  12     0.0007709395181   -1.7159445728157         37.99
+  13     0.0007678740184   -1.7160831754526         38.01
+  14     0.0009430280310   -1.7160188017005         37.98
+  15     0.0013762186104   -1.7160801213651         37.86
+ MICROCYCLE DIIS UPDATE:                   16
+  16     0.0001703518860   -1.7160899465591         37.91
+  17     0.0001200973234   -1.7160718612766         38.01
+  18     0.0001166558195   -1.7160928406721         38.05
+  19     0.0001452912203   -1.7160999409411         37.96
+  20     0.0002197254715   -1.7161021284362         37.92
+ MICROCYCLE DIIS UPDATE:                   21
+  21     0.0000363296970   -1.7161213636473         37.91
+  22     0.0000259726971   -1.7161152232355         38.00
+  23     0.0000225902536   -1.7161169097139         37.91
+  24     0.0000241060903   -1.7161145186767         37.82
+  25     0.0000299836334   -1.7161158393008         37.96
+ MICROCYCLE DIIS UPDATE:                   26
+  26     0.0000080457796   -1.7161143317947         38.04
+  27     0.0000057738139   -1.7161142865418         38.04
+  28     0.0000052253948   -1.7161150789948         38.26
+  29     0.0000056006798   -1.7161154006297         37.92
+  30     0.0000085080985   -1.7161154895991         38.06
+ MICROCYCLE DIIS UPDATE:                   31
+  31     0.0000020457022   -1.7161164208000         38.12
+  32     0.0000015442218   -1.7161160381797         38.07
+  33     0.0000013527396   -1.7161160460117         37.88
+  34     0.0000014386939   -1.7161159192236         38.15
+  35     0.0000017150713   -1.7161159620558         38.05
+ MICROCYCLE DIIS UPDATE:                   36
+  36     0.0000005129476   -1.7161158261187         38.00
+------------------------------------------------------------------
+ Iterations converged
+ CCSD correlation energy / hartree =        -1.716115826118677
+ CCSD total energy / hartree       =     -3007.805605599262435
+
+Time taken for spin-orbital canonical QED-CCSD: 1477.74 secs
