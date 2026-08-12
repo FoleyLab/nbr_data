@@ -1,9 +1,10 @@
 import numpy as np
 
 # --- Configuration ---
-INPUT_FILE = "intermediate_scans.csv"
-CCSD_OUTPUT = "QED_CCSD_Combined_Results.txt"
-SCF_OUTPUT = "QED_SCF_Combined_Results.txt"
+#INPUT_FILE = "intermediate_scans.csv"
+INPUT_FILE = "relaxed_qed_ccsd_intermediate_scans.csv"
+CCSD_OUTPUT = "Relaxed_QED_CCSD_Combined_Results.txt"
+SCF_OUTPUT = "Relaxed_QED_SCF_Combined_Results.txt"
 
 # Exact headers and divider requested
 HEADER_1 = "     theta        phi           Ex           Ey           Ez               Para_E              Ortho_E               Meta_E"

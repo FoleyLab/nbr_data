@@ -2,10 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # --- Configuration ---
-FILE_NAME = "QED_CCSD_Combined_Results.txt"
-DPI = 350  
+FILE_NAME = "Relaxed_QED_CCSD_Combined_Results.txt"
+DPI = 100  
 AU_TO_KCAL = 627.509
 
+SHADING_OP = "nearest" #< don't smooth
+#SHADING_OPT = "gouraud" #< smooth
 
 def create_single_map(P, T, data_grid, title, filename, label, vmin=None, vmax=None):
     """Helper to generate a single publication-ready plot with larger fonts."""
@@ -19,9 +21,9 @@ def create_single_map(P, T, data_grid, title, filename, label, vmin=None, vmax=N
     # Colormap scaling
     if vmin==None and vmax==None:
         vmax = np.abs(data_grid).max()
-        im = ax.pcolormesh(P, T, data_grid, shading='gouraud', cmap='RdBu_r', vmin=-vmax, vmax=vmax)
+        im = ax.pcolormesh(P, T, data_grid, shading=SHADING_OP, cmap='RdBu_r', vmin=-vmax, vmax=vmax)
     else:
-        im = ax.pcolormesh(P, T, data_grid, shading='gouraud', cmap='RdBu_r',vmin=vmin, vmax=vmax)
+        im = ax.pcolormesh(P, T, data_grid, shading=SHADING_OP, cmap='RdBu_r',vmin=vmin, vmax=vmax)
 
     # 2. Title and Axes labels
     ax.set_title(title, fontsize=fs_title, fontweight='bold', pad=20)
@@ -44,36 +46,6 @@ def create_single_map(P, T, data_grid, title, filename, label, vmin=None, vmax=N
     print(f"Saved: {filename}")
     plt.close(fig)
 
-#def create_single_map(P, T, data_grid, title, filename, label, vmin=None, vmax=None):
-#    """Helper to generate a single publication-ready plot."""
-#    fig, ax = plt.subplots(figsize=(7, 5.5), constrained_layout=True)
-#    
-#    # Use a divergent colormap centered at 0
-#    # Determine symmetric limits for the colorbar
-#    if vmax==None and vmin==None:
-#       vmax = np.abs(data_grid).max()
-#    
-##       im = ax.pcolormesh(P, T, data_grid, shading='gouraud', cmap='RdBu_r', 
-#                           vmin=-vmax, vmax=vmax)
-#
-#    else:
-#       im = ax.pcolormesh(P, T, data_grid, shading='gouraud', cmap='RdBu_r',
-#                           vmin=vmin, vmax=vmax)
-#    
-#    ax.set_title(title, fontsize=16, fontweight='bold', pad=15)
-#    ax.set_xlabel(r'Azimuthal Angle, $\phi$ (deg.)', fontsize=16)
-#    ax.set_ylabel(r'Polar Angle, $\theta$ (deg.)', fontsize=16)
-#    
-#    cbar = fig.colorbar(im, ax=ax, label=f'Energy Difference ({label})')
-#    cbar.ax.tick_params(labelsize=16)
-#    
-#    ax.set_xticks([0, 90, 180, 270, 360])
-#    ax.set_yticks([0, 45, 90, 135, 180])
-#    ax.grid(True, linestyle='--', alpha=0.3)
-#    
-#    plt.savefig(filename, dpi=DPI)
-#    print(f"Saved: {filename}")
-#    plt.close(fig)
 
 def plot_energy_diffs():
     # 1. Load the data
@@ -93,10 +65,10 @@ def plot_energy_diffs():
 
     # 4. Generate Separate Plots
     create_single_map(P, T, diff_om, r'$\Delta E$ (Ortho $-$ Meta)', 
-                      "ortho_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
+                      "relaxed_ortho_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
     
     create_single_map(P, T, diff_pm, r'$\Delta E$ (Para $-$ Meta)', 
-                      "para_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
+                      "relaxed_para_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
 
 if __name__ == "__main__":
     plot_energy_diffs()

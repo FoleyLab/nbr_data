@@ -262,6 +262,19 @@ DEFAULT_FIGURES = {
         dict(method="qed_ccsd", geometry="relaxed", pair="para_meta", direction=(65, 78)),
         dict(method="qed_ccsd", geometry="unrelaxed", pair="para_meta", direction=(65, 78)),
     ],
+    "05a_relaxed_vs_unrelaxed_ortho_meta": [
+        dict(method="qed_dft", geometry="unrelaxed", pair="ortho_meta", direction=(70, 31), zpe=False),
+        dict(method="qed_dft", geometry="relaxed", pair="ortho_meta", direction=(70, 31), zpe=False),
+        dict(method="qed_ccsd", geometry="relaxed", pair="ortho_meta", direction=(70, 31)),
+        dict(method="qed_ccsd", geometry="unrelaxed", pair="ortho_meta", direction=(70, 31)),
+    ],
+    "05b_relaxed_vs_unrelaxed_ortho_meta": [
+        dict(method="qed_dft", geometry="unrelaxed", pair="para_meta", direction=(65, 78), zpe=False),
+        dict(method="qed_dft", geometry="relaxed", pair="para_meta", direction=(65, 78), zpe=False),
+        dict(method="qed_ccsd", geometry="relaxed", pair="para_meta", direction=(65, 78)),
+        dict(method="qed_ccsd", geometry="unrelaxed", pair="para_meta", direction=(65, 78)),
+    ],
+
     "06_pqed_vs_qed_ccsd_ortho_meta": [
         dict(method="qed_ccsd", geometry="relaxed", pair="ortho_meta", direction=(70, 31)),
         dict(method="qed_ccsd", geometry="unrelaxed", pair="ortho_meta", direction=(70, 31)),
