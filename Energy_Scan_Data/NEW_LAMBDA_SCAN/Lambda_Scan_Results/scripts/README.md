@@ -3,6 +3,7 @@
 | File | Purpose |
 | --- | --- |
 | `plot_isomer_energies.py` | Generates method-comparison plots of relative isomer energies vs. `|lambda|`. |
+| `plot_qed_ccsd_relaxed_unrelaxed_styled.py` | Focused publication-style QED-CCSD relaxed/unrelaxed comparison with lower coupling-strength axis, upper mode-volume axis, and `-5 k_B T` guide line. |
 
 ## plot_isomer_energies.py
 
@@ -40,3 +41,23 @@ script. Each curve is a small dictionary describing `method`, `pair`,
 
 Requires Python with `matplotlib`. CSV parsing uses the Python standard
 library.
+
+## plot_qed_ccsd_relaxed_unrelaxed_styled.py
+
+Run:
+
+```bash
+python plot_qed_ccsd_relaxed_unrelaxed_styled.py
+```
+
+This script reads only the normalized QED-CCSD(2,2) summaries in
+`../QED_CCSD/summary/` and writes:
+
+| Output | Contents |
+| --- | --- |
+| `qed_ccsd_relaxed_vs_unrelaxed_styled.png` | 300 dpi raster figure. |
+| `qed_ccsd_relaxed_vs_unrelaxed_styled.pdf` | Vector figure. |
+
+The plot uses blue for `ortho - meta` at `(theta=70, phi=31)` and vermillion
+for `para - meta` at `(theta=65, phi=78)`. Relaxed geometries are solid with
+filled markers; unrelaxed geometries are dashed with open markers.
