@@ -1,0 +1,1389 @@
+
+  Memory set to   3.725 GiB by Python driver.
+  Threads set to 1 by Python driver.
+Discovered 12 cases in /Users/jfoley19/Code/nbr_data/QED_DFT_Theta_Phi_Relax_Campaign/runs_grid_no_freq
+  ortho theta=81 phi=180 lambda=(-0.09876883,  0.00000000,  0.01564345)
+   meta theta=81 phi=180 lambda=(-0.09876883,  0.00000000,  0.01564345)
+  ortho theta=81 phi=198 lambda=(-0.09393474, -0.03052125,  0.01564345)
+   meta theta=81 phi=198 lambda=(-0.09393474, -0.03052125,  0.01564345)
+  ortho theta=81 phi=216 lambda=(-0.07990567, -0.05805486,  0.01564345)
+   meta theta=81 phi=216 lambda=(-0.07990567, -0.05805486,  0.01564345)
+  ortho theta=81 phi=234 lambda=(-0.05805486, -0.07990567,  0.01564345)
+   meta theta=81 phi=234 lambda=(-0.05805486, -0.07990567,  0.01564345)
+  ortho theta=81 phi=252 lambda=(-0.03052125, -0.09393474,  0.01564345)
+   meta theta=81 phi=252 lambda=(-0.03052125, -0.09393474,  0.01564345)
+  ortho theta=81 phi=270 lambda=(-0.00000000, -0.09876883,  0.01564345)
+   meta theta=81 phi=270 lambda=(-0.00000000, -0.09876883,  0.01564345)
+[1/12] Computing ortho theta=81 phi=180
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.098769, 0.000000, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.320610267455     -3.010321e+03      3.006950e-04    1.459   
+2       -3010.326644002930     -6.033735e-03      5.406835e-05    1.455   
+3       -3010.327008247496     -3.642446e-04      2.807591e-05    1.502   
+4       -3010.327227521910     -2.192744e-04      6.524897e-06    1.469   
+5       -3010.327246741098     -1.921919e-05      2.555689e-05    1.466   
+6       -3010.327064869497      1.818716e-04      4.857561e-05    1.459   
+7       -3010.327172564792     -1.076953e-04      3.845354e-05    1.460   
+8       -3010.327229381958     -5.681717e-05      3.038893e-05    1.460   
+9       -3010.327321623739     -9.224178e-05      8.713087e-06    1.470   
+10      -3010.327328496229     -6.872490e-06      9.374496e-07    1.458   
+11      -3010.327328590171     -9.394171e-08      1.245806e-07    1.457   
+12      -3010.327328591867     -1.696208e-09      6.117381e-08    1.455   
+13      -3010.327328592264     -3.969944e-10      3.941106e-08    1.461   
+14      -3010.327328592389     -1.250555e-10      1.604985e-08    1.461   
+15      -3010.327328592408     -1.909939e-11      9.881465e-09    1.458*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.327328592408 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6732 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0631 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.327328592408 Eh
+@ E (Total)                                      -3010.327328592408 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.685041e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.098769, 0.000000, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.320610267455     -3.010321e+03      3.006950e-04    1.460   
+2       -3010.326644002930     -6.033735e-03      5.406835e-05    1.458   
+3       -3010.327008247496     -3.642446e-04      2.807591e-05    1.456   
+4       -3010.327227521910     -2.192744e-04      6.524897e-06    1.459   
+5       -3010.327246741098     -1.921919e-05      2.555689e-05    1.458   
+6       -3010.327064869497      1.818716e-04      4.857561e-05    1.461   
+7       -3010.327172564792     -1.076953e-04      3.845354e-05    1.461   
+8       -3010.327229381958     -5.681717e-05      3.038893e-05    1.460   
+9       -3010.327321623739     -9.224178e-05      8.713087e-06    1.472   
+10      -3010.327328496229     -6.872490e-06      9.374496e-07    1.461   
+11      -3010.327328590171     -9.394171e-08      1.245806e-07    1.465   
+12      -3010.327328591867     -1.696208e-09      6.117381e-08    1.463   
+13      -3010.327328592264     -3.969944e-10      3.941106e-08    1.457   
+14      -3010.327328592389     -1.250555e-10      1.604985e-08    1.457   
+15      -3010.327328592408     -1.909939e-11      9.881465e-09    1.458*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.327328592408 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6696 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0737 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.327328592408 Eh
+@ E (Total)                                      -3010.327328592408 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.685041e-03 Eh/Bohr
+[2/12] Computing meta theta=81 phi=180
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.098769, 0.000000, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.324501436417     -3.010325e+03      2.942848e-04    1.440   
+2       -3010.330035086701     -5.533650e-03      5.363217e-05    1.440   
+3       -3010.330366105866     -3.310192e-04      2.590027e-05    1.426   
+4       -3010.330528256590     -1.621507e-04      7.117616e-06    1.427   
+5       -3010.330557040797     -2.878421e-05      2.068304e-05    1.427   
+6       -3010.330416305921      1.407349e-04      4.455308e-05    1.439   
+7       -3010.330502519947     -8.621403e-05      3.340521e-05    1.425   
+8       -3010.330436099910      6.642004e-05      4.340014e-05    1.426   
+9       -3010.330599213430     -1.631135e-04      5.382347e-06    1.425   
+10      -3010.330601426722     -2.213292e-06      4.671765e-07    1.425   
+11      -3010.330601448234     -2.151182e-08      6.908242e-08    1.429   
+12      -3010.330601448911     -6.771188e-10      3.836956e-08    1.428   
+13      -3010.330601449053     -1.418812e-10      1.847425e-08    1.431   
+14      -3010.330601449083     -3.001333e-11      8.287178e-09    1.425*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.330601449083 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.5869 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0615 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.330601449083 Eh
+@ E (Total)                                      -3010.330601449083 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      2.199537e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.098769, 0.000000, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.324501436417     -3.010325e+03      2.942848e-04    1.437   
+2       -3010.330035086701     -5.533650e-03      5.363217e-05    1.427   
+3       -3010.330366105866     -3.310192e-04      2.590027e-05    1.430   
+4       -3010.330528256590     -1.621507e-04      7.117616e-06    1.427   
+5       -3010.330557040797     -2.878421e-05      2.068304e-05    1.429   
+6       -3010.330416305921      1.407349e-04      4.455308e-05    1.460   
+7       -3010.330502519947     -8.621403e-05      3.340521e-05    1.458   
+8       -3010.330436099910      6.642004e-05      4.340014e-05    1.438   
+9       -3010.330599213430     -1.631135e-04      5.382347e-06    1.430   
+10      -3010.330601426722     -2.213292e-06      4.671765e-07    1.430   
+11      -3010.330601448234     -2.151182e-08      6.908242e-08    1.447   
+12      -3010.330601448911     -6.771188e-10      3.836956e-08    1.426   
+13      -3010.330601449053     -1.418812e-10      1.847425e-08    1.430   
+14      -3010.330601449083     -3.001333e-11      8.287178e-09    1.426*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.330601449083 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.6212 s
+Quadrupole gradient time: 0.0103 s
+Dipole–dipole gradient time: 0.0658 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.330601449083 Eh
+@ E (Total)                                      -3010.330601449083 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      2.199537e-03 Eh/Bohr
+[3/12] Computing ortho theta=81 phi=198
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.093935, -0.030521, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.322573733060     -3.010323e+03      2.937975e-04    1.451   
+2       -3010.328299384985     -5.725652e-03      5.355673e-05    1.446   
+3       -3010.328644954198     -3.455692e-04      2.660966e-05    1.450   
+4       -3010.328838729882     -1.937757e-04      6.532571e-06    1.447   
+5       -3010.328862999553     -2.426967e-05      2.286815e-05    1.448   
+6       -3010.328691784672      1.712149e-04      4.675992e-05    1.448   
+7       -3010.328807729642     -1.159450e-04      3.404007e-05    1.446   
+8       -3010.328900898582     -9.316894e-05      1.472188e-05    1.446   
+9       -3010.328922105828     -2.120725e-05      5.257142e-06    1.445   
+10      -3010.328924399542     -2.293714e-06      3.966502e-07    1.449   
+11      -3010.328924412083     -1.254102e-08      8.671474e-08    1.450   
+12      -3010.328924413401     -1.317858e-09      4.288329e-08    1.446   
+13      -3010.328924413720     -3.192326e-10      2.253055e-08    1.446   
+14      -3010.328924413795     -7.457857e-11      1.250271e-08    1.442   
+15      -3010.328924413811     -1.591616e-11      6.530524e-09    1.442*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.328924413811 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6762 s
+Quadrupole gradient time: 0.0100 s
+Dipole–dipole gradient time: 0.0658 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.328924413811 Eh
+@ E (Total)                                      -3010.328924413811 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.050353e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.093935, -0.030521, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.322573733060     -3.010323e+03      2.937975e-04    1.457   
+2       -3010.328299384985     -5.725652e-03      5.355673e-05    1.448   
+3       -3010.328644954198     -3.455692e-04      2.660966e-05    1.444   
+4       -3010.328838729882     -1.937757e-04      6.532571e-06    1.445   
+5       -3010.328862999553     -2.426967e-05      2.286815e-05    1.446   
+6       -3010.328691784672      1.712149e-04      4.675992e-05    1.462   
+7       -3010.328807729642     -1.159450e-04      3.404007e-05    1.454   
+8       -3010.328900898582     -9.316894e-05      1.472188e-05    1.450   
+9       -3010.328922105828     -2.120725e-05      5.257142e-06    1.451   
+10      -3010.328924399542     -2.293714e-06      3.966502e-07    1.444   
+11      -3010.328924412083     -1.254102e-08      8.671474e-08    1.445   
+12      -3010.328924413401     -1.317858e-09      4.288329e-08    1.444   
+13      -3010.328924413720     -3.192326e-10      2.253055e-08    1.455   
+14      -3010.328924413795     -7.457857e-11      1.250271e-08    1.447   
+15      -3010.328924413811     -1.591616e-11      6.530524e-09    1.446*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.328924413811 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6713 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0674 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.328924413811 Eh
+@ E (Total)                                      -3010.328924413811 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.050353e-03 Eh/Bohr
+[4/12] Computing meta theta=81 phi=198
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.093935, -0.030521, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.318754716875     -3.010319e+03      2.994474e-04    1.418   
+2       -3010.324502165697     -5.747449e-03      5.345741e-05    1.415   
+3       -3010.324833710687     -3.315450e-04      2.595011e-05    1.416   
+4       -3010.324990897569     -1.571869e-04      7.011885e-06    1.417   
+5       -3010.325015393572     -2.449600e-05      2.034067e-05    1.415   
+6       -3010.324868897012      1.464966e-04      4.677361e-05    1.416   
+7       -3010.324952927223     -8.403021e-05      3.509500e-05    1.417   
+8       -3010.324833483314      1.194439e-04      5.226694e-05    1.415   
+9       -3010.325051343294     -2.178600e-04      5.510547e-06    1.415   
+10      -3010.325053417977     -2.074683e-06      1.517564e-07    1.422   
+11      -3010.325053419907     -1.930403e-09      6.217822e-08    1.415   
+12      -3010.325053420313     -4.060894e-10      3.632022e-08    1.415   
+13      -3010.325053420427     -1.136868e-10      2.071284e-08    1.416   
+14      -3010.325053420464     -3.774403e-11      1.110375e-08    1.424   
+15      -3010.325053420479     -1.500666e-11      6.096361e-09    1.416*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.325053420479 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.5773 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0645 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.325053420479 Eh
+@ E (Total)                                      -3010.325053420479 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      3.334889e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.093935, -0.030521, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.318754716875     -3.010319e+03      2.994474e-04    1.434   
+2       -3010.324502165697     -5.747449e-03      5.345741e-05    1.432   
+3       -3010.324833710687     -3.315450e-04      2.595011e-05    1.418   
+4       -3010.324990897569     -1.571869e-04      7.011885e-06    1.418   
+5       -3010.325015393572     -2.449600e-05      2.034067e-05    1.416   
+6       -3010.324868897012      1.464966e-04      4.677361e-05    1.416   
+7       -3010.324952927223     -8.403021e-05      3.509500e-05    1.415   
+8       -3010.324833483314      1.194439e-04      5.226694e-05    1.419   
+9       -3010.325051343294     -2.178600e-04      5.510547e-06    1.414   
+10      -3010.325053417977     -2.074683e-06      1.517564e-07    1.413   
+11      -3010.325053419907     -1.930403e-09      6.217822e-08    1.414   
+12      -3010.325053420313     -4.060894e-10      3.632022e-08    1.415   
+13      -3010.325053420427     -1.136868e-10      2.071284e-08    1.415   
+14      -3010.325053420464     -3.774403e-11      1.110375e-08    1.414   
+15      -3010.325053420479     -1.500666e-11      6.096361e-09    1.415*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.325053420479 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.5805 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0649 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.325053420479 Eh
+@ E (Total)                                      -3010.325053420479 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      3.334889e-03 Eh/Bohr
+[5/12] Computing ortho theta=81 phi=216
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.079906, -0.058055, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.320652704837     -3.010321e+03      2.830785e-04    1.454   
+2       -3010.325970911328     -5.318206e-03      5.403698e-05    1.448   
+3       -3010.326298260452     -3.273491e-04      2.478121e-05    1.450   
+4       -3010.326458967759     -1.607073e-04      7.279790e-06    1.448   
+5       -3010.326491202438     -3.223468e-05      1.985415e-05    1.447   
+6       -3010.326329688830      1.615136e-04      4.467971e-05    1.449   
+7       -3010.326450022235     -1.203334e-04      2.977600e-05    1.450   
+8       -3010.326522105140     -7.208290e-05      1.161066e-05    1.447   
+9       -3010.326536436312     -1.433117e-05      1.953199e-06    1.446   
+10      -3010.326536659139     -2.228271e-07      4.778475e-07    1.445   
+11      -3010.326536679389     -2.024990e-08      1.325043e-07    1.448   
+12      -3010.326536682460     -3.070909e-09      5.729503e-08    1.448   
+13      -3010.326536682975     -5.147740e-10      3.191294e-08    1.446   
+14      -3010.326536683052     -7.685230e-11      1.525709e-08    1.448   
+15      -3010.326536683077     -2.546585e-11      6.266350e-09    1.444*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.326536683077 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6498 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0666 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.326536683077 Eh
+@ E (Total)                                      -3010.326536683077 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      2.713304e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.079906, -0.058055, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.320652704837     -3.010321e+03      2.830785e-04    1.462   
+2       -3010.325970911328     -5.318206e-03      5.403698e-05    1.448   
+3       -3010.326298260452     -3.273491e-04      2.478121e-05    1.447   
+4       -3010.326458967759     -1.607073e-04      7.279790e-06    1.447   
+5       -3010.326491202438     -3.223468e-05      1.985415e-05    1.442   
+6       -3010.326329688830      1.615136e-04      4.467971e-05    1.447   
+7       -3010.326450022235     -1.203334e-04      2.977600e-05    1.445   
+8       -3010.326522105140     -7.208290e-05      1.161066e-05    1.446   
+9       -3010.326536436312     -1.433117e-05      1.953199e-06    1.447   
+10      -3010.326536659139     -2.228271e-07      4.778475e-07    1.448   
+11      -3010.326536679389     -2.024990e-08      1.325043e-07    1.446   
+12      -3010.326536682460     -3.070909e-09      5.729503e-08    1.446   
+13      -3010.326536682975     -5.147740e-10      3.191294e-08    1.446   
+14      -3010.326536683052     -7.685230e-11      1.525709e-08    1.446   
+15      -3010.326536683077     -2.546585e-11      6.266350e-09    1.446*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.326536683077 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6378 s
+Quadrupole gradient time: 0.0113 s
+Dipole–dipole gradient time: 0.0677 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.326536683077 Eh
+@ E (Total)                                      -3010.326536683077 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      2.713304e-03 Eh/Bohr
+[6/12] Computing meta theta=81 phi=216
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.079906, -0.058055, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.311614634101     -3.010312e+03      3.013693e-04    1.425   
+2       -3010.317447599246     -5.832965e-03      5.458568e-05    1.417   
+3       -3010.317783538995     -3.359397e-04      2.568046e-05    1.417   
+4       -3010.317932439987     -1.489010e-04      7.878007e-06    1.418   
+5       -3010.317961132953     -2.869297e-05      1.911701e-05    1.422   
+6       -3010.317826990712      1.341422e-04      4.507131e-05    1.416   
+7       -3010.317918726562     -9.173585e-05      3.086904e-05    1.417   
+8       -3010.317926293838     -7.567276e-06      2.917908e-05    1.417   
+9       -3010.317991814670     -6.552083e-05      4.302219e-06    1.432   
+10      -3010.317991008911      8.057591e-07      5.312658e-06    1.534   
+11      -3010.317993541089     -2.532178e-06      7.875444e-08    1.441   
+12      -3010.317993541579     -4.893081e-10      4.907059e-08    1.431   
+13      -3010.317993541748     -1.696208e-10      2.477209e-08    1.421   
+14      -3010.317993541813     -6.457412e-11      1.286322e-08    1.422   
+15      -3010.317993541835     -2.182787e-11      7.966777e-09    1.418*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.317993541835 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6038 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0665 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.317993541835 Eh
+@ E (Total)                                      -3010.317993541835 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      3.869563e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.079906, -0.058055, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.311614634101     -3.010312e+03      3.013693e-04    1.425   
+2       -3010.317447599246     -5.832965e-03      5.458568e-05    1.429   
+3       -3010.317783538995     -3.359397e-04      2.568046e-05    1.415   
+4       -3010.317932439987     -1.489010e-04      7.878007e-06    1.429   
+5       -3010.317961132953     -2.869297e-05      1.911701e-05    1.422   
+6       -3010.317826990712      1.341422e-04      4.507131e-05    1.414   
+7       -3010.317918726562     -9.173585e-05      3.086904e-05    1.446   
+8       -3010.317926293838     -7.567276e-06      2.917908e-05    1.444   
+9       -3010.317991814670     -6.552083e-05      4.302219e-06    1.428   
+10      -3010.317991008911      8.057591e-07      5.312658e-06    1.415   
+11      -3010.317993541089     -2.532178e-06      7.875444e-08    1.421   
+12      -3010.317993541579     -4.893081e-10      4.907059e-08    1.430   
+13      -3010.317993541748     -1.696208e-10      2.477209e-08    1.417   
+14      -3010.317993541813     -6.457412e-11      1.286322e-08    1.417   
+15      -3010.317993541835     -2.182787e-11      7.966777e-09    1.417*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.317993541835 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.5733 s
+Quadrupole gradient time: 0.0109 s
+Dipole–dipole gradient time: 0.0648 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.317993541835 Eh
+@ E (Total)                                      -3010.317993541835 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      3.869563e-03 Eh/Bohr
+[7/12] Computing ortho theta=81 phi=234
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.058055, -0.079906, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.322211598131     -3.010322e+03      2.681904e-04    1.448   
+2       -3010.326741395580     -4.529797e-03      5.245637e-05    1.446   
+3       -3010.327032055200     -2.906596e-04      2.292674e-05    1.435   
+4       -3010.327162840268     -1.307851e-04      6.825681e-06    1.440   
+5       -3010.327189478387     -2.663812e-05      1.835060e-05    1.451   
+6       -3010.327051225789      1.382526e-04      4.210735e-05    1.436   
+7       -3010.327157878275     -1.066525e-04      2.725459e-05    1.434   
+8       -3010.327202020064     -4.414179e-05      1.596984e-05    1.437   
+9       -3010.327226827019     -2.480695e-05      5.982135e-07    1.444   
+10      -3010.327226824738      2.281013e-09      5.221343e-07    1.441   
+11      -3010.327226850881     -2.614297e-08      1.061967e-07    1.437   
+12      -3010.327226852501     -1.620265e-09      4.474954e-08    1.434   
+13      -3010.327226852651     -1.496119e-10      2.253606e-08    1.435   
+14      -3010.327226852686     -3.501555e-11      1.044394e-08    1.443   
+15      -3010.327226852691     -5.456968e-12      5.022146e-09    1.435*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.327226852691 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6517 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0654 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.327226852691 Eh
+@ E (Total)                                      -3010.327226852691 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.728547e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.058055, -0.079906, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.322211598131     -3.010322e+03      2.681904e-04    1.446   
+2       -3010.326741395580     -4.529797e-03      5.245637e-05    1.439   
+3       -3010.327032055200     -2.906596e-04      2.292674e-05    1.438   
+4       -3010.327162840268     -1.307851e-04      6.825681e-06    1.443   
+5       -3010.327189478387     -2.663812e-05      1.835060e-05    1.437   
+6       -3010.327051225789      1.382526e-04      4.210735e-05    1.439   
+7       -3010.327157878275     -1.066525e-04      2.725459e-05    1.450   
+8       -3010.327202020064     -4.414179e-05      1.596984e-05    1.458   
+9       -3010.327226827019     -2.480695e-05      5.982135e-07    1.444   
+10      -3010.327226824738      2.281013e-09      5.221343e-07    1.453   
+11      -3010.327226850881     -2.614297e-08      1.061967e-07    1.437   
+12      -3010.327226852501     -1.620265e-09      4.474954e-08    1.438   
+13      -3010.327226852651     -1.496119e-10      2.253606e-08    1.436   
+14      -3010.327226852686     -3.501555e-11      1.044394e-08    1.440   
+15      -3010.327226852691     -5.456968e-12      5.022146e-09    1.452*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.327226852691 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6626 s
+Quadrupole gradient time: 0.0111 s
+Dipole–dipole gradient time: 0.0646 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.327226852691 Eh
+@ E (Total)                                      -3010.327226852691 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.728547e-03 Eh/Bohr
+[8/12] Computing meta theta=81 phi=234
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.058055, -0.079906, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.305828863055     -3.010306e+03      2.983671e-04    1.415   
+2       -3010.311486402542     -5.657539e-03      5.663745e-05    1.407   
+3       -3010.311815756386     -3.293538e-04      2.496678e-05    1.417   
+4       -3010.311951180564     -1.354242e-04      8.418671e-06    1.410   
+5       -3010.311982153482     -3.097292e-05      1.811888e-05    1.407   
+6       -3010.311870638537      1.115149e-04      4.191541e-05    1.403   
+7       -3010.311953067971     -8.242943e-05      2.759964e-05    1.407   
+8       -3010.312006792754     -5.372478e-05      6.564910e-06    1.408   
+9       -3010.312010531040     -3.738286e-06      8.525897e-07    1.409   
+10      -3010.312010545849     -1.480976e-08      2.782301e-07    1.408   
+11      -3010.312010549269     -3.420155e-09      6.888585e-08    1.407   
+12      -3010.312010549756     -4.861249e-10      3.559246e-08    1.408   
+13      -3010.312010549898     -1.423359e-10      1.888758e-08    1.407   
+14      -3010.312010549948     -5.002221e-11      9.737437e-09    1.407*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.312010549948 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.5849 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0637 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.312010549948 Eh
+@ E (Total)                                      -3010.312010549948 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      5.632994e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.058055, -0.079906, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.305828863055     -3.010306e+03      2.983671e-04    1.413   
+2       -3010.311486402542     -5.657539e-03      5.663745e-05    1.419   
+3       -3010.311815756386     -3.293538e-04      2.496678e-05    1.411   
+4       -3010.311951180564     -1.354242e-04      8.418671e-06    1.406   
+5       -3010.311982153482     -3.097292e-05      1.811888e-05    1.408   
+6       -3010.311870638537      1.115149e-04      4.191541e-05    1.408   
+7       -3010.311953067971     -8.242943e-05      2.759964e-05    1.409   
+8       -3010.312006792754     -5.372478e-05      6.564910e-06    1.413   
+9       -3010.312010531040     -3.738286e-06      8.525897e-07    1.411   
+10      -3010.312010545849     -1.480976e-08      2.782301e-07    1.410   
+11      -3010.312010549269     -3.420155e-09      6.888585e-08    1.411   
+12      -3010.312010549756     -4.861249e-10      3.559246e-08    1.409   
+13      -3010.312010549898     -1.423359e-10      1.888758e-08    1.410   
+14      -3010.312010549948     -5.002221e-11      9.737437e-09    1.410*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.312010549948 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.5622 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0653 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.312010549948 Eh
+@ E (Total)                                      -3010.312010549948 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      5.632994e-03 Eh/Bohr
+[9/12] Computing ortho theta=81 phi=252
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.030521, -0.093935, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.320751168895     -3.010321e+03      2.653161e-04    1.451   
+2       -3010.325013517989     -4.262349e-03      4.791157e-05    1.441   
+3       -3010.325254605351     -2.410874e-04      2.137044e-05    1.448   
+4       -3010.325358390348     -1.037850e-04      6.357766e-06    1.447   
+5       -3010.325377572846     -1.918250e-05      1.660817e-05    1.442   
+6       -3010.325295977712      8.159513e-05      3.447851e-05    1.441   
+7       -3010.325353430600     -5.745289e-05      2.508897e-05    1.443   
+8       -3010.325373365115     -1.993451e-05      1.973766e-05    1.441   
+9       -3010.325407892363     -3.452725e-05      8.794160e-07    1.448   
+10      -3010.325407833316      5.904712e-08      1.051219e-06    1.444   
+11      -3010.325407940646     -1.073295e-07      1.273748e-07    1.440   
+12      -3010.325407942216     -1.570243e-09      4.965605e-08    1.441   
+13      -3010.325407942417     -2.014531e-10      2.143672e-08    1.438   
+14      -3010.325407942468     -5.047696e-11      1.177876e-08    1.439   
+15      -3010.325407942470     -2.273737e-12      5.799971e-09    1.441*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.325407942470 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6673 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0648 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.325407942470 Eh
+@ E (Total)                                      -3010.325407942470 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.763688e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.030521, -0.093935, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.320751168895     -3.010321e+03      2.653161e-04    1.450   
+2       -3010.325013517989     -4.262349e-03      4.791157e-05    1.449   
+3       -3010.325254605351     -2.410874e-04      2.137044e-05    1.443   
+4       -3010.325358390348     -1.037850e-04      6.357766e-06    1.442   
+5       -3010.325377572846     -1.918250e-05      1.660817e-05    1.442   
+6       -3010.325295977712      8.159513e-05      3.447851e-05    1.442   
+7       -3010.325353430600     -5.745289e-05      2.508897e-05    1.444   
+8       -3010.325373365115     -1.993451e-05      1.973766e-05    1.443   
+9       -3010.325407892363     -3.452725e-05      8.794160e-07    1.441   
+10      -3010.325407833316      5.904712e-08      1.051219e-06    1.442   
+11      -3010.325407940646     -1.073295e-07      1.273748e-07    1.442   
+12      -3010.325407942216     -1.570243e-09      4.965605e-08    1.443   
+13      -3010.325407942417     -2.014531e-10      2.143672e-08    1.441   
+14      -3010.325407942468     -5.047696e-11      1.177876e-08    1.441   
+15      -3010.325407942470     -2.273737e-12      5.799971e-09    1.440*  
+  SCF Converged in 15 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.325407942470 Eh
+@ SCF Iterations                                 15
+Psi4 canonical gradient time: 6.6615 s
+Quadrupole gradient time: 0.0103 s
+Dipole–dipole gradient time: 0.0678 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.325407942470 Eh
+@ E (Total)                                      -3010.325407942470 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      1.763688e-03 Eh/Bohr
+[10/12] Computing meta theta=81 phi=252
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.030521, -0.093935, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.311222425774     -3.010311e+03      2.798130e-04    1.416   
+2       -3010.316006745338     -4.784320e-03      4.365277e-05    1.414   
+3       -3010.316226153131     -2.194078e-04      2.179996e-05    1.407   
+4       -3010.316330532071     -1.043789e-04      5.672142e-06    1.407   
+5       -3010.316343235612     -1.270354e-05      1.668064e-05    1.406   
+6       -3010.316289117679      5.411793e-05      3.135176e-05    1.405   
+7       -3010.316337124906     -4.800723e-05      1.996639e-05    1.407   
+8       -3010.316360549972     -2.342507e-05      8.844428e-06    1.408   
+9       -3010.316366715362     -6.165390e-06      1.502401e-06    1.407   
+10      -3010.316366755149     -3.978766e-08      1.087433e-06    1.406   
+11      -3010.316366852250     -9.710084e-08      6.296449e-08    1.405   
+12      -3010.316366852624     -3.733476e-10      2.800989e-08    1.405   
+13      -3010.316366852693     -6.912160e-11      1.601727e-08    1.415   
+14      -3010.316366852708     -1.546141e-11      7.178986e-09    1.407*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.316366852708 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.5298 s
+Quadrupole gradient time: 0.0101 s
+Dipole–dipole gradient time: 0.0670 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.316366852708 Eh
+@ E (Total)                                      -3010.316366852708 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      6.117926e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.030521, -0.093935, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.311222425774     -3.010311e+03      2.798130e-04    1.463   
+2       -3010.316006745338     -4.784320e-03      4.365277e-05    1.414   
+3       -3010.316226153131     -2.194078e-04      2.179996e-05    1.415   
+4       -3010.316330532071     -1.043789e-04      5.672142e-06    1.411   
+5       -3010.316343235612     -1.270354e-05      1.668064e-05    1.410   
+6       -3010.316289117679      5.411793e-05      3.135176e-05    1.407   
+7       -3010.316337124906     -4.800723e-05      1.996639e-05    1.410   
+8       -3010.316360549972     -2.342507e-05      8.844428e-06    1.406   
+9       -3010.316366715362     -6.165390e-06      1.502401e-06    1.406   
+10      -3010.316366755149     -3.978766e-08      1.087433e-06    1.415   
+11      -3010.316366852250     -9.710084e-08      6.296449e-08    1.406   
+12      -3010.316366852624     -3.733476e-10      2.800989e-08    1.421   
+13      -3010.316366852693     -6.912160e-11      1.601727e-08    1.404   
+14      -3010.316366852708     -1.546141e-11      7.178986e-09    1.411*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.316366852708 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.5555 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0614 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.316366852708 Eh
+@ E (Total)                                      -3010.316366852708 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      6.117926e-03 Eh/Bohr
+[11/12] Computing ortho theta=81 phi=270
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.000000, -0.098769, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.317679548095     -3.010318e+03      2.682974e-04    1.450   
+2       -3010.322085448566     -4.405900e-03      4.583197e-05    1.447   
+3       -3010.322314653250     -2.292047e-04      2.110636e-05    1.446   
+4       -3010.322412481414     -9.782816e-05      6.436382e-06    1.442   
+5       -3010.322429536569     -1.705516e-05      1.567982e-05    1.439   
+6       -3010.322366138789      6.339778e-05      3.172042e-05    1.445   
+7       -3010.322408888051     -4.274926e-05      2.361571e-05    1.444   
+8       -3010.322431793193     -2.290514e-05      1.630840e-05    1.441   
+9       -3010.322453975597     -2.218240e-05      1.210429e-06    1.451   
+10      -3010.322454016056     -4.045887e-08      1.065444e-06    1.442   
+11      -3010.322454114922     -9.886617e-08      1.087353e-07    1.441   
+12      -3010.322454115601     -6.789378e-10      3.727757e-08    1.442   
+13      -3010.322454115721     -1.205080e-10      1.777180e-08    1.442   
+14      -3010.322454115754     -3.228706e-11      9.065730e-09    1.455*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.322454115754 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.6671 s
+Quadrupole gradient time: 0.0103 s
+Dipole–dipole gradient time: 0.0674 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.322454115754 Eh
+@ E (Total)                                      -3010.322454115754 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      2.018794e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.000000, -0.098769, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.317679548095     -3.010318e+03      2.682974e-04    1.448   
+2       -3010.322085448566     -4.405900e-03      4.583197e-05    1.442   
+3       -3010.322314653250     -2.292047e-04      2.110636e-05    1.439   
+4       -3010.322412481414     -9.782816e-05      6.436382e-06    1.441   
+5       -3010.322429536569     -1.705516e-05      1.567982e-05    1.441   
+6       -3010.322366138789      6.339778e-05      3.172042e-05    1.450   
+7       -3010.322408888051     -4.274926e-05      2.361571e-05    1.448   
+8       -3010.322431793193     -2.290514e-05      1.630840e-05    1.440   
+9       -3010.322453975597     -2.218240e-05      1.210429e-06    1.441   
+10      -3010.322454016056     -4.045887e-08      1.065444e-06    1.438   
+11      -3010.322454114922     -9.886617e-08      1.087353e-07    1.440   
+12      -3010.322454115601     -6.789378e-10      3.727757e-08    1.440   
+13      -3010.322454115721     -1.205080e-10      1.777180e-08    1.439   
+14      -3010.322454115754     -3.228706e-11      9.065730e-09    1.439*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.322454115754 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.6610 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0635 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.322454115754 Eh
+@ E (Total)                                      -3010.322454115754 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      2.018794e-03 Eh/Bohr
+[12/12] Computing meta theta=81 phi=270
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.000000, -0.098769, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.315329774824     -3.010315e+03      2.700153e-04    1.410   
+2       -3010.319686386828     -4.356612e-03      4.346259e-05    1.416   
+3       -3010.319898619604     -2.122328e-04      2.145548e-05    1.406   
+4       -3010.320004498763     -1.058792e-04      5.149523e-06    1.405   
+5       -3010.320013931518     -9.432755e-06      1.755719e-05    1.406   
+6       -3010.319932002719      8.192880e-05      3.635906e-05    1.405   
+7       -3010.319978729321     -4.672660e-05      2.830279e-05    1.406   
+8       -3010.320007778586     -2.904927e-05      2.074568e-05    1.406   
+9       -3010.320042826751     -3.504817e-05      1.209688e-06    1.410   
+10      -3010.320042851155     -2.440311e-08      1.161667e-06    1.403   
+11      -3010.320042973979     -1.228241e-07      8.406754e-08    1.404   
+12      -3010.320042974375     -3.960849e-10      4.386263e-08    1.404   
+13      -3010.320042974445     -7.048584e-11      2.598323e-08    1.404   
+14      -3010.320042974475     -2.955858e-11      8.031377e-09    1.407*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.320042974475 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.5002 s
+Quadrupole gradient time: 0.0112 s
+Dipole–dipole gradient time: 0.0647 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.320042974475 Eh
+@ E (Total)                                      -3010.320042974475 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      5.107482e-03 Eh/Bohr
+
+  ==> CQED-SCF Energy Calculation <== 
+
+  Functional = wb97x
+
+  ==> CQED-SCF Calculation <== 
+
+  Method                = RKS
+  Basis                 = 6-311G*
+  Charge                = 1
+  Multiplicity          = 1
+  Number of electrons   = 98
+  Orbitals (AO / MO)    = 221 / 221
+
+  Cavity parameters
+  -----------------
+  lambda                = (-0.000000, -0.098769, 0.015643)
+  omega                 = 0.066150 Eh
+  Density fitting       = True
+
+  ==> SCF Iterations <== 
+
+Iter    Energy (Eh)           dE (Eh)           dRMS (a.u.)       Time (s)
+------  --------------------  ----------------  ----------------  --------
+1       -3010.315329774824     -3.010315e+03      2.700153e-04    1.414   
+2       -3010.319686386828     -4.356612e-03      4.346259e-05    1.411   
+3       -3010.319898619604     -2.122328e-04      2.145548e-05    1.409   
+4       -3010.320004498763     -1.058792e-04      5.149523e-06    1.407   
+5       -3010.320013931518     -9.432755e-06      1.755719e-05    1.411   
+6       -3010.319932002719      8.192880e-05      3.635906e-05    1.405   
+7       -3010.319978729321     -4.672660e-05      2.830279e-05    1.408   
+8       -3010.320007778586     -2.904927e-05      2.074568e-05    1.408   
+9       -3010.320042826751     -3.504817e-05      1.209688e-06    1.409   
+10      -3010.320042851155     -2.440311e-08      1.161667e-06    1.406   
+11      -3010.320042973979     -1.228241e-07      8.406754e-08    1.407   
+12      -3010.320042974375     -3.960849e-10      4.386263e-08    1.406   
+13      -3010.320042974445     -7.048584e-11      2.598323e-08    1.406   
+14      -3010.320042974475     -2.955858e-11      8.031377e-09    1.407*  
+  SCF Converged in 14 iterations.
+
+  ==> CQED-RKS Total Energy <== 
+
+@ CQED-SCF Total Energy                          -3010.320042974475 Eh
+@ SCF Iterations                                 14
+Psi4 canonical gradient time: 6.4850 s
+Quadrupole gradient time: 0.0102 s
+Dipole–dipole gradient time: 0.0623 s
+
+  ==> CQED-SCF Energy <== 
+
+@ E (CQED-SCF)                                   -3010.320042974475 Eh
+@ E (Total)                                      -3010.320042974475 Eh
+
+  ==> CQED Gradient <== 
+
+@ |g (Total)|                                      5.107482e-03 Eh/Bohr
+Wrote /Users/jfoley19/Code/nbr_data/QED_DFT_Theta_Phi_Relax_Campaign/runs_grid_no_freq/projected_gradient_ring_raw.csv
+Wrote /Users/jfoley19/Code/nbr_data/QED_DFT_Theta_Phi_Relax_Campaign/runs_grid_no_freq/projected_gradient_ring_ortho_meta_pairwise.csv
+Wrote /Users/jfoley19/Code/nbr_data/QED_DFT_Theta_Phi_Relax_Campaign/runs_grid_no_freq/projected_gradient_ring_ortho_meta_diagnostic.png

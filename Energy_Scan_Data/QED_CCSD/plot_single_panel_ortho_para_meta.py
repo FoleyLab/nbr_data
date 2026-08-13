@@ -6,8 +6,8 @@ FILE_NAME = "Relaxed_QED_CCSD_Combined_Results.txt"
 DPI = 100  
 AU_TO_KCAL = 627.509
 
-SHADING_OP = "nearest" #< don't smooth
-#SHADING_OPT = "gouraud" #< smooth
+#SHADING_OP = "nearest" #< don't smooth
+SHADING_OP = "gouraud" #< smooth
 
 def create_single_map(P, T, data_grid, title, filename, label, vmin=None, vmax=None):
     """Helper to generate a single publication-ready plot with larger fonts."""
@@ -65,10 +65,10 @@ def plot_energy_diffs():
 
     # 4. Generate Separate Plots
     create_single_map(P, T, diff_om, r'$\Delta E$ (Ortho $-$ Meta)', 
-                      "relaxed_ortho_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
+                      "relaxed_ortho_meta_diff_QED_CCSD_22.png", "kcal/mol", vmin=-8, vmax=8)
     
     create_single_map(P, T, diff_pm, r'$\Delta E$ (Para $-$ Meta)', 
-                      "relaxed_para_meta_diff_QED_CCSD_22.png", "kcal/mol")#, vmin=-30, vmax=30)
+                      "relaxed_para_meta_diff_QED_CCSD_22.png", "kcal/mol", vmin=-8, vmax=8)
 
 if __name__ == "__main__":
     plot_energy_diffs()
