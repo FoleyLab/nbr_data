@@ -39,8 +39,9 @@ To add a plot, edit the `DEFAULT_FIGURES` dictionary near the bottom of the
 script. Each curve is a small dictionary describing `method`, `pair`,
 `direction`, and any method-specific options.
 
-Requires Python with `matplotlib`. CSV parsing uses the Python standard
-library.
+Requires Python with `matplotlib`; the styled QED-CCSD script also uses
+`numpy` for Matplotlib-compatible secondary-axis transforms. CSV parsing uses
+the Python standard library.
 
 ## plot_qed_ccsd_relaxed_unrelaxed_styled.py
 
@@ -60,4 +61,6 @@ This script reads only the normalized QED-CCSD(2,2) summaries in
 
 The plot uses blue for `ortho - meta` at `(theta=70, phi=31)` and vermillion
 for `para - meta` at `(theta=65, phi=78)`. Relaxed geometries are solid with
-filled markers; unrelaxed geometries are dashed with open markers.
+filled markers; unrelaxed geometries are dashed with open markers. The lower
+x axis is coupling strength, the upper x axis is mode volume, and the
+horizontal guide marks `-5 k_B T` stabilization at 298 K.

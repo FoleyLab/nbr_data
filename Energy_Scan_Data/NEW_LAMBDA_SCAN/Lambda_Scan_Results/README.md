@@ -55,7 +55,8 @@ columns are `dE_ortho_meta*_kcal/mol` and `dE_para_meta*_kcal/mol`.
 
 ## Plotting
 
-Use `scripts/plot_isomer_energies.py` to regenerate comparison plots:
+Use `scripts/plot_isomer_energies.py` to regenerate the general comparison
+plots:
 
 ```bash
 cd scripts
@@ -65,3 +66,15 @@ python plot_isomer_energies.py
 The default script configuration generates comparisons for QED-CCSD relaxed
 vs. unrelaxed, QED-DFT relaxed vs. unrelaxed, pQED vs. QED-CCSD, and pQED vs.
 QED-DFT for the target isomer pairs and directions.
+
+For the focused publication-style QED-CCSD relaxed/unrelaxed comparison, use:
+
+```bash
+cd scripts
+python plot_qed_ccsd_relaxed_unrelaxed_styled.py
+```
+
+That script produces `qed_ccsd_relaxed_vs_unrelaxed_styled.png` and `.pdf`,
+with coupling strength on the lower x axis, mode volume on the upper x axis,
+solid/filled relaxed curves, dashed/open unrelaxed curves, and a `-5 k_B T`
+stabilization guide line.

@@ -104,13 +104,17 @@ def lambda_to_mode_volume(lambda_au: float) -> float:
     NumPy arrays, so the implementation must be vector-safe.
     """
     lambda_au = np.asarray(lambda_au)
-    return np.where(lambda_au == 0, np.inf, C_NM3 / (lambda_au**2))
+    out = np.full_like(lambda_au, np.inf, dtype=float)
+    np.divide(C_NM3, lambda_au**2, out=out, where=lambda_au != 0)
+    return out
 
 
 def mode_volume_to_lambda(volume_nm3: float) -> float:
     """Inverse transform for matplotlib's secondary_xaxis."""
     volume_nm3 = np.asarray(volume_nm3)
-    return np.where(volume_nm3 == 0, np.inf, np.sqrt(C_NM3 / volume_nm3))
+    ratio = np.full_like(volume_nm3, np.inf, dtype=float)
+    np.divide(C_NM3, volume_nm3, out=ratio, where=volume_nm3 != 0)
+    return np.sqrt(ratio)
 
 
 def read_qed_ccsd_series(entry: dict) -> tuple[list[float], list[float]]:
