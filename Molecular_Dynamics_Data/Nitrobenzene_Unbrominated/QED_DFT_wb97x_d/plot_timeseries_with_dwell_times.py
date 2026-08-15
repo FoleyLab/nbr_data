@@ -79,7 +79,7 @@ import sys
 
 # --- Configuration ---
 MD_FILE = "nitrobenzene_direction_A_wb97x_d_4000_ts.xyz"
-ENERGY_FILE = "isomer_Nel_49_Nph_10_total_energies.dat"  # fixed 2026-07-10: was a nonexistent placeholder path
+ENERGY_FILE = "Relaxed_QED_CCSD_Combined_Results.txt" #"isomer_Nel_49_Nph_10_total_energies.dat"  # fixed 2026-07-10: was a nonexistent placeholder path
 AU_TO_KCAL = 627.509  # Hartree -> kcal/mol conversion factor
 TS_TO_FS = 6.04721e-16 * 1e15 # 25 au/step -> fs/step (confirmed, see module docstring)
 THRESH = 1 # threshold in kcal / mol for stabilization
@@ -209,7 +209,7 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time_direction_D.png"):
     """Plot with comparative shading to show the thermodynamic winner.
 
     Plots DeltaE_ortho-meta(t), DeltaE_para-meta(t), and relative
-    electronic energy, shading regions by which basin is favored
+    electronic energy (mean-centered about y=0), shading regions by which basin is favored
     (Ortho-preferred, Para-preferred, or both intermediates
     destabilized/"Meta preferred") using the same +/-5 kcal/mol
     comparative logic as calculate_dwell_times. The first 10 recorded
@@ -233,7 +233,7 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time_direction_D.png"):
     t_fs = df_md['step'][slice_idx] * ts_to_fs
     traj_om = df_md['diff_om'][slice_idx].values
     traj_pm = df_md['diff_pm'][slice_idx].values
-    traj_rel_e = (df_md['e_md'] - df_md['e_md'].min())[slice_idx].values * AU_TO_KCAL
+    traj_rel_e = (df_md['e_md'] - df_md['e_md'].mean())[slice_idx].values * AU_TO_KCAL
 
     # Colors
     c_ortho = "#0072B2"   # Deep Teal/Blue
@@ -262,18 +262,18 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time_direction_D.png"):
                     color=c_destab, alpha=0.15, interpolate=True, label='Meta Preferred')
 
     # 3. Trajectory Lines
-    ax.plot(t_fs, traj_rel_e, color=c_nitro, lw=1.5, alpha=0.7, label="Nitrobenzene Rel. $E$")
+    ax.plot(t_fs, traj_rel_e, color=c_nitro, lw=0.5, alpha=0.3, label="Nitrobenzene Rel. $E$")
     ax.plot(t_fs, traj_om, color=c_ortho, lw=2.2, label=r"$\Delta E_{ortho-meta}$")
     ax.plot(t_fs, traj_pm, color=c_para, lw=2.2, linestyle='--', label=r"$\Delta E_{para-meta}$")
 
     # 4. Ref lines & Formatting
-    ax.axhline(0.0, color='black', linestyle='-', linewidth=1.2, alpha=0.7, zorder=0)
+    ax.axhline(0.0, color='black', linestyle='-', linewidth=0.5, alpha=0.5, zorder=0)
     ax.axhline(5.0, color='gray', linestyle=':', linewidth=0.8, alpha=0.5)
     ax.axhline(-5.0, color='gray', linestyle=':', linewidth=0.8, alpha=0.5)
 
     ax.set_xlabel("Time (fs)", labelpad=8)
     ax.set_ylabel(r"$\Delta E$ ($\mathrm{kcal \cdot mol^{-1}}$)", labelpad=8)
-    ax.set_ylim(-25, 45)
+    ax.set_ylim(-15, 15)
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)

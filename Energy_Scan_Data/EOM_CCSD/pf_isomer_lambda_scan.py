@@ -40,7 +40,7 @@ import pf_isomer_scan as pfscan  # noqa: E402  (reuse data parsing / PF Hamilton
 
 # --- PF Hamiltonian size knobs ----------------------------------------------
 NUM_ELECTRONIC_STATES = 49   # number of electronic states used to build H_PF
-NUM_FOCK_STATES       = 3   # number of photonic Fock states
+NUM_FOCK_STATES       = 10   # number of photonic Fock states
 
 # --- Photon frequency (Hartree), fit from the EOM-CCSD data -----------------
 OMEGA = 0.066148

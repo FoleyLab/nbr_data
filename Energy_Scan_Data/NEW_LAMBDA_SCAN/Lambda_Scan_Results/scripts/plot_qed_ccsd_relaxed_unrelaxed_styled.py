@@ -24,7 +24,7 @@ from __future__ import annotations
 import csv
 import math
 from pathlib import Path
-
+from matplotlib.patches import Patch
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -41,8 +41,22 @@ C_NM3 = 4.0 * math.pi * (A0_NM**3)
 
 # Thermal reference: R*T in kcal/mol at 298.15 K.
 RT_KCAL_MOL_298K = 0.00198720425864083 * 298.15
-THERMAL_THRESHOLD_KBT = 4
-THERMAL_THRESHOLD_KCAL = -THERMAL_THRESHOLD_KBT * RT_KCAL_MOL_298K
+THERMAL_THRESHOLD_KBT_A = 2
+THERMAL_THRESHOLD_KBT_B = 4
+THERMAL_THRESHOLD_KBT_C = 6
+
+THERMAL_THRESHOLD_KCAL_A = -THERMAL_THRESHOLD_KBT_A * RT_KCAL_MOL_298K
+THERMAL_THRESHOLD_KCAL_B = -THERMAL_THRESHOLD_KBT_B * RT_KCAL_MOL_298K
+THERMAL_THRESHOLD_KCAL_C = -THERMAL_THRESHOLD_KBT_C * RT_KCAL_MOL_298K
+
+# Optional one-sided model-bias envelope from cavity-free CCSD(T)-CCSD shifts.
+# This is not a statistical error bar.
+SHOW_MISSING_TRIPLES_ENVELOPE = True
+MISSING_TRIPLES_STABILIZATION_KCAL = {
+    "ortho_meta": 1.0,
+    "para_meta": 1.5,
+}
+MISSING_TRIPLES_ALPHA = 0.13
 
 COLORS = {
     "ortho_meta": "#0072B2",  # blue, color-blind friendly
@@ -161,6 +175,20 @@ def plot_series(ax) -> None:
         color = COLORS[entry["pair"]]
         is_relaxed = entry["geometry"] == "relaxed"
 
+        if SHOW_MISSING_TRIPLES_ENVELOPE:
+            shift = MISSING_TRIPLES_STABILIZATION_KCAL[entry["pair"]]
+            lambda_array = np.asarray(lambdas)
+            delta_array = np.asarray(delta_e)
+            ax.fill_between(
+                lambda_array,
+                delta_array - shift,
+                delta_array,
+                color=color,
+                alpha=MISSING_TRIPLES_ALPHA,
+                linewidth=0,
+                zorder=1,
+            )
+
         ax.plot(
             lambdas,
             delta_e,
@@ -173,6 +201,7 @@ def plot_series(ax) -> None:
             markeredgecolor=color,
             markeredgewidth=1.8,
             label=entry["label"],
+            zorder=2,
         )
 
 
@@ -193,7 +222,7 @@ def add_mode_volume_axis(ax) -> None:
 def add_thermal_threshold(ax) -> None:
     """Draw and label the -5 k_B T stabilization guide line."""
     ax.axhline(
-        THERMAL_THRESHOLD_KCAL,
+        THERMAL_THRESHOLD_KCAL_A,
         color="black",
         linestyle=":",
         linewidth=1.8,
@@ -202,12 +231,45 @@ def add_thermal_threshold(ax) -> None:
     )
     ax.text(
         0.021,
-        THERMAL_THRESHOLD_KCAL + 0.18,
-        rf"$-{THERMAL_THRESHOLD_KBT}\;k_B T$ stabilization",
+        THERMAL_THRESHOLD_KCAL_A + 0.18,
+        rf"$-{THERMAL_THRESHOLD_KBT_A}\;k_B T$ stabilization",
         fontsize=12,
         fontweight="bold",
         color="#333333",
     )
+    ax.axhline(
+        THERMAL_THRESHOLD_KCAL_B,
+        color="black",
+        linestyle=":",
+        linewidth=1.8,
+        alpha=0.75,
+        zorder=0,
+    )
+    ax.text( 
+        0.021,
+        THERMAL_THRESHOLD_KCAL_B + 0.18,
+        rf"$-{THERMAL_THRESHOLD_KBT_B}\;k_B T$ stabilization",
+        fontsize=12,
+        fontweight="bold",
+        color="#333333",
+    ) 
+    ax.axhline(
+        THERMAL_THRESHOLD_KCAL_C,
+        color="black",
+        linestyle=":",
+        linewidth=1.8,
+        alpha=0.75,
+        zorder=0,
+    )
+    ax.text(
+        0.051,
+        THERMAL_THRESHOLD_KCAL_C + 0.18,
+        rf"$-{THERMAL_THRESHOLD_KBT_C}\;k_B T$ stabilization",
+        fontsize=12,
+        fontweight="bold",
+        color="#333333",
+    )
+
 
 
 def main() -> None:
@@ -225,7 +287,14 @@ def main() -> None:
     ax.set_ylim(-5.2, 5.4)
     ax.set_xticks([0.02, 0.04, 0.06, 0.08, 0.10])
     ax.grid(True, which="both", linestyle=":", alpha=0.5)
-    ax.legend(loc="lower left", frameon=True, shadow=True)
+    #ax.legend(loc="lower left", frameon=True, shadow=True)
+    handles, labels = ax.get_legend_handles_labels()
+    if SHOW_MISSING_TRIPLES_ENVELOPE:
+        handles.append(
+            Patch(facecolor="0.35", alpha=MISSING_TRIPLES_ALPHA, edgecolor="none")
+        )
+        labels.append(r"estimated missing-(T) stabilization envelope")
+    ax.legend(handles, labels, loc="lower left", frameon=True, shadow=True)
 
     fig.tight_layout()
     png_path = SCRIPT_DIR / f"{OUTPUT_STEM}.png"
