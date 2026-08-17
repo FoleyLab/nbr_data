@@ -1,0 +1,17 @@
+{
+  "cell_id": "para_th90_ph0",
+  "converged": true,
+  "attempts": 1,
+  "gnorm_history": [
+    0.0003062017415777778
+  ],
+  "final_gnorm": 0.0003062017415777778,
+  "conv_threshold": 0.002,
+  "final_energy_hartree": -3010.3158314999096,
+  "wall_seconds": 14288.0,
+  "lambda_vector": [
+    0.1,
+    0.0,
+    6.123233995736766e-18
+  ]
+}

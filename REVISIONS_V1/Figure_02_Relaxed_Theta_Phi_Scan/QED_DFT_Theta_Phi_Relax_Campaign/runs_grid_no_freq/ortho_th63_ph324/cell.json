@@ -1,0 +1,16 @@
+{
+  "id": "ortho_th63_ph324",
+  "isomer": "ortho",
+  "xyz": "ortho.xyz",
+  "theta": 63.0,
+  "phi": 324.0,
+  "magnitude": 0.1,
+  "group_id": "ortho_th63",
+  "chain_index": 18,
+  "is_first_in_ring": false,
+  "lambda_vector": [
+    0.07208394201673422,
+    -0.05237204946142996,
+    0.04539904997395469
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "cell_id": "ortho_th27_ph108",
+  "converged": true,
+  "attempts": 1,
+  "gnorm_history": [
+    0.006801291209185453
+  ],
+  "final_gnorm": 0.006801291209185453,
+  "conv_threshold": 0.009,
+  "final_energy_hartree": -3010.3398244674477,
+  "wall_seconds": 1149.1,
+  "lambda_vector": [
+    -0.014029077970429505,
+    0.04317706231133892,
+    0.0891006524188368
+  ],
+  "resumed_from_stall": true
+}

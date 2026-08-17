@@ -1,0 +1,16 @@
+{
+  "id": "ortho_th45_ph0",
+  "isomer": "ortho",
+  "xyz": "ortho.xyz",
+  "theta": 45.0,
+  "phi": 0.0,
+  "magnitude": 0.1,
+  "group_id": "ortho_th45",
+  "chain_index": 0,
+  "is_first_in_ring": true,
+  "lambda_vector": [
+    0.07071067811865475,
+    0.0,
+    0.07071067811865477
+  ]
+}

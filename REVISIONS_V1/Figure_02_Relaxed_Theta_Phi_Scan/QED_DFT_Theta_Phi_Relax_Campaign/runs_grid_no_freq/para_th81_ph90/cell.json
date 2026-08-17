@@ -1,0 +1,16 @@
+{
+  "id": "para_th81_ph90",
+  "isomer": "para",
+  "xyz": "para.xyz",
+  "theta": 81.0,
+  "phi": 90.0,
+  "magnitude": 0.1,
+  "group_id": "para_th81",
+  "chain_index": 5,
+  "is_first_in_ring": false,
+  "lambda_vector": [
+    6.047846824324981e-18,
+    0.09876883405951378,
+    0.015643446504023092
+  ]
+}

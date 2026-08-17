@@ -1,0 +1,16 @@
+{
+  "id": "para_th9_ph270",
+  "isomer": "para",
+  "xyz": "para.xyz",
+  "theta": 9.0,
+  "phi": 270.0,
+  "magnitude": 0.1,
+  "group_id": "para_th9",
+  "chain_index": 15,
+  "is_first_in_ring": false,
+  "lambda_vector": [
+    -2.873654503317709e-18,
+    -0.01564344650402309,
+    0.09876883405951378
+  ]
+}

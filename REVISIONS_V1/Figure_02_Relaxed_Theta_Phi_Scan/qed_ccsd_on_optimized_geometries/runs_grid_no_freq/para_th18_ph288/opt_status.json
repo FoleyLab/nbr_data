@@ -1,0 +1,18 @@
+{
+  "cell_id": "para_th18_ph288",
+  "converged": true,
+  "attempts": 1,
+  "gnorm_history": [
+    0.001330741683205785
+  ],
+  "final_gnorm": 0.001330741683205785,
+  "conv_threshold": 0.002,
+  "final_energy_hartree": -3010.3516181020595,
+  "wall_seconds": 3668.5,
+  "lambda_vector": [
+    0.009549150281252625,
+    -0.029389262614623664,
+    0.09510565162951537
+  ],
+  "resumed_from_stall": true
+}
