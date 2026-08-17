@@ -1,0 +1,99 @@
+#!/bin/bash
+#$ -cwd
+#SBATCH --job-name QED-CI_test
+#SBATCH --account OPEN-33-34
+#SBATCH --partition qcpu
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 128
+#SBATCH --time 00:48:00
+
+. /home/matoumik/.bashrc
+
+export PYTHONPATH=/home/matoumik/build/qed-ci/src:$PYTHONPATH
+
+ml intel
+ml Anaconda3
+#conda init
+conda activate psi4env
+
+
+THISDIR=$PWD
+TMPDIR=/scratch/project/open-31-30/psi4_$SLURM_JOB_ID
+mkdir -p $TMPDIR
+cd $TMPDIR
+
+export PSI_SCRATCH=$TMPDIR
+
+export MKL_NUM_THREADS=$SLURM_NTASKS_PER_NODE
+export OMP_NUM_THREADS=$SLURM_NTASKS_PER_NODE
+
+cat << Eof > $SLURM_JOB_NAME.inp
+import psi4
+from helper_PFCI import PFHamiltonianGenerator
+import numpy as np
+from FCIDUMP_writer import make_permutation
+mol_str = """
+1 1
+symmetry c1
+C                 -0.80658313    1.22973465    0.03041801
+C                  0.56153576    1.23725234    0.01622618
+C                  1.22915389    0.01001055    0.01220575
+H                 -1.36676923    2.15803094    0.04420367
+H                  1.14116413    2.14927050    0.01037697
+N                  2.71357475    0.03144573   -0.00289824
+O                  3.28013247   -1.09741954   -0.00254733
+O                  3.24714953    1.17621948   -0.01252002
+C                 -0.77042978   -1.26805414    0.04039660
+H                 -1.30353926   -2.21202933    0.06122375
+C                  0.59726287   -1.23605918    0.02634378
+H                  1.20308359   -2.13089607    0.02793117
+C                 -1.56287141   -0.03049318    0.01040538
+H                 -2.41148563   -0.03994459    0.70143946
+Br                -2.40993182   -0.04931830   -1.82359612
+"""
+
+options_dict = {
+        "basis": "6-311G*",
+        "scf_type": "pk",
+        "e_convergence": 1e-10,
+        "d_convergence": 1e-10,
+}
+
+cavity_dict = {
+        'omega_value' : 0.136, 
+        'lambda_vector' : np.array([0, 0, 0.00]),
+        'ci_level' : 'fcidump',
+        'davidson_roots' : 10,
+        'number_of_photons' : 10,
+        'photon_number_basis' : True,
+        'canonical_mos' : True,
+        'coherent_state_basis' : False,
+	'nact_orbs' : 8,
+	'nact_els' : 8,
+        "manual_ordering" : make_permutation([36,45,47,49,5,51,52,59],49,221),   
+	'localize_active_full':True,
+   #     "localize_active" : True,
+}
+
+psi4.set_num_threads($SLURM_NTASKS_PER_NODE);
+
+test_pf = PFHamiltonianGenerator(
+        mol_str,
+        options_dict,
+        cavity_dict
+)
+
+
+Eof
+
+python3 $SLURM_JOB_NAME.inp >> $THISDIR/$SLURM_JOB_NAME.out
+
+
+
+
+cp -r $TMPDIR $THISDIR
+cp $TMPDIR/FCIDUMP* $THISDIR
+rm -r $TMPDIR
+
+
+

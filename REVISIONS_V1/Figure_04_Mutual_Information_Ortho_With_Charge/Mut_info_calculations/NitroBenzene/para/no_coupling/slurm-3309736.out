@@ -1,0 +1,10 @@
+/home/matoumik/build/qed-ci/src/FCIDUMP_writer.py:93: SyntaxWarning: invalid escape sequence '\l'
+  dump.write(f' # Printing -1/2 \lambda \lambda q integrals in spatial MO basis\n')
+/home/matoumik/build/qed-ci/src/FCIDUMP_writer.py:99: SyntaxWarning: invalid escape sequence '\l'
+  dump.write(f' # Printing \lambda mu integrals in spatial MO basis\n')
+Traceback (most recent call last):
+  File "/scratch/project/open-31-30/psi4_3309736/QED-CI_test.inp", line 42, in <module>
+    "manual_ordering" : make_permutation([36,45,47,49,5,51,52,59],49,221),   
+                        ^^^^^^^^^^^^^^^^
+NameError: name 'make_permutation' is not defined
+cp: cannot stat '/scratch/project/open-31-30/psi4_3309736/FCIDUMP*': No such file or directory

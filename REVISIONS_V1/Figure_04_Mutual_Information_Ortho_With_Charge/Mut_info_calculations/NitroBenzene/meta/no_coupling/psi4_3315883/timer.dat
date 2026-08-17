@@ -1,0 +1,49 @@
+
+Host: cn084.karolina.it4i.cz
+
+Timers On : Fri Oct 31 10:22:27 2025
+Timers Off: Fri Oct 31 10:39:25 2025
+
+Wall Time:     1018.07 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+Total PK formation time             :  21724.783u     18.483s    118.310w      1 calls
+Libint2ERI::Libint2ERI              :     28.167u      1.633s      9.018w    131 calls
+HF: Form core H                     :     86.767u      4.317s      0.468w      1 calls
+HF: Form S/X                        :      7.050u      0.917s      0.042w      1 calls
+HF: Guess                           :    169.267u     23.467s      1.530w      1 calls
+SAD Guess                           :    168.767u     23.450s      1.528w      1 calls
+HF: Form G                          :    963.467u     71.167s     41.676w     23 calls
+JK: D                               :      1.217u      0.100s      0.007w     23 calls
+JK: USO2AO                          :      0.183u      0.000s      0.001w     23 calls
+JK: JK                              :    961.033u     71.017s     41.650w     23 calls
+PK computes JK                      :    960.100u     70.983s     41.646w     23 calls
+AIO synchronize                     :      0.000u      0.000s      0.000w      1 calls
+JK: AO2USO                          :      0.000u      0.000s      0.000w     23 calls
+HF: Form F                          :      1.433u      0.100s      0.015w     23 calls
+HF: Form D                          :      1.583u      0.100s      0.009w     23 calls
+HF: DIIS                            :     98.400u      3.850s      0.709w     22 calls
+HF: Form C                          :    122.367u      2.800s      0.597w     22 calls
+
+--------------------------------------------------------------------------------------
+Total PK formation time             :  21724.783u     18.483s    118.310w      1 calls
+| Libint2ERI::Libint2ERI            :     14.133u      1.067s      8.882w    129 calls
+HF: Form core H                     :     86.767u      4.317s      0.468w      1 calls
+HF: Form S/X                        :      7.050u      0.917s      0.042w      1 calls
+HF: Guess                           :    169.267u     23.467s      1.530w      1 calls
+| SAD Guess                         :    168.767u     23.450s      1.528w      1 calls
+HF: Form G                          :    963.467u     71.167s     41.676w     23 calls
+| JK: D                             :      1.217u      0.100s      0.007w     23 calls
+| JK: USO2AO                        :      0.183u      0.000s      0.001w     23 calls
+| JK: JK                            :    961.033u     71.017s     41.650w     23 calls
+| | PK computes JK                  :    960.100u     70.983s     41.646w     23 calls
+| | | AIO synchronize               :      0.000u      0.000s      0.000w      1 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.000w     23 calls
+HF: Form F                          :      1.433u      0.100s      0.015w     23 calls
+HF: Form D                          :      1.583u      0.100s      0.009w     23 calls
+HF: DIIS                            :     98.400u      3.850s      0.709w     22 calls
+HF: Form C                          :    122.367u      2.800s      0.597w     22 calls
+Libint2ERI::Libint2ERI              :     14.033u      0.567s      0.136w      2 calls
+
+**************************************************************************************

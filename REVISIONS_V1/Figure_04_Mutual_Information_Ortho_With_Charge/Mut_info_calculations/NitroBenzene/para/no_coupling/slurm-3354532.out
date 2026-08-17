@@ -1,0 +1,5 @@
+  File "/scratch/project/open-31-30/psi4_3354532/CCSD_multipole.inp", line 57
+    E, wfn = psi4.energy("ccsd/6-311G*', return_wfn=True)
+                         ^
+SyntaxError: unterminated string literal (detected at line 57)
+cp: cannot stat '/scratch/project/open-31-30/psi4_3354532/FCIDUMP*': No such file or directory

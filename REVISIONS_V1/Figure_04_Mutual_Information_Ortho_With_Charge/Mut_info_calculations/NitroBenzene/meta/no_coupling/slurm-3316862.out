@@ -1,0 +1,8 @@
+cp: -r not specified; omitting directory '/home/matoumik/open-34-25/QED-CI/NitroBenzene/meta/no_coupling/psi4_3313192'
+cp: -r not specified; omitting directory '/home/matoumik/open-34-25/QED-CI/NitroBenzene/meta/no_coupling/psi4_3313639'
+cp: -r not specified; omitting directory '/home/matoumik/open-34-25/QED-CI/NitroBenzene/meta/no_coupling/psi4_3313817'
+cp: -r not specified; omitting directory '/home/matoumik/open-34-25/QED-CI/NitroBenzene/meta/no_coupling/psi4_3313850'
+cp: -r not specified; omitting directory '/home/matoumik/open-34-25/QED-CI/NitroBenzene/meta/no_coupling/psi4_3315836'
+cp: -r not specified; omitting directory '/home/matoumik/open-34-25/QED-CI/NitroBenzene/meta/no_coupling/psi4_3315883'
+free(): corrupted unsorted chunks
+/var/spool/slurmd/job3316862/slurm_script: line 31: 781429 Aborted                 (core dumped) molmps molmps.inp >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/meta/no_coupling/molmps.inp.out

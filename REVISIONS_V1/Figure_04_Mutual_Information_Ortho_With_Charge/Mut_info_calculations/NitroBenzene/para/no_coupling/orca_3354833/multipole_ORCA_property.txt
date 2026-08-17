@@ -1,0 +1,131 @@
+-------------------------------------------------------------
+----------------------- !PROPERTIES! ------------------------
+-------------------------------------------------------------
+# -----------------------------------------------------------
+$ SCF_Energy
+   description: The SCF energy
+   geom. index: 1
+   prop. index: 1
+        SCF Energy:    -3006.2815600844
+# -----------------------------------------------------------
+$ MDCI_Energies
+   description: The MDCI energies
+   geom. index: 1
+   prop. index: 1
+        Total number of Electrons                                                     98
+        Number of correlated Electrons                                                62
+        Number of alpha correlated Electrons                                          31
+        Number of beta correlated Electrons                                           31
+        Reference Energy:                                               -3006.2815601111
+        Total Correlation Energy:                                          -1.6675434106
+        Alpha-Alpha Pairs Correlation Energy (No (T))                      -0.2048400702
+        Beta-Beta Pairs Correlation Energy (No (T))                        -0.2048400702
+        Alpha-Beta Pairs Correlation Energy (No (T))                       -1.2578595047
+        Singlet pairs energy of double amplitudes (No (T))                 -1.0544432497
+        Triplet pairs energy of double amplitudes (No (T))                 -0.6139930908
+        Singlet pairs energy of quadratic single amplitudes (No (T))        0.0014238152
+        Triplet pairs energy of quadratic single amplitudes (No (T))       -0.0005271199
+        Triples Correction Energy:                                          0.0000000000
+        Total MDCI Energy:                                              -3007.9491035217
+# -----------------------------------------------------------
+$ SCF_Electric_Properties
+   description: The SCF Calculated Electric Properties
+   geom. index: 1
+   prop. index: 1
+       Filename                          : multipole_ORCA.scfp 
+       Do Dipole Moment Calculation      : 1 
+       Do Quadrupole Moment Calculation  : 1 
+       Do Polarizability Calculation     : 0 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        5.1267527464
+        Electronic Contribution:
+                   0          1          2    
+      0     -20.028614  -0.337176 -13.153208
+        Nuclear Contribution:
+                   0          1          2    
+      0      18.529187   0.320824  14.502153
+        Total Dipole moment:
+                   0          1          2    
+      0      -1.499427  -0.016352   1.348946
+** Quadrupole moment part of electric properties **
+        Isotropic Quadrupole moment :     -46.0414930079
+        Nuclear part of quadrupole moment
+                   0          1          2    
+      0     1676.137630  22.115319 497.527510
+      1      22.115319 273.432955   7.086485
+      2     497.527510   7.086485 279.607808
+        Electronic part of quadrupole moment
+                   0          1          2    
+      0     -1726.511937 -22.245900 -498.562886
+      1     -22.245900 -315.100704  -7.118683
+      2     -498.562886  -7.118683 -325.690230
+        Total quadrupole moment
+                   0          1          2    
+      0     -50.374307  -0.130581  -1.035376
+      1      -0.130581 -41.667749  -0.032198
+      2      -1.035376  -0.032198 -46.082422
+        Quadrupole moment diagonaized tensor
+                   0          1          2    
+      0     -50.613047 -45.845705 -41.665726
+# -----------------------------------------------------------
+$ MDCI_Electric_Properties
+   description: The MDCI Calculated Electric Properties
+   geom. index: 1
+   prop. index: 1
+       Filename                          : multipole_ORCA.mdcip 
+       Do Dipole Moment Calculation      : 1 
+       Do Quadrupole Moment Calculation  : 1 
+       Do Polarizability Calculation     : 0 
+** Dipole moment part of electric properties **
+        Magnitude of dipole moment (Debye) :        4.1130187922
+        Electronic Contribution:
+                   0          1          2    
+      0     -19.600112  -0.331617 -13.289131
+        Nuclear Contribution:
+                   0          1          2    
+      0      18.529187   0.320824  14.502153
+        Total Dipole moment:
+                   0          1          2    
+      0      -1.070925  -0.010793   1.213022
+** Quadrupole moment part of electric properties **
+        Isotropic Quadrupole moment :     -44.2422835524
+        Nuclear part of quadrupole moment
+                   0          1          2    
+      0     1676.137630  22.115319 497.527510
+      1      22.115319 273.432955   7.086485
+      2     497.527510   7.086485 279.607808
+        Electronic part of quadrupole moment
+                   0          1          2    
+      0     -1722.335853 -22.189952 -497.420579
+      1     -22.189952 -314.473746  -7.102716
+      2     -497.420579  -7.102716 -325.095645
+        Total quadrupole moment
+                   0          1          2    
+      0     -46.198223  -0.074633   0.106931
+      1      -0.074633 -41.040791  -0.016230
+      2       0.106931  -0.016230 -45.487837
+        Quadrupole moment diagonaized tensor
+                   0          1          2    
+      0     -46.214957 -45.472253 -41.039641
+# -------------------------------------------------------------
+----------------------- !GEOMETRIES! ------------------------
+# -------------------------------------------------------------
+------------------------ !GEOMETRY! -------------------------
+    Number of atoms:    15 
+    Geometry Index:     1 
+    Coordinates:
+               0 C     -0.806583130000    1.229734650000    0.030418010000
+               1 C      0.561535760000    1.237252340000    0.016226180000
+               2 C      1.229153890000    0.010010550000    0.012205750000
+               3 H     -1.366769230000    2.158030940000    0.044203670000
+               4 H      1.141164130000    2.149270500000    0.010376970000
+               5 N      2.713574750000    0.031445730000   -0.002898240000
+               6 O      3.280132470000   -1.097419540000   -0.002547330000
+               7 O      3.247149530000    1.176219480000   -0.012520020000
+               8 C     -0.770429780000   -1.268054140000    0.040396600000
+               9 H     -1.303539260000   -2.212029330000    0.061223750000
+              10 C      0.597262870000   -1.236059180000    0.026343780000
+              11 H      1.203083590000   -2.130896070000    0.027931170000
+              12 C     -1.562871410000   -0.030493180000    0.010405380000
+              13 H     -2.411485630000   -0.039944590000    0.701439460000
+              14 Br    -2.409931820000   -0.049318300000   -1.823596120000

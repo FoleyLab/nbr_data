@@ -1,0 +1,33 @@
+#! /bin/bash
+
+# export MOLMPS_NUM_THREADS
+export MOLMPS_NUM_THREADS=128
+
+# export the MOLMPS program directory
+export molmps_dir=/home/matoumik/build/MOLMPS_multi
+
+# export the MOLMPS program working directory
+export molmps_workdir=/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling
+
+# export the PATH and LD_LIBRARY_PATH
+export PATH=/home/matoumik/build/MOLMPS_multi:/apps/all/Molden/7.3-GCCcore-12.3.0/bin:/apps/all/LLVM/16.0.6-GCCcore-12.3.0/bin:/apps/all/zstd/1.5.5-GCCcore-12.3.0/bin:/apps/all/lz4/1.9.4-GCCcore-12.3.0/bin:/apps/all/XZ/5.4.2-GCCcore-12.3.0/bin:/apps/all/gzip/1.12-GCCcore-12.3.0/bin:/apps/all/X11/20230603-GCCcore-12.3.0/bin:/apps/all/fontconfig/2.14.2-GCCcore-12.3.0/bin:/apps/all/util-linux/2.39-GCCcore-12.3.0/sbin:/apps/all/util-linux/2.39-GCCcore-12.3.0/bin:/apps/all/ncurses/6.4-GCCcore-12.3.0/bin:/apps/all/freetype/2.13.0-GCCcore-12.3.0/bin:/apps/all/Brotli/1.0.9-GCCcore-12.3.0/bin:/apps/all/libpng/1.6.39-GCCcore-12.3.0/bin:/apps/all/expat/2.5.0-GCCcore-12.3.0/bin:/apps/all/bzip2/1.0.8-GCCcore-12.3.0/bin:/apps/all/GCCcore/12.3.0/bin:/home/matoumik/bin:/apps/all/XALT/3.0.2/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/apps/all/Anaconda3/2024.02-1/bin:/apps/all/Anaconda3/2024.02-1/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/c3/bin:/sbin:/bin:/opt/slurm/bin:/opt/icommands
+export LD_LIBRARY_PATH=:/apps/all/libGLU/9.0.3-GCCcore-12.3.0/lib:/apps/all/Mesa/23.1.4-GCCcore-12.3.0/lib:/apps/all/LLVM/16.0.6-GCCcore-12.3.0/lib:/apps/all/libunwind/1.6.2-GCCcore-12.3.0/lib:/apps/all/libdrm/2.4.115-GCCcore-12.3.0/lib:/apps/all/zstd/1.5.5-GCCcore-12.3.0/lib:/apps/all/lz4/1.9.4-GCCcore-12.3.0/lib:/apps/all/XZ/5.4.2-GCCcore-12.3.0/lib:/apps/all/libglvnd/1.6.0-GCCcore-12.3.0/lib:/apps/all/X11/20230603-GCCcore-12.3.0/lib:/apps/all/libpciaccess/0.17-GCCcore-12.3.0/lib:/apps/all/fontconfig/2.14.2-GCCcore-12.3.0/lib:/apps/all/util-linux/2.39-GCCcore-12.3.0/lib:/apps/all/ncurses/6.4-GCCcore-12.3.0/lib:/apps/all/freetype/2.13.0-GCCcore-12.3.0/lib:/apps/all/Brotli/1.0.9-GCCcore-12.3.0/lib:/apps/all/libpng/1.6.39-GCCcore-12.3.0/lib:/apps/all/zlib/1.2.13-GCCcore-12.3.0/lib:/apps/all/expat/2.5.0-GCCcore-12.3.0/lib:/apps/all/bzip2/1.0.8-GCCcore-12.3.0/lib:/apps/all/GCCcore/12.3.0/lib64
+
+mkdir -p /scratch/project/open-31-30/molmps_2479632
+cp /home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/* /scratch/project/open-31-30/molmps_2479632
+cd /scratch/project/open-31-30/molmps_2479632
+
+# usefull info to output
+echo > /home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/molmps.inp.out
+date >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/molmps.inp.out
+hostname >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/molmps.inp.out
+echo >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/molmps.inp.out
+
+# load modules
+module load imkl
+module load GCC
+
+# run the MOLMPS program
+molmps molmps.inp >> /home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/molmps.inp.out
+
+rm -rf /scratch/project/open-31-30/molmps_2479632

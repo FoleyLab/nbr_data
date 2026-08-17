@@ -1,0 +1,83 @@
+cp: cannot stat '/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/inputOrbs.gbw': No such file or directory
+--------------------------------------------------------------------------
+PRTE has detected that the head of the session directory tree (where
+scratch files and shared memory backing storage will be placed)
+resides on a shared file system:
+
+   Directory: /scratch/project/open-31-30/orca_3354823
+   File system type: lustre
+
+For performance reasons, it is strongly recommended that the session
+directory be located on a local file system. This can be controlled by
+setting the system temporary directory to be used by PRTE using either
+the TMPDIR envar or the "prte_tmpdir_base" MCA param.
+
+If you need the temporary directory to be different on remote nodes
+from the local one where prterun is running (e.g., when a login node is
+being employed), then you can set the local temporary directory using
+the "prte_local_tmpdir_base" MCA param and the one to be used on all
+other nodes using the "prte_remote_tmpdir_base" param.
+
+This is only a warning advisory and your job will continue. You can
+disable this warning in the future by setting the
+"prte_silence_shared_fs" MCA param to "1".
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+PRTE has detected that the head of the session directory tree (where
+scratch files and shared memory backing storage will be placed)
+resides on a shared file system:
+
+   Directory: /scratch/project/open-31-30/orca_3354823
+   File system type: lustre
+
+For performance reasons, it is strongly recommended that the session
+directory be located on a local file system. This can be controlled by
+setting the system temporary directory to be used by PRTE using either
+the TMPDIR envar or the "prte_tmpdir_base" MCA param.
+
+If you need the temporary directory to be different on remote nodes
+from the local one where prterun is running (e.g., when a login node is
+being employed), then you can set the local temporary directory using
+the "prte_local_tmpdir_base" MCA param and the one to be used on all
+other nodes using the "prte_remote_tmpdir_base" param.
+
+This is only a warning advisory and your job will continue. You can
+disable this warning in the future by setting the
+"prte_silence_shared_fs" MCA param to "1".
+--------------------------------------------------------------------------
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+/mnt/proj1/open-33-34/ORCA/1_ORCA_molmps_devel/x86_exe/orca_gtoint_mpi: symbol lookup error: /apps/all/OpenMPI/4.0.3-GCC-9.3.0/lib/libmpi_cxx.so.40: undefined symbol: ompi_mpi_errors_throw_exceptions
+--------------------------------------------------------------------------
+prterun detected that one or more processes exited with non-zero status,
+thus causing the job to be terminated. The first process to do so was:
+
+   Process name: [prterun-cn235-2323002@1,9]
+   Exit code:    127
+--------------------------------------------------------------------------
+[file orca_tools/qcmsg.cpp, line 458]: 
+  .... aborting the run
+
+Reading the input file multipole_ORCA.gbw               ... [file orca_2mkl/orca_2mkl.cpp, line 130]: No orbitals were found in the gbw file
+
+[file orca_2mkl/orca_2mkl.cpp, line 130]: No orbitals were found in the gbw file
+
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354823/multipole_ORCA.inp’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354823/multipole_ORCA_property.txt’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354823/multipole_ORCA.prop’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354823/multipole_ORCA.gbw’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354823/multipole_ORCA.int.tmp’: Operation not supported
+mv: preserving permissions for ‘/home/matoumik/open-34-25/QED-CI/NitroBenzene/para/no_coupling/orca_3354823’: Operation not supported
