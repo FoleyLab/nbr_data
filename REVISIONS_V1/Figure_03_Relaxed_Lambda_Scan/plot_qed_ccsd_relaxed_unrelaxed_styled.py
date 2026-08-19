@@ -2,7 +2,7 @@
 Publication-style QED-CCSD relaxed/unrelaxed comparison plot.
 
 This is a focused companion to plot_isomer_energies.py. It reads the normalized
-QED-CCSD(2,2) CSV summaries in ../QED_CCSD/summary and creates one figure with
+QED-CCSD(2,2) CSV summaries in Lambda_Scan_Results/QED_CCSD/summary and creates one figure with
 four curves:
 
   - ortho - meta, theta=70, phi=31, relaxed geometry
@@ -30,8 +30,7 @@ import numpy as np
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-ROOT_DIR = SCRIPT_DIR.parent
-SUMMARY_DIR = ROOT_DIR / "QED_CCSD" / "summary"
+SUMMARY_DIR = SCRIPT_DIR / "Lambda_Scan_Results" / "QED_CCSD" / "summary"
 
 OUTPUT_STEM = "qed_ccsd_relaxed_vs_unrelaxed_styled"
 
