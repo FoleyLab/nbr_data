@@ -103,7 +103,7 @@ def generate_overlay_plots():
     plt.rcParams.update({
         "font.family": "serif",
         "font.serif": ["Times New Roman"],
-        "font.size": 16,
+        "font.size": 24,
         "mathtext.fontset": "stix",
     })
 
@@ -148,7 +148,7 @@ def generate_overlay_plots():
                            vmin=-vlimit, vmax=vlimit)
 
         cbar = fig.colorbar(im, ax=ax)
-        cbar.set_label(r'$\Delta E$ (kcal/mol)', fontsize=16)
+        cbar.set_label(r'$\Delta E$ (kcal/mol)', fontsize=24)
 
         # Plot MD Trajectory
         # Black line with alpha for the path
@@ -169,7 +169,7 @@ def generate_overlay_plots():
         ax.set_xticks([0, 90, 180, 270, 360])
         ax.set_yticks([0, 45, 90, 135, 180])
 
-        ax.legend(loc='lower right', fontsize=12, framealpha=0.9)
+        ax.legend(loc='lower right', fontsize=18, framealpha=0.9)
 
         plt.savefig(filename, dpi=DPI)
         print(f"Saved: {filename}")

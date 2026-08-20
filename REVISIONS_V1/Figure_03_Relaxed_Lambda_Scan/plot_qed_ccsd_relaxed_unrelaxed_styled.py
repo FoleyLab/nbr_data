@@ -50,7 +50,7 @@ THERMAL_THRESHOLD_KCAL_C = -THERMAL_THRESHOLD_KBT_C * RT_KCAL_MOL_298K
 
 # Optional one-sided model-bias envelope from cavity-free CCSD(T)-CCSD shifts.
 # This is not a statistical error bar.
-SHOW_MISSING_TRIPLES_ENVELOPE = True
+SHOW_MISSING_TRIPLES_ENVELOPE = False
 MISSING_TRIPLES_STABILIZATION_KCAL = {
     "ortho_meta": 1.0,
     "para_meta": 1.5,
@@ -150,18 +150,18 @@ def configure_style() -> None:
     """Set plotting defaults once for a clean publication-style figure."""
     plt.rcParams.update(
         {
-            "font.size": 14,
+            "font.size": 22,
             "font.family": "sans-serif",
-            "axes.labelsize": 16,
-            "axes.titlesize": 17,
+            "axes.labelsize": 22,
+            "axes.titlesize": 22,
             "axes.linewidth": 1.2,
-            "xtick.labelsize": 13,
-            "ytick.labelsize": 13,
+            "xtick.labelsize": 22,
+            "ytick.labelsize": 22,
             "xtick.direction": "in",
             "ytick.direction": "in",
             "xtick.top": False,
             "ytick.right": True,
-            "legend.fontsize": 11,
+            "legend.fontsize": 18,
             "savefig.bbox": "tight",
         }
     )
@@ -219,7 +219,7 @@ def add_mode_volume_axis(ax) -> None:
 
 
 def add_thermal_threshold(ax) -> None:
-    """Draw and label the -5 k_B T stabilization guide line."""
+    """Draw and label the -X k_B T stabilization guide line."""
     ax.axhline(
         THERMAL_THRESHOLD_KCAL_A,
         color="black",
@@ -232,7 +232,7 @@ def add_thermal_threshold(ax) -> None:
         0.021,
         THERMAL_THRESHOLD_KCAL_A + 0.18,
         rf"$-{THERMAL_THRESHOLD_KBT_A}\;k_B T$ stabilization",
-        fontsize=12,
+        fontsize=16,
         fontweight="bold",
         color="#333333",
     )
@@ -248,7 +248,7 @@ def add_thermal_threshold(ax) -> None:
         0.021,
         THERMAL_THRESHOLD_KCAL_B + 0.18,
         rf"$-{THERMAL_THRESHOLD_KBT_B}\;k_B T$ stabilization",
-        fontsize=12,
+        fontsize=16,
         fontweight="bold",
         color="#333333",
     ) 
@@ -261,10 +261,10 @@ def add_thermal_threshold(ax) -> None:
         zorder=0,
     )
     ax.text(
-        0.051,
+        0.021,
         THERMAL_THRESHOLD_KCAL_C + 0.18,
         rf"$-{THERMAL_THRESHOLD_KBT_C}\;k_B T$ stabilization",
-        fontsize=12,
+        fontsize=16,
         fontweight="bold",
         color="#333333",
     )
@@ -293,8 +293,22 @@ def main() -> None:
             Patch(facecolor="0.35", alpha=MISSING_TRIPLES_ALPHA, edgecolor="none")
         )
         labels.append(r"estimated missing-(T) stabilization envelope")
-    ax.legend(handles, labels, loc="lower left", frameon=True, shadow=True)
+    #ax.legend(handles, labels, bbox_to_anchor=(1.05,1), loc="upper left", frameon=True, shadow=True, borderaxespad=0)
+    # Replaced ax.legend(...) call:
+    ax.legend(
+        handles,
+        labels,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 1.22),  # Positions legend above the top x-axis
+        ncol=2,                       # Split into 2 columns to save vertical space
+        frameon=True,
+        shadow=False,
+        fontsize=16,                  # Scale legend font slightly relative to 20pt axes
+        borderaxespad=0,
+    )
 
+    # Use constrained_layout instead of tight_layout to handle secondary axes & legends gracefully
+    fig.set_layout_engine("constrained")
     fig.tight_layout()
     png_path = SCRIPT_DIR / f"{OUTPUT_STEM}.png"
     pdf_path = SCRIPT_DIR / f"{OUTPUT_STEM}.pdf"

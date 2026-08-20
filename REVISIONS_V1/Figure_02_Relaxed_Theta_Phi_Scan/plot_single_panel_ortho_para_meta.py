@@ -14,9 +14,9 @@ def create_single_map(P, T, data_grid, title, filename, label, vmin=None, vmax=N
     fig, ax = plt.subplots(figsize=(8, 6), constrained_layout=True)
     
     # 1. Define font sizes
-    fs_title = 20
-    fs_labels = 18
-    fs_ticks = 16
+    fs_title = 24
+    fs_labels = 24
+    fs_ticks = 24
     
     # Colormap scaling
     if vmin==None and vmax==None:

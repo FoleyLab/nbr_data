@@ -219,11 +219,15 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time_direction_A.png"):
     plt.rcParams.update({
         "font.family": "serif",
         "font.serif": ["Times New Roman"],
-        "font.size": 16,
+        "font.size": 20,
+        "axes.labelsize": 24,
+        "xtick.labelsize": 20,
+        "ytick.labelsize": 20,
+        "legend.fontsize": 18,
         "mathtext.fontset": "stix",
     })
 
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(10, 8))
 
     # Time conversion: 25 au/step -> fs/step (confirmed, see module docstring)
     ts_to_fs = 6.04721e-16 * 1e15
@@ -283,9 +287,16 @@ def plot_deltaE_timeseries(df_md, file_name="deltaE_vs_time_direction_A.png"):
     handles, labels = ax.get_legend_handles_labels()
     # Unique labels only
     by_label = dict(zip(labels, handles))
-    ax.legend(by_label.values(), by_label.keys(), loc='upper right', fontsize=16, frameon=True)
+    # Legend placed above the top x-axis and centered, so the box is fully
+    # vertically offset from the plot and never overlaps the data (same
+    # approach as Figure 03's plot_qed_ccsd_relaxed_unrelaxed_styled.py).
+    ax.legend(by_label.values(), by_label.keys(),
+              loc='lower center', bbox_to_anchor=(0.5, 1.18), ncol=2,
+              fontsize=18, frameon=True, borderaxespad=0)
 
-    plt.tight_layout()
+    # Constrained layout keeps the offset legend on-canvas without clipping.
+    fig.set_layout_engine("constrained")
+    fig.tight_layout()
     plt.savefig(file_name, dpi=600, bbox_inches="tight")
     print(f"Plot saved: {file_name}")
     plt.show()
