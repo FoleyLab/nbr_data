@@ -1,0 +1,6 @@
+CQED-DFT energy and gradient
+============================
+Reference   : rks
+Functional  : wb97x-d
+Energy w/ Cavity      : -436.485098141215 Eh
+Energy w/o Cavity     : -436.666953561946 Eh

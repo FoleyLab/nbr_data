@@ -55,8 +55,12 @@ def parse_args():
     parser.add_argument("--memory", default="4 GB", help="Psi4 memory per worker.")
     parser.add_argument("--start", type=int, default=0, help="First frame index to process.")
     parser.add_argument("--stop", type=int, default=None, help="Stop before this frame index.")
+    parser.add_argument("--stride", type=int, default=1, help="Process every Nth frame starting from --start.")
     parser.add_argument("--resume", action="store_true", help="Skip frame indices already present in the CSV.")
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.stride < 1:
+        parser.error("--stride must be at least 1")
+    return args
 
 
 def iter_xyz_frames(filename):
@@ -179,6 +183,7 @@ def main():
         for frame in iter_xyz_frames(args.trajectory)
         if frame["frame"] >= args.start
         and (args.stop is None or frame["frame"] < args.stop)
+        and (frame["frame"] - args.start) % args.stride == 0
         and frame["frame"] not in skip_frames
     ]
 
@@ -189,13 +194,15 @@ def main():
     print(f"Trajectory : {args.trajectory}")
     print(f"Output     : {args.output}")
     print(f"Frames     : {frames[0]['frame']} through {frames[-1]['frame']} ({len(frames)} total)")
+    print(f"Stride     : every {args.stride} frame(s)")
     print(f"Workers    : {args.nproc}")
     print(f"Psi4/thread: {args.threads_per_worker} per worker")
     print(f"No cavity  : lambda={NO_CAVITY_FIELD_VECTOR}, omega={NO_CAVITY_OMEGA}")
 
     append = args.resume and args.output.exists()
     pending = {}
-    next_frame_to_write = frames[0]["frame"]
+    frame_order = [frame["frame"] for frame in frames]
+    next_frame_order_index = 0
 
     with ProcessPoolExecutor(
         max_workers=args.nproc,
@@ -210,9 +217,13 @@ def main():
             pending[frame_index] = row
 
             ready_rows = []
-            while next_frame_to_write in pending:
+            while (
+                next_frame_order_index < len(frame_order)
+                and frame_order[next_frame_order_index] in pending
+            ):
+                next_frame_to_write = frame_order[next_frame_order_index]
                 ready_rows.append(pending.pop(next_frame_to_write))
-                next_frame_to_write += 1
+                next_frame_order_index += 1
 
             if ready_rows:
                 write_rows_in_order(args.output, ready_rows, append=append)
