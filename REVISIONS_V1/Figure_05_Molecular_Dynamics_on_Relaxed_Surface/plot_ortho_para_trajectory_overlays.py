@@ -65,7 +65,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # --- Configuration ---
-MD_FILE = "nitrobenzene_direction_A_wb97x_d_4000_ts.xyz"
+MD_FILE = "nitrobenzene_direction_D_wb97x_d_4000_ts.xyz"
 ENERGY_FILE = "Relaxed_QED_CCSD_Combined_Results.txt"  
 AU_TO_KCAL = 627.509  # Hartree -> kcal/mol conversion factor
 DPI = 600 # High resolution for publication
@@ -133,8 +133,8 @@ def generate_overlay_plots():
 
     # 4. Define Plots to Generate
     plots = [
-        (diff_om, "Ortho - Meta", "traj_overlay_ortho_meta_direction_A.png"),
-        (diff_pm, "Para - Meta", "traj_overlay_para_meta_direction_A.png")
+        (diff_om, "Ortho - Meta", "traj_overlay_ortho_meta_direction_D.png"),
+        (diff_pm, "Para - Meta", "traj_overlay_para_meta_direction_D.png")
     ]
 
     for surface, title, filename in plots:

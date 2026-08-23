@@ -40,14 +40,14 @@ import pf_isomer_scan as pfscan  # noqa: E402
 # ============================================================================
 
 # --- Isomer pair and cavity-field direction ---------------------------------
-ISOMER_A = "ortho"
+ISOMER_A = "para"
 ISOMER_B = "meta"
-THETA = 70.0
-PHI = 31.0
+THETA = 65.0
+PHI = 78.0
 
 # --- PF Hamiltonian size knobs ----------------------------------------------
 NUM_ELECTRONIC_STATES = 49
-NUM_FOCK_STATES = 10
+NUM_FOCK_STATES = 2
 
 # --- Photon frequency (Hartree), fit from the EOM-CCSD data -----------------
 OMEGA = 0.066148
