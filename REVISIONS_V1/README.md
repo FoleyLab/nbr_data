@@ -13,8 +13,8 @@ Each folder is self-contained: it has its own `README.md` with a Quick Start, th
 | `Figure_01_Scheme/` | Figure 1 | Scheme of nitrobenzene and the ortho/meta/para intermediates on a common coordinate system (`Scheme_1.png`) |
 | `Figure_02_Relaxed_Theta_Phi_Scan/` | **Figure 2** | Central result: QED-DFT geometry relaxations + QED-CCSD single points on a 191-point (θ, φ) cavity-orientation grid (573 cells); energy-difference maps |
 | `Figure_03_Relaxed_Lambda_Scan/` | Figure 3 | Coupling-strength (λ) scans at fixed directions; relaxed vs. unrelaxed QED-CCSD comparisons |
-| `Figure_04_Mutual_Information_Ortho_With_Charge/` | Figure 4 | QED-CI/MPS mutual-information and resonance-reweighting analysis (directions A, D, and field-free) |
-| `Figure_05_Molecular_Dynamics_on_Relaxed_Surface/` | Figure 5 | AIMD trajectories (directions A, D) overlaid on the relaxed energy-difference surfaces |
+| `Figure_04_Mutual_Information_Ortho_With_Charge/` | Figure 4 | QED-DMRG mutual-information and resonance-reweighting analysis (directions A, D*, and field-free) |
+| `Figure_05_Molecular_Dynamics_on_Relaxed_Surface/` | Figure 5 | AIMD trajectories (directions A, D*) overlaid on the relaxed energy-difference surfaces |
 | `Figure_06_Molecular_Dynamics_Relaxed_Timeseries/` | Figure 6 | ΔE timeseries and basin dwell-time analysis along the trajectories |
 | `Figure_S1_Unrelaxed_Theta_Phi_Scans/` | Figure S1 | (θ, φ) scans on unrelaxed geometries at four theory levels (pQED, pQED+CS, QED-DFT, QED-CCSD) |
 | `Figure_S2_Unrelaxed_Energy_Decomposition/` | Figure S2 | pQED energy decomposition (E_el/E_ph/E_blc/E_dse) from ChronusQ EOM-CCSD data |
@@ -23,7 +23,7 @@ Each folder is self-contained: it has its own `README.md` with a Quick Start, th
 | `Table_S1_Triples_Correction/` | Table S1 | ORCA CCSD(T) and DLPNO-CCSD(T) triples-correction checks for the three isomers |
 
 ---
-
+* Direction D is referred to as Trajectory B in the manuscript.
 ## Common Computational Details
 
 Shared across folders unless a folder's README states otherwise:
@@ -33,7 +33,7 @@ Shared across folders unless a folder's README states otherwise:
 | **Wheland intermediates** | C₆H₅Br–NO₂ (ortho/meta/para), 15 atoms, charge +1, singlet |
 | **Trajectory species** | Nitrobenzene, 14 atoms |
 | **DFT functional / basis** | ωB97X-D / 6-311G* |
-| **Cavity frequency ω** | 0.06615 a.u. (≈ 929 nm) |
+| **Cavity frequency ω** | 0.06615 a.u. (≈ 688 nm) |
 | **Coupling λ** | 0.1 for the Figure 2 orientation scan; scanned 0–0.10 in Figures 3 / S2 |
 | **Unit conversion** | 1 Hartree = 627.509 kcal/mol |
 | **Orientation grid** | θ ∈ [0°, 90°] (11 values), φ ∈ [0°, 342°] (20 values per θ ring); 191 unique points, expanded to a 440-row full grid via the inversion symmetry E(θ, φ) = E(180°−θ, (φ+180°) mod 360°) — see the Figure_02 README |
@@ -47,6 +47,7 @@ Two field orientations recur throughout the repository (in folder/file names as 
 | **Direction A** | (70°, 31°) | ortho vs. meta |
 | **Direction D** | (65°, 78°) | para vs. meta |
 
+*Note*: **Direction D** is referred to as **Trajectory B** in the manuscript.
 ---
 
 ## Software
@@ -57,8 +58,8 @@ Two field orientations recur throughout the repository (in folder/file names as 
 | ExaChem | GPU-accelerated QED-CCSD single points (Figure 2) |
 | ChronusQ | EOM-CCSD reference data for the pQED Hamiltonians (Figure S2) |
 | ORCA | CCSD(T) / DLPNO-CCSD(T) triples corrections (Table S1) |
-| QED-CI / MPS tools | Mutual-information calculations (Figure 4) |
-| Python (numpy, pandas, matplotlib) | All analysis and plotting; Figure S2 scripts use the `p4dev` conda environment |
+| MolMPS | QED-DMRG Mutual-information calculations (Figure 4) |
+| Python (numpy, pandas, matplotlib) | All analysis and plotting |
 
 ---
 
