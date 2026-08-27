@@ -16,10 +16,11 @@ Each folder is self-contained: it has its own `README.md` with a Quick Start, th
 | `Figure_04_Mutual_Information_Ortho_With_Charge/` | Figure 4 | QED-DMRG mutual-information and resonance-reweighting analysis (directions A, D*, and field-free) |
 | `Figure_05_Molecular_Dynamics_on_Relaxed_Surface/` | Figure 5 | AIMD trajectories (directions A, D*) overlaid on the relaxed energy-difference surfaces |
 | `Figure_06_Molecular_Dynamics_Relaxed_Timeseries/` | Figure 6 | ΔE timeseries and basin dwell-time analysis along the trajectories |
-| `Figure_S1_Unrelaxed_Theta_Phi_Scans/` | Figure S1 | (θ, φ) scans on unrelaxed geometries at four theory levels (pQED, pQED+CS, QED-DFT, QED-CCSD) |
+| `Figure_S1_Unrelaxed_Theta_Phi_Scans/` | Figure S1 | (θ, φ) scans on unrelaxed geometries at three theory levels (pQED, QED-DFT, QED-CCSD(2,2)) |
 | `Figure_S2_Unrelaxed_Energy_Decomposition/` | Figure S2 | pQED energy decomposition (E_el/E_ph/E_blc/E_dse) from ChronusQ EOM-CCSD data |
 | `Figure_S7_Snapshots/` | Figure S7 | Rendered structure snapshots (direction-A trajectory; Wheland intermediates) |
 | `Figure_S8_Nitrobenzene_Energy_Fluctuations/` | Figure S8 | Cavity vs. cavity-free potential-energy fluctuations along the direction-A trajectory |
+| `Figure_S9_ZPE_Analysis/` | Figure S9 | Zero-point-energy check: relaxed QED-DFT relative energies (ortho–meta, para–meta) with vs. without ZPE correction across the coupling scan for the cavity-relaxed intermediates |
 | `Table_S1_Triples_Correction/` | Table S1 | ORCA CCSD(T) and DLPNO-CCSD(T) triples-correction checks for the three isomers |
 
 ---
